@@ -1,0 +1,2662 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.1.10"
+line0="{*Name_en*}"
+line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
+childtype="HEADING2"
+icon="bullet_2">
+<Name type="Text">TreeLine LeeMe</Name>
+<Name_en type="Text">TreeLine ReadMe</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1</RefNum>
+<HEADING1 item="y">
+<Name>Archivo LeeMe para TreeLine</Name>
+<Name_en>ReadMe File for TreeLine</Name_en>
+<Done>yes</Done>
+<RefNum>1.1</RefNum>
+</HEADING1>
+<HEADING_CNTR item="y"
+line0="{*Name_en*}"
+line1="&lt;center&gt;&lt;h2&gt;{*Name_en*}&lt;/h2&gt;&lt;/center&gt;"
+childtype="TEXT_PARA"
+icon="bullet_2">
+<Name type="Text">un programa de gestión de la información</Name>
+<Name_en type="Text">an information storage program</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.2</RefNum>
+</HEADING_CNTR>
+<TEXT_CNTR item="y"
+line0="{*Name_en*}"
+line1="&lt;center&gt;{*Name_en*}&lt;/center&gt;"
+icon="bullet_2">
+<Name type="Text">por Doug Bell</Name>
+<Name_en type="Text">by Doug Bell</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.3</RefNum>
+</TEXT_CNTR>
+<TEXT_CNTR_TODO item="y"
+line0="{*Name_en*}"
+line1="&lt;center&gt;{*Name_en*}&lt;/center&gt;"
+generic="TEXT_CNTR"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text">Versión 1.0.1</Name>
+<Name_en type="Text">Version 1.1.10 (unstable development snapshot)</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text">1.4</RefNum>
+</TEXT_CNTR_TODO>
+<TEXT_CNTR_TODO item="y">
+<Name>8 de marzo de 2007</Name>
+<Name_en>January 15, 2008</Name_en>
+<Done>false</Done>
+<RefNum>1.5</RefNum>
+</TEXT_CNTR_TODO>
+<HEADING2 item="y"
+line0="{*Name_en*}"
+line1="&lt;hr /&gt;&lt;h2&gt;{*Name_en*}&lt;/h2&gt;"
+childtype="HEADING3"
+icon="bullet_2">
+<Name type="Text">Contenidos</Name>
+<Name_en type="Text">Contents</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.6</RefNum>
+<CONTENTS_LINK item="y"
+line0="{*Name_en*}"
+line1="&lt;br /&gt;{*Link*}&lt;br /&gt;"
+icon="bullet_2">
+<Name type="Text">Transfondo</Name>
+<Name_en type="Text">Background</Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en">background</Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.6.1</RefNum>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Características</Name>
+<Name_en>Features</Name_en>
+<Link>features</Link>
+<Done>yes</Done>
+<RefNum>1.6.2</RefNum>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Temas legales</Name>
+<Name_en>Legal Issues</Name_en>
+<Link>legal</Link>
+<Done>yes</Done>
+<RefNum>1.6.3</RefNum>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Requerimientos del sistema</Name>
+<Name_en>System Requirements</Name_en>
+<Link>sysreq</Link>
+<Done>yes</Done>
+<RefNum>1.6.4</RefNum>
+<CONTENTS_LINK_INDENT item="y"
+line0="{*Name_en*}"
+line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
+icon="bullet_2">
+<Name type="Text">Linux</Name>
+<Name_en type="Text">Linux</Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en">linux-sys</Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.6.4.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Windows</Name>
+<Name_en>Windows</Name_en>
+<Link>win-sys</Link>
+<Done>yes</Done>
+<RefNum>1.6.4.2</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Instalación</Name>
+<Name_en>Installation</Name_en>
+<Link>install</Link>
+<Done>yes</Done>
+<RefNum>1.6.5</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Linux</Name>
+<Name_en>Linux</Name_en>
+<Link>linux-inst</Link>
+<Done>yes</Done>
+<RefNum>1.6.5.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Windows</Name>
+<Name_en>Windows</Name_en>
+<Link>win-inst</Link>
+<Done>yes</Done>
+<RefNum>1.6.5.2</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Uso de TreeLine</Name>
+<Name_en>Using TreeLine</Name_en>
+<Link>using</Link>
+<Done>yes</Done>
+<RefNum>1.6.6</RefNum>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Historial de revisiones</Name>
+<Name_en>Revision History</Name_en>
+<Link>revs</Link>
+<Done>yes</Done>
+<RefNum>1.6.7</RefNum>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>¿Preguntas, comentarios, críticas?</Name>
+<Name_en>Questions, Comments, Criticisms?</Name_en>
+<Link>contact</Link>
+<Done>yes</Done>
+<RefNum>1.6.8</RefNum>
+</CONTENTS_LINK>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Transfondo</Name>
+<Name_en>Background</Name_en>
+<Ref>background</Ref>
+<Done>yes</Done>
+<RefNum>1.7</RefNum>
+<TEXT_PARA item="y"
+line0="{*Topic_en*}"
+line1="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+icon="bullet_2">
+<Topic type="Text">Introducción</Topic>
+<Topic_en type="Text">Introduction</Topic_en>
+<Text type="Text" html="y" lines="12">¿Tienes un montón de notas con información importante pegadas por todas partes? ¿O numerosas listas de libros, películas, enlaces, datos de identificación de páginas web, contactos personales, o cosas que hacer? ¿Eres capaz de encontrarlas cuando las necesitas? Yo a menudo soy incapaz, así que esta es mi respuesta a ese problema.</Text>
+<Text_en type="Text" html="y" lines="12">Do you have lots of sticky notes lying around with various useful information jotted down? Or many lists of books, movies, links, website logins, personal contacts, or things to do? Can you find them when you need them? Well, I often couldn't. So here's my answer.</Text_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.7.1</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Vista global</Topic>
+<Topic_en>Overview</Topic_en>
+<Text>Algunas personas dirian que TreeLine es un &lt;a href=&quot;http://en.wikipedia.org/wiki/Outliner&quot;&gt;Outliner (gestor de esquemas)&lt;/a&gt;, otras que es un &lt;a href=&quot;http://en.wikipedia.org/wiki/Personal_information_manager&quot;&gt;PIM (gestor de información personal)&lt;/a&gt;. Básicamente, almacena casi cualquier tipo de información. La estructura en forma de árbol facilita el tener la información organizada. Asímismo, cada nodo dentro del árbol puede contener diversos campos, formando una pequeña base de datos. Se puede definir el formato de salida para cada nodo, y esta salida puede ser mostrada en pantalla, impresa o exportada a HTML.</Text>
+<Text_en>Some would call TreeLine an Outliner, others would call it a PIM. Basically, it just stores almost any kind of information. A tree structure makes it easy to keep things organized. And each node in the tree can contain several fields, forming a mini-database. The output format for each node can be defined, and the output can be shown on the screen, printed, or exported to HTML.</Text_en>
+<Done>yes</Done>
+<RefNum>1.7.2</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>¡Es libre!</Topic>
+<Topic_en>It's free</Topic_en>
+<Text>Dado que no estoy en el negocio del software, estoy desarrollando este programa como Software Libre para que cualquiera lo pueda usar, distribuir y modificar, siempre y cuando no sea incorporado en ningún programa propietario. Si te gusta el programa, puedes decírselo a otras personas. Puedes asímismo comunicarme cualquier cosa que pienses sobre el programa - ver la sección &lt;a href=&quot;#contact&quot;&gt;¿Preguntas, comentarios, críticas?&lt;/a&gt; para información sobre cómo contactar conmigo.</Text>
+<Text_en>Since I'm not in the software business, I'm making this program free for anyone to use, distribute and modify, as long as it is not incorporated into any proprietary programs. If you like the software, feel free to let others know about it. And let me know what you think - see the &lt;a href=&quot;#contact&quot;&gt;Questions, Comments, Criticisms?&lt;/a&gt; section for contact information.</Text_en>
+<Done>yes</Done>
+<RefNum>1.7.3</RefNum>
+</TEXT_PARA>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Características</Name>
+<Name_en>Features</Name_en>
+<Ref>features</Ref>
+<Done>yes</Done>
+<RefNum>1.8</RefNum>
+<HEADING4_TODO item="y"
+line0="{*Name_en*}"
+line1="&lt;h4&gt;{*Name_en*}&lt;/h4&gt;"
+childtype="TEXT_PARA"
+generic="HEADING4"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text">General</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+<TEXT_BULLETS item="y"
+line0="{*Topic_en*}"
+line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
+sibprefix="&lt;ul&gt;"
+sibsuffix="&lt;/ul&gt;"
+icon="bullet_2">
+<Topic type="Text">Almacenamiento de información</Topic>
+<Topic_en type="Text">Store information</Topic_en>
+<Text type="Text" html="y" lines="7">Almacena practicamente cualquier tipo de información, incluyendo texto, HTML, números, fechas, horas, booleanos, URLs, etc.</Text>
+<Text_en type="Text" html="y" lines="7">Stores almost any type of information, including plain text, HTML, numbers, dates, times, booleans, URLs, etc.</Text_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.8.1</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Estructura de árbol</Topic>
+<Topic_en>Tree structure</Topic_en>
+<Text>La estructura en forma de árbol mantiene organizados los contenidos,</Text>
+<Text_en>The tree structure helps keep things organized.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.2</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Campos</Topic>
+<Topic_en>Fields</Topic_en>
+<Text>Cada nodo puede contener varios campos que componen una pequeña base de datos.</Text>
+<Text_en>Each node can have several fields that form a mini-database.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.3</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Tipos de nodo</Topic>
+<Topic_en>Node types</Topic_en>
+<Text>Se puede incluir diferentes tipos de nodos, cada uno con un conjunto diferente de campos, en un sólo archivo</Text>
+<Text_en>Several node types, with different sets of fields, can be included in one file.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.4</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Formato de salida</Topic>
+<Topic_en>Output format</Topic_en>
+<Text>El formato de los nodos, incluídos campos, líneas de salida y el icono para la vista de árbol se pueden definir para cada tipo de nodo.</Text>
+<Text_en>The node format, including fields, output lines and tree-view icon, can be defined for each node type.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.5</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Views</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
+generic="TEXT_BULLETS"
+condition="Done != &quot;true&quot;"
+sibprefix="&lt;ul&gt;"
+sibsuffix="&lt;/ul&gt;"
+icon="bullet_1">
+<Topic type="Text"></Topic>
+<Topic_en type="Text">Left-hand view</Topic_en>
+<Text type="Text" html="y" lines="7"></Text>
+<Text_en type="Text" html="y" lines="7">The left-hand view defaults to a tree view but can show a flat list of descendants of the current node.</Text_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Filtering</Topic_en>
+<Text_en>The left flat view also shows the results of filtering operations.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Vista del lado derecho</Topic>
+<Topic_en>Right-hand view</Topic_en>
+<Text>La vista del lado derecho puede mostrar una de tres posibles vistas - la salida de datos, la edición de los datos del nodo y la edición de los títulos del nodo.</Text>
+<Text_en>The right-hand view can show one of three views - for showing output, editing node data and editing node titles.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.6</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Show parent and children</Topic_en>
+<Text_en>The right-hand view is normally split to show data from the parent node and its children.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Show multiple selection</Topic_en>
+<Text_en>If multiple nodes are selected, the right-hand view shows all of their data.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Show descendant output</Topic_en>
+<Text_en>The output view can be set to show indented output from all descendant nodes.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Navigation</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Incremental search</Topic_en>
+<Text_en>There is a quick incremental search command to find a matching node title.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Find command</Topic_en>
+<Text_en>There is a find command that searches through all node data.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Toggle selections</Topic_en>
+<Text_en>Previous and next selection commands toggle selections to quickly move between parts of the tree.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Formatting</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Format dialog</Topic_en>
+<Text_en>The dialog for data type configuration has several tabs to easily set all type, field and output parameters.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Copia de formato</Topic>
+<Topic_en>Format copies</Topic_en>
+<Text>La información de formato puede ser copiada desde otro archivo de TreeLine.</Text>
+<Text_en>Formatting information can be copied from another TreeLine file.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.10</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>File Handling</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS item="y">
+<Topic>Deshacer/rehacer</Topic>
+<Topic_en>Undo/redo</Topic_en>
+<Text>Los comandos deshacer y rehacer están disponibles para cualquiera de las operaciones de modificación.</Text>
+<Text_en>Undo and redo commands are available for all modifying operations.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.12</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Formatos de archivos</Topic>
+<Topic_en>File formats</Topic_en>
+<Text>Los archivos de TreeLine son en XML por defecto, pero hay opciones para comprimir o codificar los archivos.</Text>
+<Text_en>TreeLine files are XML by default, but there are options for automatically compressing or encrypting the files.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.14</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Document templates</Topic_en>
+<Text_en>Document templates for new files are preformatted to cover basic needs.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Impresión</Topic>
+<Topic_en>Printing</Topic_en>
+<Text>La salida de los datos con formato puede ser impresa junto con las líneas de padres e hijos y las cabeceras y pies de páginas.</Text>
+<Text_en>The formatted output can be printed with parent/child lines and  headers and footers.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.13</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>File Import and Export</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS item="y">
+<Topic>Exportación a HTML</Topic>
+<Topic_en>HTML export</Topic_en>
+<Text>Los datos pueden ser exportados a HTML.</Text>
+<Text_en>The data can be exported to HTML.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.15</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Exportación a XSLT</Topic>
+<Topic_en>XSLT export</Topic_en>
+<Text>Se puede exportar un archivo XSLT para trabajar con los archivos en XML de TreeLine.</Text>
+<Text_en>An XSLT file can be exported to work with the XML TreeLine files.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.16</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Importación y exportación de texto</Topic>
+<Topic_en>Text import/export</Topic_en>
+<Text>Se pueden importar tablas de datos delimitados por tabulaciones y archivos de texto indentado con tabulaciones. Se pueden importar igualmente archivos en texto llano y archivos de &lt;a href=&quot;http://www.treepad.com/&quot;&gt;Treepad&lt;/a&gt;.</Text>
+<Text_en>Tab-delimited tables and tab-indented text files can be imported and exported.  Plain text files and Treepad files can be imported.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.17</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Importación y exportación de favoritos</Topic>
+<Topic_en>Bookmark import/export</Topic_en>
+<Text>Se pueden importar y exportar archivos de favoritos en formato Mozilla y XBEL.</Text>
+<Text_en>Mozilla and XBEL format bookmark files can be imported and exported.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.18</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Importación y exportación de XML genérico</Topic>
+<Topic_en>Generic XML import/export</Topic_en>
+<Text>Se pueden importar y exportar archivos genéricos en formato XML, permitiendo el uso de TreeLine como un editor de XML puro.</Text>
+<Text_en>Generic XML files can be imported and exported, allowing TreeLine to function as a crude XML editor.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.19</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>ODF import/export</Topic_en>
+<Text_en>ODF text documents can be imported and exported as outlines.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Conversión de archivos por lotes</Topic>
+<Topic_en>Batch conversion</Topic_en>
+<Text>Se puede realizar conversión de archivos por lotes desde el interfaz de líneas de comandos.</Text>
+<Text_en>Batch file conversions can be done from a command line interface.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.20</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Linking Objects</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS item="y">
+<Topic>Enlaces URL</Topic>
+<Topic_en>URL links</Topic_en>
+<Text>Pulsar sobre un campo URL en la vista de salida de datos abre un enlace en un navegador web externo.</Text>
+<Text_en>Clicking on URL fields in the output view opens the link in an external web browser.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.7</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Enlaces internos</Topic>
+<Topic_en>Internal links</Topic_en>
+<Text>Hay campos de enlaces internos que seleccionan otro nodo basándose en una referencia o una palabra clave.</Text>
+<Text_en>There are internal link fields that select another node based on a reference or a keyword.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.8</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Enlaces ejecutables</Topic>
+<Topic_en>Executable links</Topic_en>
+<Text>Un enlace ejecutable es capaz de ejecutar un programa externo o de abrir un archivo cuando es pulsado.</Text>
+<Text_en>An executable link can run an external program or open a file when clicked.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.9</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Data Manipulation</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS item="y">
+<Topic>Ordenación</Topic>
+<Topic_en>Sorting</Topic_en>
+<Text>Hay varias opciones de ordenación.</Text>
+<Text_en>There are several sorting options.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.21</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Filtrado</Topic>
+<Topic_en>Filtering</Topic_en>
+<Text>Se pueden filtrar los nodos.</Text>
+<Text_en>The nodes can be filtered.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.22</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Tipos condicionales</Topic>
+<Topic_en>Conditional types</Topic_en>
+<Text>El icono y el formato de salida de los datos de un nodo pueden ser modificados en función de sus datos.</Text>
+<Text_en>A node's icon and output format can be changed conditionally based on its data.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.23</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Corrección de la ortografía</Topic>
+<Topic_en>Spell check</Topic_en>
+<Text>Se puede comprobar la ortografía de los campos de texto (apoyándose en un programa externo - ver la sección &lt;a href=&quot;#sysreq&quot;&gt;Requerimientos del sistema&lt;/a&gt;).</Text>
+<Text_en>Text data can be spell checked (requires an external program - see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.24</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Estructuración de datos</Topic>
+<Topic_en>Arranging data</Topic_en>
+<Text>Los datos pueden ser estructurados automáticamente usando como referencia los nodos padre o las categorías de los campos de datos.</Text>
+<Text_en>Data can be automatically arranged using either parent references or categories from data fields.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.25</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Numeración</Topic>
+<Topic_en>Numbering</Topic_en>
+<Text>Existe un mecanismo para la numeración de esquemas.</Text>
+<Text_en>There is an outline numbering feature.</Text_en>
+<Done>yes</Done>
+<RefNum>1.8.26</RefNum>
+</TEXT_BULLETS>
+</HEADING4_TODO>
+<HEADING4_TODO item="y">
+<Name_en>Customization</Name_en>
+<Done>false</Done>
+<TEXT_BULLETS_TODO item="y">
+<Topic>Personalización</Topic>
+<Topic_en>Customization</Topic_en>
+<Text>Hay muchas otras opciones para la personalización del programa, incluyendo atajos de teclado definidos por el usuario.</Text>
+<Text_en>There are many options for customizing both general and file-based attributes.</Text_en>
+<Done>false</Done>
+<RefNum>1.8.27</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic_en>Shortcuts and toolbars</Topic_en>
+<Text_en>There are editors for keyboard shortcuts and toolbar commands.</Text_en>
+<Done>false</Done>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic>Internacionalización</Topic>
+<Topic_en>Internationalization</Topic_en>
+<Text>El interfaz de usuario y la documentación están disponibles en inglés, francés, alemán y español.</Text>
+<Text_en>The user interface and documentation are available in English, French, German, Portuguese, Russian and Spanish.</Text_en>
+<Done>false</Done>
+<RefNum>1.8.28</RefNum>
+</TEXT_BULLETS_TODO>
+</HEADING4_TODO>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Temas legales</Name>
+<Name_en>Legal Issues</Name_en>
+<Ref>legal</Ref>
+<Done>yes</Done>
+<RefNum>1.9</RefNum>
+<TEXT_PARA item="y">
+<Topic>Software Libre</Topic>
+<Topic_en>Free software</Topic_en>
+<Text>TreeLine es Software Libre; puedes redistribuirlo y/o modificarlo bajo los términos de la GNU General Public License tal y como ha sido publicada por la Free Software Foundation; bien la versión 2 de la licencia, o (a tu elección) cualquier versión posterior.</Text>
+<Text_en>TreeLine is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either Version 2 of the License, or (at your option) any later version.</Text_en>
+<Done>yes</Done>
+<RefNum>1.9.1</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Sin garantía</Topic>
+<Topic_en>No warranty</Topic_en>
+<Text>Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA. En el archivo LICENSE que acompaña a este programa se puede encontrar más información.</Text>
+<Text_en>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. See the LICENSE file provided with this program for more information.</Text_en>
+<Done>yes</Done>
+<RefNum>1.9.2</RefNum>
+</TEXT_PARA>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Requerimientos del sistema</Name>
+<Name_en>System Requirements</Name_en>
+<Ref>sysreq</Ref>
+<Done>yes</Done>
+<RefNum>1.10</RefNum>
+<HEADING4 item="y"
+line0="{*Name_en*}"
+line1="&lt;h4&gt;{*Name_en*}&lt;/h4&gt;"
+childtype="TEXT_PARA"
+icon="bullet_2">
+<Name type="Text">Linux</Name>
+<Name_en type="Text">Linux</Name_en>
+<Ref type="Text" ref="y">linux-sys</Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.10.1</RefNum>
+<TEXT_PARA item="y">
+<Topic>Bibliotecas</Topic>
+<Topic_en>Libraries</Topic_en>
+<Text>TreeLine necesita las siguientes bibliotecas y programas:</Text>
+<Text_en>TreeLine requires the following libraries and programs:</Text_en>
+<Done>yes</Done>
+<RefNum>1.10.1.1</RefNum>
+<TEXT_BULLETS_TODO item="y">
+<Topic>Qt</Topic>
+<Topic_en>Qt</Topic_en>
+<Text>Qt (Versión 2.3 o versión 3.x)</Text>
+<Text_en>Qt (Version 4.1 or higher)</Text_en>
+<Done>false</Done>
+<RefNum>1.10.1.1.1</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic>Python</Topic>
+<Topic_en>Python</Topic_en>
+<Text>Python (Versión 2.3 o superior - pero aún está disponible una versión anterior de TreeLine para aquellas personas que están atadas a versiones más antiguas de Python)</Text>
+<Text_en>Python (Version 2.3 or higher)</Text_en>
+<Done>false</Done>
+<RefNum>1.10.1.1.2</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS_TODO item="y">
+<Topic>PyQt</Topic>
+<Topic_en>PyQt</Topic_en>
+<Text>PyQt (Versión 2.4 o superior - ver &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; para más información)</Text>
+<Text_en>PyQt (Version 4.0 or higher - see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; for more information)</Text_en>
+<Done>false</Done>
+<RefNum>1.10.1.1.3</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Párser de XML</Topic>
+<Topic_en>XML parser</Topic_en>
+<Text>Es necesario un párser de XM, como la biblioteca expat o el paquete PyXML</Text>
+<Text_en>An XML parser is required, such as the expat library or the PyXML package</Text_en>
+<Done>yes</Done>
+<RefNum>1.10.1.1.4</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Corrector ortográfico</Topic>
+<Topic_en>Spell check</Topic_en>
+<Text>Si se desea disponer de la capacidad de comprobar la ortografía, se ha de instalar el programa aspell (preferiblemente) o ispell. Estos programas están empaquetados para casi todas las distribuciones.</Text>
+<Text_en>If spell checking capability is desired, either the aspell (preferred) or ispell programs are required (these are packaged with most distributions)</Text_en>
+<Done>yes</Done>
+<RefNum>1.10.1.1.5</RefNum>
+</TEXT_BULLETS>
+</TEXT_PARA>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Windows</Name>
+<Name_en>Windows</Name_en>
+<Ref>win-sys</Ref>
+<Done>yes</Done>
+<RefNum>1.10.2</RefNum>
+<TEXT_PARA item="y">
+<Topic>Binarios</Topic>
+<Topic_en>Binary</Topic_en>
+<Text>Si se usan los archivos incorporados en el instalador, TreeLine debería poder ejecutarse en Windows 95, 98, NT, 2000 o XP.</Text>
+<Text_en>Using the files provided in the installer, TreeLine should run on any computer running Win 95, 98, NT, 2000, or XP.</Text_en>
+<Done>yes</Done>
+<RefNum>1.10.2.1</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Comprobación de la ortografía</Topic>
+<Topic_en>Spell check</Topic_en>
+<Text>Si se desea la posibilidad de comprobar la ortografía de los textos, es necesario un programa externo. Se debe instalar bien aspell (preferiblemente) o ispell. Desde &lt;a href=&quot;http://aspell.net/win32/&quot;&gt;aspell.net/win32/&lt;/a&gt; o &lt;a href=&quot;http://www.luziusschneider.com/Speller/English/&quot;&gt; www.luziusschneider.com/Speller/English/&lt;/a&gt; se pueden descargar tanto los programas como los diccionarios para los idiomas que se desee.</Text>
+<Text_en>If spell checking capability is desired, an external program is required.  Either aspell (preferred) or ispell must be installed.  See &lt;a href=&quot;http://aspell.net/win32/&quot;&gt; aspell.net/win32/&lt;/a&gt; or &lt;a href=&quot;http://www.luziusschneider.com/Speller/English/&quot;&gt; www.luziusschneider.com/Speller/English/&lt;/a&gt; to download one of the programs and its dictionaries for any desired languages.</Text_en>
+<Done>yes</Done>
+<RefNum>1.10.2.2</RefNum>
+</TEXT_PARA>
+</HEADING4>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Instalación</Name>
+<Name_en>Installation</Name_en>
+<Ref>install</Ref>
+<Done>yes</Done>
+<RefNum>1.11</RefNum>
+<HEADING4 item="y">
+<Name>Linux</Name>
+<Name_en>Linux</Name_en>
+<Ref>linux-inst</Ref>
+<Done>yes</Done>
+<RefNum>1.11.1</RefNum>
+<TEXT_PARA item="y">
+<Topic>Instalación básica</Topic>
+<Topic_en>Basic install</Topic_en>
+<Text>Extrae los contenidos del archivo comprimido tar y en una terminal de comandos ejecuta &quot;cd TreeLine&quot; para cambiar de directorio. Para una instalación básica, basta con ejecutar el siguiente comando como root: &quot;python install.py&quot;</Text>
+<Text_en>Extract the source files from the treeline tar file, then change to the TreeLine directory in a terminal.  For a basic installation, simply execute the following command as root:  &quot;python install.py&quot;</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.1.1</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Opciones de instalación</Topic>
+<Topic_en>Install options</Topic_en>
+<Text>Para ver las opciones de instalación, usa &quot;python install.py -h&quot;&lt;br /&gt;&lt;br /&gt;
+
+Para instalar TreeLine en un directorio diferente del asignado por defecto  (/usr/local), usa:  &quot;python install.py -p /prefix/path&quot;</Text>
+<Text_en>To see all install options, use: &quot;python install.py -h&quot;&lt;br /&gt;&lt;br /&gt;
+
+To install TreeLine with a different prefix (the default is /usr/local), use:  &quot;python install.py -p /prefix/path&quot;</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.1.2</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Internacionalización</Topic>
+<Topic_en>Internationalization</Topic_en>
+<Text>Para instalar los archivos de traducción de TreeLine, es necesario dercargar el archivo comprimido &quot;treeline-i18n-...&quot; que coincida con el número de versión del archivo principal de TreeLine (ignorando la letra que hay añadida como sufijo al número de versión del archivo con las traducciones). Para instalar el programa y los archivos de traducción al mismo tiempo, hay que extraer los contenidos del archivo tar con las traducciones en el mismo directorio en el que se ha extraido el archivo tar con el programa principal, y ejecutar el mecanismo de instalación tal y como se ha descrito antes. Si TreeLine ya ha sido instalado con anterioridad, basta con extraer los archivos con la traducción en cualquier directorio y ejecutar el comando de instalación para las traducciones tal y como se ha descrito anteriormente.</Text>
+<Text_en>To install language translations for TreeLine, download the &quot;treeline-i18n-...&quot; tar file that matches the version number of the main TreeLine file (ignore the letter suffix on the translation version number).  To install the program and translation files simultaneously, extract the translation file from the same directory where the main treeline tar file was extracted and run the install command as described above.  If TreeLine is already installed, extract the translation file to any directory and run the translation's install command as described above.</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.1.4</RefNum>
+</TEXT_PARA>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Windows</Name>
+<Name_en>Windows</Name_en>
+<Ref>win-inst</Ref>
+<Done>yes</Done>
+<RefNum>1.11.2</RefNum>
+<TEXT_PARA item="y">
+<Topic>Instalación básica</Topic>
+<Topic_en>Basic install</Topic_en>
+<Text>Simplemente ejecuta el archivo instalador que has descargado (treeline-x.x.x-install.exe). Esto instalará el programa con sus bibliotecas y creará opcionalmente las asociaciones de ficheros y accesos directos.</Text>
+<Text_en>Simply execute the downloaded installation file (treeline-x.x.x-install.exe).  It will install the program with its libraries and optionally create file associations and shortcuts.</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.2.1</RefNum>
+</TEXT_PARA>
+<TEXT_PARA_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+generic="TEXT_PARA"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Topic type="Text">Actualización</Topic>
+<Topic_en type="Text">Upgrade</Topic_en>
+<Text type="Text" html="y" lines="12">Si ya tienes instalada y funcionando la versión 0.7.0 o superior de TreeLine, puedes descargarte un archivo más pequeño. Simplemente instala y ejecuta treeline-x.x.x-upgrade.exe para actualizar la instalación que ya tienes.</Text>
+<Text_en type="Text" html="y" lines="12">When doing a minor upgrade (only the last number in the revision varies), you can use a smaller download.  Simply install and execute treeline-x.x.x-upgrade.exe to upgrade the files from your previous installation.</Text_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text">1.11.2.2</RefNum>
+</TEXT_PARA_TODO>
+<TEXT_PARA item="y">
+<Topic>Comprobación de la ortografía</Topic>
+<Topic_en>Spell checker</Topic_en>
+<Text>Para usar el comprobador ortográfico, se ha de instalar un programa externo (aspell o ispell) (ver la sección &lt;a href=&quot;#sysreq&quot;&gt;Requerimientos del sistema&lt;/a&gt;).</Text>
+<Text_en>To use TreeLine's spell checker, an external program (aspell or ispell) must be installed (see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.2.3</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Internacionalización</Topic>
+<Topic_en>Internationalization</Topic_en>
+<Text>Para instalar los archivos de traducción de TreeLine, es necesario dercargar el archivo ejecutable &quot;treeline-i18n-...&quot; que coincida con el número de versión del archivo principal de TreeLine (ignorando la letra que hay añadida como sufijo al número de versión del archivo con las traducciones). Para instalarlo, simplemente ejecuta el archivo con las traducciones.</Text>
+<Text_en>To install language translations for TreeLine, download the &quot;treeline-i18n-...&quot; exe file that matches the version number of the main TreeLine file (ignore the letter suffix on the translation version number).  To install the translation files, simply execute the translation file.</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.2.5</RefNum>
+</TEXT_PARA>
+<TEXT_PARA item="y">
+<Topic>Modificación del código fuente</Topic>
+<Topic_en>Modify source code</Topic_en>
+<Text>Si deseas modificar el código fuente o escribir tus propios programas con PyQt para Windows, no uses el procedimiento descrito antes. En su lugar, deberás instalar Python (ver &lt;a href=&quot;http://www.python.org&quot;&gt; www.python.org&lt;/a&gt;), Qt (ver &lt;a href=&quot;http://www.trolltech.com&quot;&gt; www.trolltech.com&lt;/a&gt;), y PyQt (ver &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt;). A continuación extrae el código fuente de la versión para Linux (archivo treeline de tipo tar) en el directorio que prefieras y ejecuta el archivo treeline.py.</Text>
+<Text_en>If you wish to modify the source code or write your own PyQt programs for Windows, do not use the above procedure. Instead, you need to install Python (see &lt;a href=&quot;http://www.python.org&quot;&gt; www.python.org&lt;/a&gt;), Qt (see &lt;a href=&quot;http://www.trolltech.com&quot;&gt; www.trolltech.com&lt;/a&gt;), and PyQt (see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt;). Then extract the source code files from the Linux version (treeline tar file) to a directory of your choice and execute the treeline.py file.</Text_en>
+<Done>yes</Done>
+<RefNum>1.11.2.6</RefNum>
+</TEXT_PARA>
+</HEADING4>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Uso de TreeLine</Name>
+<Name_en>Using TreeLine</Name_en>
+<Ref>using</Ref>
+<Done>yes</Done>
+<RefNum>1.12</RefNum>
+<HEADING3 item="y"
+line0="{*Name_en*}"
+line1="&lt;hr /&gt;&lt;h3&gt;{*Name_en*}&lt;/h3&gt;"
+childtype="HEADING4"
+icon="bullet_2">
+<Name type="Text">Contenidos</Name>
+<Name_en type="Text">Contents</Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.12.1</RefNum>
+<CONTENTS_LINK item="y">
+<Name>Comenzando</Name>
+<Name_en>Getting Started</Name_en>
+<Link>start</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.1</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Introducción</Name>
+<Name_en>Introduction</Name_en>
+<Link>start-intro</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.1.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y"
+line0="{*Name_en*}"
+line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
+generic="CONTENTS_LINK_INDENT"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text">Templates</Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en">start-templates</Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Archivos de ejemplo</Name>
+<Name_en>Example Files</Name_en>
+<Link>start-example</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.1.2</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Lo básico</Name>
+<Name_en>Basics</Name_en>
+<Link>basics</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.2</RefNum>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Left Pane Views</Name_en>
+<Link>basics-left</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Right Pane Views</Name_en>
+<Link>basics-right</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Órdenes</Name>
+<Name_en>Commands</Name_en>
+<Link>basics-cmds</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.2.2</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Navegación por el árbol</Name>
+<Name_en>Tree Navigation</Name_en>
+<Link>nav</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.3</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Atajos de teclado</Name>
+<Name_en>Keyboard Shortcuts</Name_en>
+<Link>nav-keys</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.3.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Selection</Name_en>
+<Link>nav-select</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Búsquedas</Name>
+<Name_en>Searching</Name_en>
+<Link>nav-search</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.3.2</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Edición del árbol</Name>
+<Name_en>Tree Editing</Name_en>
+<Link>edit</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.4</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Menú de edición</Name>
+<Name_en>Edit Menu</Name_en>
+<Link>edit-menu</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.4.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Atajos</Name>
+<Name_en>Shortcuts</Name_en>
+<Link>edit-shortcuts</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.4.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Vistas en el lado derecho</Name>
+<Name_en>Right Pane Views</Name_en>
+<Link>edit-view</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.4.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Corrección ortográfica</Name>
+<Name_en>Spell Check</Name_en>
+<Link>edit-spell</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.4.4</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Formateo y tipos de nodos</Name>
+<Name_en>Formatting and Node Types</Name_en>
+<Link>format</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Asignación de nodos a un tipo</Name>
+<Name_en>Setting Nodes to a Type</Name_en>
+<Link>format-set</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Type List</Name_en>
+<Link>format-type</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Type Config</Name_en>
+<Link>format-config</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Field List</Name_en>
+<Link>format-fields</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Field Config</Name_en>
+<Link>format-fieldconf</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Output</Name_en>
+<Link>format-output</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Formato de títulos</Name>
+<Name_en>Title Formatting</Name_en>
+<Link>format-title</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Líneas no mostradas</Name>
+<Name_en>Skipped Lines</Name_en>
+<Link>format-skip</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.5</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Etiquetas de HTML</Name>
+<Name_en>HTML Tags</Name_en>
+<Link>format-html</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.6</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Ejemplos de formateo</Name>
+<Name_en>Formatting Examples</Name_en>
+<Link>format-example</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.7</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Otras referencias de campos</Name>
+<Name_en>Other Field References</Name_en>
+<Link>format-refs</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Sibling Prefix and Suffix</Name_en>
+<Link>format-sibling-text</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Link Reference Field</Name_en>
+<Link>format-link-ref</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipos genéricos y derivados</Name>
+<Name_en>Generic and Derived Types</Name_en>
+<Link>format-derived</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.11</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipos condicionales</Name>
+<Name_en>Conditional Types</Name_en>
+<Link>format-condition</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.12</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Copia de formatos</Name>
+<Name_en>Copying Formats</Name_en>
+<Link>format-copy</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.5.13</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Tipos de campos</Name>
+<Name_en>Field Types</Name_en>
+<Link>fields</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Opciones de los campos</Name>
+<Name_en>Field Options</Name_en>
+<Link>field-options</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipo de texto</Name>
+<Name_en>Text Type</Name_en>
+<Link>field-text</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipos de elección, combinación y booleanos</Name>
+<Name_en>Choice, Combination and Boolean Types</Name_en>
+<Link>field-choice</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipo numérico</Name>
+<Name_en>Number Type</Name_en>
+<Link>field-number</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipos de fecha y hora</Name>
+<Name_en>Date and Time Types</Name_en>
+<Link>field-date</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.5</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Tipos de enlaces</Name>
+<Name_en>Linking Types</Name_en>
+<Link>field-link</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.6</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Unique ID Type</Name_en>
+<Link>field-unique</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Opciones avanzadas</Name>
+<Name_en>Advanced Options</Name_en>
+<Link>field-advanced</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.6.7</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Manipulación de los datos de árbol</Name>
+<Name_en>Tree Data Manipulation</Name_en>
+<Link>data</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Órdenes basadas en categorías</Name>
+<Name_en>Category-based Commands</Name_en>
+<Link>data-category</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Órdenes basadas en referencias</Name>
+<Name_en>Reference-based Commands</Name_en>
+<Link>data-ref</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Ordenación</Name>
+<Name_en>Sorting</Name_en>
+<Link>data-sort</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Filtrado</Name>
+<Name_en>Filtering</Name_en>
+<Link>data-filter</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Numeración</Name>
+<Name_en>Numbering</Name_en>
+<Link>data-number</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.5</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Cambiar datos seleccionados</Name>
+<Name_en>Change Selections</Name_en>
+<Link>data-change</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.7.6</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Impresión</Name>
+<Name_en>Printing</Name_en>
+<Link>print</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.8</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Opciones de impresión</Name>
+<Name_en>Print Options</Name_en>
+<Link>print-options</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.8.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Page Setup</Name_en>
+<Link>print-setup</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Printer Font</Name_en>
+<Link>print-font</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Cabecera y pie de página</Name>
+<Name_en>Header and Footer</Name_en>
+<Link>print-header</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.8.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Vista previa</Name>
+<Name_en>Print Preview</Name_en>
+<Link>print-preview</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.8.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Problemas con la impresión</Name>
+<Name_en>Printing Problems</Name_en>
+<Link>print-problems</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.8.4</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Manejo de archivos</Name>
+<Name_en>File Handling</Name_en>
+<Link>file</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Compresión de archivos</Name>
+<Name_en>File Compression</Name_en>
+<Link>file-comp</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Codificación de archivos</Name>
+<Name_en>File Encryption</Name_en>
+<Link>file-enc</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Grabación automática</Name>
+<Name_en>Auto Save</Name_en>
+<Link>file-auto-save</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Grabación del estado del árbol</Name>
+<Name_en>Saved Tree States</Name_en>
+<Link>file-states</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Línea de órdenes</Name>
+<Name_en>Command Line</Name_en>
+<Link>file-cmdline</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.9.5</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Importación de archivos</Name>
+<Name_en>File Import</Name_en>
+<Link>import</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10</RefNum>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>General Information</Name_en>
+<Link>import-general</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Texto con tabulaciones</Name>
+<Name_en>Delimited Text</Name_en>
+<Link>import-delim</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Texto puro</Name>
+<Name_en>Plain Text</Name_en>
+<Link>import-plain</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Archivos de Treepad</Name>
+<Name_en>Treepad Files</Name_en>
+<Link>import-treepad</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Archivos de favoritos</Name>
+<Name_en>Bookmark Files</Name_en>
+<Link>import-bookmarks</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>XML genérico</Name>
+<Name_en>Generic XML</Name_en>
+<Link>import-xml</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.10.5</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>ODF Text Document</Name_en>
+<Link>import-odf</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Exportación de archivos</Name>
+<Name_en>File Export</Name_en>
+<Link>export</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11</RefNum>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>General Information</Name_en>
+<Link>export-general</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>HTML</Name>
+<Name_en>HTML</Name_en>
+<Link>export-html</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Texto</Name>
+<Name_en>Delimited Text</Name_en>
+<Link>export-delim</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Archivos de favoritos</Name>
+<Name_en>Bookmark Files</Name_en>
+<Link>export-bookmarks</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11.3</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>XML genérico</Name>
+<Name_en>Generic XML</Name_en>
+<Link>export-xml</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11.4</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>XSLT</Name>
+<Name_en>XSLT</Name_en>
+<Link>export-xslt</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.11.5</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>ODF Text Document</Name_en>
+<Link>export-odf</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+</CONTENTS_LINK>
+<CONTENTS_LINK_TODO item="y"
+line0="{*Name_en*}"
+line1="&lt;br /&gt;{*Link*}&lt;br /&gt;"
+generic="CONTENTS_LINK"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text">Customizations</Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en">custom</Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Options</Name_en>
+<Link>custom-options</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Fonts</Name_en>
+<Link>custom-fonts</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Keyboard Shortcuts</Name_en>
+<Link>custom-keys</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Toolbars</Name_en>
+<Link>custom-tools</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Colors</Name_en>
+<Link>custom-color</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Tree Icons</Name_en>
+<Link>custom-icons</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+</CONTENTS_LINK_TODO>
+<CONTENTS_LINK item="y">
+<Name>Extensiones</Name>
+<Name_en>Plugins</Name_en>
+<Link>plugins</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.12</RefNum>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Descripción</Name>
+<Name_en>Description</Name_en>
+<Link>plugins-intro</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.12.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Instalación</Name>
+<Name_en>Installation</Name_en>
+<Link>plugins-install</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.12.2</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Interfaz</Name>
+<Name_en>Interface</Name_en>
+<Link>plugins-intrf</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.12.3</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+<CONTENTS_LINK item="y">
+<Name>Problemas comunes</Name>
+<Name_en>Common Problems</Name_en>
+<Link>errors</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.13</RefNum>
+<CONTENTS_LINK_INDENT_TODO item="y">
+<Name_en>Closed Panes</Name_en>
+<Link>errors-panes</Link>
+<Done>false</Done>
+</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Error en XML</Name>
+<Name_en>XML Error</Name_en>
+<Link>errors-xml</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.13.1</RefNum>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Impresión</Name>
+<Name_en>Printing</Name_en>
+<Link>errors-print</Link>
+<Done>yes</Done>
+<RefNum>1.12.1.13.3</RefNum>
+</CONTENTS_LINK_INDENT>
+</CONTENTS_LINK>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Comenzando</Name>
+<Name_en>Getting Started</Name_en>
+<Ref>start</Ref>
+<Done>yes</Done>
+<RefNum>1.12.2</RefNum>
+<TEXT_HEAD_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
+line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+generic="TEXT_HEAD"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Topic type="Text">Introducción</Topic>
+<Topic_en type="Text">Introduction</Topic_en>
+<Text type="Text" html="y" lines="12">TreeLine es un programa más complejo de lo que podría parecer a simple vista. Se recomienda leer gran parte de esta documentación para poder aprender a usarlo de una forma eficiente.&lt;br /&gt;&lt;br /&gt;
+
+La sección &lt;a href=&quot;#basics&quot;&gt;Lo básico&lt;/a&gt; describe las vistas y la selección de datos. Para aprender a moverte por el árbol y a modificarlo están las secciones &lt;a href=&quot;#nav&quot;&gt;Navegación por el árbol&lt;/a&gt; y &lt;a href=&quot;#edit&quot;&gt;Edición del árbol&lt;/a&gt;. El siguiente paso consiste en usar TreeLine con más de una línea de texto para cada nodo. Para aprender a asignar datos personalizados a cada nodo, puedes mirar las secciones &lt;a href=&quot;#format&quot;&gt;Formateo y tipos de nodos&lt;/a&gt; y &lt;a href=&quot;#fields&quot;&gt;Tipos de campos&lt;/a&gt;.</Text>
+<Text_en type="Text" html="y" lines="12">TreeLine is a more complex program than it appears at first glance.  Reading much of this documentation is highly recommended in order to learn to use it effectively.&lt;br /&gt;&lt;br /&gt;
+
+The &lt;a href=&quot;#basics&quot;&gt;Basics&lt;/a&gt; section describes views and selections.  To learn how to move around and change the tree, refer to the &lt;a href=&quot;#nav&quot;&gt;Tree Navigation&lt;/a&gt; and &lt;a href=&quot;#edit&quot;&gt;Tree Editing&lt;/a&gt; sections.  Next, its time to go beyond using TreeLine with only simple text for each node.  To learn about setting up custom data for each node, refer to the &lt;a href=&quot;#format&quot;&gt;Formatting and Node Types&lt;/a&gt; and the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; sections.</Text_en>
+<Ref type="Text" ref="y">start-intro</Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text">1.12.2.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Templates</Topic_en>
+<Text_en>When starting a new file, the templates dialog gives a choice of nodes with a single line of text or with long text.  The single line template only has a node title, while the long text options have a title and a multiple line text field in each node.  For long text, you can also choose between plain text, which preserves line breaks, and HTML text, which allows more complex formatting.&lt;br /&gt;&lt;br /&gt;
+
+There are a few more specific options, including canned setups for personal contact information a book list and a to-do list.</Text_en>
+<Ref>start-templates</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y"
+line0="{*Topic_en*}"
+line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
+line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+icon="bullet_2">
+<Topic type="Text">Archivos de ejemplo</Topic>
+<Topic_en type="Text">Example Files</Topic_en>
+<Text type="Text" html="y" lines="12">Archivos de ejemplo</Text>
+<Text_en type="Text" html="y" lines="12">Various TreeLine sample files can be opened by using the &quot;File-&amp;gt;Open Sample&quot; command.  They include (roughly in order of increasing complexity):</Text_en>
+<Ref type="Text" ref="y">start-example</Ref>
+<Done type="Boolean" format="yes/no" init="true">yes</Done>
+<RefNum type="Text">1.12.2.2</RefNum>
+<TEXT_BULLETS item="y">
+<Topic>sample_basic_contacts</Topic>
+<Topic_en>sample_basic_contacts</Topic_en>
+<Text>El archivo &quot;sample_basic_contacts&quot; es un formato para almacenar información de contacto. Se usan diferentes campos para almacenar la información.</Text>
+<Text_en>The &quot;sample_basic_contacts&quot; file is a format for storing contact information.  Several fields are used for various pieces of information.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.1</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_basic_booklist</Topic>
+<Topic_en>sample_basic_booklist</Topic_en>
+<Text>El archivo &quot;sample_basic_booklist&quot; es una lista de libros, de tal forma que se muestra un ejemplo de configuración de nodos que contienen información. Se usan diferentes tipos de campos para crear los tipos de datos que almacenan la información sobre el autor y el libro.</Text>
+<Text_en>The &quot;sample_basic_booklist&quot; file is a list of books, providing an example of configuring nodes to contain data.  Several different field types are used to create author and book data types.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.2</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_basic_longtext</Topic>
+<Topic_en>sample_basic_longtext</Topic_en>
+<Text>El archivo &quot;sample_basic_longtext&quot; contiene un campo de texto largo bajo cada nodo, de forma parecida al programa Treepad. Además sirve para ilustrar la diferencia entre campos de texto simple y de texto HTML.</Text>
+<Text_en>The &quot;sample_basic_longtext&quot; file contains a long text field under each node, similar to the Treepad program.  It also shows the difference between plain text and HTML text fields.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.3</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_color_items</Topic>
+<Topic_en>sample_color_items</Topic_en>
+<Text>El archivo &quot;sample_color_items&quot; usa etiquetas HTML en los formatos de los tipos de datos para darle color a la salida. Ver también la sección &lt;a href=&quot;#format-html&quot;&gt;Etiquedas HTML&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_color_items&quot; file uses HTML tags in data type formats to provide color output. See also the &lt;a href=&quot;#format-html&quot;&gt;HTML Tags&lt;/a&gt; section.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.4</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS_TODO item="y">
+<Topic>sample_char_format</Topic>
+<Topic_en>sample_char_format</Topic_en>
+<Text>El archivo &quot;sample_char_format&quot; es un ejemplo del uso de etiquetas HTML para comtrolar el formato del texto de salida. Ver también la sección &lt;a href=&quot;#field-options&quot;&gt;Opciones de los campos&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_char_format&quot; file is an example of using HTML tags in the data to control font formatting.  See also the &lt;a href=&quot;#format-html&quot;&gt;HTML Tags&lt;/a&gt; and the &lt;a href=&quot;#field-options&quot;&gt;Field Options&lt;/a&gt; sections.</Text_en>
+<Done>false</Done>
+<RefNum>1.12.2.2.5</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>sample_bookmarks</Topic>
+<Topic_en>sample_bookmarks</Topic_en>
+<Text>El archivo &quot;sample_bookmarks&quot; es un ejemplo del uso de enlaces HTML externos. Contiene la configuración de archivo usada al importar o exportar archivos de favoritos.</Text>
+<Text_en>The &quot;sample_bookmarks&quot; file is an example of  using external HTML links.  This is the file setup that is used when importing or exporting bookmark files.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.6</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_intern_links</Topic>
+<Topic_en>sample_intern_links</Topic_en>
+<Text>El archivo &quot;sample_intern_links&quot; muestra cómo crear enlaces que conduzcan a otros puntos del archivo TreeLine. Ver también la sección &lt;a href=&quot;#field-link&quot;&gt;Tipos de enlaces&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_intern_links&quot; file shows how to do links that lead to elsewhere in the TreeLine file.  See also the &lt;a href=&quot;#field-link&quot;&gt;Linking Types&lt;/a&gt; section.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.7</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_table_booklist</Topic>
+<Topic_en>sample_table_booklist</Topic_en>
+<Text>El archivo &quot;sample_table_booklist&quot; muestra cómo se usan etiquetas HTML y prefijos y sufijos entre hermanos para crear tablas a en la salida. Ver también la sección &lt;a href=&quot;#format-advanced&quot;&gt;Configuración avanzada&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_table_booklist&quot; file shows how to use HTML tags and sibling prefixes and suffixes to create tables in the output.  See also the &lt;a href=&quot;#format-advanced&quot;&gt;Advanced Settings&lt;/a&gt; section.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.8</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>sample_other_fields</Topic>
+<Topic_en>sample_other_fields</Topic_en>
+<Text>El archivo &quot;sample_other_fields&quot; es un ejemplo de referencias alternativas para los campos, incluyendo referencias a los nodos ancestros, hijos e información de archivos. Ver también la sección &lt;a href=&quot;#format-refs&quot;&gt;Otras referencias de campos&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_other_fields&quot; file is an example of alternate field references, including references to ancestor nodes, child nodes and file information.  See also the &lt;a href=&quot;#format-refs&quot;&gt;Other Field References&lt;/a&gt; section.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.9</RefNum>
+</TEXT_BULLETS>
+<TEXT_BULLETS_TODO item="y">
+<Topic>sample_conditional_todo</Topic>
+<Topic_en>sample_conditional_todo</Topic_en>
+<Text>El archivo &quot;sample_conditional_todo&quot; muestra cómo usar tipos condicionales para cambiar la salida del nodo en función de los contenidos de éste. Ver también la sección 
+&lt;a href=&quot;#format-condition&quot;&gt;Tipos condicionales&lt;/a&gt;.</Text>
+<Text_en>The &quot;sample_conditional_todo&quot; shows how to use conditional types to change node output based on node content.  See also the &lt;a href=&quot;#format-derived&quot;&gt;Derived&lt;/a&gt; and &lt;a href=&quot;#format-condition&quot;&gt;Conditional Types&lt;/a&gt; sections.</Text_en>
+<Done>false</Done>
+<RefNum>1.12.2.2.10</RefNum>
+</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>readme</Topic>
+<Topic_en>readme</Topic_en>
+<Text>El propio archivo &quot;readme&quot; muestra diversos tipos de formato, incluyendo cabeceras, bullets, enlaces internos e imágenes.</Text>
+<Text_en>The &quot;readme&quot; file itself shows many types of formatting, including  headings, bullets, internal links and pictures.</Text_en>
+<Done>yes</Done>
+<RefNum>1.12.2.2.11</RefNum>
+</TEXT_BULLETS>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Lo básico</Name>
+<Name_en>Basics</Name_en>
+<Ref>basics</Ref>
+<Done>yes</Done>
+<RefNum>1.12.3</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Left Pane Views</Topic_en>
+<Text_en>The default view in the left pane is the &quot;Tree View&quot;.  Parent nodes can be opened and closed to display or hide their indented descendant nodes.&lt;br /&gt;&lt;br /&gt;
+
+The other tab in the left pane is the &quot;Flat View&quot;.  It displays all of the descendants of the nodes that are selected in the &quot;Tree View&quot; in a flat list.  It also shows the results of filtering operations (see the &lt;a href=&quot;#data-filter&quot;&gt;Filtering&lt;/a&gt; section).</Text_en>
+<Ref>basics-left</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Vistas</Topic>
+<Topic_en>Right Pane Views</Topic_en>
+<Text>La ventana de TreeLine está dividida en dos partes. La vista de la izquierda muestra la estructura completa del árbol, mientras que la de la derecha muestra diversa información sobre el nodo que está seleccionado en el árbol, en la vista izquierda.
+
+El panel derecho contiene además tres pestañas que permiten mostrar los datos de forma diferente. La vista &quot;Salida de datos&quot; muestra el texto con formato para cada nodo. La vista &quot;Editor de datos&quot; muestra una caja de edición de texto para cada uno de los campos de datos dentro del nodo. La vista &quot;Lista de títulos&quot; muestra una lista de títulos de los nodos que puede ser modificada usando los mecanismos habituales de los editores.&lt;br /&gt;&lt;br /&gt;</Text>
+<Text_en>The right pane is tabbed to show one of three different views of the data. The &quot;Data Output&quot; view shows the formatted text for each node and is read-only (see &lt;a href=&quot;#fig-1&quot;&gt;Figure 1&lt;/a&gt;). The &quot;Data Editor&quot; view shows a text edit box for each data field within a node (see &lt;a href=&quot;#fig-2&quot;&gt;Figure 2&lt;/a&gt;). The &quot;Title List&quot; view shows a list of node titles that can be modified using typical text editor methods.&lt;br /&gt;&lt;br /&gt;
+
+When a parent node is selected in the tree, the the right view will default to showing information about the selected node in an upper pane and information about the selected node's children in the lower pane.  The &quot;View-&amp;gt;Show Child Pane&quot; command will toggle the display of the child nodes.  If the selected node has no children, the view will show a single pane with information about the selected node only.&lt;br /&gt;&lt;br /&gt;
+
+When multiple nodes are selected in the tree, the right view will not display any child node information.  It will instead show information about every selected node.&lt;br /&gt;&lt;br /&gt;
+
+When the &quot;View-&amp;gt;Show Output Descendants&quot; command is toggled, the &quot;Data Output&quot; tab will show an indented list with information about every descendant of a single selected node.&lt;br /&gt;&lt;br /&gt;
+
+The initial state of the views can be controlled by changing the startup conditions in &quot;Tools-&amp;gt;General Options&quot;.&lt;br /&gt;&lt;br /&gt;
+
+By default, the number of nodes displayed simultaneously in the &quot;Data Editor&quot; view is limited.  Buttons in a heading allow the next or previous set of nodes to be displayed.  This provides a convenient way to page through the node information without slowing the program by trying to display too many fields.  The number of pages to display can be set in &quot;Tools-&amp;gt;General Options&quot;.</Text_en>
+<Ref>basics-right</Ref>
+<Done>false</Done>
+<RefNum>1.12.3.1</RefNum>
+<FIGURE_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;p&gt;{*Picture_en*}&lt;/p&gt;"
+line2="&lt;p&gt;&lt;b&gt;{*Caption_en*}&lt;/b&gt;&lt;/p&gt;"
+generic="FIGURE"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Topic type="Text"></Topic>
+<Topic_en type="Text">Output pane picture</Topic_en>
+<Caption type="Text" html="y" lines="2"></Caption>
+<Caption_en type="Text" html="y" lines="2">Figure 1:  Output Pane</Caption_en>
+<Picture type="Picture" html="y"></Picture>
+<Picture_en type="Picture" html="y">doc_main.png</Picture_en>
+<Ref type="Text" ref="y">fig-1</Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+</FIGURE_TODO>
+<FIGURE_TODO item="y">
+<Topic_en>Edit pane picture</Topic_en>
+<Caption_en>Figure 2:  Edit Pane</Caption_en>
+<Picture_en>doc_edit.png</Picture_en>
+<Ref>fig-2</Ref>
+<Done>false</Done>
+</FIGURE_TODO>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Órdenes</Topic>
+<Topic_en>Commands</Topic_en>
+<Text>La mayor parte de las órdenes del menu y de la barra de herramientas son aplicadas sobre los elementos seleccionados en la vista de la izquierda. En general, realizan una operación sobre los mismos nodos o sobre los descendientes de los nodos. Se pueden seleccionar múltiples nodos dejando presionada las teclas &quot;Control&quot; o &quot;Mays&quot; al mismo tiempo que se pulsa el elemento con el ratón. Algunas órdenes, como &quot;Archivo-&amp;gt;Exportar&quot; y &quot;Archivo-&amp;gt;Imprimir&quot; usan solamente los datos del nodo actual, que es mostrado con un rectángulo alrededor. La vista del lado derecho también hace referencia exclusivamente al nodo actual.&lt;br /&gt;&lt;br /&gt;
+
+Para añadir información a un documento nuevo de TreeLine, se usa la orden &quot;Editar-&amp;gt;Añadir hijo&quot;, que crea un nodo nuevo. A partir de ahí se pueden usar combinaciones de las órdenes añadir e insertar para crear nodos adicionales. De forma alternativa, se pueden escribir nuevos títulos de nodos en la &quot;Lista de títulos&quot; del panel derecho.</Text>
+<Text_en>Most of the menu and tool-bar commands apply to the items selected in the left view. In general, they perform an operation on the nodes themselves or on the descendants of the nodes. Multiple nodes can be selected by holding down the &quot;Ctrl&quot; and &quot;Shift&quot; buttons when clicking with the mouse.&lt;br /&gt;&lt;br /&gt;
+
+To add information to a new TreeLine document, use the &quot;Edit-&amp;gt;Add Child&quot; command to create a new node. Then combinations of the add and insert commands may be used for additional nodes. Alternatively, new node titles may be typed into the &quot;Title List&quot; view in the right pane.</Text_en>
+<Ref>basics-cmds</Ref>
+<Done>false</Done>
+<RefNum>1.12.3.2</RefNum>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Navegación por el árbol</Name>
+<Name_en>Tree Navigation</Name_en>
+<Ref>nav</Ref>
+<Done>yes</Done>
+<RefNum>1.12.4</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>Atajos de teclado</Topic>
+<Topic_en>Keyboard Shortcuts</Topic_en>
+<Text>Hay varias combinaciones de teclado que se pueden usar para la navegación por el árbol. Las teclas de flecha arriba y abajo mueven la selección. Las flechas izquierda y derecha abren y cierran el nodo actual. Mantener pulsada la tecla CONTROL y las flechas arriba y abajo permiten moverse entre nodos hermanos, evitando a los hijos. La tecla CONTROL y &quot;U&quot; hacen que el cursor se mueva al elemento padre. Las techas &quot;Inicio&quot;, &quot;Fin&quot;, &quot;AvPág&quot; y &quot;RePág&quot; se pueden usar para desplazarse sápidamente por el árbol. Mantener la tecla MAYS con las teclas &quot;AvPág&quot; y &quot;RePág&quot; hará que se produzca un desplazamiento en la visualización del hijo en la vista derecha.&lt;br /&gt;&lt;br /&gt;
+
+Todas estas teclas y los atajos del teclado para las órdenes de los menúes desplegables pueden ser personalizados si se modifica el archivo de configuración de TreeLine (&quot;~/.treeline&quot; en Linux, &quot;treeline.ini&quot; en Windows).&lt;br /&gt;&lt;br /&gt;
+
+Otra forma de moverse a través del árbol es escribir la primera letra del título de un nodo visible. Escribir la letra en minúsculas hace que el movimiento sea hacia abajo, y en mayúsculas hacia arriba. Pulsar de nuevo la misma letra hace que se mueva el cursor hasta la siguiente posibilidad.</Text>
+<Text_en>There are several keyboard commands that can be used for tree navigation. The up and down arrow keys move the selection. The left and right arrows open and close the current node. Holding the CTRL and SHIFT keys with &quot;J&quot; or &quot;K&quot; moves between siblings, skipping children. The CTRL key and &quot;U&quot; moves to an item's parent. The &quot;Home&quot;, &quot;End&quot;, &quot;Page Up&quot; and &quot;Page Down&quot; keys can be used to move quickly through the tree.  The CTRL and SHIFT keys can be held with the &quot;Page Up&quot; and &quot;Page Down&quot; keys to move the tree view even when a different pane is focused.&lt;br /&gt;&lt;br /&gt;
+
+All of these keys and the keyboard shortcuts for pull-down menu commands can be customized by using the &quot;Tools-&amp;gt;Set Keyboard Shortcuts&quot; command.  The shortcut editor has tabs for menu and non-menu based commands.  Simply type the new key sequence with the appropriate field selected.&lt;br /&gt;&lt;br /&gt;
+
+Another way to move through the tree is to type the first letter of a visible node title. Hitting the letter again moves to the next possibility.</Text_en>
+<Ref>nav-keys</Ref>
+<Done>false</Done>
+<RefNum>1.12.4.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Selection</Topic_en>
+<Text_en>Multiple nodes can be selected by holding down the CTRL or the SHIFT keys when changing the active node.  Individual nodes are added or removed from the selection when the CTRL key is held.  The selection of all nodes between the old and new active nodes are toggled when SHIFT is held.  The active node can be changed by using the mouse or by using any of the keyboard navigation methods.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;View-&amp;gt;Previous Selection&quot; and &quot;View-&amp;gt;Next Selection&quot; commands can be used to toggle through a history of selections, allowing faster navigation through the tree.&lt;br /&gt;&lt;br /&gt;
+
+By default, the selection sequence doesn't matter.  However, if the general option for multiple selection is changed to &quot;Selection Order&quot;, nodes selected with CTRL key held are output in the order selected.</Text_en>
+<Ref>nav-select</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Búsquedas</Topic>
+<Topic_en>Searching</Topic_en>
+<Text>Hay varias formas de buscar nodos. Estos métodos permiten localizar nodos que estén enterrados dentro de la estructura del árbol. La primera forma es el comando &quot;Herramientas-&amp;gt;Buscar&quot; . Aparecerá un diálogo no bloqueante en el que se pueden introducir las palabras clave para realizar la búsqueda. El nodo encontrado será el que tenga las palabras clave en cualquiera de sus campos. La siguiente forma es la búsqueda incremental. Si se escribe el caracter &quot;/&quot; y a continuación la cadena de búsqueda, ésta se realizará al mismo tiempo que se esté escribiendo la cadena deseada. La búsqueda incremental solamente es capaz de encontrar textos en los títulos de los nodos. La búsqueda anterior puede ser repetida pulsando la tecla &quot;F3&quot;, y se puede repetir en dirección inversa con la combinación de teclas &quot;Mays-F3&quot;&lt;br /&gt;&lt;br /&gt;
+
+Por defecto, los nodos padre se abrirán y cerrarán cuando se encuentren nodos con las herramientas de búsqueda, escribiendo su primera letra, y con la acción del teclado &quot;hermano siguiente&quot;. Se puede deshabilitar este comportamiento en &quot;Herramientas-&amp;gt;Opciones generales&quot;.</Text>
+<Text_en>There are two ways to search for nodes. These methods can find nodes that are buried in the tree structure. The first is the &quot;Tools-&amp;gt;Find&quot; command. Keywords can be entered in a modeless dialog box. A node is found if the keywords are matched in any of the node's fields.  The matching text will highlight in the &quot;Data Output&quot; pane.&lt;br /&gt;&lt;br /&gt;
+
+The next method is an incremental search, started by typing CTRL + &quot;/&quot;.  Then type the search string, which shows up in the lower status bar area. The search will progress as the string is being typed. The incremental search only finds text in the node's titles.  The previous search can be repeated with the &quot;F3&quot; key and backward with &quot;Shift-F3&quot;.&lt;br /&gt;&lt;br /&gt;
+
+By default, parent nodes will automatically open and close when found with the search methods, by typing the first letter, and with the &quot;next sibling&quot; keyboard command. This behavior can be disabled in &quot;Tools-&amp;gt;General Options&quot;.</Text_en>
+<Ref>nav-search</Ref>
+<Done>false</Done>
+<RefNum>1.12.4.2</RefNum>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Edición del árbol</Name>
+<Name_en>Tree Editing</Name_en>
+<Ref>edit</Ref>
+<Done>yes</Done>
+<RefNum>1.12.5</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>Menú de edición</Topic>
+<Topic_en>Edit Menu</Topic_en>
+<Text>Los comandos en el menú &quot;Editar&quot; (exceptuando los de deshacer y rehacer) operan sobre los nodos que estén seleccionados en la vista en árbol del lado izquierdo. Las operaciones de cortar, copiar y pegar también pueden considerarse una excepción a esta norma, ya que también pueden operar en la vista derecha en el caso de que haya algo seleccionado allí. Es importante que tengas pendiente que también resultan afectados los descendientes de los nodos seleccionados.&lt;br /&gt;&lt;br /&gt;
+
+Pegar añadirá una copia del nodo como el último hijo del nodo actual. De forma alternativa, el comando &quot;Editar-&amp;gt;Pegar texto del nodo&quot; cambiará de nombre la selección en base a lo que haya en el nodo superior en el portapapeles.</Text>
+<Text_en>The commands in the &quot;Edit&quot; menu (except for undo and redo) operate on the selected nodes in the left tree view. The cut, copy and paste commands can be an exception to this, since they operate on the right view when something is selected there. And keep in mind that, in general, the descendants of the selected nodes are also affected.&lt;br /&gt;&lt;br /&gt;
+
+Paste will add a copied nodes as the last child of the selected node.  If more than one node is selected, additional copies are added under each selected node.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Edit-&amp;gt;Paste Node Text&quot; command renames the selection based on either the text in the clipboard or the title of the top node in the clipboard.</Text_en>
+<Ref>edit-menu</Ref>
+<Done>false</Done>
+<RefNum>1.12.5.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Atajos</Topic>
+<Topic_en>Shortcuts</Topic_en>
+<Text>Hay numerosos atajos que se pueden usar para la edición en el árbol. Usando el mecanismo de arrastrar y soltar se conseguirá mover o copiar archivos de tal forma que se conviertan en hijos del nodo de destino. Pulsando sobre un nodo seleccionado se porá cambiar su nombre. Pulsar la tecla enter insertará un nuevo nodo, y la tecla suprimir causará la eliminación de los nodos que estén seleccionados. Si se desea, se puede deshabilitar estos atajos en &quot;Herramientas-&amp;gt;Opciones generales&quot;.</Text>
+<Text_en>There are several shortcuts for use in tree editing. Drag and drop will move or copy nodes to become a children of the destination node. Clicking on a selected node will rename it. Pressing the enter key will insert a new node, and pressing the delete key will remove the selected nodes. If desired, these shortcuts can be disabled in &quot;Tools-&amp;gt;General Options&quot;.</Text_en>
+<Ref>edit-shortcuts</Ref>
+<Done>yes</Done>
+<RefNum>1.12.5.2</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Vistas en el lado derecho</Topic>
+<Topic_en>Right Pane Views</Topic_en>
+<Text>En el panel derecho, el &quot;Editor de datos&quot; aporta la forma más directa de cambiar los datos dentro de un nodo. Si el campo modificado es usado en el formato del título, el título del nodo mostrará los cambios. El editor de campos se puede desplazar, permitiendo la inserción de múltiples líneas de texto.&lt;br /&gt;&lt;br /&gt;
+
+Hay elementos en los menús contextuales del editor de datos para añadir etiquetas de tipo fuente alrededor del texto que se halle seleccionado. Estas etiquetas incluyen negrita, itálica, subrayado, tamaño y color. Para que esto sea válido, ha de permitirse a estos campos mostrar contenido en HTML (ver la sección &lt;a href=&quot;#fields&quot;&gt;Tipos de campos&lt;/a&gt;) .&lt;br /&gt;&lt;br /&gt;
+
+Se puede utilizar un editor externo con la opción &quot;Editor externo&quot; del menú contextual. Una vez que se graben los datos modificados con el editor externo seleccionado, el texto de la caja cambiará. Se puede usar la variable de entorno EDITOR para especificar qué editor debe usarse. Si dicha variable no existe, TreeLine preguntará por el editor que se desea usar por defecto.&lt;br /&gt;&lt;br /&gt;
+
+También en el panel derecho está la vista &quot;Lista de títulos&quot;, útil para poder cambiar los títulos de los nodos hijos, o para crear hijos nuevos. Es posible además pegar directamente en esta vista una lista de nuevos nodos como un simple texto.</Text>
+<Text_en>In the right pane, the &quot;Data Editor&quot; view provides the most direct way to edit the data within a node. If the edited field is used in the title formatting, the node title in the tree will show the changes. The field editor will scroll, allowing multiple lines of text to be entered.&lt;br /&gt;&lt;br /&gt;
+
+There are items in the &quot;Data Editor&quot; box context menus to add HTML font tags around selected text. These tags include bold, italics, underline, size and color. Note that the fields must be set to display HTML content (see the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; section) for this to be effective.&lt;br /&gt;&lt;br /&gt;
+
+An external editor can also be invoked from a &quot;Data Editor&quot; box context menu.   After the text editor saves changes and is closed, the changed text will be in the text box.  The EDITOR environment variable can be used to specify the editor to start, or, if the variable doesn't exist, TreeLine will prompt for an executable to set as the default.&lt;br /&gt;&lt;br /&gt;
+
+Also in the right pane, the &quot;Title List&quot; view is useful to quickly rename child titles or to add new child nodes. A text list of new nodes can even be pasted directly into this view.</Text_en>
+<Ref>edit-view</Ref>
+<Done>yes</Done>
+<RefNum>1.12.5.3</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Corrección ortográfica</Topic>
+<Topic_en>Spell Check</Topic_en>
+<Text>En el menú &quot;Herramientas&quot; está disponible el comando para realizar correcciones ortográficas. Para poder usar este comando es necesario tener instalado un programa externo (aspell o ispell - ver la sección &lt;a href=&quot;#sysreq&quot;&gt;Requerimientos del sistema&lt;/a&gt;). Si hay alguna palabra mal escrita en la rama seleccionada, se podrá optar desde un diálogo por ignorarla, añadirla al diccionario, reemplazarla por una sugerencia del programa o modificarla. Este mecanismo permite comprobar el texto de todos los campos de datos de cada nodo.&lt;br /&gt;&lt;br /&gt;
+
+Por defecto el comprobador ortográfico usará el idioma actual seleccionado en el sistema operativo sobre el que se ejecute. Si se usa aspell, existe una opción en &quot;Herramientas-&amp;gt;Opciones de archivo&quot; para especificar en dos letras el código del idioma para el archivo actual de TreeLine. Por supuesto, los diccionarios necesarios de aspell han de estar instalados en el sistema. Esta opción no funciona con ispell.</Text>
+<Text_en>There is a spell check command in the &quot;Tools&quot; menu.  Use of this command requires an external program to be installed (either aspell or ispell - see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).  If there are any misspelled words in the selected branch, a dialog will allow the word to be ignored, added to the dictionary, replaced with a suggestion or edited.  This will spell check the text in all data fields of each node.&lt;br /&gt;&lt;br /&gt;
+
+By default, the spell check will use dictionaries for the current operating system language.  If using aspell, there is an option under &quot;Tools-&amp;gt;File Options&quot; to specify an alternate two-letter language code for the current TreeLine file.  Note that the appropriate aspell dictionary files must be installed and that this option does not work with ispell.</Text_en>
+<Ref>edit-spell</Ref>
+<Done>yes</Done>
+<RefNum>1.12.5.4</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Formateo y tipos de nodos</Name>
+<Name_en>Formatting and Node Types</Name_en>
+<Ref>format</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6</RefNum>
+<TEXT_HEAD item="y">
+<Topic>Asignación de nodos a un tipo</Topic>
+<Topic_en>Setting Nodes to a Type</Topic_en>
+<Text>Por defecto, un documento de TreeLine recién creado contiene dos tipos de nodos: &quot;RAÍZ&quot; y &quot;PREDETERMINADO&quot;. El tipo es mostrado en lo alto de cada caja de datos de un nodo en el &quot;Editor de datos&quot; de la vista derecha. A continuación se describirá la creación de tipos nuevos y la personalización de tipos. Para asignar los nodos seleccionados a un tipo concreto, usa el menú &quot;Datos-&amp;gt;Configurar el tipo de nodo&quot;. Por otra parte, para asignar una serie de nodos hijos y descendientes a un tipo determinado, hay que usar el comando &quot;Datos-&amp;gt;Configurar el tipo de los descendientes&quot;. El cuadro de diálogo resultante permitirá cambiar al tipo elegido los nodos seleccionados, sus hijos, todos los descendientes o los descendientes que cumplan determinadas condiciones lógicas. El cuadro de diálogo se puede mantener abierto mientras se modifica la selección de elementos del árbol para asignar más nodos.</Text>
+<Text_en>By default, a new TreeLine document contains two node types: &quot;ROOT&quot; and &quot;DEFAULT&quot;. The type is shown at the top of each node box in the &quot;Data Editor&quot; right-hand view. The creation of new types and the customization of types is described below. To set the selected nodes to a specific type, use the &quot;Data-&amp;gt;Set Item Type&quot; menu. Alternately, to set a series of child and descendant nodes to a specific type, use the &quot;Data-&amp;gt;Set Descendant Types&quot; command. The resulting dialog box allows the selected nodes, their children, all descendants, or descendants matching logical conditions to be set to the highlighted type. The dialog box can be left open while the tree selection is changed to set more nodes.</Text_en>
+<Ref>format-set</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.1</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Type List</Topic_en>
+<Text_en>The &quot;Type List&quot; is the first tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  The list of data types can be modified by the buttons on the right.  New types can be added, and existing types can be copied, renamed or deleted.</Text_en>
+<Ref>format-type</Ref>
+<Done>no</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Type Config</Topic_en>
+<Text_en>&quot;Type Config&quot; is the second tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  It contains a selection for the default child type.  If set, this will be the initial type used for new children with this type of parent.  If set to &quot;[None]&quot;, children will default to either the type of their siblings or their parent.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Change Icon&quot; button allows the selection of a custom tree icon for this data type.  The &quot;Clear Select&quot; button on the icon dialog can be used to set the icon to &quot;None&quot;, so that no icon will be displayed for this type.   To avoid showing any tree icons, the &quot;Show icons in the tree view&quot; general option can be unset.</Text_en>
+<Ref>format-config</Ref>
+<Done>no</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Field List</Topic_en>
+<Text_en>The &quot;Field List&quot; is the third tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  The list of fields within a data type can be modified by using the buttons on the right.  New fields can be added, and existing fields can be moved up and down in the list, renamed or deleted.</Text_en>
+<Ref>format-fields</Ref>
+<Done>no</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Field Config</Topic_en>
+<Text_en>&quot;Field Config&quot; is the fourth tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; (see &lt;a href=&quot;#fig-3&quot;&gt;Figure 3&lt;/a&gt;).  The field type and its output format string can be set (see the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; section for details).  Extra prefix and suffix text to be output with the field can also be set, and a default field value for new nodes can be entered.  There is a choice between plain text, which preserves line breaks, and HTML text, which allows various formatting options.  Finally, the number of lines displayed in the editor for the field can be specified.</Text_en>
+<Ref>format-fieldconf</Ref>
+<Done>no</Done>
+<FIGURE_TODO item="y">
+<Topic_en>Field config picture</Topic_en>
+<Caption_en>Figure 3:  Field Config Tab</Caption_en>
+<Picture_en>doc_fieldconf.png</Picture_en>
+<Ref>fig-3</Ref>
+<Done>false</Done>
+</FIGURE_TODO>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Output</Topic_en>
+<Text_en>&quot;Output&quot; is the last tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; (see &lt;a href=&quot;#fig-4&quot;&gt;Figure 4&lt;/a&gt;).  The left half of the dialog shows the fields.  The right half shows the formatting for the title (used for the node text in the tree view) and the node output. The formatting consists of text lines with embedded fields. The fields are shown as &quot;{*field_name*}&quot;. The field that is selected in the list can be added to a format at the cursor position with the &quot;&amp;gt;&amp;gt;&quot; keys.  The format field reference at the cursor can be removed with the &quot;&amp;lt;&amp;lt;&quot; keys.</Text_en>
+<Ref>format-output</Ref>
+<Done>no</Done>
+<FIGURE_TODO item="y">
+<Topic_en>Output tab picture</Topic_en>
+<Caption_en>Figure 4:  Output Tab</Caption_en>
+<Picture_en>doc_output.png</Picture_en>
+<Ref>fig-4</Ref>
+<Done>false</Done>
+</FIGURE_TODO>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Formato de títulos</Topic>
+<Topic_en>Title Formatting</Topic_en>
+<Text>Cuando se cambia de nombre un nodo del árbol, el programa intenta ajustarse al patrón de formato del título para asignar los campos adecuados. Si el formato del título es muy complejo, puede que no sea capaz de averiguarlo correctamente. Se debe evitar hacer algunas cosas, como poner como campos adyacentes sin caracteres que los separe, a menos que no se desee renombrar los nodos desde el árbol.&lt;br /&gt;&lt;br /&gt;
+
+Si los datos de texto usados para la vista del título en el árbol tienen varias líneas, solamente se usará la primera como título.</Text>
+<Text_en>When a node in the tree is renamed, the program attempts to match the title formatting pattern to set the appropriate fields. If the title formatting is too complex, it may not correctly guess the intent. Things like adjacent fields with no characters separating them should be avoided unless you do not wish to rename nodes from the tree.&lt;br /&gt;&lt;br /&gt;
+
+If the text data used for a tree view title has multiple lines, only the first line will be used as the title.</Text_en>
+<Ref>format-title</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.4</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Líneas no mostradas</Topic>
+<Topic_en>Skipped Output Lines</Topic_en>
+<Text>Si una línea en el formateo de la salida contiene uno o más campos y todos esos campos para un nodo determinado están vacíos, la línea no será mostrada. No se generará ninguna línea en blanco ni texto embebido como salida para esa línea. Esto no se aplicará a las líneas en la que no exista ningún campo (que solamente contengan texto embebido). Asímismo, cuando se salte una línea que termine con una etiqueta &amp;lt;br/&amp;gt; o &amp;lt;hr/&amp;gt;, la etiqueta final se mantendrá.</Text>
+<Text_en>If a line in the output formatting contains one or more fields and all of those fields for a given node are empty, the line is skipped. No blank line or embedded text will be output for that line. Note that this does not apply to a line without any fields (only embedded text). Also, when a line ending with a &amp;lt;br/&amp;gt; or an &amp;lt;hr/&amp;gt; tag is skipped, the ending tag is retained.</Text_en>
+<Ref>format-skip</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.5</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Etiquetas de HTML</Topic>
+<Topic_en>HTML Tags</Topic_en>
+<Text>Se pueden usar etiquetas simples de formato en HTML en los formatos de salida de los nodos. Alguna de las etiquetas que más se usan son &quot;&amp;lt;b&amp;gt;negrita&amp;lt;/b&amp;gt;&quot;, &quot;&amp;lt;u&amp;gt;subrayado&amp;lt;/u&amp;gt;&quot;, &quot;salto de línea&amp;lt;br/&amp;gt;&quot;, &quot;&amp;lt;hr/&amp;gt;línea horizontal&quot;, y algunas etiquetas de fuentes de letras. En general se debe evitar usar bloques de etiquetas complejos. Cuando la opción &quot;Permitir texto enriquecido en HTML en los formatos&quot; está desactivada, las etiquetas de formato son tratadas como texto puro. Para ver un ejemplo del uso de etiquetas, se puede ver el archivo &quot;sample_color_items&quot; (usando la órden &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).&lt;br /&gt;&lt;br /&gt;
+
+Se añade siempre de forma automática a la salida un salto de línea tras cada línea de formato, a menos que no esté activada la opción &quot;Añadir salto de línea tras cada línea&quot;. Además, la opción &quot;Añadir líneas en blanco entre los nodos&quot; determina si se debe introducir de forma automática una línea en blanco entre la salida de los nodos. Se puede usar una etiqueta de salto de línea (&quot;&amp;lt;br&amp;gt;&quot;) al final del formato para obtener el mismo efecto, o una etiqueta de línea horizontal (&quot;&amp;lt;hr&amp;gt;&quot;) si se prefiere usar ésta para separar los nodos.</Text>
+<Text_en>Simple HTML formatting tags can be used in node output formats. Commonly used tags include &quot;&amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;&quot;, &quot;&amp;lt;u&amp;gt;underline&amp;lt;/u&amp;gt;&quot;, &quot;line break&amp;lt;br/&amp;gt;&quot;, &quot;&amp;lt;hr/&amp;gt;horizontal line&quot;, and various font tags. Complex block tags should generally be avoided. When the &quot;Allow HTML rich text in formats&quot; file option is disabled, formatting tags are treated as plain text.  For an example of tag use, see the &quot;sample_color_items&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).&lt;br /&gt;&lt;br /&gt;
+
+A line break is automatically output after each formatting line, unless the &quot;Add line breaks after each line&quot; file option is unset.  In addition, the &quot;Add blank lines between nodes&quot; file option determines whether there is also an automatic blank line between node outputs. A line break tag (&quot;&amp;lt;br&amp;gt;&quot;) can be used at the end of the formatting to get the same effect, or a horizontal line tag (&quot;&amp;lt;hr&amp;gt;&quot;) may be used instead to separate the nodes.</Text_en>
+<Ref>format-html</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.6</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Ejemplos de formateo</Topic>
+<Topic_en>Formatting Examples</Topic_en>
+<Text>Aquí se puede ver un ejemplo de formato de salida para una lista de libros:&lt;br /&gt;&lt;br /&gt;
+
+&amp;lt;hr/&amp;gt;&quot;{*Title*}&quot;&lt;br /&gt;
+(c) {*Copyright*}, Rating: {*Rating*}&lt;br /&gt;
+{*PlotDescription*}&lt;br /&gt;&lt;br /&gt;
+
+En la distribución del programa se incluyen archivos de ejemplo con diferentes tipos de formato. Se pueden abrir usando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;. Asímismo hay una lista de dichos archivos en la sección &lt;a href=&quot;#start-example&quot;&gt;Archivos de ejemplo&lt;/a&gt;.</Text>
+<Text_en>Here is an example of output formatting for a book list:&lt;br /&gt;&lt;br /&gt;
+
+&amp;lt;hr/&amp;gt;&quot;{*Title*}&quot;&lt;br /&gt;
+(c) {*Copyright*}, Rating: {*Rating*}&lt;br /&gt;
+{*PlotDescription*}&lt;br /&gt;&lt;br /&gt;
+
+Sample files with various kinds of formatting are included in the program distribution.  They can be opened by using the &quot;File-&amp;gt;Open Sample&quot; command.  They are also listed in the &lt;a href=&quot;#start-example&quot;&gt;Example Files&lt;/a&gt; section.</Text_en>
+<Ref>format-example</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.7</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Otras referencias de campos</Topic>
+<Topic_en>Other Field References</Topic_en>
+<Text>Las referencias a campos de lo nodos padre y abuelo son mostradas como &quot;{**nombre_campo*}&quot; y &quot;{***nombre_campo*}&quot;, respectivamente. Puede haber también referencias a ancestros genéricos, que se muestran como &quot;{*?nombre_campo*}&quot;, y que obtienen la información del ancestro más cercano que tenga un campo coincidente.&lt;br /&gt;&lt;br /&gt;
+
+Se puede añadir estas referencias con el botón &quot;Otros campos&quot; en la parte del diálogo correspondiente al campo. Será necesario introducir el nivel de parentesco (cualquier ancestro, padre, abuelo, etc.) y el tipo de dato del ancestro. El botón &quot;&amp;gt;&amp;gt;&quot; sirve para añadir los campos seleccionados al formato.&lt;br /&gt;&lt;br /&gt;
+
+Se pueden añadir asímismo referencias a nodos hijos desde el diálogo &quot;Otros campos&quot;. La información del hijo es introducida entonces en la salida del padre. La información del hijo está delimitada por una cadena de texto definida como opción del archivo. El separador es por defecto una coma y un espacio, pero se puede asignar a &amp;lt;br&amp;gt; o a cualquier otra cosa.&lt;br /&gt;&lt;br /&gt;
+
+El diálogo &quot;Otros campos&quot; contiene además información de referencia a otros archivos. Estos campos contienen meta-datos que incluyen el nombre del archivo, ubicación, tamaño e instante de modificación. En el título y en los editores de formato de la salida aparecerán como &quot;{*!nombre_campo*}&quot;.&lt;br /&gt;&lt;br /&gt;
+
+Para ver ejemplos de estos campos, se puede mirar el archivo &quot;sample_other_fields&quot; (ejecutando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).</Text>
+<Text_en>References to fields that are not contained within the node can be added to the output.  Pushing the &quot;Show Advanced&quot; button on the &quot;Output&quot; tab of the configure dialog makes a reference level selection become visible.&lt;br /&gt;&lt;br /&gt;
+
+If the reference level is changed to &quot;File Info Reference&quot;, fields containing file meta-data can be added to the output.  These include the file name, path, size, and modified time. These are shown as &quot;{*!field_name*}&quot; in the title and output format editors.&lt;br /&gt;&lt;br /&gt;
+
+There are field references to various ancestor nodes (parents, grandparents, etc.).  These require the data type of the reference to be specified.  This selection determines the field names that are available, but the data from any type with a matching field name will be shown in the output.  References to fields from parent and grandparent nodes are shown as &quot;{**field_name*}&quot; and &quot;{***field_name*}&quot;, respectively. There are also general ancestor references, shown as &quot;{*?field_name*}&quot;, that take data from the closest ancestor with a matching field.&lt;br /&gt;&lt;br /&gt;
+
+References to child nodes can also be added.  These also require that the child data type be specified.  The child data becomes embedded in the parent output.  The child data is delimited with a separator string defined as a file option.  The separator defaults to a comma and a space, but can be set to &amp;lt;br&amp;gt; or anything else.&lt;br /&gt;&lt;br /&gt;
+
+Finally, a &quot;Child Count&quot; reference can be added.  This field will show the number of children (&quot;Level1&quot; field) or grandchildren (&quot;Level2&quot; field) of a node.  These are shown as {*#Level1*} in the format editors.&lt;br /&gt;&lt;br /&gt;
+
+For examples of these fields, see the &quot;sample_other_fields&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
+<Ref>format-refs</Ref>
+<Done>false</Done>
+<RefNum>1.12.6.3</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Configuración avanzada</Topic>
+<Topic_en>Sibling Prefix and Suffix</Topic_en>
+<Text>El botón &quot;Avanzado&quot; en el diálogo &quot;Configurar tipos de datos&quot; saca opciones de configuración adicionales. La primera permite asignar uno de los campos como campo de referencia, usado por los comandos de organización y aplanado de datos por referencia y para las referencias de enlaces internos. El campo de referencia es el primer campo por defecto.&lt;br /&gt;&lt;br /&gt;
+
+El diálogo avanzado también tiene controles para asignar etiquetas de prefijo y sufijo para los hermanos. Estas etiquetas a menudo son dejadas en blanci, pero pueden ser útiles para crear tablas o listas indentadas con puntos. Estas etiquetas serán situadas antes y después de los grupos de hermanos del tipo adecuado. Por ejemplo, para crear una tabla de salida, la etiqueta de prefijo de los hermanos podría asignarse a  &quot;&amp;lt;table border=&quot;1&quot;&amp;gt;&quot;, y la de sufijo a &quot;&amp;lt;/table&amp;gt;&quot;. El formato de salida podría entonces asignarse a:&lt;br /&gt;&lt;br /&gt;
+
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&quot;{*Title*}&quot;&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;(c)  {*Copyright*}&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&lt;br /&gt;&lt;br /&gt;
+
+Se puede ver además el archivo de ejemplo &quot;sample_table_booklist&quot;  (usando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).&lt;br /&gt;&lt;br /&gt;
+
+Los hermanos deberían ser generalmente del mismo tipo, o al menos tener las mismas etiquetas de prefijo y sufijo.</Text>
+<Text_en>Pushing the &quot;Show Advanced&quot; button on the &quot;Type Config&quot; tab of the configure dialog makes a sibling text section become visible, with settings for sibling prefix and suffix tags.  These tags can often be left blank, but are useful for creating tables or bulleted lists.  These tags will be placed before and after sibling groups of the proper type.  For example, to create an output table, the sibling prefix tag could be set to &quot;&amp;lt;table border=&quot;1&quot;&amp;gt;&quot; and the suffix tag could be set to &quot;&amp;lt;/table&amp;gt;&quot;.  Then, the output format could be set to:&lt;br /&gt;&lt;br /&gt;
+
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&quot;{*Title*}&quot;&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;(c)  {*Copyright*}&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&lt;br /&gt;&lt;br /&gt;
+
+Also see the &quot;sample_table_booklist&quot; example file (by using the &quot;File-&amp;gt;Open Sample&quot; command).&lt;br /&gt;&lt;br /&gt;
+
+Siblings should generally be of the same type, or at least have the same prefix and suffix tags.</Text_en>
+<Ref>format-sibling-text</Ref>
+<Done>false</Done>
+<RefNum>1.12.6.10</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Link Reference Field</Topic_en>
+<Text_en>One of the fields for each type is designated as the link reference field.  By default, it is the first field in the list.  Pushing the &quot;Show Advanced&quot; button on the &quot;Type Config&quot; tab of the configure dialog shows the selector for this field.&lt;br /&gt;&lt;br /&gt;
+
+The link reference field is used for internal link references and for the arrange and flatten by reference commands.  The contents of this field should generally be unique if usage of these functions is planned.</Text_en>
+<Ref>format-link-ref</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Tipos genéricos y derivados</Topic>
+<Topic_en>Generic and Derived Types</Topic_en>
+<Text>Los tipos de datos pueden configurarse para derivar la configuración de sus campos desde un tipo genérico. Ésto permite que tipos con un formato de salida diferente usen siempre los mismos tipos de datos para los campos. Cualquier cambio en la lista de campos del tipo genérico será reflejada de forma automática en los campos de todos los tipos derivados. Esto no se aplica para el formato de salida de los campos, que se puede seguir asignando de forma independiente.&lt;br /&gt;&lt;br /&gt;
+
+Existen dos métodos para crear tipos derivados. En primer lugar, se puede seleccionar una opción derivada cuando se copia un tipo desde el diálogo &quot;Añadir/Eliminar tipos de datos&quot; (al que se accede desde el botón &quot;Modificar lista&quot; en el diálogo &quot;Configurar los tipos de datos&quot;). Alternativamente, se puede especificar un tipo genérico desde el cuadro de diálogo &quot;Configuración avanzada&quot; del tipo derivado.</Text>
+<Text_en>Data types can be set to derive their field settings from a generic type.  This allows types with different output formatting to always use the same set of fields.  Any changes to the generic's list of fields and field types are automatically reflected in the fields of all derived types.  This does not apply to a field's output formatting, which can still be set independently.&lt;br /&gt;&lt;br /&gt;
+
+There are two methods for creating derived types.  First, a derived option can be selected when copying a type on the &quot;Type List&quot; tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  Alternately, a generic type can be specified from the derived type's &quot;Type Config&quot; tab of the dialog if the advanced functions are shown.</Text_en>
+<Ref>format-derived</Ref>
+<Done>false</Done>
+<RefNum>1.12.6.11</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Tipos condicionales</Topic>
+<Topic_en>Conditional Types</Topic_en>
+<Text>Se pueden usar expresiones condicionales para asignar automáticamente un tipo de dato en función de los contenidos de cada nodo. Solamente se puede asignar condiciones a un tipo genérico y los tipos derivados que tenga asociados. Esto permite la asignación automática de diferentes formatos de salida o diferentes iconos dependiendo de los campos de datos de cada nodo.&lt;br /&gt;&lt;br /&gt;
+
+Se puede acceder al cuadro de diálogo de tipos condiionales desde un botón en el cuadro de diálogo de &quot;configuración avanzada&quot; de tipos. Cada línea de la configuración de los condicionales incluyen un campo, un operador y un valor para la comparación (ver &lt;a href=&quot;#fig-2&quot;&gt;Imagen 2&lt;/a&gt;). Los operadores incluyen igualdad, mayor que, menor que, comienza por, termina por, y contiene. Existen además operadores verdadero y falso que permiten hacer cambiar el tipo de todos los nodos simultáneamente.&lt;br /&gt;&lt;br /&gt;
+
+Para tipos especiales de campos como fechas, horas o booleanos, el valor de comparación habrá de ser introducido en el mismo formato usado en la ventana del editor de datos. En general, los operadores comienza por, termina por y contiene no deberán ser usados para estos campos especiales, puesto que la comparación se realiza usando una representación interna de los datos. Con las fechas y horas se puede usar un valor especial de comparaqción, &quot;ahora&quot;, que siempre será interpretado como la fecha y hora del instante actual.&lt;br /&gt;&lt;br /&gt;
+
+Se puede añadir más líneas condicionales mediante el botón &quot;Añadir regla nueva&quot;. Las líneas se pueden combinar mediante los operadores &quot;y&quot; y &quot;o&quot;. El botón &quot;Eliminar Regla&quot; elimina la última línea condicional. Si solamente hay una línea, el botón &quot;Eliminar Regla&quot; eliminará la condición.&lt;br /&gt;&lt;br /&gt;
+
+No es necesario asignar condiciones para todos los tipos en una familia. Si no existe ninguna condición que sea cierta para un nodo, el programa elegirá una condición en blanco sobre una falsa.&lt;br /&gt;&lt;br /&gt;
+
+Como ejemplo, se puede ver el archivo &quot;sample_conditional_todo&quot; (usando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).</Text>
+<Text_en>Conditional expressions can be used to automatically assign a data type based on each node's content.  Conditions can be assigned only to a generic type and its associated derived types.  This allows the automatic assignment of different output formatting or different icons depending on each node's field data.&lt;br /&gt;&lt;br /&gt;
+
+The conditional dialog box is accessed from a button on the &quot;Type Config&quot; tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; if the advanced functions are shown.  Each line of the condition includes a field, an operator and a comparison value (see &lt;a href=&quot;#fig-5&quot;&gt;Figure 5&lt;/a&gt;).  The operators include equality, greater than, less than, starts with, ends with, and contains.  There are also True and False operators that will toggle the type of all nodes simultaneously.&lt;br /&gt;&lt;br /&gt;
+
+For special field types such as dates, times, and booleans, the comparison value should be entered in the same format that is used in the Data Editor window.  In general, the starts with, ends with, and contains operators should not be used for these special fields, since the comparison is done using an internal data representation.  Dates and times also support a special comparison value of &quot;now&quot;, which is always interpreted as the current date and time.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Add New Rule&quot; button is used to add additional condition lines.  The lines can be joined with &quot;and&quot; or &quot;or&quot; operators.  The &quot;Remove Rule&quot; button deletes the last condition line.  If only a single line is present, the &quot;Remove Rule&quot; button completely removes the condition.&lt;br /&gt;&lt;br /&gt;
+
+Conditions do not have to be set for all types in a family.  If no conditions are true for a node, the program will select a blank condition over a false one.&lt;br /&gt;&lt;br /&gt;
+
+For an example, see the &quot;sample_conditional_todo&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
+<Ref>format-condition</Ref>
+<Done>false</Done>
+<RefNum>1.12.6.12</RefNum>
+<FIGURE_TODO item="y">
+<Topic>Imagen del diálogo</Topic>
+<Topic_en>Conditional dialog picture</Topic_en>
+<Caption>Imagen 2:  Diálogo de formato de campos</Caption>
+<Caption_en>Figure 5:  Conditional Dialog</Caption_en>
+<Picture>condition_dlg.png</Picture>
+<Picture_en>doc_condition.png</Picture_en>
+<Ref>fig-5</Ref>
+<Done>false</Done>
+<RefNum>1.12.6.12.1</RefNum>
+</FIGURE_TODO>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Copia de formatos</Topic>
+<Topic_en>Copying Formats</Topic_en>
+<Text>Otro método para modificar el formato de los tipos de datos es copiar la información de formato desde otro archivo de TreeLine. Esto se hace mediante la órden  &quot;Datos-&amp;gt;Copiar tipos desde archivo&quot;. Todos los tipos del archivo elegido son copiados al actual. Cualquier tipo que exista en el archivo actual con el mismo nombre será sobreescrito, aunque los tipos que tengan un nombre diferente serán mantenidos en el resultado.</Text>
+<Text_en>Another method for changing data type formatting is to copy the formats from another TreeLine file. This is done with the &quot;Data-&amp;gt;Copy Types from File&quot; command. All types from the chosen file are copied. Any types in the current file with matching names are overwritten, but types with unique names are retained.</Text_en>
+<Ref>format-copy</Ref>
+<Done>yes</Done>
+<RefNum>1.12.6.13</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Tipos de campos</Name>
+<Name_en>Field Types</Name_en>
+<Ref>fields</Ref>
+<Done>yes</Done>
+<RefNum>1.12.7</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>Opciones de los campos</Topic>
+<Topic_en>Field Options</Topic_en>
+<Text>En el diálogo &quot;Configurar tipos de datos&quot;, el botón &quot;Tipo de campo&quot; hace que aparezca un nuevo diálogo para el formato del campo deseado (ver &lt;a href=&quot;#fig-3&quot;&gt;Imagen 3&lt;/a&gt;). El tipo de campo se puede asignar como texto, numérico, de elección, de combinación, auto-elección, fecha, hora, booleano, dirección URL, ruta de archivo, enlace interno, enlace ejecutable, email o una imagen. Se puede introducir un prefijo y un sufijo que serán mostrados siempre que el contenido del campo no esté vacío.&lt;br /&gt;&lt;br /&gt;
+
+Existen además opciones de configuración para el manejo de los contenidos de texto, de tal forma que se puede permitir texto enriquecido con HTML en el campo de datos, o mantener los saltos de línea (ignorando los códigos HTML). Se se decide usar texto enriquecido con HTML, los saltos de línea son ignorados, y los caracteres especiales que no estén expresados en HTML, como es el caso de los símbolos &quot;&amp;lt;&quot;, &quot;&amp;gt;&quot; y &quot;&amp;amp;&quot;, no serán mostrados. Asímismo hay disponible una opción general que permite configurar de forma automática el contenido de los campos nuevos de texto como HTML. Para ver un ejemplo del uso de taxto enriquecido, se puede ver el archivo &quot;sample_char_format&quot; (usando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).&lt;br /&gt;&lt;br /&gt;
+
+Algunos de los tipos de campos usan una cadena de texto para definir su formato de salida. Para ver una lista de los caracteres de formato, se puede usar el botón &quot;Ayuda sobre el formato&quot;. Los datos que se introduzcan en el editor de datos que no coincidan con ese formato definido, harán que se muestre en letra negrita la etiqueta del campo, y la salida para ese campo será reemplazada por &quot;#####&quot;.</Text>
+<Text_en>The field type and options are set in the &quot;Field Config&quot; tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; (see &lt;a href=&quot;#fig-3&quot;&gt;Figure 3&lt;/a&gt;).  The field type may be set to text, number, choice, combination, auto choice, date, time, boolean, URL, path, internal link, executable link, unique ID, email, or picture.   Prefix and suffix text can be entered and will show up whenever the data is not blank.&lt;br /&gt;&lt;br /&gt;
+
+There are also settings for text content handling that can be set to allow HTML rich text in the field data or to preserve line breaks (ignoring HTML code). If HTML rich text is used, carriage returns are ignored and non-escaped &quot;&amp;lt;&quot;, &quot;&amp;gt;&quot; and &quot;&amp;amp;&quot; symbols do not display. There is also a general option available that makes new fields default to HTML content.  For an example of rich text use, see the &quot;sample_char_format&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).&lt;br /&gt;&lt;br /&gt;
+
+Several of the field types use a formatting string to define their output. For a list of available formatting characters, use the &quot;Format Help&quot; button. Entries in the data editor which do not match the format will cause the field name label to show in bold, and the output for that field will be replaced by &quot;#####&quot;.</Text_en>
+<Ref>field-options</Ref>
+<Done>false</Done>
+<RefNum>1.12.7.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Tipo de texto</Topic>
+<Topic_en>Text Type</Topic_en>
+<Text>El tipo asignado inicialmente a un tipo de campo es de campo de texto. Estos campos se pueden modificar mediante el uso de cuadros de edición en la vista de edición de datos de la vista derecha del programa. La altura de esta caja de edición de texto se expande de forma automática cuando se redibuja después de introducir varias líneas de texto en ella. La altura del cuadro de edición puede ser también asignada explícitamente en el cuadro de diálogo de formato de campo.</Text>
+<Text_en>The default field type is a text field. These fields are edited using edit boxes in the data editor view. The edit box height expands when redisplayed after adding several lines of text. The edit box height can also be set explicitly in the &quot;Field Config&quot; tab.</Text_en>
+<Ref>field-text</Ref>
+<Done>false</Done>
+<RefNum>1.12.7.2</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Tipos de elección, combinación y booleanos</Topic>
+<Topic_en>Choice, Combination and Boolean Types</Topic_en>
+<Text>Los tipos de elección y combinación permiten la selección de elementos de texto desde una lista desplegable de edición. Las cadenas de texto que definen el formato para estos tipos han de presentarse separando los elementos por el caracter &quot;/&quot; (se puede usar &quot;//&quot; para obtener dicho caracter de forma literal en un elemento). El tipo de elección se usa para seleccionar un único elemento y el de combinación permite la selección de múltiples elementos. La lista desplegable para el tipo de combinación permite añadir o eliminar elementos. Además, se puede autocompletar el texto de un elemento escribiendo únicamente el comienzo.&lt;br /&gt;&lt;br /&gt;
+
+El tipo de campo booleano es similar al de elección, pero con las opciones &quot;sí/no&quot;, &quot;verdadero/falso&quot; y &quot;1/0&quot;.&lt;br /&gt;&lt;br /&gt;
+
+Existe además un tipo de campo de autoelección. Como el de elección, dispone de una lista desplegable de elementos, pero en este caso no tiene una cadena de texto de formato, sino que se rellena de forma automática con los datos introducidos anteriormente.</Text>
+<Text_en>The choice and combination field types allow for the selection of text items from a pull-down edit list. The formatting strings for these types list the items separated with the &quot;/&quot; character (use &quot;//&quot; to get a literal &quot;/&quot; in an item). Choice is used to select a single item and combination to select multiple items. The pull-down edit list for combination allows items to be added or removed. Also, the initial text of an item can be typed and auto-completed.&lt;br /&gt;&lt;br /&gt;
+
+The boolean field type is similar to choice, but defaults to options such as &quot;True/False&quot;, &quot;yes/no&quot; and &quot;1/0&quot;.&lt;br /&gt;&lt;br /&gt;
+
+There is also an AutoChoice field type.  Like Choice, it provides pull-down selection items, but it does not have a formatting string.  The pull-down is automatically populated with all previously used entries.</Text_en>
+<Ref>field-choice</Ref>
+<Done>yes</Done>
+<RefNum>1.12.7.3</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Tipo numérico</Topic>
+<Topic_en>Number Type</Topic_en>
+<Text>En el tipo numérico, se pueden poner caracteres especiales en el formato que definan la forma de mostrarse los números. El formato usa los caracteres &quot;#&quot; (indicando que mostrar el dígito es opcional) y &quot;0&quot; (el dígito es obligatorio) para definir el formato de salida. Por ejemplo, pi formateado con #.#&quot; es &quot;3.1&quot;, y formateado con &quot;00.00&quot; es &quot;03.14&quot;. Independientemente del formato, los dígitos a la izquierda del separador decimal no son truncados, ya que eso daría lugar a un resultado incorrecto. Se ha de tener cuidado con mostrar suficientes dígitos decimales (bien opcionales u obligatorios) para evitar problemas con errores de redondeo.&lt;br /&gt;&lt;br /&gt;
+
+El separador decimal puede ser &quot;.&quot; o &quot;,&quot; para permitir la representación internacionalizada. Para usar separadores de milenas se han de usar las expresiones &quot;\,&quot; o &quot;\.&quot;. Por ejemplo, un número grande puede ser representado como &quot;#\,###\,###.##&quot; o como &quot;#\.###\.###,##&quot;. Para más detalles sobre el formato se puede pulsar el botón &quot;Ayuda sobre el formato&quot; desde el diálogo de formato de campos.. &lt;br /&gt;&lt;br /&gt;
+
+Al contrario que otros formatos, el tipo numérico usa asímismo el formato de salida para mostrarse en el editor de datos. Por supuestom cualquier nueva entrada con un formato razonable es interpretado correctamente, aunque es necesario usar el caracter de separación de decimales adecuado.</Text>
+<Text_en>In the number type, special characters in the format define the display of the numbers.  The format uses a string of &quot;#&quot; (optional digit) and &quot;0&quot; (required digit) characters to define the output formatting. For example, pi formatted with &quot;#.#&quot; is &quot;3.1&quot; and formatted with &quot;00.00&quot; is &quot;03.14&quot;. Regardless of the formatting, digits to the left of the decimal point are not truncated, since that would display an incorrect result.  But use care to show enough decimal places (either optional or required) to avoid problems with round-off error.&lt;br /&gt;&lt;br /&gt;
+
+The radix character can be specified as either &quot;.&quot;  or &quot;,&quot; to handle internationalization.  For use as a thousands separator, use &quot;\,&quot; or &quot;\.&quot;.  For example, a large number may be formatted as &quot;#\,###\,###.##&quot; or as &quot;#\.###\.###,##&quot;.  Press the &quot;Format Help&quot; button from the field format dialog for more formatting details. &lt;br /&gt;&lt;br /&gt;
+
+Unlike most other formats, the number type also uses the output format for display in the Data Editor.  Of course, any new entry with a reasonable format is correctly interpreted (but the correct radix character must be used).</Text_en>
+<Ref>field-number</Ref>
+<Done>yes</Done>
+<RefNum>1.12.7.4</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Tipos de fecha y hora</Topic>
+<Topic_en>Date and Time Types</Topic_en>
+<Text>En los tipos de fecha y hora, hay definidos caracteres especiales para el formato que son reemplazados por la información contenida en los datos, de igual forma que ocurre con los tipos numéricos. Se puede pulsar el botón &quot;Ayuda sobre el formato&quot; desde el diálogo de formato de campos para obtener más detalles sobre el formato.&lt;br /&gt;&lt;br /&gt;
+
+Existen asímismo formatos para estos tipos bajo &quot;Herramientas-&amp;gt;Opciones generales-&amp;gt;Formatos del editor de datos&quot;. Éstos controlan cómo se muestran estos formatos en la vista de edición de datos. Generalmente, los datos que se introduzcan en el editor de datos serán correctamente interpretados independientemente de la configuración, pero las fechas habrán de usar la secuencia correcta para el día, mes y año. El editor de datos no soporta días de la semana. Si no es posible interpretar los datos que se han introducido, el nombre del campo se mostrará en letra negrita.&lt;br /&gt;&lt;br /&gt;
+
+Se puede usar el valor inicial por omisión del campo, &quot;Ahora&quot;, para obtener el instante de tiempo de la creación del nodo.</Text>
+<Text_en>In the date, and time field types, special characters in the formats are replaced by elements of the data, similar to number fields.  Press the &quot;Format Help&quot; button from the field format dialog for formatting details. &lt;br /&gt;&lt;br /&gt;
+
+There are also formats for these types under &quot;Tools-&amp;gt;General Options-&amp;gt;Data Editor Formats&quot;. These control how these fields are displayed in the Data Editor view. Generally, entries in the data editor with various formats will be correctly interpreted regardless of this setting, but dates must use the correct day-month-year sequence. Also note that the date editor format does not support days of the week.  Entries which cannot be interpreted will cause the field name to show in bold.&lt;br /&gt;&lt;br /&gt;
+
+A default initial field value of &quot;Now&quot; can be used to get a time-stamp of node creation.</Text_en>
+<Ref>field-date</Ref>
+<Done>yes</Done>
+<RefNum>1.12.7.5</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Tipos de enlaces</Topic>
+<Topic_en>Linking Types</Topic_en>
+<Text>Los tipos URL, ruta y email se pueden usar para crear elnaces en la salida. URL se usa para enlaces web estándares (se asume http:// por omisión, a menos que se indique lo contrario), ruta define un enlace a un archivo local (se asume file:/// por omisión), y email representa un enlace a una dirección de correo electrónico (por omisión mailto:). Cuando se pulsa con el ratón sobre un enlace en la ventana de salida, se abrirá un navegador o un programa de correo electrónico. En la exportación a HTML, actúan como enlaces convencionales. Lo único que se ha de hacer es introducir la ruta completa (como por ejemplo &quot;www.bellz.org/treeline/index.html&quot;) en el editor de datos. En Linux, la definición de la variable de entorno &quot;BROWSER&quot; a una cadena de texto como &quot;mozilla %s&quot; hará que se pueda usar el navegador que se desee.&lt;br /&gt;&lt;br /&gt;
+
+Existe además un tipo de campo de enlace interno, que crea un enlace en la salida de datos tal que al pulsarlo se selecciona el nodo siguiente en que el texto del campo de referencia coincida con el del enlace. Si los enlaces o campos de referencia contienen varias líneas, cada una de dichas líneas es trarada como un enlace o una referencia independiente, respectivamente.  Si se desea, se puede usar el mismo campo como enlace y como referencia simultáneamente, de tal forma que al pulsar dicho campo en uno de los nodos, se selecciona el nodo siguiente que tenga esa misma clave. Si la salida es exportada a HTML, los enlaces internos funcionan como enlace a etiquetas ancla (anchors) de la página aunque, en casos con referenciasd duplicadas, solamente son capaces de localizar la referencia superior que coincida con esa clave, y no la siguiente. Para mirar un ejemplo, se puede ver el archivo &quot;sample_intern_links&quot; (usando el comando &quot;Archivo-&amp;gt;Abrir ejemplo&quot;).&lt;br /&gt;&lt;br /&gt;
+
+El campo EnlaceEjecutable ejecuta un programa externo cuando su enlace es pulsado. El comando a ejecutar viene dado por el texto del campo. También se puede hacer que el comando a ejecutar contenga el nombre del programa, de tal forma que el texto del campo se usa para lo parámetros de dicho programa o para nombres de archivos. Se pueden deshabilitar estos enlaces mediante el uso de una opción general cuando exista una preocupación relativa a la seguridad.&lt;br /&gt;&lt;br /&gt;
+
+El tipo de campo de imagen mostrará la imagen referenciada en la salida. Para ello se ha de introducir la ruta completa de la imagen en el editor de datos. En el caso de que el programa use Qt2 (usado para construir la versión de Windows del programa) la ventana de salida solamente permitirá los formatos de imágenes GIFy PNG. Para Qt3, también es soportado el formato JPEG entre otros. Por supuesto, cuando se exporten los datos a HTML, la imagen se mostrará siempre que el navegador que se use para visualizarla soporte el formato.</Text>
+<Text_en>The URL, path, and email field types are used to create links in the output. URL is for a standard web link (defaults to http:// unless otherwise specified), path is for a local file link (defaults to file:///), and email is for a mail link (defaults to mailto:). When clicked in the output window. these links open an external browser or email program. In exported HTML, they act as regular links. Simply enter the desired full path (such as &quot;www.bellz.org/treeline/index.html&quot;) in the data editor. In Linux, setting the &quot;BROWSER&quot; environment variable to a string like &quot;mozilla %s&quot; will result in the desired browser being used.&lt;br /&gt;&lt;br /&gt;
+
+There is also an internal link field type. It creates a clickable link in the Data Output window that selects the next node with matching text in its reference field. If link or reference fields contain multiple lines, each line is treated as a separate link or reference, respectively. If desired, the same field can be used as both the link and reference fields, so that clicking on a keyword in one node's field selects the next node that also has that keyword. If exported to HTML, the internal links function as links to page anchors, but, in cases with duplicate references, they only find the uppermost reference on the page instead of the next one.  For an example, see the &quot;sample_intern_links&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).&lt;br /&gt;&lt;br /&gt;
+
+The ExecuteLink field type runs an external program when its link is clicked.  The command to run is given by the text of the field.  Or the field's prefix may contain the program name, so that the field's text is used for arguments or file names.  A general option can disable these links when security is a concern.&lt;br /&gt;&lt;br /&gt;
+
+The picture field type will show a referenced picture in the output. Enter the path to a local image file in the data editor. Supported image types include JPEG and PNG.  GIF is support is optional - it may be supported depending on build options in the Qt library.  Of course, when exporting HTML, the picture will show as long as the browser supports the format.</Text_en>
+<Ref>field-link</Ref>
+<Done>false</Done>
+<RefNum>1.12.7.6</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Unique ID Type</Topic_en>
+<Text_en>A Unique ID field type is automatically loaded with unique numbers. This is often useful for ensuring that the link reference field is always unique.&lt;br /&gt;&lt;br /&gt;
+
+Initially, the field's format string is set to the desired first number in the series, with optional leading zeros and optional leading or trailing characters. The initial number and the extra characters are useful to avoid duplication of numbers in different files.  All nodes of the data type will get an automatically assigned ID. The field format string will always show the next available number, which will be given to the next new node of that type.</Text_en>
+<Ref>field-unique</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Opciones avanzadas</Topic>
+<Topic_en>Advanced Options</Topic_en>
+<Text>El botón &quot;Avanzado&quot; en el diálogo &quot;Formato de campo&quot; hace aparecer opciones de configuración adicionales. Se puede especificar un valor por omisión para un tipo de campo determinado. Cualquier nodo nuevo tendrá asignado ese valor para ese campo de datos en el momento de su creación.&lt;br /&gt;&lt;br /&gt;
+
+También se puede hacer que los campos de enlace muestren un texto alternativo en lugar del URL al que apuntan, simplemente especificando un campo de texto alternativo.&lt;br /&gt;&lt;br /&gt;
+
+De igual forma se pueden configurar los campos de tal forma que sea obligatorio rellenarlos. Estos campos aparecerán marcados con un asterisco en la vista de edición de datos.&lt;br /&gt;&lt;br /&gt;
+
+Es posible marcar los campos como ocultos, de tal forma que no aparezcan an la vista de edición de datos.</Text>
+<Text_en>The &quot;Show Advanced&quot; button in the &quot;Field Config&quot; tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; brings up additional settings.&lt;br /&gt;&lt;br /&gt;
+
+Link fields can display alternate text in place of the target URL.  This is done by specifying an alternate text field.&lt;br /&gt;&lt;br /&gt;
+
+There is also a setting to flag fields as required to be filled in. Those fields will be marked with an asterisk in the data edit view.&lt;br /&gt;&lt;br /&gt;
+
+Fields can also be set as hidden, to prevent them from showing in the data edit view.</Text_en>
+<Ref>field-advanced</Ref>
+<Done>yes</Done>
+<RefNum>1.12.7.7</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Manipulación de los datos de árbol</Name>
+<Name_en>Tree Data Manipulation</Name_en>
+<Ref>data</Ref>
+<Done>yes</Done>
+<RefNum>1.12.8</RefNum>
+<TEXT_HEAD item="y">
+<Topic>Órdenes basadas en categorías</Topic>
+<Topic_en>Category-based Commands</Topic_en>
+<Text>El menú &quot;Datos&quot; contiene comandos para organizar y aplanar los datos según la categoría o la referencia asociada a los nodos. Estos métodos se pueden usar para añadir y eliminar de forma automática diferentes niveles de nodos por debajo del nodo actual en el árbol.&lt;br /&gt;&lt;br /&gt;
+
+El comando &quot;Añadir nivel con categorías&quot; parmite seleccionar uno o más campos que tengan en común los nodos hijos y agrupar a éstos según categorías comunes. Por ejemplo, en una lista de libros, si se eligen los campos &quot;nombre_del_autor&quot; y &quot;apelllido_del_autor&quot;, se obtendrá como resultado un árbol con los libros agrupados debajo de nuevos nodos, dada uno de ellos conteniendo un autor diferente.&lt;br /&gt;&lt;br /&gt;
+
+El comando &quot;Aplanar por categoría&quot; se puede considerar como el opuesto a &quot;Añadir nivel con categorías&quot;. Elimina los nodos descendientes que tengan hijos, transfiriendo sus campos de datos a éstos. En caso de que existan campos con el mismo nombre en éstos, los campos serán cambiados de nombre en vez de sobreescribirlos, pero la utilidad de este comando radica en la existencia de padres e hijos con nombres de campos de datos diferentes.</Text>
+<Text_en>The &quot;Data&quot; menu contains commands for arranging and flattening the data by category and by reference. These methods are used to automatically add and remove levels of nodes below the current node in the tree.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Add Category Level&quot; command allows you to select one or more of the fields that the child nodes have in common. These fields are used to create new parent nodes for the children, grouping them by common categories. For example, in a list of books, picking the &quot;author_first_name&quot; and &quot;author_last_name&quot; fields will result in a tree with the books under new nodes for each unique author.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Flatten by Category&quot; command is almost the opposite of &quot;Add Category Level&quot;. It eliminates any descendant nodes with children, transferring their data fields to their children. It will rename fields instead of overwriting data with the same field names, but this command is most useful when the children and parents are different types with unique field names.</Text_en>
+<Ref>data-category</Ref>
+<Done>yes</Done>
+<RefNum>1.12.8.1</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Órdenes basadas en referencias</Topic>
+<Topic_en>Reference-based Commands</Topic_en>
+<Text>Los comandos &quot;Organizar por referencia&quot; y &quot;Aplanar por referencia&quot; organizan los nodos de datos usando punteros al valor del campo de datos referencia del padre. Estos comandos se basan en la existencia de valores no repetidos en el campo de referencia de los nodos, como puede ser un número de identificación.  El comando &quot;Aplanar por referencia&quot; añade un campo que contiene el identificador del padre en cada uno de los nodos descendientes. A continuación sitúa todos los nodos debajo del nodo raíz elegido.
+El comando &quot;Organizar por referencia&quot; realiza la operación contraris, situando cada nodo debajo del nodo padre que contiene la identificación referenciada. Si exiten varios nodos con el mismo identificador, se elige el más cercano por encima del hijo. Todos los nodos que tengan una referencia a un padre inexistente se sitúan directamente por debajo del nodo raíz elegido.&lt;br /&gt;&lt;br /&gt;
+
+El comando &quot;Actualizar por referencia&quot; usa un archivo separado para actualizar los valores de los campos inexistentes, haciendo coindidir en el campo de datos referenciados valores únicos o no repetidos. Cualquier campo que exista en el nodo del otro fichero, pero no en el original, es añadido al resultado. Si se desea, se pueden borrar campos en el archivo original para forzar la actualización, puesto que el campo no debe existir (y no simplemente no tener contenido).</Text>
+<Text_en>The &quot;Arrange by Reference&quot; and &quot;Flatten by Reference&quot; commands arrange data nodes by using pointers to the value of their parent's reference data field. These commands rely on nodes having unique values in the reference field, such as an ID number. The &quot;Flatten by Reference&quot; command adds a field containing the parent's ID to each descendant node. It then places all of the nodes under the selected root node. The &quot;Arrange by Reference&quot; command does the opposite, placing each node under the parent with the referenced ID. If there are multiple nodes with the same ID, the nearest node above the child is chosen. Any nodes with lost parents are placed directly under the selected root node.&lt;br /&gt;&lt;br /&gt;</Text_en>
+<Ref>data-ref</Ref>
+<Done>false</Done>
+<RefNum>1.12.8.2</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Ordenación</Topic>
+<Topic_en>Sorting</Topic_en>
+<Text>El menú datos también contiene los comandos &quot;Ordenar nodos hijos&quot;, &quot;Ordenar tipo en la rama&quot; y &quot;Ordenar rama por título&quot;. Los dos primeros permiten la selección de varios campos para usarlos como clave primaria de ordenación, clave secundaria, etc. Las llaves han de ser elegidas en el orden correcto con el botón izquierdo del ratón. Para cambiar la dirección se ha de usar el botón central del ratón. El comando &quot;Ordenar nodos hijos&quot; ordena solamente los hijos de los nodos seleccionados, mientra que  el comando &quot;Ordenar tipo en la rama&quot; ordena todos los descendientes de un tipo determinado. El comando &quot;Ordenar rama por título&quot; ordenará todos los descendientes, pero lo hará exclusivamente mediante el texto del título de los nodos, no mediante determinadas claves de ordenación cualesquiera.</Text>
+<Text_en>The &quot;Data-&amp;gt;Sort&quot; command brings up the sort dialog.  It contains options for sorting the entire tree, the selected branches, the selection's children or the selection's siblings. The sorting can be based on specific fields within specified types or on titles only.&lt;br /&gt;&lt;br /&gt;
+
+Sorting by types allows the selection of several fields to be used as the first key, second key, etc.  Multiple types can be selected in the list on the left.  The fields that the selected types have in common are listed on the right.  The fields to be used as keys are selected in order with the left mouse button and the direction is changed with the right mouse button.</Text_en>
+<Ref>data-sort</Ref>
+<Done>false</Done>
+<RefNum>1.12.8.3</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Filtrado</Topic>
+<Topic_en>Filtering</Topic_en>
+<Text>El comando &quot;Filtrar datos&quot; permite la eliminación de nodos basándose en reglas definidas por los usuarios. Si hay más de un tipo de dato en los descendientes de los nodos seleccionados, se elige el tipo a filtrar. A continuación, se pueden insertar reglas lógicas enlazadas por operadores &quot;and&quot; y &quot;or&quot; (presionando el botón &quot;Añadir regla&quot;). Todos los descendientes del tipo elegido que no encajen en la regla definida son eliminados, así como sus hijos. El nombre del fichero actual pasará a tener añadido el sufijo &quot;_filter&quot; para evitar la sobreescritura del archivo completo. Si el documento ha sido previamente modificado, el sistema preguntará si se desea grabar el archivo sin filtrar. Una vez realizada la operación de filtrado, no es posible deshacerla.</Text>
+<Text_en>The &quot;Data-&amp;gt;Conditional Filter&quot; command limits the display of nodes in the flat view based on user-defined rules.  First, the type to be filtered is selected. Next, logical rules may be entered based on any of the type's fields (similar to &lt;a href=&quot;#fig-5&quot;&gt;Figure 5&lt;/a&gt;). Multiple rules can be linked by the &quot;and&quot; and &quot;or&quot; operators (press the &quot;Add Rule&quot; button). The &quot;True&quot; rule can be used to show all of the nodes of a given type.  Only descendant nodes that match the rules will be shown in the &quot;Flat View&quot; pane.  The filtering stays in effect for the &quot;Flat View&quot; pane until it is cleared using the &quot;Data-&amp;gt;Clear Filtering&quot; command (see &lt;a href=&quot;#fig-6&quot;&gt;Figure 6&lt;/a&gt;).&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Data-&amp;gt;Text Filter&quot; command works similarly, except it only prompts for a text search string. Only the nodes that have a match for that string somewhere in their field data are displayed in the &quot;Flat View&quot;.  Again, the filtering stays in effect for the &quot;Flat View&quot; pane until it is cleared using the &quot;Data-&amp;gt;Clear Filtering&quot; command.</Text_en>
+<Ref>data-filter</Ref>
+<Done>false</Done>
+<RefNum>1.12.8.4</RefNum>
+<FIGURE_TODO item="y">
+<Topic_en>Filtering picture</Topic_en>
+<Caption_en>Figure 6:  Filter Results</Caption_en>
+<Picture_en>doc_filter.png</Picture_en>
+<Ref>fig-6</Ref>
+<Done>false</Done>
+</FIGURE_TODO>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Numeración</Topic>
+<Topic_en>Numbering</Topic_en>
+<Text>El comando &quot;Numeración&quot; se usa para añadir campos numéricos a los nodos descendientes. Estos campos numéricos no se actualizan de forma automática cuando el árbol es modificado, sino que es necesario repetir la ejecución del comando &quot;Numeración&quot;. En el diálogo se ha de introducir un nombre de campo que puede ser nuevo, o ya existir anteriormente.  El nodo raíz (seleccionado) puede ser incluido en la numeración si se desea. Se puede elegir un estilo de numeración dentro de tres posibles: El estilo &quot;esquema&quot; comienza la numeración para cada grupo de hijos, el estilo &quot;sección&quot; añade el número del hijo al del padre y el de &quot;un sólo nivel&quot; solamente realiza la numeración del primer nivel de hijos. Se pueden usar los formatos por defecto (&quot;I, II..., A, B..., 1, 2...&quot; para esquemas; &quot;1, 2..., 1.1, 1.2...&quot; para secciones), o especificar formatos personalizados para cada nivel. Los formatos personalizados deberán contener uno de los siguientes caracteres: &quot;1&quot;, &quot;A&quot;, &quot;a&quot;, &quot;I&quot;, or &quot;i&quot;. Las series comenzarán a numerarse a partir de ahí (usando números, letras o números romanos, respectivamente). El elemento que se usará para la numeración será la última aparición de uno de esos caracteres en el texto de formato. Las apariciones previas se supondrán que forman parte del propio formato.</Text>
+<Text_en>The &quot;Numbering&quot; command is used to add number fields to descendant nodes. The number fields do not automatically update when the tree is modified - the &quot;Numbering&quot; command must be repeated. In the dialog, a new or existing field name is entered, and the root (selected) node may be included in the numbering if desired. One of three styles may be chosen: outline style restarts numbering for each group of children, section style appends the child's number onto the parent's number, and single level style numbers only the first level of children. The default formats can be used (&quot;I, II..., A, B..., 1, 2...&quot; for outlines; &quot;1, 2..., 1.1, 1.2...&quot; for sections), or custom formats may be specified for each level. The custom formats should contain one of the following characters: &quot;1&quot;, &quot;A&quot;, &quot;a&quot;, &quot;I&quot;, or &quot;i&quot;. The series will continue from there (using numbers, letters or Roman numerals, respectively). The last occurrence of one of these characters in the format string is used - previous ones are assumed to be part of the format.</Text_en>
+<Ref>data-number</Ref>
+<Done>yes</Done>
+<RefNum>1.12.8.5</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Cambiar datos seleccionados</Topic>
+<Topic_en>Change Selections</Topic_en>
+<Text>Finalmente, el comando &quot;Modificar los datos seleccionados&quot; permite cambiar de forma simultánea los valores de un campo de datos para todos los nodos seleccionados. Simplemente selecciona el campo deseado e introduce el nuevo valor.</Text>
+<Text_en>Finally, the &quot;Change Selected Data&quot; command allows the values of a data field to be changed simultaneously for all selected nodes. Simply select the desired field and enter the new value.  To erase field values, enter a character then delete it - this will indicate that a blank field is desired.</Text_en>
+<Ref>data-change</Ref>
+<Done>false</Done>
+<RefNum>1.12.8.6</RefNum>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Impresión</Name>
+<Name_en>Printing</Name_en>
+<Ref>print</Ref>
+<Done>yes</Done>
+<RefNum>1.12.9</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>Opciones de impresión</Topic>
+<Topic_en>Print Options</Topic_en>
+<Text>La vista llamada &quot;Salida de datos&quot; en el panel de la derecha muestra el texto de salida ya formateado para el nodo actual y sus hijos. La salida de datos formateada puede ser impresa. Para dicha  impresión son mostrados los descendientes del nodo con sus hijos indentados,  comenzando desde el nodo actual. El nodo raíz puede ser incluído o excluído, y los elementos cuyos padres están cerrados en el árbol pueden ser saltados.&lt;br /&gt;&lt;br /&gt;
+
+Hay opciones adicionales en el cuadro de diálogo &quot;Opciones de impresión&quot; para asignar los tipos de letras, tamaño de los márgenes, el número de columnas, así como para añadir líneas que muestren la estructura del árbol. Estas líneas son dibujadas de tal forma que conectan los nodos padre con sus hijos, y permiten visualizar más fácilmente estas relaciones, especialmente entre diferentes páginas. Estas líneas pueden no mostrarse de la forma deseada en el caso de que se usen determinadas etiquetas de HTML.&lt;br /&gt;&lt;br /&gt;
+
+Por defecto, TreeLine evitará saltar de una página a otra entre un padre y su primer hijo. Este comportamiento puede ser desactivado si se modifica la opción de impresión llamada &quot;Mantener el primer hijo con el padre&quot;.</Text>
+<Text_en>The &quot;File-&amp;gt;Print Options dialog's first tab is &quot;General Options&quot;.  On the left, printing of the entire tree, the selected branches (all descendants) or the selected nodes can be selected.  The first two options print all of the descendants with the children indented.&lt;br /&gt;&lt;br /&gt;
+
+On the right are options for drawing tree structure lines, including the root node, including only open children and keeping the first child with its parent.  The tree structure lines are drawn to connect parent and child nodes. They can make parent/child relationships easier to visualize, especially across multiple pages. The lines may not display as desired when using some HTML formatting tags.&lt;br /&gt;&lt;br /&gt;
+
+By default, TreeLine will avoid breaking pages between a parent and its first child.  This behavior can be disabled by disabling the &quot;Keep first child with parent&quot; option.</Text_en>
+<Ref>print-options</Ref>
+<Done>false</Done>
+<RefNum>1.12.9.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Page Setup</Topic_en>
+<Text_en>The second tab of the &quot;Print Options&quot; dialog box is &quot;Page Setup&quot;.  On the left are settings for page size, orientation and units.  On the right are settings for columns, indent offsets, and margins.</Text_en>
+<Ref>print-setup</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Printer Font</Topic_en>
+<Text_en>The third tab of the &quot;Print Options&quot; dialog box is &quot;Font Selection&quot;.  The printout will use the same font as the &quot;Data Output&quot; pane if the upper check box is checked.  If it is unchecked, a font can be selected specifically for printing.</Text_en>
+<Ref>print-font</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Cabecera y pie de página</Topic>
+<Topic_en>Header and Footer</Topic_en>
+<Text>De igual forma, en el cuadro de diálogo de &quot;Opciones de impresión&quot; existe un botón para asignar la cabecera y el pie de página. Este botón abrirá un nuevo cuadro de diálogo con campos de datos sobre el archivo a la izquierda y seis cajas de edición de los textos a la derecha, correspondientes a la cabecera y el pie de página (justificados a la izquierda, centro o derecha). Estos campos pueden ser añadidos a las cajas de edición y combinados con otros textos, de igual forma que en el diálogo &quot;Datos-&amp;gt;Configurar tipos de datos&quot;. La configuración de cabecera y pie de página es grabada en el archivo de TreeLine.</Text>
+<Text_en>The third tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text_en>
+<Ref>print-header</Ref>
+<Done>false</Done>
+<RefNum>1.12.9.2</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Vista previa</Topic>
+<Topic_en>Print Preview</Topic_en>
+<Text>Se visualizará una vista previa antes de imprimir (pero tras presionar el botón de &quot;Aceptar&quot; en el cuadro de diálogo normal de impresión) por defecto. La vista previa de impresión mostrará más detalles si se aumenta el tamaño de su ventana.</Text>
+<Text_en>The print preview window can be shown by using the &quot;File-&amp;gt;Print Preview&quot; menu or with the button on the &quot;Print Options&quot; dialog.  Buttons on the window are used to navigate between pages, open the &quot;Print Options&quot; dialog, or open the print dialog.  The print preview will show more detail if its window is made larger.</Text_en>
+<Ref>print-preview</Ref>
+<Done>false</Done>
+<RefNum>1.12.9.3</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Problemas con la impresión</Topic>
+<Topic_en>Printing Problems</Topic_en>
+<Text>Se pueden eliminar algunos problemas de impresión, especialmente los relativos a los márgenes y a la división de palabras, cambiando el tipo de letra de impresión a uno que esté mejor soportado por la impresora.</Text>
+<Text_en>Some printing problems, especially problems with margins and word-wrapping, can be eliminated by changing the print font to a font that is better supported by the printer.</Text_en>
+<Ref>print-problems</Ref>
+<Done>yes</Done>
+<RefNum>1.12.9.4</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Manejo de archivos</Name>
+<Name_en>File Handling</Name_en>
+<Ref>file</Ref>
+<Done>yes</Done>
+<RefNum>1.12.10</RefNum>
+<TEXT_HEAD item="y">
+<Topic>Compresión de archivos</Topic>
+<Topic_en>File Compression</Topic_en>
+<Text>Un archivo de TreeLine es un archivo de texto XML. Existe también la opción de trabajar con archivos comprimidos (en formato gzip) para ahorrar espacio. Se pueden configurar individualemente archivos con modo comprimido desde &quot;Herramientas-&amp;gt;Opciones de archivo&quot;, o desde el diálogo &quot;Grabar cómo&quot;. Existe también una opción general para asignar el modo por defecto para los archivos nuevos.</Text>
+<Text_en>A TreeLine file is in an XML text format. There are also options to work with compressed files (gzip format) to save space. Individual files can be set to compressed mode from either &quot;Tools-&amp;gt;File Options&quot; or from the save-as dialog. There is also a general option to set the default mode for new files.</Text_en>
+<Ref>file-comp</Ref>
+<Done>yes</Done>
+<RefNum>1.12.10.1</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Codificación de archivos</Topic>
+<Topic_en>File Encryption</Topic_en>
+<Text>Hay una opción para la codificación de archivos que permite proteger con contraseña los archivos de TreeLine. Se pueden configurar individualemente archivos para trabajar en modo codificado desde &quot;Herramientas-&amp;gt;Opciones de archivo&quot;, o desde el diálogo &quot;Grabar cómo&quot;. Existe asímismo una opción general para asignar el comportamiento por defecto  para archivos nuevos. Para la codificación se usa fa función de hash SHA para el cifrado del flujo de datos - esto debería ser bastante seguro.</Text>
+<Text_en>There is a file encryption option to password protect TreeLine files. Individual files can be set to encrypted mode from either &quot;Tools-&amp;gt;File Options&quot; or from the save-as dialog. There is also a general option to set the default for new files. The encryption uses the SHA hash function as a stream cipher - it should be fairly secure.</Text_en>
+<Ref>file-enc</Ref>
+<Done>yes</Done>
+<RefNum>1.12.10.2</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Grabación automática</Topic>
+<Topic_en>Auto-Save</Topic_en>
+<Text>El mecanismo de grabación automática permite almacenar los archivos que aún no han sido grabados, con el símbolo  &quot;~&quot; añadido al nombre del archivo. Estos archivos de salvaguarda se eliminan de forma automática cuando el archivo es grabado o cuando se produce una salida limpia del programa. El tiempo de intervalo entre las grabaciones automáticas se puede configurar en las opciones generales. Asignar este intervalo a cero desactiva esta característica.</Text>
+<Text_en>An auto-save feature can store unsaved files with a &quot;~&quot; appended to the file name. The backup files are automatically removed when the file is saved or TreeLine exits cleanly. The auto-save time interval is set in the general options. Setting the interval to zero disables this feature.</Text_en>
+<Ref>file-auto-save</Ref>
+<Done>yes</Done>
+<RefNum>1.12.10.3</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Grabación del estado del árbol</Topic>
+<Topic_en>Saved Tree States</Topic_en>
+<Text>Cuando se abre un archivo que se ha usado recientemente, TreeLine restaurará el estado de los nodos abiertos y seleccionados en el árbol. Esta información es almacenada en el archivo de configuración de TreeLine del usuario. Si se desea, se puede desactivar esta característica con una opción general.</Text>
+<Text_en>When opening a recently used file, TreeLine will restore the states of open and selected nodes. This information is stored in the user's TreeLine configuration file. If desired, this feature can be disabled with a general option.</Text_en>
+<Ref>file-states</Ref>
+<Done>yes</Done>
+<RefNum>1.12.10.4</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Línea de órdenes</Topic>
+<Topic_en>Command Line</Topic_en>
+<Text>Las opciones de la línea de órdenes permite realizar operaciones no interactivas de importación y exportación de archivos. Esto permite que se puedan programar ejecuciones automatizadas. Para obtener más información, ejecuta &quot;treeline -h&quot; desde la línea de órdenes del sistema. Si se está usando un archivo binario de Windows, la salida está deshabilitada, por lo que se debe redireccionar a un archivo (&quot;treeline -h &amp;gt; log.txt&quot;).</Text>
+<Text_en>Command line options allow non-interactive file importing and exporting. This allows automated runs to be scheduled. For more details, run &quot;treeline -h&quot; from the command line.</Text_en>
+<Ref>file-cmdline</Ref>
+<Done>false</Done>
+<RefNum>1.12.10.5</RefNum>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Importación de archivos</Name>
+<Name_en>File Import</Name_en>
+<Ref>import</Ref>
+<Done>yes</Done>
+<RefNum>1.12.11</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>Texto con tabulaciones</Topic>
+<Topic_en>General Information</Topic_en>
+<Text>Los archivos de TreeLine están almacenados en formato de texto XML. Se pueden importar otros tipos de archivos de texto simplemente abriéndolos. Si se abre un archivo que no contiene XML válido para TreeLine, se solicitará que se describa el tipo de archivo que se desea importar..&lt;br /&gt;&lt;br /&gt;
+
+TreeLine es capaz de abrir un archivo de tipo texto con una estructura en árbol representada por tabulaciones antes de cada línea. En este caso, solamente es importado el título del nodo, sin ningún campo extra. Este método es el utilizado para abrir archivos de versiones antiguas de TreeLine..&lt;br /&gt;&lt;br /&gt;
+
+Se pueden también importar tablas delimitadas por tabulaciones. De ellas se podrá obtener un único nivel de descendencia bajo el nodo raíz, conteniendo cada nodo los campos correspondientes a cada una de las columnas de la tabla. La primera fila de la tabla es usada para obtener los nombres de los campos, y cada una de las filas restantes dará lugar a un nodo.</Text>
+<Text_en>A TreeLine file is in an XML text format. Other types of text files can be imported simply by opening them. Opening a file that is not valid TreeLine XML will result in a prompt for the type of import desired.</Text_en>
+<Ref>import-general</Ref>
+<Done>false</Done>
+<RefNum>1.12.11.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Texto con tabulaciones</Topic>
+<Topic_en>Delimited Text</Topic_en>
+<Text>Los archivos de TreeLine están almacenados en formato de texto XML. Se pueden importar otros tipos de archivos de texto simplemente abriéndolos. Si se abre un archivo que no contiene XML válido para TreeLine, se solicitará que se describa el tipo de archivo que se desea importar..&lt;br /&gt;&lt;br /&gt;
+
+TreeLine es capaz de abrir un archivo de tipo texto con una estructura en árbol representada por tabulaciones antes de cada línea. En este caso, solamente es importado el título del nodo, sin ningún campo extra. Este método es el utilizado para abrir archivos de versiones antiguas de TreeLine..&lt;br /&gt;&lt;br /&gt;
+
+Se pueden también importar tablas delimitadas por tabulaciones. De ellas se podrá obtener un único nivel de descendencia bajo el nodo raíz, conteniendo cada nodo los campos correspondientes a cada una de las columnas de la tabla. La primera fila de la tabla es usada para obtener los nombres de los campos, y cada una de las filas restantes dará lugar a un nodo.</Text>
+<Text_en>TreeLine will open a text file with a tree structure represented by tabs before each line. In this case, only the node title is imported, without any extra fields.&lt;br /&gt;&lt;br /&gt;
+
+A tab-delimited table can also be imported. It becomes a single level of children under the root node, with each node containing fields from each table column. The first row of the table is used as field names and each subsequent row becomes a node.</Text_en>
+<Ref>import-delim</Ref>
+<Done>false</Done>
+<RefNum>1.12.11.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Texto puro</Topic>
+<Topic_en>Plain Text</Topic_en>
+<Text>Hay dos tipos de importación de archivos de texto puro. Uno crea un nodo separado para cada línea en el archivo. El otro crea un nodo para cada párrafo, asumiendo que los párrafos están separados por líneas vacías. En ambos casos, el archivo de TreeLine resultante tendrá todo el texto bajo un único nodo padre, pero es un buen punto de comienzo. Se podrá añadir posteriormente una estructura adicional a los datos si se desea.</Text>
+<Text_en>There are two types of plain text import. One creates a separate node for each line in the file. The other creates a node for each paragraph, assuming the paragraphs are separated by blank lines. In both cases, the resulting TreeLine file will have all of the text under a single parent, but it is a good starting point. Additional structure can be added later.</Text_en>
+<Ref>import-plain</Ref>
+<Done>yes</Done>
+<RefNum>1.12.11.2</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Archivos de Treepad</Topic>
+<Topic_en>Treepad Files</Topic_en>
+<Text>Existe asímismo un filtro para importar archivos desde el programa shareware Treepad. Solo están soportados los nodos de texto de Treepad.</Text>
+<Text_en>There is also a filter to import files from the Treepad shareware program.  Only Treepad text nodes are supported.</Text_en>
+<Ref>import-treepad</Ref>
+<Done>yes</Done>
+<RefNum>1.12.11.3</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>XML genérico</Topic>
+<Topic_en>Bookmark Files</Topic_en>
+<Text>TreeLine permite importar y exportar archivos XML genéricos. Estas rutinas no contienen mucha complejidad - cada  elemento XML se convierte en un nodo, y cada atributo de XML en un campo. El contenido de los textos de XML es transformado en campos con el nombre &quot;Element_Data&quot;. Esto permite a TreeLine funcionar como un editor de XML puro.</Text>
+<Text_en>TreeLine will import bookmark files in both the Mozilla HTML format (Mozilla, Firefox and Netscape browsers) and the XBEL format (Konqueror, Galeon and Elinks browsers). Each bookmark becomes a node with a name and a link field. Some information in the files, such as visited dates and icon references, is not imported.  For an example, see the &quot;sample_bookmarks&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
+<Ref>import-bookmarks</Ref>
+<Done>yes</Done>
+<RefNum>1.12.11.4</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic_en>Generic XML</Topic_en>
+<Text_en>TreeLine will import and export generic XML files. These routines do not have much intelligence - each XML element becomes a node and each XML attribute becomes a field. XML text content become fields named &quot;Element_Data&quot;. This lets TreeLine function as a crude XML editor.</Text_en>
+<Ref>import-xml</Ref>
+<Done>yes</Done>
+<RefNum>1.12.11.5</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>ODF Text Document</Topic_en>
+<Text_en>TreeLine will import Open Document Format (ODF) text documents, from applications such as OpenOffice.org and KWord.   The node structure is formed based on the heading styles assigned in the document. Any text under each heading is assigned to that heading's node. The import filter is intended for simple text outlines only.  No formatting is maintained, and objects such as tables and pictures are not imported.</Text_en>
+<Ref>import-odf</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Exportación de archivos</Name>
+<Name_en>File Export</Name_en>
+<Ref>export</Ref>
+<Done>yes</Done>
+<RefNum>1.12.12</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic>HTML</Topic>
+<Topic_en>General Information</Topic_en>
+<Text>Los archivos son exportados usando la orden &quot;Archivo-&amp;gt;Exportar&quot;. Esto hará que se muestre un cuadro de diálogo con los diferentes tipos de exportación y las opciones disponibles.&lt;br /&gt;&lt;br /&gt;
+
+La salida a un único archivo HTML es similar a la impresión, con opciones similares. Puede incluir la cabecera y el pie de página en el HTML, y se puede asignar el número de columnas.&lt;br /&gt;&lt;br /&gt;
+
+También existe la exportación a múltiples archivos en HTML, con la que se crea una estructura de directorios. El nombre de los directorios se obtiene del primer campo de datos, que debe contener nombres de archivo válidos. Tampoco debe haber nombres duplicados bajo el mismo padre. Cada archivo HTML es una tabla da datos para un conjunto de hijos, con enlaces a las páginas tanto del padre como de los hijos.</Text>
+<Text_en>Files are exported using the &quot;File-&amp;gt;Export&quot; command. This will show a dialog box of available export types and options.</Text_en>
+<Ref>export-general</Ref>
+<Done>false</Done>
+<RefNum>1.12.12.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>HTML</Topic>
+<Topic_en>HTML</Topic_en>
+<Text>Los archivos son exportados usando la orden &quot;Archivo-&amp;gt;Exportar&quot;. Esto hará que se muestre un cuadro de diálogo con los diferentes tipos de exportación y las opciones disponibles.&lt;br /&gt;&lt;br /&gt;
+
+La salida a un único archivo HTML es similar a la impresión, con opciones similares. Puede incluir la cabecera y el pie de página en el HTML, y se puede asignar el número de columnas.&lt;br /&gt;&lt;br /&gt;
+
+También existe la exportación a múltiples archivos en HTML, con la que se crea una estructura de directorios. El nombre de los directorios se obtiene del primer campo de datos, que debe contener nombres de archivo válidos. Tampoco debe haber nombres duplicados bajo el mismo padre. Cada archivo HTML es una tabla da datos para un conjunto de hijos, con enlaces a las páginas tanto del padre como de los hijos.</Text>
+<Text_en>Single-file HTML output is similar to printing, with similar options. It can include the print header and footer in the HTML, and the number of columns can be set.&lt;br /&gt;&lt;br /&gt;
+
+There is also a multiple-file HTML export that creates a directory structure. Directories are named for the content of the reference data field, which must contain legal file names and not have duplicates under the same parent. Each HTML file is a table of data for a set of siblings, with links to the parent and child pages.</Text_en>
+<Ref>export-html</Ref>
+<Done>false</Done>
+<RefNum>1.12.12.1</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic>Texto</Topic>
+<Topic_en>Delimited Text</Topic_en>
+<Text>Los datos pueden ser exportados a textos de títulos tabulados (el antiguo formato de texto de TreeLine) y a tablas delimitadas por tabulaciones. Estos formatos son iguales a sus correspondientes formatos para la importación de archivos. Cuando se exporta a una tabla, solamente se usa el primer nivel de hijos, por lo que es posible que se desee aplanar los datos antes de realizar la exportación</Text>
+<Text_en>Data can be exported to tabbed title text and tab-delimited tables. These formats are the same as the corresponding import formats. When exporting to a table, only the first level of children is used, so you may wish to flatten the data before exporting.</Text_en>
+<Ref>export-delim</Ref>
+<Done>false</Done>
+<RefNum>1.12.12.2</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Archivos de favoritos</Topic>
+<Topic_en>Bookmark Files</Topic_en>
+<Text>TreeLine permite exportar archivos de favoritos tanto en el formato HTML de Mozilla (válido para los navegadores Mozilla, Firefox o Netscape) y el formato XBEL (para los navegadores Konqueror, Galeon o Elinks)</Text>
+<Text_en>TreeLine will export bookmark files in both the Mozilla HTML format (Mozilla, Firefox and Netscape browsers) and the XBEL format (Konqueror, Galeon and Elinks browsers).</Text_en>
+<Ref>export-bookmarks</Ref>
+<Done>yes</Done>
+<RefNum>1.12.12.3</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>XML genérico</Topic>
+<Topic_en>Generic XML</Topic_en>
+<Text>TreeLine permite importar y exportar archivos XML genéricos. Estas rutinas no contienen mucha complejidad - cada nodo se convierte en un elemento XML, y cada campo en un atributo de XML, excepto para los campos que tengan el nombre &quot;Element_Data&quot;, que se convierten en el texto del elemento. Esto permite a TreeLine funcionar como un editor de XML puro.</Text>
+<Text_en>TreeLine will import and export generic XML files. These routines do not have much intelligence - each node becomes an XML element and each field becomes an XML attribute, except for fields named &quot;Element_Data&quot; that become the element's text. This lets TreeLine function as a crude XML editor.</Text_en>
+<Ref>export-xml</Ref>
+<Done>yes</Done>
+<RefNum>1.12.12.4</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>XSLT</Topic>
+<Topic_en>XSLT</Topic_en>
+<Text>Además de poder exportar los datos, es posible también exportar el formato de un archivo a un archivo de tipo XSLT. Éste puede ser usado para mostrar los datos XML de un archivo nativo en formato TreeLine en cualquier navegador que sea compatible con ésta representación, sin necesidad de exportar los datos a HTML. Las versiones más modernas de la mayor parte de los navegadores son compatibles con XSLT. Ha de tenerse en cuenta, sin embargo, que es posible que el formato de tipos de datos complejos sea ignorado por el XSLT.&lt;br /&gt;&lt;br /&gt;
+
+Cuando se exporta a XSLT, se le añade además un enlace del archivo XSL al archivo de TreeLine. Por este motivo, es importante grabar el archivo TreeLine a continuación. En general, el archivo de TreeLine deberá tener una extensión .xml para que pueda ser abierto de forma directa por un navegador compatible. Tras eso, no será necesario volver a exportar el archivo XLS si solamente se modifican los datos (y no se cambia el formato).&lt;br /&gt;&lt;br /&gt;
+
+Si se utilizan etiquetas HTML en formatos de datos que vayan a ser exportados a XLST, deberán emplearse en estilo xHTML (&amp;lt;br /&amp;gt; en vez de &amp;lt;br&amp;gt;). Cuando se realice la exportación, se preguntará asímismo por el nombre de una hoja de estilo opcional (css). Este nombre es almacenado en el archivo TreeLine para usarlo por defecto en futuras exportaciones. La referencia al archivo XLST contenida en el archivo de TreeLine puede ser eliminada con la órden &quot;Herramientas-&amp;gt;Eliminar referencia a XSLT&quot;.</Text>
+<Text_en>In addition to exporting data, the format for a file can be exported to an XSLT file. This can be used to display the XML data from a native TreeLine file in a compliant browser without exporting the data to HTML. Recent versions of most browsers are XSLT compliant. Note that complex field type formatting will be ignored by the XSLT.&lt;br /&gt;&lt;br /&gt;
+
+When exporting to XSLT, a link to the XSL file is added to the TreeLine file.  Note that the TreeLine file must then be saved. In general, the TreeLine file should have a .xml extension so that the TreeLine file can be opened directly in a compliant browser. After that, the XSL file does not need to be re-exported for data changes (only for formatting changes).&lt;br /&gt;&lt;br /&gt;
+
+If HTML tags are used in data formats that will be exported to XSLT, they should use xHTML style (&amp;lt;br /&amp;gt; instead of &amp;lt;br&amp;gt;). When exporting, there is a prompt for the name of an optional style sheet (css). This name is stored in the TreeLine file as the default for future exports. Also, the reference to the XSLT file in the TreeLine file may be removed with the &quot;Tools-&amp;gt;Remove XSLT Reference&quot; command.</Text_en>
+<Ref>export-xslt</Ref>
+<Done>yes</Done>
+<RefNum>1.12.12.5</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>ODF Text Document</Topic_en>
+<Text_en>TreeLine will export an outline to an Open Document Format (ODF) text document, compatible with OpenOffice.org and KWord. The title of each node is assigned a heading style at the appropriate level. Any other text in the output of each node becomes normal text under the heading. The export filter is intended for simple text outlines only.  Any HTML formatting is stripped, and objects such as tables and pictures are not supported.</Text_en>
+<Ref>export-odf</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+</HEADING3>
+<HEADING3_TODO item="y"
+line0="{*Name_en*}"
+line1="&lt;hr /&gt;&lt;h3&gt;{*Name_en*}&lt;/h3&gt;"
+childtype="HEADING4"
+generic="HEADING3"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text">Customizations</Name_en>
+<Ref type="Text" ref="y">custom</Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Options</Topic_en>
+<Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.</Text_en>
+<Ref>custom-options</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Fonts</Topic_en>
+<Text_en>Fonts used in the tree views, the output view and the editor views can be set in the &quot;Tools-&amp;gt;Set Fonts&quot; menu.</Text_en>
+<Ref>custom-fonts</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Keyboard Shortcuts</Topic_en>
+<Text_en>Keyboard shortcuts can be customized by using the &quot;Tools-&amp;gt;Set Keyboard Shortcuts&quot; command.  The shortcut editor has tabs for menu and non-menu based commands.  Simply type the new key sequence with the appropriate field selected.</Text_en>
+<Ref>custom-keys</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Toolbars</Topic_en>
+<Text_en>An editor to customize the toolbars is available from &quot;Tools-&amp;gt;Customize Toolbars&quot;.  The number of toolbars can be set and the buttons on each can be defined.</Text_en>
+<Ref>custom-tools</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Colors</Topic_en>
+<Text_en>User interface colors can be set using the last three items in the &quot;Tools menu.  If the &quot;Use Default System Colors&quot; command is enabled, the user background and text color settings are overridden.</Text_en>
+<Ref>custom-color</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Tree Icons</Topic_en>
+<Text_en>There is an icons directory in the user configuration directory (&quot;~/.treeline-1.x/icons&quot; on Linux, &quot;Documents and Settings\&amp;lt;user&amp;gt;\Application Data\bellz\treeline-1.x\icons&quot; on Windows).  Image files (PNG or BMP) placed into this directory are available for use as tree icons.</Text_en>
+<Ref>custom-icons</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+</HEADING3_TODO>
+<HEADING3 item="y">
+<Name>Extensiones</Name>
+<Name_en>Plugins</Name_en>
+<Ref>plugins</Ref>
+<Done>yes</Done>
+<RefNum>1.12.13</RefNum>
+<TEXT_HEAD item="y">
+<Topic>Descripción</Topic>
+<Topic_en>Description</Topic_en>
+<Text>TreeLine dispone de un interfaz para conectar módulos de extensión. Esto permite que se puedan desarrollar extensiones por diferentes programadores que puedan cubrir las necesidades de grupos minoritarios de usuarios sin necesidad de congestionar la aplicación completa. Las extensiones pueden añadir nuevos elementos al menú, acceder a los datos de TreeLine y leer y escribir archivos de TreeLine.&lt;br /&gt;&lt;br /&gt;
+
+Las extensiones disponibles actualmente están accesibles en la página de descargas (&quot;Downloads&quot;) del sitio web de TreeLine.</Text>
+<Text_en>TreeLine has an interface to plugin extension modules. This allows extensions to be written by various coders that provide functionality needed by a few users without adding bloat to the main application. The plugins can add new menu items, access the TreeLine data and read and write TreeLine Files.&lt;br /&gt;&lt;br /&gt;
+
+Currently available plugins are listed on the &quot;Downloads&quot; page of the TreeLine web site.</Text_en>
+<Ref>plugins-intro</Ref>
+<Done>yes</Done>
+<RefNum>1.12.13.1</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y">
+<Topic>Instalación</Topic>
+<Topic_en>Installation</Topic_en>
+<Text>Las extensiones son instaladas copiando el archivo en Python (*.py) al directorio de extensiones (&quot;&amp;lt;prefix&amp;gt;/lib/treeline/plugins/&quot; en Linux o &quot;TreeLine\lib\plugins\&quot; en Windows). Se puede obtener una lista de los plugins cargados usando la orden &quot;Ayuda-&amp;gt;Ver extensiones&quot;.&lt;br /&gt;&lt;br /&gt;
+
+Asímismo existe también un parámetro en el archivo de configuración, &quot;UserPluginDir&quot;, que permite especificar un directorio alternativo para las extensiones. Esto permite usar extensiones sin necesidad de tener acceso de administración del sistema. Este parámetro solamente se puede cambiar modificando el archivo de configuración (~/.treeline en Linux, treeline.ini en Windows).</Text>
+<Text_en>The plugins are installed by copying their Python file (*.py) to a plugins directory.  This can be a directory in the TreeLine installation (&quot;&amp;lt;prefix&amp;gt;/lib/treeline/plugins/&quot; on Linux or &quot;TreeLine\lib\plugins\&quot; on Windows) or in the user configuration directory (&quot;~/.treeline-1.x/plugins/&quot; on Linux, &quot;Documents and Settings\&amp;lt;user&amp;gt;\Application Data\bellz\treeline-1.x\plugins\&quot; on Windows).  A list of loaded plugins can be found using the &quot;Help-&amp;gt;About Plugins&quot; command.</Text_en>
+<Ref>plugins-install</Ref>
+<Done>false</Done>
+<RefNum>1.12.13.2</RefNum>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Interfaz</Topic>
+<Topic_en>Interface</Topic_en>
+<Text>Se puede obtener información sobre cómo escribir nuevas extensiones examinando el archivo &quot;plugininterface.py&quot; en el código fuente de TreeLine.</Text>
+<Text_en>Information about writing new plugins can be found in the &quot;plugininterface.py&quot; file in the TreeLine source code.</Text_en>
+<Ref>plugins-intrf</Ref>
+<Done>yes</Done>
+<RefNum>1.12.13.3</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+<HEADING3 item="y">
+<Name>Problemas comunes</Name>
+<Name_en>Common Problems</Name_en>
+<Ref>errors</Ref>
+<Done>yes</Done>
+<RefNum>1.12.14</RefNum>
+<TEXT_HEAD_TODO item="y">
+<Topic_en>Closed Panes</Topic_en>
+<Text_en>If one of the view panes is not visible when it should contain data, it has probably been collapsed to a size of zero.  This can apply to the left pane and to the upper and lower right panes.  To fix this, look for a thin stripe along one of the view borders that can be dragged back into its proper position.</Text_en>
+<Ref>errors-panes</Ref>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
+<TEXT_HEAD item="y">
+<Topic>Error en XML</Topic>
+<Topic_en>XML Error</Topic_en>
+<Text>Un mensaje de error que diga &quot;Error al cargar el analizador de XML&quot; quiere decir normalmente que TreeLine no ha sido capaz de localizar una biblioteca XML, necesaria para poder funcionar. Bajo Linux, Python usa bibliotecas externas para analizar XML. El problema se debería poder solucionar instalando la biblioteca expat o el paquete PyXML. Bajo Windows, Python incluye un analizador, por lo que este error no debería aparecer nunca, salvo que falten ficheros o estén corruptos.</Text>
+<Text_en>An error message, &quot;Error loading XML Parser&quot;, typically means that TreeLine could not find a necessary XML library. Under Linux, Python uses external libraries for parsing. Installing either the expat library or the PyXML package should fix the problem. Under Windows, Python includes a parser, so this error should not be seen unless files are missing or corrupt.</Text_en>
+<Ref>errors-xml</Ref>
+<Done>yes</Done>
+<RefNum>1.12.14.1</RefNum>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Topic>Impresión</Topic>
+<Topic_en>Printing</Topic_en>
+<Text>Algunos problemas de impresión, especialmente los relativos a márgenes y a la división de las palabras, pueden ser eliminados cambiando la fuente de letra para la impresión por una fuente que esté mejor soportada por la impresora.</Text>
+<Text_en>Some printing problems, especially problems with margins and word-wrapping, can be eliminated by changing the print font to a font that is better supported by the printer.</Text_en>
+<Ref>errors-print</Ref>
+<Done>yes</Done>
+<RefNum>1.12.14.3</RefNum>
+</TEXT_HEAD>
+</HEADING3>
+</HEADING2>
+<HEADING2 item="y">
+<Name>Historial de revisiones</Name>
+<Name_en>Revision History</Name_en>
+<Ref>revs</Ref>
+<Done>yes</Done>
+<RefNum>1.13</RefNum>
+<TEXT_PARA_TODO item="y">
+<Topic_en>See the English version</Topic_en>
+<Text_en>The full revision history can be found in the English version of the ReadMe.</Text_en>
+<Done>false</Done>
+<RefNum>1.13.1</RefNum>
+</TEXT_PARA_TODO>
+</HEADING2>
+<HEADING2 item="y">
+<Name>¿Preguntas, comentarios, críticas?</Name>
+<Name_en>Questions, Comments, Criticisms?</Name_en>
+<Ref>contact</Ref>
+<Done>yes</Done>
+<RefNum>1.14</RefNum>
+<TEXT_PARA_TODO item="y">
+<Topic>Lista de correo</Topic>
+<Topic_en>Mailing list</Topic_en>
+<Text>Hay una lista de correo en la que se puede hablar de cualquier tema relacionado con TreeLine. En ella es en la que se producen las conversaciones sobre desarrollo (desde planificación o sugerencias hasta beta testing), anuncios de publicaciones de nuevas versiones del software, avisos sobre bugs, y conversaciones generales sobre el uso del programa.&lt;br /&gt;&lt;br /&gt;
+
+Para apuntarse a la lista, basta con ir a &lt;a href=&quot;http://www.bellz.org/mailman/listinfo/treeline&quot;&gt; www.bellz.org/mailman/listinfo/treeline&lt;/a&gt;. Las espectativas sobre la lista son que sea de bajo tráfico.</Text>
+<Text_en>There is a mailing list for users to discuss anything and everything about TreeLine. This is the place for development discussions (from roadmaps to feature suggestions to beta testing), release announcements, bug reports, and general user discussions (from new uses to tips &amp;amp; tricks to configuration samples).&lt;br /&gt;&lt;br /&gt;
+
+To subscribe, go to &lt;a href=&quot;https://lists.berlios.de/mailman/listinfo/treeline-users&quot;&gt; lists.berlios.de/mailman/listinfo/treeline-users&lt;/a&gt;. I expect this to be a low-volume mailing list.</Text_en>
+<Done>false</Done>
+<RefNum>1.14.1</RefNum>
+</TEXT_PARA_TODO>
+<TEXT_PARA item="y">
+<Topic>Correo Electrónico</Topic>
+<Topic_en>Email</Topic_en>
+<Text>Si no deseas apuntarte a la lista de correo, puedes contactar conmigo por correo electrónico: doug101 ARROBA bellz PUNTO org</Text>
+<Text_en>If you do not wish to subscribe to the mailing list, I can be contacted by email at: doug101 AT bellz DOT org</Text_en>
+<Done>yes</Done>
+<RefNum>1.14.2</RefNum>
+</TEXT_PARA>
+<TEXT_PARA_TODO item="y">
+<Topic>Actualizaciones</Topic>
+<Topic_en>Updates</Topic_en>
+<Text>Agradezco cualquier aportación, incluyendo avisos sobre los bugs que puedan aparecer. Asímismo, se puede comprobar periódicamente &lt;a href=&quot;http://www.bellz.org&quot;&gt;www.bellz.org&lt;/a&gt; si existen actualizaciones.</Text>
+<Text_en>I welcome any feedback, including reports of any bugs you find. Also, you can periodically check back to &lt;a href=&quot;http://treeline.bellz.org&quot;&gt;treeline.bellz.org&lt;/a&gt; for any updates.</Text_en>
+<Done>false</Done>
+<RefNum>1.14.3</RefNum>
+</TEXT_PARA_TODO>
+</HEADING2>
+<FIGURE item="n"
+line0="{*Topic_en*}"
+line1="&lt;p&gt;{*Picture_en*}&lt;/p&gt;"
+line2="&lt;p&gt;&lt;b&gt;{*Caption_en*}&lt;/b&gt;&lt;/p&gt;"
+icon="bullet_2">
+<Topic type="Text"></Topic>
+<Topic_en type="Text"></Topic_en>
+<Caption type="Text" html="y" lines="2"></Caption>
+<Caption_en type="Text" html="y" lines="2"></Caption_en>
+<Picture type="Picture" html="y"></Picture>
+<Picture_en type="Picture" html="y"></Picture_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="true"></Done>
+<RefNum type="Text"></RefNum>
+</FIGURE>
+<HEADING_CNTR_TODO item="n"
+line0="{*Name_en*}"
+line1="&lt;center&gt;&lt;h2&gt;{*Name_en*}&lt;/h2&gt;&lt;/center&gt;"
+childtype="TEXT_PARA"
+generic="HEADING_CNTR"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text"></Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</HEADING_CNTR_TODO>
+<HEADING1_TODO item="n"
+line0="{*Name_en*}"
+line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
+childtype="HEADING2"
+generic="HEADING1"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text"></Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</HEADING1_TODO>
+<HEADING2_TODO item="n"
+line0="{*Name_en*}"
+line1="&lt;hr /&gt;&lt;h2&gt;{*Name_en*}&lt;/h2&gt;"
+childtype="HEADING3"
+generic="HEADING2"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text"></Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</HEADING2_TODO>
+</HEADING1>
