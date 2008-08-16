@@ -107,7 +107,7 @@ def setLocalEncoding():
         # not reliable?
         globalref.localTextEncoding = locale.getpreferredencoding()
         'test'.encode(globalref.localTextEncoding)
-    except (AttributeError, LookupError, locale.Error):
+    except (AttributeError, LookupError, TypeError, locale.Error):
         try:
             # not available on windows
             globalref.localTextEncoding = locale.nl_langinfo(locale.CODESET)
@@ -116,7 +116,7 @@ def setLocalEncoding():
             try:
                 globalref.localTextEncoding = locale.getdefaultlocale()[1]
                 'test'.encode(globalref.localTextEncoding)
-            except (AttributeError, LookupError, locale.Error):
+            except (AttributeError, LookupError, TypeError, locale.Error):
                 globalref.localTextEncoding = 'utf-8'
 
 
