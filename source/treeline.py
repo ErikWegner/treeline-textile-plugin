@@ -152,7 +152,7 @@ def main():
             QtGui.QApplication.setStyle('plastique')
         win = treemainwin.TreeMainWin()
         if args:
-            win.openFile(args[0])
+            win.openFile(unicode(args[0], globalref.localTextEncoding))
         else:
             win.autoOpen()
         win.show()
