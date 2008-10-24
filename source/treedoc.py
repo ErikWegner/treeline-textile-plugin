@@ -112,7 +112,6 @@ class TreeDoc(object):
         if hasattr(fileRef, 'seek'):
             fileRef.seek(0)
         prefix = fileRef.read(2)
-        self.compressFile = prefix == '\037\213'
         if hasattr(fileRef, 'seek'):
             fileRef.seek(0)
         else:
@@ -120,10 +119,12 @@ class TreeDoc(object):
             fileRef = StringIO.StringIO(prefix + oldFileRef.read())
             fileRef.name = oldFileRef.name
             oldFileRef.close()
-        if self.compressFile:
+        if prefix == '\037\213':
             name = fileRef.name
             fileRef = gzip.GzipFile(fileobj=fileRef)
             fileRef.name = name
+        # may already be a gzip object from before password prompt
+        self.compressFile = isinstance(fileRef, gzip.GzipFile)
         return fileRef
 
     def decryptFile(self, fileObj):
