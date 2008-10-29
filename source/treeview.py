@@ -194,9 +194,8 @@ class TreeView(QtGui.QTreeWidget):
     def commitData(self, editor):
         """Change tree based on results of edit operation"""
         text = unicode(editor.text())
-        item = globalref.docRef.selection[0]
-        if text and text != item.title() and item == self.editedItem and \
-                    item.setTitle(text, True):
+        item = self.editedItem
+        if text and text != item.title() and item.setTitle(text, True):
             QtGui.QTreeWidget.commitData(self, editor)
             self.resizeColumnToContents(0)
             globalref.updateRightView()
