@@ -100,11 +100,14 @@ class TreeView(QtGui.QTreeWidget):
             globalref.docRef.root.setDescendantCondTypes()
         origX = self.horizontalScrollBar().value()
         origMaxX = self.horizontalScrollBar().maximum()
+        origY = self.verticalScrollBar().value()
         self.blockSignals(True)
         self.blockColumnResize = True
         self.clear()
         self.blockSignals(False)
         item = TreeViewItem(self, globalref.docRef.root)
+        if origY <= self.verticalScrollBar().maximum():
+            self.verticalScrollBar().setValue(origY)
         self.blockSignals(True)
         if globalref.docRef.selection:
             try:
