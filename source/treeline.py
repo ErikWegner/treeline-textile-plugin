@@ -148,8 +148,11 @@ def main():
     if opts:
         CmdLine(opts, args)
     else:
-        if not userStyle and not sys.platform.startswith('win'):
-            QtGui.QApplication.setStyle('plastique')
+        if not userStyle:
+            if sys.platform.startswith('dar'):
+                QtGui.QApplication.setStyle('macintosh')
+            elif not sys.platform.startswith('win'):
+                QtGui.QApplication.setStyle('plastique')
         win = treemainwin.TreeMainWin()
         if args:
             win.openFile(unicode(args[0], globalref.localTextEncoding))
