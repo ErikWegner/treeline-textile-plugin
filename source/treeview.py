@@ -100,11 +100,14 @@ class TreeView(QtGui.QTreeWidget):
             globalref.docRef.root.setDescendantCondTypes()
         origX = self.horizontalScrollBar().value()
         origMaxX = self.horizontalScrollBar().maximum()
+        origY = self.verticalScrollBar().value()
         self.blockSignals(True)
         self.blockColumnResize = True
         self.clear()
         self.blockSignals(False)
         item = TreeViewItem(self, globalref.docRef.root)
+        if origY <= self.verticalScrollBar().maximum():
+            self.verticalScrollBar().setValue(origY)
         self.blockSignals(True)
         if globalref.docRef.selection:
             try:
@@ -194,9 +197,8 @@ class TreeView(QtGui.QTreeWidget):
     def commitData(self, editor):
         """Change tree based on results of edit operation"""
         text = unicode(editor.text())
-        item = globalref.docRef.selection[0]
-        if text and text != item.title() and item == self.editedItem and \
-                    item.setTitle(text, True):
+        item = self.editedItem
+        if text and text != item.title() and item.setTitle(text, True):
             QtGui.QTreeWidget.commitData(self, editor)
             self.resizeColumnToContents(0)
             globalref.updateRightView()

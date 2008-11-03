@@ -35,7 +35,8 @@ SOURCES = cmdline.py \
           treexmlparse.py \
           undo.py
 
-TRANSLATIONS = treeline_de.ts \
+TRANSLATIONS = treeline_cs.ts \
+               treeline_de.ts \
                treeline_es.ts \
                treeline_fr.ts \
                treeline_pt.ts \

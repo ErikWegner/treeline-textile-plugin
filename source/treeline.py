@@ -15,7 +15,7 @@
 """
 
 __progname__ = 'TreeLine'
-__version__ = '1.2.0'
+__version__ = '1.2.1'
 __author__ = 'Doug Bell'
 
 helpFilePath = None    # modified by install script if required
@@ -148,11 +148,14 @@ def main():
     if opts:
         CmdLine(opts, args)
     else:
-        if not userStyle and not sys.platform.startswith('win'):
-            QtGui.QApplication.setStyle('plastique')
+        if not userStyle:
+            if sys.platform.startswith('dar'):
+                QtGui.QApplication.setStyle('macintosh')
+            elif not sys.platform.startswith('win'):
+                QtGui.QApplication.setStyle('plastique')
         win = treemainwin.TreeMainWin()
         if args:
-            win.openFile(args[0])
+            win.openFile(unicode(args[0], globalref.localTextEncoding))
         else:
             win.autoOpen()
         win.show()

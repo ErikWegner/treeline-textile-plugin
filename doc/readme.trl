@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.1.10"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.1"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.0 (stable release)</Name>
+<Name>Version 1.2.1 (stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>June 17, 2008</Name>
+<Name>November 4, 2008</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -1469,6 +1469,36 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <HEADING2 item="y">
 <Name>Revision History</Name>
 <Ref>revs</Ref>
+<HEADING3 item="y">
+<Name>November 4, 2008 - Release 1.2.1 (stable release)</Name>
+<HEADING4 item="y">
+<Name>Bug Fixes:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Rename input loss</Topic>
+<Text>Fix the loss of entered text when the renaming of a node is ended by a command that changes the selected node.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Unicode file names</Topic>
+<Text>Problems with opening files with Unicode file names from the command line or from a file association have been fixed.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Windows JPEG support</Topic>
+<Text>Fixed problems with JPEG and GIF image support in the Windows binary build.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Tree view scrolling</Topic>
+<Text>When commands change the tree view, it no longer scrolls vertically unless the current node is not visible.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Compressed encrypted files</Topic>
+<Text>Fixed problems with files set to both compressed and encrypted modes.  But note that compressing an encrypted file still does not significantly reduce its size.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Mac support</Topic>
+<Text>Problems on the Macintosh platform with detecting the text encoding and with setting the default theme have been fixed.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+</HEADING3>
 <HEADING3 item="y">
 <Name>June 17, 2008 - Release 1.2.0 (new stable release)</Name>
 <HEADING4 item="y">
