@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2008-06-16 by Doug Bell
+; Last modified : 2008-11-03 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.2.0"
+!define VERSION "1.2.1"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -292,15 +292,23 @@ SectionEnd
                 File ".\lib\msvcp71.dll"
                 File ".\lib\MSVCR71.dll"
                 File ".\lib\pyexpat.pyd"
+                File ".\lib\PyQt4.QtCore.pyd"
+                File ".\lib\PyQt4.QtGui.pyd"
 		File ".\lib\python25.dll"
                 File ".\lib\QtCore4.dll"
-                File ".\lib\QtCore.pyd"
                 File ".\lib\QtGui4.dll"
-                File ".\lib\QtGui.pyd"
                 File ".\lib\select.pyd"
                 File ".\lib\sip.pyd"
                 File ".\lib\unicodedata.pyd"
                 File ".\lib\w9xpopen.exe"
+
+                SetOutPath "$INSTDIR\lib\imageformats"
+
+                File ".\lib\imageformats\qgif4.dll"
+                File ".\lib\imageformats\qico4.dll"
+                File ".\lib\imageformats\qjpeg4.dll"
+                File ".\lib\imageformats\qsvg4.dll"
+                File ".\lib\imageformats\qtiff4.dll"
 
 	SectionEnd
 !endif
@@ -756,6 +764,8 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\python25.dll"
         Delete "$INSTDIR\lib\python24.dll"
         Delete "$INSTDIR\lib\python23.dll"
+        Delete "$INSTDIR\lib\PyQt4.QtCore.pyd"
+        Delete "$INSTDIR\lib\PyQt4.QtGui.pyd"
         Delete "$INSTDIR\lib\QtCore4.dll"
         Delete "$INSTDIR\lib\QtCore.pyd"
         Delete "$INSTDIR\lib\QtGui4.dll"
@@ -766,6 +776,12 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\unicodedata.pyd"
         Delete "$INSTDIR\lib\w9xpopen.exe"
 	Delete "$INSTDIR\lib\zlib.pyd"
+
+        Delete "$INSTDIR\lib\imageformats\qgif4.dll"
+        Delete "$INSTDIR\lib\imageformats\qico4.dll"
+        Delete "$INSTDIR\lib\imageformats\qjpeg4.dll"
+        Delete "$INSTDIR\lib\imageformats\qsvg4.dll"
+        Delete "$INSTDIR\lib\imageformats\qtiff4.dll"
 
 	Delete "$INSTDIR\source\treeline.nsi"
 	Delete "$INSTDIR\source\install.ico"
@@ -827,6 +843,7 @@ Section "Uninstall"
 
 	; Remove directories used
         RMDir "$INSTDIR\lib\plugins"
+        RMDir "$INSTDIR\lib\imageformats"
         RMDir "$INSTDIR\lib"
         RMDir "$INSTDIR\doc"
         RMDir "$INSTDIR\icons\toolbar\16x16"
