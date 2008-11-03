@@ -3,7 +3,7 @@
 ; Created       : 2005-7-1
 ; By            : Doug Bell
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2008-06-16 by Doug Bell
+; Last modified : 2008-11-03 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.2.0a"
+!define VERSION "1.2.1a"
 
 
 Name "${NAME} Translations ${VERSION} by Doug Bell"
