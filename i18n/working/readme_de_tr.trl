@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.1.10"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.1"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -42,15 +42,14 @@ line1="&lt;center&gt;{*Name_en*}&lt;/center&gt;"
 generic="TEXT_CNTR"
 condition="Done != &quot;true&quot;"
 icon="bullet_1">
-<Name type="Text">Version 1.0.1</Name>
-<Name_en type="Text">Version 1.1.10 (unstable development snapshot)</Name_en>
+<Name type="Text">Version 1.2.1</Name>
+<Name_en type="Text">Version 1.2.1 (stable release)</Name_en>
 <Ref type="Text" ref="y"></Ref>
 <Done type="Boolean" format="yes/no" init="false">false</Done>
 <RefNum type="Text">1.4</RefNum>
 </TEXT_CNTR_TODO>
 <TEXT_CNTR_TODO item="y">
-<Name>8 März 2007</Name>
-<Name_en>January 15, 2008</Name_en>
+<Name_en>November 4, 2008</Name_en>
 <Done>false</Done>
 <RefNum>1.5</RefNum>
 </TEXT_CNTR_TODO>
