@@ -133,6 +133,7 @@ class DataOutView(QtGui.QTextBrowser):
         """Update view if was collaped by splitter"""
         if (event.oldSize().height() == 0 and event.size().height()) or \
            (event.oldSize().width() == 0 and event.size().width()):
+            self.setEnabled(True)
             self.updateView()
         return QtGui.QTextBrowser.resizeEvent(self, event)
 
@@ -214,5 +215,6 @@ class TitleListView(QtGui.QTextEdit):
         """Update view if was collaped by splitter"""
         if (event.oldSize().height() == 0 and event.size().height()) or \
            (event.oldSize().width() == 0 and event.size().width()):
+            self.setEnabled(True)
             self.updateView()
         return QtGui.QTextEdit.resizeEvent(self, event)

@@ -658,6 +658,7 @@ class DataEditView(QtGui.QWidget):
         """Change the minimum viewport size if view size changes"""
         if (event.oldSize().height() == 0 and event.size().height()) or \
            (event.oldSize().width() == 0 and event.size().width()):
+            self.setEnabled(True)
             self.updateView()
         else:
             self.scrollView.invalidateLayouts()

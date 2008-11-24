@@ -345,7 +345,10 @@ class TreeMainWin(QtGui.QMainWindow):
                 childView.oldViewHeight = 0
             for index in range(2):
                 if splitter.widget(index).height():    # not collapsed
+                    splitter.widget(index).setEnabled(True)
                     splitter.widget(index).updateView()
+                else:
+                    splitter.widget(index).setEnabled(False)
         if self.setTypeDlg and self.setTypeDlg.isVisible():
             # could be updateDlg(), except needed after ConfigDialog apply
             self.setTypeDlg.loadList()
