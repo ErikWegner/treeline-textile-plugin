@@ -2591,7 +2591,7 @@ class TreeMainWin(QtGui.QMainWindow):
 
         dataMenu.addSeparator()
 
-        dataAddCatAct = QtGui.QAction(('&Add Category Level...'),
+        dataAddCatAct = QtGui.QAction(_('&Add Category Level...'),
                                       self.selParentsActGrp)
         dataAddCatAct.setStatusTip(_('Insert category nodes above children'))
         dataMenu.addAction(dataAddCatAct)
