@@ -39,12 +39,12 @@ class TreeItem(object):
         self.parent = parent
         self.formatName = formatName
         self.data = {}
+        self.childList = []
         if initText:
             self.setTitle(initText)
         if addDefaultData:
             self.nodeFormat().setInitDefaultData(self.data)
         self.open = False
-        self.childList = []
         self.viewData = None
         self.level = 0    # updated only by numbered descend list
 
