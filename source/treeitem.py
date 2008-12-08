@@ -634,7 +634,7 @@ class TreeItem(object):
             newFormat = self.childList and self.childList[0].formatName or \
                         self.formatName
         newItem = TreeItem(self, newFormat, text, True)
-        newItem.setUniqueID()
+        newItem.setUniqueID(True)
         self.childList.insert(pos, newItem)
         globalref.docRef.modified = True
         return newItem
@@ -650,7 +650,7 @@ class TreeItem(object):
         if newFormat not in globalref.docRef.treeFormats:
             newFormat = self.formatName
         newItem = TreeItem(self.parent, newFormat, text, True)
-        newItem.setUniqueID()
+        newItem.setUniqueID(True)
         self.parent.childList.insert(pos, newItem)
         globalref.docRef.modified = True
         return newItem
@@ -919,7 +919,7 @@ class TreeItem(object):
             newParent = child.findEquivFields(catList, newItems)
             if not newParent:
                 newParent = TreeItem(self, newType)
-                newParent.setUniqueID()
+                newParent.setUniqueID(True)
                 for field in catList:
                     newParent.data[field] = child.data.get(field, '')
                 newItems.append(newParent)
