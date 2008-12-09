@@ -17,7 +17,6 @@ import re
 import string
 import os
 import sys
-import sets
 from PyQt4 import QtCore, QtGui
 try:
     from __main__ import templatePath
@@ -803,8 +802,7 @@ class TemplateDialog(QtGui.QDialog):
 
     def loadLanguages(self):
         """Populate language combo box"""
-        availLanguages = sets.Set([item.langCode for item in
-                                   self.fullTemplateList])
+        availLanguages = set([item.langCode for item in self.fullTemplateList])
         availLanguages = list(availLanguages)
         availLanguages.sort()
         self.languageCombo.addItems(availLanguages)

@@ -14,7 +14,6 @@
 
 import re
 import copy
-import sets
 from PyQt4 import QtCore, QtGui
 import treeformats
 import nodeformat
@@ -1429,7 +1428,7 @@ class FieldEntry(QtGui.QDialog):
         elif self.text[:3].lower() == 'xml':
             error = _('Name cannot start with "xml"')
         elif FieldEntry.illegalRe.search(self.text):
-            badChars = sets.Set(FieldEntry.illegalRe.findall(self.text))
+            badChars = set(FieldEntry.illegalRe.findall(self.text))
             error = '%s: "%s"' % \
                     (_('The following characters are not allowed'),
                      unicode(''.join(badChars)))
