@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.1"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.2"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.1 (stable release)</Name>
+<Name>Version 1.2.2 (stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>November 4, 2008</Name>
+<Name>December 16, 2008</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -299,7 +299,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Internationalization</Topic>
-<Text>The user interface and documentation are available in English, French, German, Portuguese, Russian and Spanish.</Text>
+<Text>The user interface and documentation are available in English, French and German.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 </HEADING2>
@@ -330,7 +330,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
-<Text>Python (Version 2.3 or higher)</Text>
+<Text>Python (Version 2.4, 2.5 or 2.6)</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
@@ -1262,7 +1262,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Header and Footer</Topic>
-<Text>The third tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text>
+<Text>The fourth tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text>
 <Ref>print-header</Ref>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -1469,6 +1469,39 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <HEADING2 item="y">
 <Name>Revision History</Name>
 <Ref>revs</Ref>
+<HEADING3 item="y">
+<Name>December 16, 2008 - Release 1.2.2 (stable release)</Name>
+<HEADING4 item="y">
+<Name>Updates:</Name>
+<TEXT_BULLETS item="y">
+<Topic>German translation</Topic>
+<Text>Added German translations of the GUI and the ReadMe file.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Translation updates</Topic>
+<Text>Added a few missing strings to the translation files.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Python 2.6 compatibility</Topic>
+<Text>Substituted some imported modules to avoid deprecation warnings in Python 2.6.  Note that Python 2.3 is no longer supported.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Bug Fixes:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Edit view tabbing</Topic>
+<Text>Fixed problems using tabbing to change focus from the tree to the data editor.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>UniqueID fields in titles</Topic>
+<Text>ID numbers are now properly assigned to new nodes with UniqueID fields in the title.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Child count in titles</Topic>
+<Text>Fixed problems creating nodes with child count fields in the titles</Text>
+</TEXT_BULLETS>
+</HEADING4>
+</HEADING3>
 <HEADING3 item="y">
 <Name>November 4, 2008 - Release 1.2.1 (stable release)</Name>
 <HEADING4 item="y">

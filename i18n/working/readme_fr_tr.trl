@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.1.10"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.2"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -37,14 +37,14 @@ icon="bullet_2">
 <RefNum type="Text">1.3</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.0</Name>
-<Name_en>Version 1.2.0</Name_en>
+<Name>Version 1.2.2</Name>
+<Name_en>Version 1.2.2</Name_en>
 <Done>true</Done>
 <RefNum>1.4</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>17 juin 2008</Name>
-<Name_en>June 17, 2008</Name_en>
+<Name>16 décembre 2008</Name>
+<Name_en>December 16, 2008</Name_en>
 <Done>true</Done>
 <RefNum>1.5</RefNum>
 </TEXT_CNTR>
@@ -543,8 +543,8 @@ icon="bullet_2">
 <TEXT_BULLETS item="y">
 <Topic>Internationalisation</Topic>
 <Topic_en>Internationalization</Topic_en>
-<Text>L'interface utilisateur et la documentation sont disponibles en Anglais, Français , Allemand , Portugais , Russe et Espagnole</Text>
-<Text_en>The user interface and documentation are available in English, French, German, Portuguese, Russian and Spanish.</Text_en>
+<Text>L'interface utilisateur et la documentation sont disponibles en Anglais, Français et Allemand</Text>
+<Text_en>The user interface and documentation are available in English, French or German.</Text_en>
 <Done>true</Done>
 <RefNum>1.8.28</RefNum>
 </TEXT_BULLETS>
@@ -603,8 +603,8 @@ icon="bullet_2">
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
 <Topic_en>Python</Topic_en>
-<Text>Python (Version 2.3 ou ultérieur )</Text>
-<Text_en>Python (Version 2.3 or higher)</Text_en>
+<Text>Python (Version 2.4, 2.5 ou 2.6 )</Text>
+<Text_en>Python (Version 2.4, 2.5 or 2.6)</Text_en>
 <Done>true</Done>
 <RefNum>1.10.1.1.2</RefNum>
 </TEXT_BULLETS>
@@ -2279,7 +2279,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Topic>En-tête et pied de page</Topic>
 <Topic_en>Header and Footer</Topic_en>
 <Text>Dans la boîte de dialogue options d'impression le troisième onglet est utilisé pour configurer les en-têtes et pieds de page. Ce bouton fait apparaître une nouvelle boîte de dialogue avec le nom des champs du fichier dans la partie gauche et six boîtes d'édition en-tête/pied de page (justification à gauche, au centre et à droite) sur la droite. Ces champs peuvent être ajoutés et combinés avec du texte entré dans les boîtes d'édition, exactement comme dans la boîte de dialogue &quot;Données-&amp;gt;Paramètres du Type de Données&quot;. La configuration en-tête/pied de page est sauvegardée avec le fichier TreeLine.</Text>
-<Text_en>The third tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text_en>
+<Text_en>The fourth tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text_en>
 <Ref>print-header</Ref>
 <Done>true</Done>
 <RefNum>1.12.9.2</RefNum>
