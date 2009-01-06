@@ -25,7 +25,7 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Name>Version 1.2.2 (stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>December 16, 2008</Name>
+<Name>January 8, 2009</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -1470,7 +1470,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <Name>Revision History</Name>
 <Ref>revs</Ref>
 <HEADING3 item="y">
-<Name>December 16, 2008 - Release 1.2.2 (stable release)</Name>
+<Name>January 8, 2009 - Release 1.2.2 (stable release)</Name>
 <HEADING4 item="y">
 <Name>Updates:</Name>
 <TEXT_BULLETS item="y">
@@ -1484,6 +1484,10 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <TEXT_BULLETS item="y">
 <Topic>Python 2.6 compatibility</Topic>
 <Text>Substituted some imported modules to avoid deprecation warnings in Python 2.6.  Note that Python 2.3 is no longer supported.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Windows binary</Topic>
+<Text>The windows binary has been updated to use Python 2.6</Text>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">

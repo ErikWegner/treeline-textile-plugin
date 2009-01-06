@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.1"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.2"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.1</Name>
+<Name>Version 1.2.2</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>4 Novembre 2008</Name>
+<Name>8 janvier 2009</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -299,7 +299,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Internationalisation</Topic>
-<Text>L'interface utilisateur et la documentation sont disponibles en Anglais, Français , Allemand , Portugais , Russe et Espagnole</Text>
+<Text>L'interface utilisateur et la documentation sont disponibles en Anglais, Français et Allemand</Text>
 </TEXT_BULLETS>
 </HEADING4>
 </HEADING2>
@@ -330,7 +330,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
-<Text>Python (Version 2.3 ou ultérieur )</Text>
+<Text>Python (Version 2.4, 2.5 ou 2.6 )</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
