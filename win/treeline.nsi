@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2008-11-03 by Doug Bell
+; Last modified : 2009-01-07 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.2.1"
+!define VERSION "1.2.2"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -282,19 +282,37 @@ SectionEnd
 
 		SectionIn 1 RO
 
+                Delete "$INSTDIR\lib\_qt.pyd"
+                Delete "$INSTDIR\lib\_sre.pyd"
+                Delete "$INSTDIR\lib\_winreg.pyd"
+                Delete "$INSTDIR\lib\libqtc.pyd"
+                Delete "$INSTDIR\lib\libsip.dll"
+                Delete "$INSTDIR\lib\mingwm10.dll"
+                Delete "$INSTDIR\lib\msvcp71.dll"
+                Delete "$INSTDIR\lib\MSVCR71.dll"
+                Delete "$INSTDIR\lib\python25.dll"
+                Delete "$INSTDIR\lib\python24.dll"
+                Delete "$INSTDIR\lib\python23.dll"
+                Delete "$INSTDIR\lib\QtCore.pyd"
+                Delete "$INSTDIR\lib\QtGui.pyd"
+                Delete "$INSTDIR\lib\qt-mt230nc.dll"
+                Delete "$INSTDIR\lib\zlib.pyd"
+
+
                 SetOutPath "$INSTDIR\lib"
 
+                File ".\lib\_ctypes.pyd"
                 File ".\lib\_hashlib.pyd"
 		File ".\lib\_socket.pyd"
 		File ".\lib\_ssl.pyd"
                 File ".\lib\bz2.pyd"
-                File ".\lib\mingwm10.dll"
-                File ".\lib\msvcp71.dll"
-                File ".\lib\MSVCR71.dll"
+                File ".\lib\Microsoft.VC90.CRT.manifest"
+                File ".\lib\msvcp90.dll"
+                File ".\lib\msvcr90.dll"
                 File ".\lib\pyexpat.pyd"
                 File ".\lib\PyQt4.QtCore.pyd"
                 File ".\lib\PyQt4.QtGui.pyd"
-		File ".\lib\python25.dll"
+		File ".\lib\python26.dll"
                 File ".\lib\QtCore4.dll"
                 File ".\lib\QtGui4.dll"
                 File ".\lib\select.pyd"
@@ -309,6 +327,9 @@ SectionEnd
                 File ".\lib\imageformats\qjpeg4.dll"
                 File ".\lib\imageformats\qsvg4.dll"
                 File ".\lib\imageformats\qtiff4.dll"
+                File ".\lib\Microsoft.VC90.CRT.manifest"
+                File ".\lib\msvcp90.dll"
+                File ".\lib\msvcr90.dll"
 
 	SectionEnd
 !endif
@@ -748,6 +769,7 @@ Section "Uninstall"
         Delete "$INSTDIR\icons\x_2.png"
         Delete "$INSTDIR\icons\x_3.png"
 
+        Delete "$INSTDIR\lib\_ctypes.pyd"
         Delete "$INSTDIR\lib\_hashlib.pyd"
         Delete "$INSTDIR\lib\_qt.pyd"
         Delete "$INSTDIR\lib\_socket.pyd"
@@ -760,6 +782,9 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\mingwm10.dll"
         Delete "$INSTDIR\lib\msvcp71.dll"
         Delete "$INSTDIR\lib\MSVCR71.dll"
+        Delete "$INSTDIR\lib\Microsoft.VC90.CRT.manifest"
+        Delete "$INSTDIR\lib\msvcp90.dll"
+        Delete "$INSTDIR\lib\msvcr90.dll"
         Delete "$INSTDIR\lib\pyexpat.pyd"
         Delete "$INSTDIR\lib\python25.dll"
         Delete "$INSTDIR\lib\python24.dll"
@@ -782,6 +807,9 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\imageformats\qjpeg4.dll"
         Delete "$INSTDIR\lib\imageformats\qsvg4.dll"
         Delete "$INSTDIR\lib\imageformats\qtiff4.dll"
+        Delete "$INSTDIR\lib\imageformats\Microsoft.VC90.CRT.manifest"
+        Delete "$INSTDIR\lib\imageformats\msvcp90.dll"
+        Delete "$INSTDIR\lib\imageformats\msvcr90.dll"
 
 	Delete "$INSTDIR\source\treeline.nsi"
 	Delete "$INSTDIR\source\install.ico"

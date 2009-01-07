@@ -3,7 +3,7 @@
 ; Created       : 2005-7-1
 ; By            : Doug Bell
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2008-11-03 by Doug Bell
+; Last modified : 2009-01-07 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.2.1a"
+!define VERSION "1.2.2a"
 
 
 Name "${NAME} Translations ${VERSION} by Doug Bell"
@@ -77,8 +77,8 @@ Section "Translation Files (required)" translations
 	SetOutPath "$INSTDIR\lib\translations"
 
 	; Put files there
-        ;File ".\translations\treeline_de.ts"
-        ;File ".\translations\treeline_de.qm"
+        File ".\translations\treeline_de.ts"
+        File ".\translations\treeline_de.qm"
         ;File ".\translations\treeline_es.ts"
         ;File ".\translations\treeline_es.qm"
         File ".\translations\treeline_fr.ts"
@@ -87,7 +87,7 @@ Section "Translation Files (required)" translations
         ;File ".\translations\treeline_pt.qm"
         ;File ".\translations\treeline_ru.ts"
         ;File ".\translations\treeline_ru.qm"
-	;File ".\translations\qt_de.qm"
+	File ".\translations\qt_de.qm"
         ;File ".\translations\qt_es.qm"
 	File ".\translations\qt_fr.qm"
         ;File ".\translations\qt_pt.qm"
@@ -97,8 +97,8 @@ Section "Translation Files (required)" translations
         SetOutPath "$INSTDIR\doc"
 
 	; Put files there
-        ;File ".\translations\README_de.html"
-        ;File ".\translations\readme_de.trl"
+        File ".\translations\README_de.html"
+        File ".\translations\readme_de.trl"
         ;File ".\translations\README_es.html"
         ;File ".\translations\readme_es.trl"
         File ".\translations\README_fr.html"
