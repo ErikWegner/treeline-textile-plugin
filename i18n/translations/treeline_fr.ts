@@ -2312,12 +2312,12 @@ ont le même nom que le fichier de sortie.</translation>
     <message>
         <location filename="optiondlg.py" line="37"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="optiondlg.py" line="41"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Annuler</translation>
+        <translation>&amp;Annuler</translation>
     </message>
 </context>
 <context>
@@ -5154,7 +5154,7 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="2594"/>
         <source>&amp;Add Category Level...</source>
-        <translation type="unfinished">Ajouter Champ du Classement</translation>
+        <translation>Ajouter Champ du Classement</translation>
     </message>
 </context>
 <context>
