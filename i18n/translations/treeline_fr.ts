@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="fr">
+<defaultcodec></defaultcodec>
 <context>
     <name>cmdline</name>
     <message>
@@ -5153,7 +5154,7 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="2594"/>
         <source>&amp;Add Category Level...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajouter Champ du Classement</translation>
     </message>
 </context>
 <context>

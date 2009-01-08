@@ -1487,14 +1487,14 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Windows binary</Topic>
-<Text>The windows binary has been updated to use Python 2.6</Text>
+<Text>The windows binary has been updated to use Python 2.6, and the installer has been tweaked to reduce DLL conflicts.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Bug Fixes:</Name>
 <TEXT_BULLETS item="y">
 <Topic>Edit view tabbing</Topic>
-<Text>Fixed problems using tabbing to change focus from the tree to the data editor.</Text>
+<Text>Fixed problems using the tab key to change focus from the tree to the data editor.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>UniqueID fields in titles</Topic>
@@ -1502,7 +1502,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Child count in titles</Topic>
-<Text>Fixed problems creating nodes with child count fields in the titles</Text>
+<Text>Fixed problems creating nodes with child count fields in the titles.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 </HEADING3>
