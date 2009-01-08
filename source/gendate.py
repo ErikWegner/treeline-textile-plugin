@@ -3,7 +3,7 @@
 #****************************************************************************
 # gendate.py, provides a class for date formating
 #
-# Copyright (C) 2006, Douglas W. Bell
+# Copyright (C) 2008, Douglas W. Bell
 #
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, either Version 2 or any later
@@ -14,7 +14,6 @@
 import re
 import time
 import types
-from sets import Set
 
 
 class GenDate(object):
@@ -28,7 +27,7 @@ class GenDate(object):
     monthChooser = dict([(mon.lower(), i+1) for i, mon in \
                          enumerate(monthAbbrevs)])
     monthAbbrevs = [_(name) for name in monthAbbrevs]
-    monthAbbrevLengths = list(Set([len(name) for name in monthAbbrevs] + [3]))
+    monthAbbrevLengths = list(set([len(name) for name in monthAbbrevs] + [3]))
     monthAbbrevLengths.sort()
     monthAbbrevLengths.reverse()
     monthChooser.update(dict([(mon.lower(), i+1) for i, mon in \

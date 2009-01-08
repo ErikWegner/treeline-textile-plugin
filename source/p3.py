@@ -14,12 +14,17 @@
 
 from string import join
 from array import array
-import sha
 from time import time
 import struct
+try:
+    import hashlib
+    shaHash = hashlib.sha1
+except ImportError:
+    import sha         # stay compatible with Python 2.4
+    shaHash = sha.new
 
 class CryptError(Exception): pass
-def _hash(str): return sha.new(str).digest()
+def _hash(str): return shaHash(str).digest()
 
 _ivlen = 16
 _maclen = 8
@@ -39,7 +44,7 @@ def _expand_key(key, clen):
     xkey=[]
     seed=key
     for i in xrange(blocks):
-        seed=sha.new(key+seed).digest()
+        seed=shaHash(key+seed).digest()
         xkey.append(seed)
     j = join(xkey,'')
     return array(_arraytype, j)
@@ -115,10 +120,10 @@ def _hmac_setup():
 
 def _hmac(msg, key):
     if len(key)>64:
-        key=sha.new(key).digest()
+        key=shaHash(key).digest()
     ki = (translate(key,_itrans)+_ipad)[:64] # inner
     ko = (translate(key,_otrans)+_opad)[:64] # outer
-    return sha.new(ko+sha.new(ki+msg).digest()).digest()
+    return shaHash(ko+shaHash(ki+msg).digest()).digest()
 
 #
 # benchmark and unit test

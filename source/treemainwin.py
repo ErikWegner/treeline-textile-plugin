@@ -345,7 +345,10 @@ class TreeMainWin(QtGui.QMainWindow):
                 childView.oldViewHeight = 0
             for index in range(2):
                 if splitter.widget(index).height():    # not collapsed
+                    splitter.widget(index).setEnabled(True)
                     splitter.widget(index).updateView()
+                else:
+                    splitter.widget(index).setEnabled(False)
         if self.setTypeDlg and self.setTypeDlg.isVisible():
             # could be updateDlg(), except needed after ConfigDialog apply
             self.setTypeDlg.loadList()
@@ -2588,7 +2591,7 @@ class TreeMainWin(QtGui.QMainWindow):
 
         dataMenu.addSeparator()
 
-        dataAddCatAct = QtGui.QAction(('&Add Category Level...'),
+        dataAddCatAct = QtGui.QAction(_('&Add Category Level...'),
                                       self.selParentsActGrp)
         dataAddCatAct.setStatusTip(_('Insert category nodes above children'))
         dataMenu.addAction(dataAddCatAct)

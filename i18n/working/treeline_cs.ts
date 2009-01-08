@@ -2300,6 +2300,19 @@ if they share the output file&apos;s name.</source>
     </message>
 </context>
 <context>
+    <name>optiondlg</name>
+    <message>
+        <location filename="optiondlg.py" line="37"/>
+        <source>&amp;OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="optiondlg.py" line="41"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>printdata</name>
     <message>
         <location filename="printdata.py" line="309"/>
@@ -3318,58 +3331,58 @@ if they share the output file&apos;s name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="213"/>
+        <location filename="treedoc.py" line="214"/>
         <source>Could not open as treeline file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="275"/>
+        <location filename="treedoc.py" line="276"/>
         <source>Error in tabbed list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="312"/>
+        <location filename="treedoc.py" line="313"/>
         <source>Too few headings to read data as table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="405"/>
+        <location filename="treedoc.py" line="406"/>
         <source>Title</source>
         <comment>title field name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="428"/>
+        <location filename="treedoc.py" line="429"/>
         <source>Bad file format in %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="598"/>
+        <location filename="treedoc.py" line="599"/>
         <source>Problem with Unicode characters in file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="497"/>
+        <location filename="treedoc.py" line="498"/>
         <source>Could not open as XBEL file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="530"/>
+        <location filename="treedoc.py" line="531"/>
         <source>Could not open as HTML bookmark file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="562"/>
+        <location filename="treedoc.py" line="563"/>
         <source>Could not open XML file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="594"/>
+        <location filename="treedoc.py" line="595"/>
         <source>Could not unzip ODF file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treedoc.py" line="602"/>
+        <location filename="treedoc.py" line="603"/>
         <source>Could not open corrupt ODF file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3681,12 +3694,12 @@ See TreeLine ReadMe file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1912"/>
+        <location filename="treemainwin.py" line="1915"/>
         <source>&amp;Size...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1920"/>
+        <location filename="treemainwin.py" line="1923"/>
         <source>&amp;Color...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3736,1373 +3749,1378 @@ See TreeLine ReadMe file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="507"/>
+        <location filename="treemainwin.py" line="510"/>
         <source>Could not load plugin module %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="534"/>
+        <location filename="treemainwin.py" line="537"/>
         <source>Backup file &quot;%s&quot; exists.
 A previous session may have crashed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="535"/>
+        <location filename="treemainwin.py" line="538"/>
         <source>&amp;Restore Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="536"/>
+        <location filename="treemainwin.py" line="539"/>
         <source>&amp;Delete Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="537"/>
+        <location filename="treemainwin.py" line="540"/>
         <source>&amp;Cancel File Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="542"/>
+        <location filename="treemainwin.py" line="545"/>
         <source>Error - could not restore backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1353"/>
+        <location filename="treemainwin.py" line="1356"/>
         <source>Error - could not read file &quot;%s&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="574"/>
+        <location filename="treemainwin.py" line="577"/>
         <source>Tab &amp;indented text, one node per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="576"/>
+        <location filename="treemainwin.py" line="579"/>
         <source>Text &amp;table with header row, one node per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="578"/>
+        <location filename="treemainwin.py" line="581"/>
         <source>Plain text, one &amp;node per line (CR delimitted)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="580"/>
+        <location filename="treemainwin.py" line="583"/>
         <source>Plain text &amp;paragraphs (blank line delimitted)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="582"/>
+        <location filename="treemainwin.py" line="585"/>
         <source>Treepad &amp;file (text nodes only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="584"/>
+        <location filename="treemainwin.py" line="587"/>
         <source>&amp;XML bookmarks (XBEL format)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="586"/>
+        <location filename="treemainwin.py" line="589"/>
         <source>&amp;HTML bookmarks (Mozilla format)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="588"/>
+        <location filename="treemainwin.py" line="591"/>
         <source>&amp;Generic XML (Non-TreeLine file)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="590"/>
+        <location filename="treemainwin.py" line="593"/>
         <source>Open Document (ODF) text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="591"/>
+        <location filename="treemainwin.py" line="594"/>
         <source>Import Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="592"/>
+        <location filename="treemainwin.py" line="595"/>
         <source>Choose Text Import Method</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="603"/>
+        <location filename="treemainwin.py" line="606"/>
         <source>Error - %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="980"/>
+        <location filename="treemainwin.py" line="983"/>
         <source>Error - Could not write to %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="776"/>
+        <location filename="treemainwin.py" line="779"/>
         <source>Error - could not read template file &quot;%s&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="815"/>
+        <location filename="treemainwin.py" line="818"/>
         <source>Sample directory not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="818"/>
+        <location filename="treemainwin.py" line="821"/>
         <source>Open Sample Template File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="841"/>
+        <location filename="treemainwin.py" line="844"/>
         <source>Save As</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="867"/>
+        <location filename="treemainwin.py" line="870"/>
         <source>Nothing to export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="871"/>
+        <location filename="treemainwin.py" line="874"/>
         <source>Export Html</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="894"/>
+        <location filename="treemainwin.py" line="897"/>
         <source>Export to Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="902"/>
+        <location filename="treemainwin.py" line="905"/>
         <source>A link to a stylesheet can be added to the XSL file
 Enter a CSS filename (blank for none)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="907"/>
+        <location filename="treemainwin.py" line="910"/>
         <source>Export XSLT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="922"/>
+        <location filename="treemainwin.py" line="925"/>
         <source>Export Subtree</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="928"/>
+        <location filename="treemainwin.py" line="931"/>
         <source>Export Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="934"/>
+        <location filename="treemainwin.py" line="937"/>
         <source>Export Titles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="943"/>
+        <location filename="treemainwin.py" line="946"/>
         <source>Export XBEL Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="950"/>
+        <location filename="treemainwin.py" line="953"/>
         <source>Export Html Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="958"/>
+        <location filename="treemainwin.py" line="961"/>
         <source>Export Generic XML</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="965"/>
+        <location filename="treemainwin.py" line="968"/>
         <source>Export ODF Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1332"/>
+        <location filename="treemainwin.py" line="1335"/>
         <source>Open Configuration File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1402"/>
+        <location filename="treemainwin.py" line="1405"/>
         <source>Filter Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1380"/>
+        <location filename="treemainwin.py" line="1383"/>
         <source>Select data type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1386"/>
+        <location filename="treemainwin.py" line="1389"/>
         <source>Filter %s Data Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1403"/>
+        <location filename="treemainwin.py" line="1406"/>
         <source>Enter key words</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1446"/>
+        <location filename="treemainwin.py" line="1449"/>
         <source>No common fields to set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1480"/>
+        <location filename="treemainwin.py" line="1483"/>
         <source>Category Fields</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1481"/>
+        <location filename="treemainwin.py" line="1484"/>
         <source>Select fields for new level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1493"/>
+        <location filename="treemainwin.py" line="1496"/>
         <source>Cannot expand without common fields</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1515"/>
+        <location filename="treemainwin.py" line="1518"/>
         <source>No common fields with parent references</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1517"/>
+        <location filename="treemainwin.py" line="1520"/>
         <source>Reference Field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1519"/>
+        <location filename="treemainwin.py" line="1522"/>
         <source>Select field with parent references</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1531"/>
+        <location filename="treemainwin.py" line="1534"/>
         <source>Flatten by Reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1533"/>
+        <location filename="treemainwin.py" line="1536"/>
         <source>Enter new field name for parent references:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1576"/>
+        <location filename="treemainwin.py" line="1579"/>
         <source>Spell Check Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1578"/>
+        <location filename="treemainwin.py" line="1581"/>
         <source>Could not find either aspell.exe or ispell.exe
 Manually locate?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1579"/>
+        <location filename="treemainwin.py" line="1582"/>
         <source>&amp;Browse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2010"/>
+        <location filename="treemainwin.py" line="2013"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1583"/>
+        <location filename="treemainwin.py" line="1586"/>
         <source>Locate aspell.exe or ipsell.exe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1584"/>
+        <location filename="treemainwin.py" line="1587"/>
         <source>Program (*.exe)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1598"/>
+        <location filename="treemainwin.py" line="1601"/>
         <source>TreeLine Spell Check Error
 Make sure aspell or ispell is installed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1618"/>
+        <location filename="treemainwin.py" line="1621"/>
         <source>TreeLine Spell Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1612"/>
+        <location filename="treemainwin.py" line="1615"/>
         <source>Finished checking the branch
 Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2009"/>
+        <location filename="treemainwin.py" line="2012"/>
         <source>&amp;Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2009"/>
+        <location filename="treemainwin.py" line="2012"/>
         <source>&amp;No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1619"/>
+        <location filename="treemainwin.py" line="1622"/>
         <source>Finished checking the branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1634"/>
+        <location filename="treemainwin.py" line="1637"/>
         <source>General Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1635"/>
+        <location filename="treemainwin.py" line="1638"/>
         <source>Startup Condition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1637"/>
+        <location filename="treemainwin.py" line="1640"/>
         <source>Automatically open last file used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1639"/>
+        <location filename="treemainwin.py" line="1642"/>
         <source>Show children in right-hand view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1641"/>
+        <location filename="treemainwin.py" line="1644"/>
         <source>Show descendants in output view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1643"/>
+        <location filename="treemainwin.py" line="1646"/>
         <source>Restore view states of recent files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1645"/>
+        <location filename="treemainwin.py" line="1648"/>
         <source>Restore window geometry from last exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1646"/>
+        <location filename="treemainwin.py" line="1649"/>
         <source>Features Available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1647"/>
+        <location filename="treemainwin.py" line="1650"/>
         <source>Click item to rename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1649"/>
+        <location filename="treemainwin.py" line="1652"/>
         <source>Tree drag &amp;&amp; drop available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1651"/>
+        <location filename="treemainwin.py" line="1654"/>
         <source>Insert node with enter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1653"/>
+        <location filename="treemainwin.py" line="1656"/>
         <source>Rename new nodes when created</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1655"/>
+        <location filename="treemainwin.py" line="1658"/>
         <source>Automatically open search nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1657"/>
+        <location filename="treemainwin.py" line="1660"/>
         <source>Show icons in the tree view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1659"/>
+        <location filename="treemainwin.py" line="1662"/>
         <source>Enable executable links</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1660"/>
+        <location filename="treemainwin.py" line="1663"/>
         <source>New Objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1662"/>
+        <location filename="treemainwin.py" line="1665"/>
         <source>Set new files to compressed by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1664"/>
+        <location filename="treemainwin.py" line="1667"/>
         <source>Set new files to encrypted by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1666"/>
+        <location filename="treemainwin.py" line="1669"/>
         <source>New fields default to HTML content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1669"/>
+        <location filename="treemainwin.py" line="1672"/>
         <source>Multiple Selection Sequence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1670"/>
+        <location filename="treemainwin.py" line="1673"/>
         <source>Tree order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1671"/>
+        <location filename="treemainwin.py" line="1674"/>
         <source>Selection order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1673"/>
+        <location filename="treemainwin.py" line="1676"/>
         <source>Data Editor Pages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1675"/>
+        <location filename="treemainwin.py" line="1678"/>
         <source>Number of pages shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1676"/>
+        <location filename="treemainwin.py" line="1679"/>
         <source>set to 0 for all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1677"/>
+        <location filename="treemainwin.py" line="1680"/>
         <source>Undo Memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1679"/>
+        <location filename="treemainwin.py" line="1682"/>
         <source>Number of undo levels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1680"/>
+        <location filename="treemainwin.py" line="1683"/>
         <source>Auto Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1682"/>
+        <location filename="treemainwin.py" line="1685"/>
         <source>Minutes between saves</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1683"/>
+        <location filename="treemainwin.py" line="1686"/>
         <source>set to 0 to disable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1684"/>
+        <location filename="treemainwin.py" line="1687"/>
         <source>Recent Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1686"/>
+        <location filename="treemainwin.py" line="1689"/>
         <source>Number of recent files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1687"/>
+        <location filename="treemainwin.py" line="1690"/>
         <source>in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1688"/>
+        <location filename="treemainwin.py" line="1691"/>
         <source>Data Editor Formats</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1689"/>
+        <location filename="treemainwin.py" line="1692"/>
         <source>Dates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1690"/>
+        <location filename="treemainwin.py" line="1693"/>
         <source>Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1691"/>
+        <location filename="treemainwin.py" line="1694"/>
         <source>Appearance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1693"/>
+        <location filename="treemainwin.py" line="1696"/>
         <source>Child indent offset (points)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1696"/>
+        <location filename="treemainwin.py" line="1699"/>
         <source>Default max data editor lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1766"/>
+        <location filename="treemainwin.py" line="1769"/>
         <source>File Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1767"/>
+        <location filename="treemainwin.py" line="1770"/>
         <source>Output Formating</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1769"/>
+        <location filename="treemainwin.py" line="1772"/>
         <source>Add blank lines between nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1771"/>
+        <location filename="treemainwin.py" line="1774"/>
         <source>Add line breaks after each line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1773"/>
+        <location filename="treemainwin.py" line="1776"/>
         <source>Allow HTML rich text in formats</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1774"/>
+        <location filename="treemainwin.py" line="1777"/>
         <source>File Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1776"/>
+        <location filename="treemainwin.py" line="1779"/>
         <source>Use file compression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1778"/>
+        <location filename="treemainwin.py" line="1781"/>
         <source>Use file encryption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1779"/>
+        <location filename="treemainwin.py" line="1782"/>
         <source>Embedded Child Fields</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1781"/>
+        <location filename="treemainwin.py" line="1784"/>
         <source>Separator String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1782"/>
+        <location filename="treemainwin.py" line="1785"/>
         <source>Spell Check Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1784"/>
+        <location filename="treemainwin.py" line="1787"/>
         <source>2-letter code (blank</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1785"/>
+        <location filename="treemainwin.py" line="1788"/>
         <source>for system default)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1885"/>
+        <location filename="treemainwin.py" line="1888"/>
         <source>TreeLine README File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1888"/>
+        <location filename="treemainwin.py" line="1891"/>
         <source>Read Me file not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1897"/>
+        <location filename="treemainwin.py" line="1900"/>
         <source>TreeLine, Version %(ver)s
  by %(author)s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1912"/>
+        <location filename="treemainwin.py" line="1915"/>
         <source>Font Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1914"/>
+        <location filename="treemainwin.py" line="1917"/>
         <source>Enter size factor (-6 to +6)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2006"/>
+        <location filename="treemainwin.py" line="2009"/>
         <source>Save changes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2007"/>
+        <location filename="treemainwin.py" line="2010"/>
         <source>Save changes to &quot;%s&quot;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2113"/>
+        <location filename="treemainwin.py" line="2116"/>
         <source>Set &amp;Item Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2133"/>
+        <location filename="treemainwin.py" line="2136"/>
         <source>Toolbar %d</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2156"/>
+        <location filename="treemainwin.py" line="2159"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2164"/>
+        <location filename="treemainwin.py" line="2167"/>
         <source>&amp;New...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2165"/>
+        <location filename="treemainwin.py" line="2168"/>
         <source>New File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2166"/>
+        <location filename="treemainwin.py" line="2169"/>
         <source>Start a new file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2171"/>
+        <location filename="treemainwin.py" line="2174"/>
         <source>&amp;Open...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2172"/>
+        <location filename="treemainwin.py" line="2175"/>
         <source>Open File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2173"/>
+        <location filename="treemainwin.py" line="2176"/>
         <source>Open a file from disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2178"/>
+        <location filename="treemainwin.py" line="2181"/>
         <source>Open Sa&amp;mple...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2179"/>
+        <location filename="treemainwin.py" line="2182"/>
         <source>Open a sample template file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2187"/>
+        <location filename="treemainwin.py" line="2190"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2188"/>
+        <location filename="treemainwin.py" line="2191"/>
         <source>Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2189"/>
+        <location filename="treemainwin.py" line="2192"/>
         <source>Save changes to the current file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2194"/>
+        <location filename="treemainwin.py" line="2197"/>
         <source>Save &amp;As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2195"/>
+        <location filename="treemainwin.py" line="2198"/>
         <source>Save the file with a new name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2201"/>
+        <location filename="treemainwin.py" line="2204"/>
         <source>&amp;Export...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2203"/>
+        <location filename="treemainwin.py" line="2206"/>
         <source>Export the file as html, as a table or as text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2211"/>
+        <location filename="treemainwin.py" line="2214"/>
         <source>P&amp;rint Options...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2213"/>
+        <location filename="treemainwin.py" line="2216"/>
         <source>Set margins, page size and other options for printing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2219"/>
+        <location filename="treemainwin.py" line="2222"/>
         <source>Print Pre&amp;view...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2221"/>
+        <location filename="treemainwin.py" line="2224"/>
         <source>Show a preview of printing results</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2227"/>
+        <location filename="treemainwin.py" line="2230"/>
         <source>&amp;Print...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2228"/>
+        <location filename="treemainwin.py" line="2231"/>
         <source>Print starting at the selected node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2239"/>
+        <location filename="treemainwin.py" line="2242"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2240"/>
+        <location filename="treemainwin.py" line="2243"/>
         <source>Exit the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2245"/>
+        <location filename="treemainwin.py" line="2248"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2247"/>
+        <location filename="treemainwin.py" line="2250"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2248"/>
+        <location filename="treemainwin.py" line="2251"/>
         <source>Undo the previous action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2253"/>
+        <location filename="treemainwin.py" line="2256"/>
         <source>&amp;Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2254"/>
+        <location filename="treemainwin.py" line="2257"/>
         <source>Redo the previous undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2260"/>
+        <location filename="treemainwin.py" line="2263"/>
         <source>Cu&amp;t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2261"/>
+        <location filename="treemainwin.py" line="2264"/>
         <source>Cut the branch or text to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2268"/>
+        <location filename="treemainwin.py" line="2271"/>
         <source>&amp;Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2269"/>
+        <location filename="treemainwin.py" line="2272"/>
         <source>Copy the branch or text to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2276"/>
+        <location filename="treemainwin.py" line="2279"/>
         <source>Cop&amp;y Title Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2278"/>
+        <location filename="treemainwin.py" line="2281"/>
         <source>Copy node title text to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2284"/>
+        <location filename="treemainwin.py" line="2287"/>
         <source>&amp;Paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2285"/>
+        <location filename="treemainwin.py" line="2288"/>
         <source>Paste nodes or text from the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2293"/>
+        <location filename="treemainwin.py" line="2296"/>
         <source>Pa&amp;ste Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2294"/>
+        <location filename="treemainwin.py" line="2297"/>
         <source>Paste text from the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2300"/>
+        <location filename="treemainwin.py" line="2303"/>
         <source>Re&amp;name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2301"/>
+        <location filename="treemainwin.py" line="2304"/>
         <source>Rename the current tree entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2313"/>
+        <location filename="treemainwin.py" line="2316"/>
         <source>Insert Sibling &amp;Before</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2315"/>
+        <location filename="treemainwin.py" line="2318"/>
         <source>Insert new sibling before selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2323"/>
+        <location filename="treemainwin.py" line="2326"/>
         <source>Insert Sibling &amp;After</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2325"/>
+        <location filename="treemainwin.py" line="2328"/>
         <source>Insert new sibling after selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2333"/>
+        <location filename="treemainwin.py" line="2336"/>
         <source>Add C&amp;hild</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2335"/>
+        <location filename="treemainwin.py" line="2338"/>
         <source>Add a new child to the selected parent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2347"/>
+        <location filename="treemainwin.py" line="2350"/>
         <source>&amp;Delete Node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2348"/>
+        <location filename="treemainwin.py" line="2351"/>
         <source>Delete the selected nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2356"/>
+        <location filename="treemainwin.py" line="2359"/>
         <source>&amp;Indent Node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2357"/>
+        <location filename="treemainwin.py" line="2360"/>
         <source>Indent the selected nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2365"/>
+        <location filename="treemainwin.py" line="2368"/>
         <source>Unind&amp;ent Node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2366"/>
+        <location filename="treemainwin.py" line="2369"/>
         <source>Unindent the selected nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2378"/>
+        <location filename="treemainwin.py" line="2381"/>
         <source>&amp;Move Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2379"/>
+        <location filename="treemainwin.py" line="2382"/>
         <source>Move the selected nodes up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2387"/>
+        <location filename="treemainwin.py" line="2390"/>
         <source>M&amp;ove Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2388"/>
+        <location filename="treemainwin.py" line="2391"/>
         <source>Move the selected nodes down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2396"/>
+        <location filename="treemainwin.py" line="2399"/>
         <source>Move &amp;First</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2398"/>
+        <location filename="treemainwin.py" line="2401"/>
         <source>Move the selected nodes to be the first children</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2404"/>
+        <location filename="treemainwin.py" line="2407"/>
         <source>Move &amp;Last</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2406"/>
+        <location filename="treemainwin.py" line="2409"/>
         <source>Move the selected nodes to be the last children</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2415"/>
+        <location filename="treemainwin.py" line="2418"/>
         <source>&amp;View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2417"/>
+        <location filename="treemainwin.py" line="2420"/>
         <source>&amp;Previous Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2418"/>
+        <location filename="treemainwin.py" line="2421"/>
         <source>View the previous tree selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2424"/>
+        <location filename="treemainwin.py" line="2427"/>
         <source>&amp;Next Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2425"/>
+        <location filename="treemainwin.py" line="2428"/>
         <source>View the next tree selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2434"/>
+        <location filename="treemainwin.py" line="2437"/>
         <source>Show &amp;Tree View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2435"/>
+        <location filename="treemainwin.py" line="2438"/>
         <source>Show the tree in the right view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2440"/>
+        <location filename="treemainwin.py" line="2443"/>
         <source>Show &amp;Flat View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2441"/>
+        <location filename="treemainwin.py" line="2444"/>
         <source>Show a flat list in the right view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2451"/>
+        <location filename="treemainwin.py" line="2454"/>
         <source>Show Data &amp;Output</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2452"/>
+        <location filename="treemainwin.py" line="2455"/>
         <source>Show data output in right view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2457"/>
+        <location filename="treemainwin.py" line="2460"/>
         <source>Show Data &amp;Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2458"/>
+        <location filename="treemainwin.py" line="2461"/>
         <source>Show data editor in right view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2463"/>
+        <location filename="treemainwin.py" line="2466"/>
         <source>Show Title &amp;List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2464"/>
+        <location filename="treemainwin.py" line="2467"/>
         <source>Show title list in right view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2473"/>
+        <location filename="treemainwin.py" line="2476"/>
         <source>Show &amp;Child Pane</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2475"/>
+        <location filename="treemainwin.py" line="2478"/>
         <source>Toggle splitting right-hand view to show children</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2483"/>
+        <location filename="treemainwin.py" line="2486"/>
         <source>Show Output &amp;Descendants</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2485"/>
+        <location filename="treemainwin.py" line="2488"/>
         <source>Toggle showing descendants in output view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2493"/>
+        <location filename="treemainwin.py" line="2496"/>
         <source>&amp;Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2508"/>
+        <location filename="treemainwin.py" line="2511"/>
         <source>&amp;Set Descendant Types...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2511"/>
+        <location filename="treemainwin.py" line="2514"/>
         <source>Set data type of selections and children</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2517"/>
+        <location filename="treemainwin.py" line="2520"/>
         <source>&amp;Configure Data Types...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2520"/>
+        <location filename="treemainwin.py" line="2523"/>
         <source>Modify data types, fields &amp; output lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2526"/>
+        <location filename="treemainwin.py" line="2529"/>
         <source>C&amp;opy Types from File...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2528"/>
+        <location filename="treemainwin.py" line="2531"/>
         <source>Copy the configuration from another TreeLine file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2538"/>
+        <location filename="treemainwin.py" line="2541"/>
         <source>Sort &amp;Nodes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2540"/>
+        <location filename="treemainwin.py" line="2543"/>
         <source>Open the dialog for sorting nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2551"/>
+        <location filename="treemainwin.py" line="2554"/>
         <source>Edit data values for all selected nodes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2557"/>
+        <location filename="treemainwin.py" line="2560"/>
         <source>N&amp;umbering...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2559"/>
+        <location filename="treemainwin.py" line="2562"/>
         <source>Add numbering to a given data field</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2567"/>
+        <location filename="treemainwin.py" line="2570"/>
         <source>Con&amp;ditional Filter...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2569"/>
+        <location filename="treemainwin.py" line="2572"/>
         <source>Filter types with conditional rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2575"/>
+        <location filename="treemainwin.py" line="2578"/>
         <source>Te&amp;xt Filter...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2576"/>
+        <location filename="treemainwin.py" line="2579"/>
         <source>Filter with a text search string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2582"/>
+        <location filename="treemainwin.py" line="2585"/>
         <source>Cl&amp;ear Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2583"/>
+        <location filename="treemainwin.py" line="2586"/>
         <source>Clear current filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2593"/>
+        <location filename="treemainwin.py" line="2594"/>
+        <source>&amp;Add Category Level...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2596"/>
         <source>Insert category nodes above children</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2599"/>
+        <location filename="treemainwin.py" line="2602"/>
         <source>&amp;Flatten by Category</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2601"/>
+        <location filename="treemainwin.py" line="2604"/>
         <source>Collapse data by merging fields</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2609"/>
+        <location filename="treemainwin.py" line="2612"/>
         <source>Arrange by &amp;Reference...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2612"/>
+        <location filename="treemainwin.py" line="2615"/>
         <source>Arrange data using parent references</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2618"/>
+        <location filename="treemainwin.py" line="2621"/>
         <source>F&amp;latten by Reference...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2620"/>
+        <location filename="treemainwin.py" line="2623"/>
         <source>Collapse data after adding references</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2626"/>
+        <location filename="treemainwin.py" line="2629"/>
         <source>&amp;Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2628"/>
+        <location filename="treemainwin.py" line="2631"/>
         <source>&amp;Expand Full Branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2630"/>
+        <location filename="treemainwin.py" line="2633"/>
         <source>Expand all children of selected node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2637"/>
+        <location filename="treemainwin.py" line="2640"/>
         <source>&amp;Collapse Full Branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2640"/>
+        <location filename="treemainwin.py" line="2643"/>
         <source>Collapse all children of the selected node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2649"/>
+        <location filename="treemainwin.py" line="2652"/>
         <source>&amp;Find...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2651"/>
+        <location filename="treemainwin.py" line="2654"/>
         <source>Find node matching text string</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2657"/>
+        <location filename="treemainwin.py" line="2660"/>
         <source>&amp;Spell Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2659"/>
+        <location filename="treemainwin.py" line="2662"/>
         <source>Spell check the tree&apos;s text data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2665"/>
+        <location filename="treemainwin.py" line="2668"/>
         <source>&amp;Remove XSLT Ref</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2666"/>
+        <location filename="treemainwin.py" line="2669"/>
         <source>Delete reference to XSLT export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2674"/>
+        <location filename="treemainwin.py" line="2677"/>
         <source>&amp;General Options...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2675"/>
+        <location filename="treemainwin.py" line="2678"/>
         <source>Set user preferences for all files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2681"/>
+        <location filename="treemainwin.py" line="2684"/>
         <source>File &amp;Options...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2682"/>
+        <location filename="treemainwin.py" line="2685"/>
         <source>Set preferences for this file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2688"/>
+        <location filename="treemainwin.py" line="2691"/>
         <source>Set Fo&amp;nts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2690"/>
+        <location filename="treemainwin.py" line="2693"/>
         <source>&amp;Tree Font...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2691"/>
+        <location filename="treemainwin.py" line="2694"/>
         <source>Set Tree Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2692"/>
+        <location filename="treemainwin.py" line="2695"/>
         <source>Sets font for tree &amp; flat views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2699"/>
+        <location filename="treemainwin.py" line="2702"/>
         <source>&amp;Data Output Font...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2700"/>
+        <location filename="treemainwin.py" line="2703"/>
         <source>Set Data Output Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2701"/>
+        <location filename="treemainwin.py" line="2704"/>
         <source>Sets font for output views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2707"/>
+        <location filename="treemainwin.py" line="2710"/>
         <source>&amp;Editor Font...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2708"/>
+        <location filename="treemainwin.py" line="2711"/>
         <source>Set Editor Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2709"/>
+        <location filename="treemainwin.py" line="2712"/>
         <source>Sets font for edit views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2715"/>
+        <location filename="treemainwin.py" line="2718"/>
         <source>Set &amp;Keyboard Shortcuts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2716"/>
+        <location filename="treemainwin.py" line="2719"/>
         <source>Customize keyboard commands</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2722"/>
+        <location filename="treemainwin.py" line="2725"/>
         <source>Custo&amp;mize Toolbars...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2723"/>
+        <location filename="treemainwin.py" line="2726"/>
         <source>Customize toolbar buttons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2731"/>
+        <location filename="treemainwin.py" line="2734"/>
         <source>&amp;Use Default System Colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2733"/>
+        <location filename="treemainwin.py" line="2736"/>
         <source>Use system colors, not custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2742"/>
+        <location filename="treemainwin.py" line="2745"/>
         <source>&amp;Background Color...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2743"/>
+        <location filename="treemainwin.py" line="2746"/>
         <source>Set view background color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2749"/>
+        <location filename="treemainwin.py" line="2752"/>
         <source>&amp;Text Color...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2750"/>
+        <location filename="treemainwin.py" line="2753"/>
         <source>Set view text color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2756"/>
+        <location filename="treemainwin.py" line="2759"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2758"/>
+        <location filename="treemainwin.py" line="2761"/>
         <source>&amp;Help Contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2759"/>
+        <location filename="treemainwin.py" line="2762"/>
         <source>View information about using TreeLine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2765"/>
+        <location filename="treemainwin.py" line="2768"/>
         <source>&amp;View Full ReadMe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2766"/>
+        <location filename="treemainwin.py" line="2769"/>
         <source>View the entire ReadMe file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2772"/>
+        <location filename="treemainwin.py" line="2775"/>
         <source>&amp;About TreeLine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2773"/>
+        <location filename="treemainwin.py" line="2776"/>
         <source>About this program</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2779"/>
+        <location filename="treemainwin.py" line="2782"/>
         <source>About &amp;Plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2780"/>
+        <location filename="treemainwin.py" line="2783"/>
         <source>Show loaded plugin modules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="2789"/>
+        <location filename="treemainwin.py" line="2792"/>
         <source>&amp;Add Font Tags</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5118,37 +5136,37 @@ Continue from the root branch?</source>
 <context>
     <name>treeview</name>
     <message>
-        <location filename="treeview.py" line="214"/>
+        <location filename="treeview.py" line="216"/>
         <source>Search for:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="220"/>
+        <location filename="treeview.py" line="222"/>
         <source>Search for: %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="223"/>
+        <location filename="treeview.py" line="225"/>
         <source>Search for: %s  (not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="230"/>
+        <location filename="treeview.py" line="232"/>
         <source>Next:  %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="233"/>
+        <location filename="treeview.py" line="235"/>
         <source>Next:  %s  (not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="241"/>
+        <location filename="treeview.py" line="243"/>
         <source>Previous:  %s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treeview.py" line="244"/>
+        <location filename="treeview.py" line="246"/>
         <source>Previous:  %s  (not found)</source>
         <translation type="unfinished"></translation>
     </message>

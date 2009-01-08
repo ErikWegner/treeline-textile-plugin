@@ -31,11 +31,11 @@
         </center>
 
         <center>
-          Version 1.2.1 (stable release)
+          Version 1.2.2 (stable release)
         </center>
 
         <center>
-          November 4, 2008
+          January 8, 2009
         </center>
         <hr>
 
@@ -262,7 +262,7 @@
               commands.</li>
 
               <li>The user interface and documentation are available in
-              English, French, German, Portuguese, Russian and Spanish.</li>
+              English, French and German.</li>
             </ul>
           </div>
         </div><a id="legal" name="legal">
@@ -296,7 +296,7 @@
               <ul>
                 <li>Qt (Version 4.1 or higher)</li>
 
-                <li>Python (Version 2.3 or higher)</li>
+                <li>Python (Version 2.4, 2.5 or 2.6)</li>
 
                 <li>PyQt (Version 4.0 or higher - see <a href=
                 "http://www.riverbankcomputing.co.uk">www.riverbankcomputing.co.uk</a>
@@ -1580,9 +1580,9 @@
 
             <h4>Header and Footer</h4>
 
-            <p>The third tab on the "Print Options" dialog is used to set the
-            print header and footer. There are file info fields on the left
-            and six header/footer edit boxes (left, center and right
+            <p>The fourth tab on the "Print Options" dialog is used to set
+            the print header and footer. There are file info fields on the
+            left and six header/footer edit boxes (left, center and right
             justified) on the right. These fields can be added and combined
             with other text in the edit boxes, just like in the "Output" tab
             of the "Data-&gt;Configure Data Types" dialog. The header and
@@ -1934,6 +1934,46 @@
         <h2>Revision History</h2>
 
         <div>
+          <hr>
+
+          <h3>January 8, 2009 - Release 1.2.2 (stable release)</h3>
+
+          <div>
+            <h4>Updates:</h4>
+
+            <div>
+              <ul>
+                <li>Added German translations of the GUI and the ReadMe
+                file.</li>
+
+                <li>Added a few missing strings to the translation
+                files.</li>
+
+                <li>Substituted some imported modules to avoid deprecation
+                warnings in Python 2.6. Note that Python 2.3 is no longer
+                supported.</li>
+
+                <li>The windows binary has been updated to use Python 2.6,
+                and the installer has been tweaked to reduce DLL
+                conflicts.</li>
+              </ul>
+            </div>
+
+            <h4>Bug Fixes:</h4>
+
+            <div>
+              <ul>
+                <li>Fixed problems using the tab key to change focus from the
+                tree to the data editor.</li>
+
+                <li>ID numbers are now properly assigned to new nodes with
+                UniqueID fields in the title.</li>
+
+                <li>Fixed problems creating nodes with child count fields in
+                the titles.</li>
+              </ul>
+            </div>
+          </div>
           <hr>
 
           <h3>November 4, 2008 - Release 1.2.1 (stable release)</h3>
