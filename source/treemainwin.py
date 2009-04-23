@@ -25,8 +25,6 @@ except ImportError:
     helpFilePath = None
     iconPath = None
 import treedoc
-import nodeformat
-import treeitem
 import treeview
 import treeflatview
 import treerightviews

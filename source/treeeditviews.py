@@ -17,7 +17,6 @@ import os.path
 import tempfile
 from PyQt4 import QtCore, QtGui
 import configdialog
-import treedoc
 import optiondefaults
 import globalref
 

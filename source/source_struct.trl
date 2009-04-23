@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DEFAULT item="y" nospace="y" tlversion="1.2.2"
+line0="{*ClassName*} ({*FileName*})"
+line1="{*ClassName*} ({*FileName*})">
+<ClassName type="Text" ref="y">main</ClassName>
+<FileName type="Text">treeline.py</FileName>
+<DEFAULT item="y">
+<ClassName>TreeMainWin</ClassName>
+<FileName>treemainwin.py</FileName>
+<DEFAULT item="y">
+<ClassName>TreeDoc</ClassName>
+<FileName>treedoc</FileName>
+<DEFAULT item="y">
+<ClassName>TreeFormats</ClassName>
+<FileName>treeformats.py</FileName>
+<REF item="y"
+line0="{*ClassName*}"
+line1="{*ClassName*}">
+<ClassName type="InternalLink" html="y">NodeFormat</ClassName>
+<Null type="Text" ref="y"></Null>
+</REF>
+<REF item="y">
+<ClassName>FileInfoFormat</ClassName>
+</REF>
+<REF item="y">
+<ClassName>TreeDoc</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>NodeFormat</ClassName>
+<FileName>nodeformat.py</FileName>
+<REF item="y">
+<ClassName>Conditional</ClassName>
+</REF>
+<DEFAULT item="y">
+<ClassName>TextFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>LongTextFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>NumberFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+<DEFAULT item="y">
+<ClassName>GenNumber</ClassName>
+<FileName>gennumber.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ChoiceFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>CombinationFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>AutoChoiceFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DateFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+<DEFAULT item="y">
+<ClassName>GenDate</ClassName>
+<FileName>gendate.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TimeFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+<DEFAULT item="y">
+<ClassName>GenTime</ClassName>
+<FileName>gentime.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>BooleanFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+<DEFAULT item="y">
+<ClassName>GenBoolean</ClassName>
+<FileName>genboolean.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>UniqueIDFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>URLFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PathFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>EmailFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>InternalLinkFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ExecuteLinkFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PictureFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ParentFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>AncestorFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ChildFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>CountFormat</ClassName>
+<FileName>fieldformat.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FileInfoFormat</ClassName>
+<FileName>nodeformat.py</FileName>
+<DEFAULT item="y">
+<ClassName>GenDate</ClassName>
+<FileName>gendate.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>GenTime</ClassName>
+<FileName>gentime.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TreeItem</ClassName>
+<FileName>treeitem.py</FileName>
+<REF item="y">
+<ClassName>NodeFormat</ClassName>
+</REF>
+<REF item="y">
+<ClassName>OutputGroup</ClassName>
+</REF>
+<DEFAULT item="y">
+<ClassName>OutputItem</ClassName>
+<FileName>output.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TreeSelection</ClassName>
+<FileName>treeselection.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TreeSaxHandler</ClassName>
+<FileName>treexmlparse.py</FileName>
+<REF item="y">
+<ClassName>NodeFormat</ClassName>
+</REF>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>XbelSaxHandler</ClassName>
+<FileName>treexmlparse.py</FileName>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>HtmlBookmarkHandler</ClassName>
+<FileName>treexmlparse.py</FileName>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>GenericXmlHandler</ClassName>
+<FileName>treexmlparse.py</FileName>
+<REF item="y">
+<ClassName>NodeFormat</ClassName>
+</REF>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OdfSaxHandler</ClassName>
+<FileName>treexmlparse.py</FileName>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>UndoRedoStore</ClassName>
+<FileName>undo.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>Option</ClassName>
+<FileName>option.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TreeView</ClassName>
+<FileName>treeview.py</FileName>
+<DEFAULT item="y">
+<ClassName>TreeViewItem</ClassName>
+<FileName>treeview.py</FileName>
+</DEFAULT>
+<REF item="y">
+<ClassName>TreeItem</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FlatView</ClassName>
+<FileName>treeflatview.py</FileName>
+<DEFAULT item="y">
+<ClassName>FlatViewItem</ClassName>
+<FileName>flatview.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DataOutView</ClassName>
+<FileName>treerightviews.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TitleListView</ClassName>
+<FileName>treerightviews.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DataEditView</ClassName>
+<FileName>treeeditviews</FileName>
+<DEFAULT item="y">
+<ClassName>DataEditLine</ClassName>
+<FileName>treeeditviews</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DataEditCombo</ClassName>
+<FileName>treeeditviews</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DataEditGroup</ClassName>
+<FileName>treeeditviews</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>DataEditScrollView</ClassName>
+<FileName>treeeditviews</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ConfigDialog</ClassName>
+<FileName>configdialog.py</FileName>
+<DEFAULT item="y">
+<ClassName>TypeListPage</ClassName>
+<FileName>configdialog.py</FileName>
+<REF item="y">
+<ClassName>FieldEntry</ClassName>
+</REF>
+<DEFAULT item="y">
+<ClassName>FieldCopyEntry</ClassName>
+<FileName>configdialog.py</FileName>
+</DEFAULT>
+<REF item="y">
+<ClassName>NodeFormat</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TypeConfigPage</ClassName>
+<FileName>configdialog.py</FileName>
+<REF item="y">
+<ClassName>ConditionDlg</ClassName>
+</REF>
+<REF item="y">
+<ClassName>IconSelectDlg (configdialog.py)</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FieldListPage</ClassName>
+<FileName>configdialog.py</FileName>
+<REF item="y">
+<ClassName>FieldEntry</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FieldConfigPage</ClassName>
+<FileName>configdialog.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OutputPage</ClassName>
+<FileName>configdialog.py</FileName>
+<DEFAULT item="y">
+<ClassName>TitleEdit</ClassName>
+<FileName>configdialog.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ChildCountFormat</ClassName>
+<FileName>nodeformat.py</FileName>
+</DEFAULT>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ConditionDlg</ClassName>
+<FileName>configdialog.py</FileName>
+<DEFAULT item="y">
+<ClassName>ConditionRule</ClassName>
+<FileName>configdialog.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>Conditional</ClassName>
+<FileName>conditional.py</FileName>
+<DEFAULT item="y">
+<ClassName>ConditionLine</ClassName>
+<FileName>conditional.py</FileName>
+</DEFAULT>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FieldEntry</ClassName>
+<FileName>configdialog.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PasswordEntry</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>RadioChoiceDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TemplateDialog</ClassName>
+<FileName>treedialogs.py</FileName>
+<DEFAULT item="y">
+<ClassName>TemplateItem</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ExportDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>TypeSetDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+<REF item="y">
+<ClassName>ConditionDlg</ClassName>
+</REF>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>SortDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+<DEFAULT item="y">
+<ClassName>FieldSelectList</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>EditFieldsDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>NumberingDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FieldSelectDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>FindTextEntry</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>SpellCheckDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+<DEFAULT item="y">
+<ClassName>SpellContextEdit</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ShortcutDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+<DEFAULT item="y">
+<ClassName>KeyLineEdit</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>ToolbarDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PluginListDlg</ClassName>
+<FileName>treedialogs.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PrintData</ClassName>
+<FileName>printdata.py</FileName>
+<REF item="y">
+<ClassName>OutputGroup</ClassName>
+</REF>
+<DEFAULT item="y">
+<ClassName>PrintOptionsDialog</ClassName>
+<FileName>printdialogs</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PrintPrevDlg</ClassName>
+<FileName>printdialogs</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlg</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlgBool</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlgRadio</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlgInt</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlgStr</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OptionDlg</ClassName>
+<FileName>optiondlg.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>OutputGroup</ClassName>
+<FileName>output.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>IconDict</ClassName>
+<FileName>icondict.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>HelpView</ClassName>
+<FileName>helpview.py</FileName>
+<DEFAULT item="y">
+<ClassName>HelpViewer</ClassName>
+<FileName>helpview.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>RecentFileList</ClassName>
+<FileName>recentfiles.py</FileName>
+<DEFAULT item="y">
+<ClassName>RecentFile</ClassName>
+<FileName>recentfiles.py</FileName>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>SpellCheck</ClassName>
+<FileName>spellcheck.py</FileName>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>PluginInterface</ClassName>
+<FileName>plugininterface.py</FileName>
+<REF item="y">
+<ClassName>NodeFormat</ClassName>
+</REF>
+</DEFAULT>
+</DEFAULT>
+<DEFAULT item="y">
+<ClassName>CmdLine</ClassName>
+<FileName>cmdline.py</FileName>
+<REF item="y">
+<ClassName>TreeDoc</ClassName>
+</REF>
+<REF item="y">
+<ClassName>Option</ClassName>
+</REF>
+</DEFAULT>
+</DEFAULT>

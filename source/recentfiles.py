@@ -16,7 +16,6 @@ import sys
 import time
 from PyQt4 import QtCore, QtGui
 import globalref
-import treedoc
 
 
 class RecentFileList(list):

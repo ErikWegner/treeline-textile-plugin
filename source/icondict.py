@@ -14,7 +14,6 @@
 
 import os.path
 from PyQt4 import QtCore, QtGui
-import treedoc
 import globalref
 
 class IconDict(dict):
