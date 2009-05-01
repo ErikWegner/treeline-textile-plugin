@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.2"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.3 alpha"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.2 (stable release)</Name>
+<Name>Version 1.2.3 (stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>January 8, 2009</Name>
+<Name>May 5, 2009</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -1469,6 +1469,27 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <HEADING2 item="y">
 <Name>Revision History</Name>
 <Ref>revs</Ref>
+<HEADING3 item="y">
+<Name>May 5, 2009 - Release 1.2.3 (stable release)</Name>
+<HEADING4 item="y">
+<Name>Updates:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Windows 98 compatibility</Topic>
+<Text>A new build has been created for use on the Windows 98 operating system.  This fixes problems that made TreeLine 1.2.2 unusable on Windows 98.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Copy persistence</Topic>
+<Text>Data copied to the Windows clipboard is now preserved after exiting from TreeLine.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Bug Fixes:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Copy/paste error</Topic>
+<Text>Fixed a bug on Windows that showed an error message at program exit if the copy command had been used during the session.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+</HEADING3>
 <HEADING3 item="y">
 <Name>January 8, 2009 - Release 1.2.2 (stable release)</Name>
 <HEADING4 item="y">
