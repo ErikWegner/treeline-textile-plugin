@@ -82,7 +82,8 @@ AutoCloseWindow false
 ShowInstDetails show
 
 InstType Typical
-SetOverwrite ifnewer
+SetOverwrite on
+;SetOverwrite ifnewer
 
 
 ; The stuff to install
