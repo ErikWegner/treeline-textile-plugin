@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.3 alpha"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.3"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -1487,6 +1487,10 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <TEXT_BULLETS item="y">
 <Topic>Copy/paste error</Topic>
 <Text>Fixed a bug on Windows that showed an error message at program exit if the copy command had been used during the session.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>HTML directory export</Topic>
+<Text>In an HTML directories export, characters that are illegal in directory names are now correctly removed.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 </HEADING3>
