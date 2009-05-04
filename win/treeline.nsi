@@ -29,7 +29,7 @@
 !endif
 
 !ifdef PYQT98
-	!define SUFFIX "-install"
+	!define SUFFIX "-w98-install"
 !endif
 
 !ifndef SUFFIX
