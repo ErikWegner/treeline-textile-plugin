@@ -2061,6 +2061,10 @@ class TreeMainWin(QtGui.QMainWindow):
                 tabNum = self.rightTabs.currentIndex()
                 globalref.options.changeData('ActiveRightView', tabNum, True)
             globalref.options.writeChanges()
+            # make clipboard data persistent and fix error message on windows
+            clip = QtGui.QApplication.clipboard()
+            clipEvent = QtCore.QEvent(QtCore.QEvent.Clipboard)
+            QtGui.QApplication.sendEvent(clip, clipEvent)
             event.accept()
         else:
             event.ignore()

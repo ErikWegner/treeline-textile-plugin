@@ -15,7 +15,7 @@
 """
 
 __progname__ = 'TreeLine'
-__version__ = '1.2.2'
+__version__ = '1.2.3'
 __author__ = 'Doug Bell'
 
 helpFilePath = None    # modified by install script if required

@@ -35,6 +35,7 @@ class TreeItem(object):
     blankTitle = _('[BLANK TITLE]')
     maxLevel = 0  # for ODF export
     dirExportLinkRe = re.compile(r'<a href="#(.+)">')
+    dirExportDirRe = re.compile(r'[/\\"*?|<>:]')
     def __init__(self, parent, formatName, initText='', addDefaultData=False):
         self.parent = parent
         self.formatName = formatName
@@ -305,7 +306,7 @@ class TreeItem(object):
             dirName = ''
         if encode:
             dirName = dirName.encode(sys.getfilesystemencoding(), 'replace')
-        dirName = dirName.strip('/\\"*?|<>:')
+        dirName = TreeItem.dirExportDirRe.sub('', dirName)
         if not dirName:
             dirName = '___'
         return dirName
