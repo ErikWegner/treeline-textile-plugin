@@ -33,11 +33,9 @@ import configdialog
 import treedialogs
 import printdata
 import globalref
-import option
 import optiondefaults
 import optiondlg
 import output
-import icondict
 import helpview
 import recentfiles
 import spellcheck
@@ -46,6 +44,7 @@ import plugininterface
 
 class TreeMainWin(QtGui.QMainWindow):
     """Main window, menus, toolbar, and status"""
+    toolIcons = None
     tlPlainFileFilter = u'%s (*.trl *.xml)' % _('TreeLine Files - Plain')
     tlCompFileFilter = u'%s (*.trl *.trl.gz)' % \
                        _('TreeLine Files - Compressed')
@@ -76,24 +75,6 @@ class TreeMainWin(QtGui.QMainWindow):
         self.setAcceptDrops(True)
         self.setStatusBar(QtGui.QStatusBar())
         globalref.mainWin = self
-        mainVersion = '.'.join(__version__.split('.')[:2])
-        globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
-        globalref.options.loadAll(optiondefaults.defaultOutput())
-        iconPathList = [iconPath, os.path.join(globalref.modPath, u'icons/'),
-                        os.path.join(globalref.modPath, u'../icons/')]
-        if not iconPath:
-            del iconPathList[0]
-        globalref.treeIcons = icondict.IconDict()
-        globalref.treeIcons.addIconPath([os.path.join(path, u'tree') for path
-                                         in iconPathList])
-        globalref.treeIcons.addIconPath([globalref.options.iconPath])
-        self.toolIcons = icondict.IconDict()
-        self.toolIcons.addIconPath([os.path.join(path, u'toolbar') for path in
-                                    iconPathList], [u'', u'32x32', u'16x16'])
-        self.toolIcons.loadAllIcons()
-        windowIcon = globalref.treeIcons.getIcon(u'treeline')
-        if windowIcon:
-            QtGui.QApplication.setWindowIcon(windowIcon)
         self.resize(globalref.options.intData('WindowXSize', 10, 10000),
                     globalref.options.intData('WindowYSize', 10, 10000))
         if globalref.options.boolData('SaveWindowGeom'):
@@ -1825,7 +1806,8 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def toolsCustomToolbar(self):
         """Start dialog to customize toolbar buttons"""
-        dlg = treedialogs.ToolbarDlg(self.setupToolbars, self.toolIcons, self)
+        dlg = treedialogs.ToolbarDlg(self.setupToolbars,
+                                     TreeMainWin.toolIcons, self)
         if dlg.exec_() == QtGui.QDialog.Accepted:
             pass
 
@@ -1880,11 +1862,11 @@ class TreeMainWin(QtGui.QMainWindow):
         if not self.helpView:
             path = self.findHelpPath()
             if path:
-                self.toolIcons.loadIcons(['helpback', 'helpforward',
-                                          'helphome'])
+                TreeMainWin.toolIcons.loadIcons(['helpback', 'helpforward',
+                                                 'helphome'])
                 self.helpView = helpview.HelpView(path,
                                                   _('TreeLine README File'),
-                                                  self.toolIcons)
+                                                  TreeMainWin.toolIcons)
             else:
                 globalref.setStatusBar(_('Read Me file not found'))
                 return
@@ -2121,7 +2103,7 @@ class TreeMainWin(QtGui.QMainWindow):
     def addActionIcons(self):
         """Add icons to actions for menus and toolbars"""
         for name, action in self.actions.iteritems():
-            icon = self.toolIcons.getIcon(name.lower())
+            icon = TreeMainWin.toolIcons.getIcon(name.lower())
             if icon:
                 action.setIcon(icon)
 

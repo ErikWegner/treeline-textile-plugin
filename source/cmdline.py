@@ -15,14 +15,8 @@
 import sys
 import os.path
 from PyQt4 import QtCore, QtGui
-try:
-    from __main__ import __version__
-except ImportError:
-    __version__ = '??'
 import treedoc
 import globalref
-import option
-import optiondefaults
 
 usage = [_('Usage:'),
          '',
@@ -128,9 +122,6 @@ class CmdLine(object):
         self.quiet = False
         importType = ''
         exportType = ''
-        mainVersion = '.'.join(__version__.split('.')[:2])
-        globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
-        globalref.options.loadAll(optiondefaults.defaultOutput())
         for opt, arg in opts:
             if opt in ('-h', '--help'):
                 printUsage()

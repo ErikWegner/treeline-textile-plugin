@@ -15,7 +15,7 @@
 """
 
 __progname__ = 'TreeLine'
-__version__ = '1.2.3'
+__version__ = '1.3.0'
 __author__ = 'Doug Bell'
 
 helpFilePath = None    # modified by install script if required
@@ -130,6 +130,9 @@ def main():
     import treedoc
     from cmdline import CmdLine
     import treemainwin
+    import option
+    import optiondefaults
+    import icondict
 
     if not treedoc.testXmlParser():
         QtGui.QMessageBox.critical(None, _('Error'),
@@ -144,6 +147,27 @@ def main():
         cmdline.printUsage()
         sys.exit(2)
     args = args[1:]
+
+    mainVersion = '.'.join(__version__.split('.')[:2])
+    globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
+    globalref.options.loadAll(optiondefaults.defaultOutput())
+    iconPathList = [iconPath, os.path.join(globalref.modPath, u'icons/'),
+                    os.path.join(globalref.modPath, u'../icons/')]
+    if not iconPath:
+        del iconPathList[0]
+    globalref.treeIcons = icondict.IconDict()
+    globalref.treeIcons.addIconPath([os.path.join(path, u'tree') for path
+                                     in iconPathList])
+    globalref.treeIcons.addIconPath([globalref.options.iconPath])
+    treemainwin.TreeMainWin.toolIcons = icondict.IconDict()
+    treemainwin.TreeMainWin.toolIcons.addIconPath([os.path.join(path,
+                                                                u'toolbar')
+                                                   for path in iconPathList],
+                                                  [u'', u'32x32', u'16x16'])
+    treemainwin.TreeMainWin.toolIcons.loadAllIcons()
+    windowIcon = globalref.treeIcons.getIcon(u'treeline')
+    if windowIcon:
+        QtGui.QApplication.setWindowIcon(windowIcon)
 
     if opts:
         CmdLine(opts, args)
