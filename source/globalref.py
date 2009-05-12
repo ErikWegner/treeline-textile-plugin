@@ -36,3 +36,23 @@ updateViewItem = dummyFunction    # called with item parameter
 updateViewMenuStat = dummyFunction
 setStatusBar = dummyFunction  # called with text and optional duration (ms)
 focusTree = dummyFunction
+
+
+def updateRefs():
+    """Update references based on current main window"""
+    global updateViewAll
+    updateViewAll = mainWin.updateViews
+    global updateLeftView
+    updateLeftView = mainWin.updateLeftView
+    global updateRightView
+    updateRightView = mainWin.updateRightView
+    global updateViewSelection
+    updateViewSelection = mainWin.updateViewSelection
+    global updateViewItem
+    updateViewItem = mainWin.updateViewItem
+    global updateViewMenuStat
+    updateViewMenuStat = mainWin.updateCmdAvail
+    global setStatusBar
+    setStatusBar = mainWin.statusBar().showMessage
+    global focusTree
+    focusTree = mainWin.focusLeftView

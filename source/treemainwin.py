@@ -182,14 +182,6 @@ class TreeMainWin(QtGui.QMainWindow):
         self.helpView = None
         self.fileImported = False
         self.printData = printdata.PrintData()
-        globalref.updateViewAll = self.updateViews
-        globalref.updateLeftView = self.updateLeftView
-        globalref.updateRightView = self.updateRightView
-        globalref.updateViewSelection = self.updateViewSelection
-        globalref.updateViewItem = self.updateViewItem
-        globalref.updateViewMenuStat = self.updateCmdAvail
-        globalref.setStatusBar = self.statusBar().showMessage
-        globalref.focusTree = self.focusLeftView
 
         self.actions = {}
         self.shortcuts = {}
@@ -377,6 +369,7 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def updateForFileChange(self, addToRecent=True):
         """Update GUI after file new or open"""
+        globalref.updateRefs()
         self.setMainCaption()
         if self.leftTabs.currentWidget() == self.flatView:
             self.leftTabs.setCurrentWidget(self.treeView)
