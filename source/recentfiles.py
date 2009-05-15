@@ -20,14 +20,10 @@ import globalref
 
 class RecentFileList(list):
     """A list of RecentFile objects"""
-    def __init__(self, menu, beforeAct):
+    def __init__(self):
         list.__init__(self)
-        self.menu = menu
-        self.beforeAct = beforeAct
         self.numEntries = globalref.options.intData('RecentFiles', 0, 99)
-        self.actionList = []
         self.loadList()
-        self.updateMenu()
 
     def loadList(self):
         """Load recent files from options"""
@@ -87,14 +83,17 @@ class RecentFileList(list):
 
     def updateMenu(self):
         """Refresh menu items"""
+        menu = globalref.mainWin.recentFileSep.parentWidget()
+        actionList = globalref.mainWin.recentFileActions
         menuLength = min(self.numEntries, len(self))
-        while len(self.actionList) < menuLength:
-            self.actionList.append(RecentAction(globalref.mainWin))
-            self.menu.insertAction(self.beforeAct, self.actionList[-1])
-        while len(self.actionList) > menuLength:
-            self.menu.removeAction(self.actionList[-1])
-            del self.actionList[-1]
-        for action, entry, num in zip(self.actionList, self,
+        while len(actionList) < menuLength:
+            actionList.append(RecentAction(globalref.mainWin))
+            menu.insertAction(globalref.mainWin.recentFileSep,
+                              actionList[-1])
+        while len(actionList) > menuLength:
+            menu.removeAction(actionList[-1])
+            del actionList[-1]
+        for action, entry, num in zip(actionList, self,
                                       range(menuLength)):
             action.setPath(entry, num)
 

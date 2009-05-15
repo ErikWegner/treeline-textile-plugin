@@ -45,6 +45,7 @@ import plugininterface
 class TreeMainWin(QtGui.QMainWindow):
     """Main window, menus, toolbar, and status"""
     toolIcons = None
+    recentFiles = None
     tlPlainFileFilter = u'%s (*.trl *.xml)' % _('TreeLine Files - Plain')
     tlCompFileFilter = u'%s (*.trl *.trl.gz)' % \
                        _('TreeLine Files - Compressed')
@@ -186,7 +187,12 @@ class TreeMainWin(QtGui.QMainWindow):
         self.actions = {}
         self.shortcuts = {}
         self.toolbars = []
+        self.recentFileSep = None
         self.setupMenus()
+        self.recentFileActions = []
+        if not TreeMainWin.recentFiles:
+            TreeMainWin.recentFiles = recentfiles.RecentFileList()
+        TreeMainWin.recentFiles.updateMenu()
         self.setupShortcuts()
         self.addActionIcons()
         self.setupToolbars()
@@ -374,9 +380,9 @@ class TreeMainWin(QtGui.QMainWindow):
         if self.leftTabs.currentWidget() == self.flatView:
             self.leftTabs.setCurrentWidget(self.treeView)
         if addToRecent:
-            self.recentFiles.addEntry(self.doc.fileName)
+            TreeMainWin.recentFiles.addEntry(self.doc.fileName)
         if addToRecent and globalref.options.boolData('PersistTreeState'):
-            if not self.recentFiles.restoreTreeState(self.treeView):
+            if not TreeMainWin.recentFiles.restoreTreeState(self.treeView):
                 self.updateViews()
         else:
             self.updateViews()
@@ -590,16 +596,17 @@ class TreeMainWin(QtGui.QMainWindow):
         """Open from recentFiles call"""
         if filePath and self.savePrompt():
             if not self.openFile(filePath):
-                self.recentFiles.removeEntry(filePath)
+                TreeMainWin.recentFiles.removeEntry(filePath)
 
     def autoOpen(self):
         """Open last used file"""
-        if globalref.options.boolData('AutoFileOpen') and self.recentFiles:
-            path = self.recentFiles[0].path
+        if globalref.options.boolData('AutoFileOpen') and \
+                 TreeMainWin.recentFiles:
+            path = TreeMainWin.recentFiles[0].path
             if path and not self.openFile(path, False):
-                self.recentFiles.removeEntry(path)
-        elif not self.recentFiles and globalref.options.intData('RecentFiles',
-                                                                0, 99):
+                TreeMainWin.recentFiles.removeEntry(path)
+        elif not TreeMainWin.recentFiles and \
+                globalref.options.intData('RecentFiles', 0, 99):
             self.show()
             self.fileNew()   # prompt for template if no recent files
 
@@ -607,7 +614,7 @@ class TreeMainWin(QtGui.QMainWindow):
         """Return user specified file name for save as & export"""
         dir, name = os.path.split(self.doc.fileName)
         if not dir:
-            dir = self.recentFiles.firstPath()
+            dir = TreeMainWin.recentFiles.firstPath()
         if not dir:
             dir = unicode(os.environ.get('HOME', ''),
                           sys.getfilesystemencoding())
@@ -763,7 +770,7 @@ class TreeMainWin(QtGui.QMainWindow):
         if self.savePrompt():
             dfltPath = os.path.dirname(self.doc.fileName)
             if not dfltPath:
-                dfltPath = self.recentFiles.firstPath()
+                dfltPath = TreeMainWin.recentFiles.firstPath()
             if not dfltPath:
                 dfltPath = unicode(os.environ.get('HOME', ''),
                                    sys.getfilesystemencoding())
@@ -817,7 +824,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                     filterList[currentFilter])
         if fileName and self.saveFile(fileName):
             self.setMainCaption()
-            self.recentFiles.addEntry(fileName)
+            TreeMainWin.recentFiles.addEntry(fileName)
             self.fileImported = False
             self.delAutoSaveFile(oldFileName)
 
@@ -1672,7 +1679,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                1, optiondefaults.maxNumLines)
         if dlg.exec_() == QtGui.QDialog.Accepted:
             if not globalref.options.boolData('PersistTreeState'):
-                self.recentFiles.clearTreeStates()
+                TreeMainWin.recentFiles.clearTreeStates()
             globalref.options.writeChanges()
             if oldAutoSave != globalref.options.intData('AutoSaveMinutes',
                                                         0, 999):
@@ -1681,7 +1688,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                                   intData('UndoLevels', 0, 99)
             self.doc.redoStore.levels = globalref.options.\
                                                   intData('UndoLevels', 0, 99)
-            self.recentFiles.changeNumEntries(globalref.options.
+            TreeMainWin.recentFiles.changeNumEntries(globalref.options.
                                                  intData('RecentFiles', 0, 99))
             self.treeView.setIndentation(globalref.options.
                                          intData('IndentOffset',
@@ -1992,13 +1999,13 @@ class TreeMainWin(QtGui.QMainWindow):
                     self.delAutoSaveFile()
                     return True
             if globalref.options.boolData('PersistTreeState'):
-                self.recentFiles.saveTreeState(self.treeView)
+                TreeMainWin.recentFiles.saveTreeState(self.treeView)
         return True
 
     def closeEvent(self, event):
         """Ask for save if doc modified"""
         if self.savePrompt():
-            self.recentFiles.writeList()
+            TreeMainWin.recentFiles.writeList()
             toolbarPos = base64.b64encode(self.saveState().data())
             globalref.options.changeData('ToolbarPosition', toolbarPos, True)
             if globalref.options.boolData('SaveWindowGeom'):
@@ -2212,9 +2219,7 @@ class TreeMainWin(QtGui.QMainWindow):
                      self.printData.filePrint)
 
         fileMenu.addSeparator()
-        sepAction = fileMenu.addSeparator()
-        numRecent = globalref.options.intData('RecentFiles', 0, 99)
-        self.recentFiles = recentfiles.RecentFileList(fileMenu, sepAction)
+        self.recentFileSep = fileMenu.addSeparator()
 
         fileQuitAct = QtGui.QAction(_('&Quit'), self)
         fileQuitAct.setStatusTip(_('Exit the application'))
