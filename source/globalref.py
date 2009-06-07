@@ -40,6 +40,8 @@ focusTree = dummyFunction
 
 def updateRefs():
     """Update references based on current main window"""
+    global pluginInterface
+    pluginInterface = mainWin.pluginInterface
     global updateViewAll
     updateViewAll = mainWin.updateViews
     global updateLeftView

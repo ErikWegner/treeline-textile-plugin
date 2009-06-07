@@ -174,6 +174,7 @@ class TreeMainWin(QtGui.QMainWindow):
             childTitleView.oldViewHeight = 80
 
         self.doc = None
+        self.pluginInterface = None
         self.condFilter = None
         self.textFilter = []
         self.setTypeDlg = None
@@ -369,8 +370,8 @@ class TreeMainWin(QtGui.QMainWindow):
                                                    len(self.textFilter))
         self.actions['ToolsRemXLST'].setEnabled(len(self.doc.xlstLink))
         self.statusBar().clearMessage()
-        if globalref.pluginInterface:
-            globalref.pluginInterface.execCallback(globalref.pluginInterface.
+        if self.pluginInterface:
+            self.pluginInterface.execCallback(self.pluginInterface.
                                                    viewUpdateCallbacks)
 
     def updateForFileChange(self, addToRecent=True):
@@ -450,28 +451,27 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def setupPlugins(self):
         """Load plugin modules"""
-        globalref.pluginInterface = plugininterface.PluginInterface(self)
+        self.pluginInterface = plugininterface.PluginInterface(self)
         pluginPaths = [os.path.join(globalref.modPath, 'plugins')]
         userPluginPath = globalref.options.pluginPath
         if userPluginPath:
             pluginPaths.append(userPluginPath)
-        self.pluginList = []
+        pluginList = []
         for pluginPath in pluginPaths:
             if os.access(pluginPath, os.R_OK):
                 sys.path.insert(1, pluginPath)
-                self.pluginList.extend([name[:-3] for name in
+                pluginList.extend([name[:-3] for name in
                                         os.listdir(pluginPath) if
                                         name.endswith('.py')])
         self.pluginInstances = []  # saves returned ref - avoid garbage collect
         self.pluginDescript = []
         errorList = []
-        for name in self.pluginList[:]:
+        for name in pluginList:
             try:
                 module = __import__(name)
                 if not hasattr(module, 'main'):
                     raise ImportError
-                self.pluginInstances.append(module.main(globalref.
-                                                        pluginInterface))
+                self.pluginInstances.append(module.main(self.pluginInterface))
                 descript = module.__doc__
                 if descript:
                     descript = [line for line in descript.split('\n')
@@ -481,7 +481,6 @@ class TreeMainWin(QtGui.QMainWindow):
                 self.pluginDescript.append(descript)
             except ImportError:
                 errorList.append(name)
-                self.pluginList.remove(name)
         if errorList:
             QtGui.QMessageBox.warning(self, 'TreeLine',
                                 _('Could not load plugin module %s') %
@@ -587,8 +586,8 @@ class TreeMainWin(QtGui.QMainWindow):
         self.doc.root.open = True
         QtGui.QApplication.restoreOverrideCursor()
         self.updateForFileChange(addToRecent)
-        if globalref.pluginInterface:
-            globalref.pluginInterface.execCallback(globalref.pluginInterface.
+        if self.pluginInterface:
+            self.pluginInterface.execCallback(self.pluginInterface.
                                                    fileOpenCallbacks)
         return True
 
@@ -734,8 +733,8 @@ class TreeMainWin(QtGui.QMainWindow):
         self.updateCmdAvail()
         self.delAutoSaveFile()
         self.resetAutoSave()
-        if globalref.pluginInterface:
-            globalref.pluginInterface.execCallback(globalref.pluginInterface.
+        if self.pluginInterface:
+            self.pluginInterface.execCallback(self.pluginInterface.
                                                    fileSaveCallbacks)
         return True
 
@@ -760,8 +759,8 @@ class TreeMainWin(QtGui.QMainWindow):
             else:
                 self.doc = treedoc.TreeDoc()
             self.updateForFileChange(False)
-            if globalref.pluginInterface:
-                globalref.pluginInterface.execCallback(globalref.
+            if self.pluginInterface:
+                self.pluginInterface.execCallback(globalref.
                                                        pluginInterface.
                                                        fileNewCallbacks)
 
@@ -1415,10 +1414,10 @@ class TreeMainWin(QtGui.QMainWindow):
             self.doc.undoStore.addDataUndo(self.doc.selection)
             for item in self.doc.selection:
                 item.editFields(dlg.resultDict)
-                if globalref.pluginInterface:
+                if self.pluginInterface:
                     fields = [item.nodeFormat().findField(name) for name in
                               dlg.resultDict.keys()]
-                    globalref.pluginInterface.execCallback(globalref.
+                    self.pluginInterface.execCallback(globalref.
                                                            pluginInterface.
                                                            dataChangeCallbacks,
                                                            item, fields)
