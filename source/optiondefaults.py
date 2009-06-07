@@ -152,6 +152,7 @@ def defaultOutput():
             "OpenSearchNodes      yes",
             "ShowTreeIcons        yes",
             "EnableExecLinks      yes",
+            "OpenNewWindow        yes",
             "CompressNewFiles     no",
             "EncryptNewFiles      no",
             "HtmlNewFields        no",

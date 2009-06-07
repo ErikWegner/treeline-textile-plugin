@@ -1638,6 +1638,8 @@ class TreeMainWin(QtGui.QMainWindow):
                                 _('Show icons in the tree view'))
         optiondlg.OptionDlgBool(dlg, 'EnableExecLinks',
                                 _('Enable executable links'))
+        optiondlg.OptionDlgBool(dlg, 'OpenNewWindow',
+                                _('Open files in new windows'))
         dlg.startGroupBox(_('New Objects'))
         optiondlg.OptionDlgBool(dlg, 'CompressNewFiles',
                                _('Set new files to compressed by default'))
