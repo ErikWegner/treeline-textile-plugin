@@ -5,7 +5,7 @@
  treeline.py, the main program file
 
  TreeLine, an information storage program
- Copyright (C) 2006, Douglas W. Bell
+ Copyright (C) 2009, Douglas W. Bell
 
  This is free software; you can redistribute it and/or modify it under the
  terms of the GNU General Public License, either Version 2 or any later
@@ -129,10 +129,8 @@ def main():
 
     import treedoc
     from cmdline import CmdLine
+    import treecontrol
     import treemainwin
-    import option
-    import optiondefaults
-    import icondict
 
     if not treedoc.testXmlParser():
         QtGui.QMessageBox.critical(None, _('Error'),
@@ -148,41 +146,12 @@ def main():
         sys.exit(2)
     args = args[1:]
 
-    mainVersion = '.'.join(__version__.split('.')[:2])
-    globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
-    globalref.options.loadAll(optiondefaults.defaultOutput())
-    iconPathList = [iconPath, os.path.join(globalref.modPath, u'icons/'),
-                    os.path.join(globalref.modPath, u'../icons/')]
-    if not iconPath:
-        del iconPathList[0]
-    globalref.treeIcons = icondict.IconDict()
-    globalref.treeIcons.addIconPath([os.path.join(path, u'tree') for path
-                                     in iconPathList])
-    globalref.treeIcons.addIconPath([globalref.options.iconPath])
-    treemainwin.TreeMainWin.toolIcons = icondict.IconDict()
-    treemainwin.TreeMainWin.toolIcons.addIconPath([os.path.join(path,
-                                                                u'toolbar')
-                                                   for path in iconPathList],
-                                                  [u'', u'32x32', u'16x16'])
-    treemainwin.TreeMainWin.toolIcons.loadAllIcons()
-    windowIcon = globalref.treeIcons.getIcon(u'treeline')
-    if windowIcon:
-        QtGui.QApplication.setWindowIcon(windowIcon)
+    treeControl = treecontrol.TreeControl(userStyle)
 
     if opts:
         CmdLine(opts, args)
     else:
-        if not userStyle:
-            if sys.platform.startswith('dar'):
-                QtGui.QApplication.setStyle('macintosh')
-            elif not sys.platform.startswith('win'):
-                QtGui.QApplication.setStyle('plastique')
-        win = treemainwin.TreeMainWin()
-        if args:
-            win.openFile(unicode(args[0], globalref.localTextEncoding))
-        else:
-            win.autoOpen()
-        win.show()
+        treeControl.firstWindow(args)
         signal.signal(signal.SIGINT, signal.SIG_IGN)
         app.exec_()
 

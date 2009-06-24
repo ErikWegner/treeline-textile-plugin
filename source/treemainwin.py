@@ -4,7 +4,7 @@
 # treemainwin.py, provides a class for the main window
 #
 # TreeLine, an information storage program
-# Copyright (C) 2006, Douglas W. Bell
+# Copyright (C) 2009, Douglas W. Bell
 #
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, either Version 2 or any later
@@ -19,11 +19,10 @@ import codecs
 import base64
 from PyQt4 import QtCore, QtGui
 try:
-    from __main__ import __version__, __author__, helpFilePath, iconPath
+    from __main__ import __version__, __author__, helpFilePath
 except ImportError:
     __version__ = __author__ = '??'
     helpFilePath = None
-    iconPath = None
 import treedoc
 import treeview
 import treeflatview
