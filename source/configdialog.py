@@ -38,6 +38,7 @@ class ConfigDialog(QtGui.QDialog):
         self.setAttribute(QtCore.Qt.WA_QuitOnClose, False)
         self.setWindowFlags(QtCore.Qt.Window)
         self.setWindowTitle(_('Configure Data Types'))
+        self.mainWinRef = globalref.mainWin
 
         self.formatModified = False
         self.prevPage = None

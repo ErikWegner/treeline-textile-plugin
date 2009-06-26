@@ -56,6 +56,9 @@ class TreeControl(object):
                 QtGui.QApplication.setStyle('macintosh')
             elif not sys.platform.startswith('win'):
                 QtGui.QApplication.setStyle('plastique')
+        qApp = QtGui.QApplication.instance()
+        qApp.connect(qApp, QtCore.SIGNAL('focusChanged(QWidget*, QWidget*)'),
+                     self.updateFocus)
 
     def firstWindow(self, fileNames=None):
         """Open first main window"""
@@ -66,3 +69,15 @@ class TreeControl(object):
         else:
             win.autoOpen()
         win.show()
+
+    def updateFocus(self):
+        """Check for focus change to a different main window"""
+        win = QtGui.QApplication.activeWindow()
+        while win and win.parent():
+            win = win.parent()
+        try:
+            win = win.mainWinRef
+        except AttributeError:
+            pass
+        if win and win != globalref.mainWin:
+            print 'Possible focus change', win
