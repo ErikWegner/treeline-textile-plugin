@@ -178,7 +178,7 @@ class RecentAction(QtGui.QAction):
 
     def openItem(self):
         """Execute function to open this file"""
-        self.parent().recentOpen(unicode(self.statusTip()))
+        globalref.treeControl.recentOpen(unicode(self.statusTip()))
 
 
 class TreeState(object):

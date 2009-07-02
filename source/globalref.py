@@ -13,7 +13,7 @@
 #****************************************************************************
 
 
-
+treeControl = None
 docRef = None
 mainWin = None
 options = None

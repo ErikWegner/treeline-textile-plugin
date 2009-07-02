@@ -25,12 +25,14 @@ import treemainwin
 import option
 import optiondefaults
 import icondict
+import recentfiles
 
 
 class TreeControl(object):
     """Program and main window control"""
     def __init__(self, userStyle):
         self.windowList = []
+        globalref.treeControl = self
         mainVersion = '.'.join(__version__.split('.')[:2])
         globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
         globalref.options.loadAll(optiondefaults.defaultOutput())
@@ -56,6 +58,7 @@ class TreeControl(object):
                 QtGui.QApplication.setStyle('macintosh')
             elif not sys.platform.startswith('win'):
                 QtGui.QApplication.setStyle('plastique')
+        self.recentFiles = recentfiles.RecentFileList()
         qApp = QtGui.QApplication.instance()
         qApp.connect(qApp, QtCore.SIGNAL('focusChanged(QWidget*, QWidget*)'),
                      self.updateFocus)
@@ -67,8 +70,26 @@ class TreeControl(object):
         if fileNames:
             win.openFile(unicode(fileNames[0], globalref.localTextEncoding))
         else:
-            win.autoOpen()
+            self.autoOpen(win)
         win.show()
+
+    def autoOpen(self, win):
+        """Open last used file"""
+        if globalref.options.boolData('AutoFileOpen') and \
+                 self.recentFiles:
+            path = self.recentFiles[0].path
+            if path and not win.openFile(path, False):
+                self.recentFiles.removeEntry(path)
+        elif not self.recentFiles and \
+                globalref.options.intData('RecentFiles', 0, 99):
+            win.show()
+            win.fileNew()   # prompt for template if no recent files
+
+    def recentOpen(self, filePath):
+        """Open from recentFiles call"""
+        if filePath and globalref.mainWin.savePrompt():
+            if not globalref.mainWin.openFile(filePath):
+                self.recentFiles.removeEntry(filePath)
 
     def updateFocus(self):
         """Check for focus change to a different main window"""
