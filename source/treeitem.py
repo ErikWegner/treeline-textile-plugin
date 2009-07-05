@@ -164,7 +164,7 @@ class TreeItem(object):
             if not globalref.docRef.formHtml:
                 xmlList[0] += u' nohtml="y"'
             if globalref.docRef.childFieldSep != \
-                                globalref.docRef.childFieldSepDflt:
+                                treedoc.TreeDoc.childFieldSepDflt:
                 xmlList[0] += u' childsep="%s"' % \
                               escape(globalref.docRef.childFieldSep,
                                      treedoc.escDict)

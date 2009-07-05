@@ -51,7 +51,10 @@ class TreeDoc(object):
     separatorName = _('SEPARATOR', 'bookmark format separator name')
     bookmarkRootTitle = _('Bookmarks')
     copyFormat = None
-    def __init__(self, filePath=None):
+    def __init__(self, filePath=None, setNewDefaults=False, importType=None):
+        """Open filePath (can also be file ref) if given, 
+           setNewDefaults uses user defaults for compression & encryption,
+           importType gives an import method (in text) to read the file"""
         globalref.docRef = self
         self.root = None
         self.treeFormats = TreeFormats()
@@ -59,29 +62,30 @@ class TreeDoc(object):
         self.fileInfoFormat = None
         TreeDoc.copyFormat = nodeformat.NodeFormat('_DUMMY__ROOT_', {},
                                                    TreeFormats.fieldDefault)
-        # self.resetParam()
-        self.fileName = ''
-        if filePath:
-            self.readFile(filePath)
-        else:
-            self.newFile()
-
-    def resetParam(self):
-        """Set doc setting values to defaults"""
-        self.selection = treeselection.TreeSelection([self.root])
         self.undoStore = undo.UndoRedoStore()
         self.redoStore =  undo.UndoRedoStore()
-        self.modified = False
+        self.sortFields = ['']
+        self.fileName = ''
         self.spaceBetween = True
         self.lineBreaks = True
         self.formHtml = True
         self.childFieldSep = TreeDoc.childFieldSepDflt
         self.spellChkLang = ''
-        self.sortFields = ['']
-        self.xslCssLink = ''
         self.xlstLink = ''
+        self.xslCssLink = ''
         self.tlVersion = __version__
         self.fileInfoFormat = nodeformat.FileInfoFormat()
+        if filePath:
+            self.readFile(filePath)
+        else:
+            self.treeFormats = TreeFormats({}, True)
+            self.root = TreeItem(None, TreeFormats.rootFormatDefault)
+            self.root.setTitle(TreeDoc.rootTitleDefault)
+        self.modified = False
+        if setNewDefaults or not hasattr(self, 'compressFile'):
+            self.compressFile = globalref.options.boolData('CompressNewFiles')
+            self.encryptFile = globalref.options.boolData('EncryptNewFiles')
+        self.selection = treeselection.TreeSelection([self.root])
         self.fileInfoFormat.translateFields()
         self.fileInfoFormat.updateFileInfo()
 
@@ -167,28 +171,16 @@ class TreeDoc(object):
             fileRef.name = name
         return fileRef
 
-    def newFile(self):
-        """Start empty file"""
-        self.compressFile = globalref.options.boolData('CompressNewFiles')
-        self.encryptFile = globalref.options.boolData('EncryptNewFiles')
-        self.treeFormats = TreeFormats({}, True)
-        self.root = TreeItem(None, TreeFormats.rootFormatDefault)
-        self.root.setTitle(TreeDoc.rootTitleDefault)
-        self.resetParam()
-        self.fileName = ''
-
     def readFile(self, fileRef):
         """Open and read file - raise exception on failure,
            fileRef is either file path or file object"""
-        origFileInfoFormat = self.fileInfoFormat
-        self.fileInfoFormat = nodeformat.FileInfoFormat()
         filePath = hasattr(fileRef, 'read') and \
                    unicode(fileRef.name, sys.getfilesystemencoding()) or \
                    fileRef
         try:
             f = self.getReadFileObj(fileRef)
             f = self.decryptFile(f)
-            handler = treexmlparse.TreeSaxHandler()
+            handler = treexmlparse.TreeSaxHandler(self)
             input = xml.sax.InputSource()
             input.setByteStream(f)
             input.setEncoding('utf-8')
@@ -199,39 +191,21 @@ class TreeDoc(object):
         except IOError:
             print 'Error - could not read file', \
                   filePath.encode(globalref.localTextEncoding)
-            self.fileInfoFormat = origFileInfoFormat
             raise
         except UnicodeError:
             print 'Error - bad Unicode in file', \
                   filePath.encode(globalref.localTextEncoding)
             f.close()
-            self.fileInfoFormat = origFileInfoFormat
             raise
         except xml.sax.SAXException:
             self.storedFileRef = f
             self.storedFileRef.seek(0)
-            self.fileInfoFormat = origFileInfoFormat
             raise ReadFileError(_('Could not open as treeline file'))
         f.close()
         self.root = handler.rootItem
         self.fileName = filePath
         self.treeFormats = TreeFormats(handler.formats)
-        self.xlstLink = handler.xlstLink
-        self.xslCssLink = handler.xslCssLink
-        self.spaceBetween = handler.spaceBetween
-        self.lineBreaks = handler.lineBreaks
-        self.formHtml = handler.formHtml
-        self.childFieldSep = handler.childFieldSep
-        self.spellChkLang = handler.spellChkLang
-        self.tlVersion = handler.tlVersion
-        self.selection = treeselection.TreeSelection([self.root])
-        self.undoStore = undo.UndoRedoStore()
-        self.redoStore =  undo.UndoRedoStore()
-        self.modified = False
-        self.sortFields = ['']
         self.fileInfoFormat.replaceListFormat()
-        self.fileInfoFormat.translateFields()
-        self.fileInfoFormat.updateFileInfo()
         self.treeFormats.updateAutoChoices()
         self.treeFormats.updateUniqueID()
         self.treeFormats.updateDerivedTypes()
@@ -256,7 +230,6 @@ class TreeDoc(object):
                 f.close()
             return
         f.close()
-        origFormats = self.treeFormats
         bufList = [(text.count('\t', 0, len(text) - len(text.lstrip())),
                     text.strip()) for text in textList if text.strip()]
         if bufList:
@@ -269,10 +242,7 @@ class TreeDoc(object):
                 if newRoot.loadTabbedChildren(bufList):
                     self.root = newRoot
                     self.fileName = filePath
-                    self.resetParam()
                     return
-        self.treeFormats = origFormats
-        self.modified = False
         raise ReadFileError(_('Error in tabbed list'))
 
     def readTable(self, fileRef, errors='strict'):
@@ -290,7 +260,6 @@ class TreeDoc(object):
                 f.close()
             return
         f.close()
-        origFormats = self.treeFormats
         self.treeFormats = TreeFormats({}, True)  # set defaults ROOT & DEFAULT
         newRoot = TreeItem(None, TreeFormats.rootFormatDefault)
         defaultFormat = self.treeFormats[TreeFormats.formatDefault]
@@ -307,13 +276,10 @@ class TreeDoc(object):
                     newItem.data[self.treeFormats[TreeFormats.formatDefault].
                             fieldList[num].name] = lineList[num].strip()
             except IndexError:
-                self.treeFormats = origFormats
-                self.modified = False
                 print 'Too few headings to read data as a table'
                 raise ReadFileError(_('Too few headings to read data as table'))
         self.root = newRoot
         self.fileName = filePath
-        self.resetParam()
 
     def readLines(self, fileRef, errors='strict'):
         """Import plain text, node per line"""
@@ -345,7 +311,6 @@ class TreeDoc(object):
                 newItem.data[TreeFormats.textFieldName] = line
         self.root = newRoot
         self.fileName = filePath
-        self.resetParam()
 
     def readPara(self, fileRef, errors='strict'):
         """Import plain text, blank line delimitted"""
@@ -382,7 +347,6 @@ class TreeDoc(object):
                 newItem.data[TreeFormats.textFieldName] = line
         self.root = newRoot
         self.fileName = filePath
-        self.resetParam()
 
     def readTreepad(self, fileRef, errors='strict'):
         """Read Treepad text-node file"""
@@ -399,7 +363,6 @@ class TreeDoc(object):
             else:
                 f.close()
             return
-        origFormats = self.treeFormats
         self.treeFormats = TreeFormats()
         format = nodeformat.NodeFormat(TreeFormats.formatDefault)
         titleFieldName = _('Title', 'title field name')
@@ -422,8 +385,6 @@ class TreeDoc(object):
                     level = int(lines[1])
                     lines = lines[2:]
                 except (ValueError, IndexError):
-                    self.treeFormats = origFormats
-                    self.modified = False
                     print 'Error - bad file format in %s' % \
                           filePath.encode(globalref.localTextEncoding)
                     raise ReadFileError(_('Bad file format in %s') % filePath)
@@ -442,7 +403,6 @@ class TreeDoc(object):
             parentList.append(item)
         self.root = itemList[0]
         self.fileName = filePath
-        self.resetParam()
 
     def createBookmarkFormat(self):
         """Return a set of formats for bookmark imports"""
@@ -502,7 +462,6 @@ class TreeDoc(object):
                       TreeDoc.bookmarkRootTitle
         self.fileName = filePath
         self.treeFormats = formats
-        self.resetParam()
 
     def readMozilla(self, fileRef, errors='strict'):
         """Read Mozilla HTML format bookmarks"""
@@ -535,7 +494,6 @@ class TreeDoc(object):
                       TreeDoc.bookmarkRootTitle
         self.fileName = filePath
         self.treeFormats = formats
-        self.resetParam()
 
     def readXml(self, fileRef):
         """Read a generic (non-TreeLine) XML file"""
@@ -567,11 +525,9 @@ class TreeDoc(object):
         for format in self.treeFormats.values():
             format.fixImportedFormat(treexmlparse.GenericXmlHandler.
                                                   textFieldName)
-        self.resetParam()
 
     def readOdf(self, fileRef):
         """Read an Open Document Format (ODF) file"""
-        origFormats = self.treeFormats
         self.treeFormats = TreeFormats(None, True)
         rootItem = TreeItem(None, TreeFormats.rootFormatDefault,
                             TreeDoc.rootTitleDefault)
@@ -591,20 +547,16 @@ class TreeDoc(object):
             xml.sax.parseString(text, handler)
         except (zipfile.BadZipfile, KeyError):
             f.close()
-            self.treeFormats = origFormats
             raise ReadFileError(_('Could not unzip ODF file'))
         except UnicodeError:
             f.close()
-            self.treeFormats = origFormats
             raise ReadFileError(_('Problem with Unicode characters in file'))
         except xml.sax.SAXException:
             f.close()
-            self.treeFormats = origFormats
             raise ReadFileError(_('Could not open corrupt ODF file'))
         f.close()
         self.root = rootItem
         self.fileName = filePath
-        self.resetParam()
 
     def readXmlString(self, string):
         """Read xml string and return top item or None"""

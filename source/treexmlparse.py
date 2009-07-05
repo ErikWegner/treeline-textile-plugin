@@ -18,27 +18,19 @@ import HTMLParser
 import nodeformat
 from treeitem import TreeItem
 from treeformats import TreeFormats
-import globalref
 
 
 class TreeSaxHandler(xml.sax.ContentHandler):
     """Handler to read xml thru sax"""
-    def __init__(self):
+    def __init__(self, docRef):
         xml.sax.ContentHandler.__init__(self)
+        self.docRef = docRef
         self.currentItem = None
         self.bareFormat = None
         self.rootItem = None
         self.formats = {}
         self.dataEntry = ''
         self.text = ''
-        self.xlstLink = ''
-        self.xslCssLink = ''
-        self.spaceBetween = True
-        self.lineBreaks = True
-        self.formHtml = True
-        self.childFieldSep = globalref.docRef.childFieldSepDflt
-        self.spellChkLang = ''
-        self.tlVersion = ''
 
     def startElement(self, name, attrs):
         """Called by the reader at the open tag of each element"""
@@ -55,16 +47,16 @@ class TreeSaxHandler(xml.sax.ContentHandler):
                 else:
                     self.rootItem = newItem
                     if attrs.get(u'nospace', '').startswith('y'):
-                        self.spaceBetween = False
+                        self.docRef.spaceBetween = False
                     if attrs.get(u'nobreaks', '').startswith('y'):
-                        self.lineBreaks = False
+                        self.docRef.lineBreaks = False
                     if attrs.get(u'nohtml', '').startswith('y'):
-                        self.formHtml = False
+                        self.docRef.formHtml = False
                     if attrs.get(u'childsep', ''):
-                        self.childFieldSep = attrs.get(u'childsep', '')
-                    self.spellChkLang = attrs.get(u'spellchk', '')
-                    self.xslCssLink = attrs.get(u'xslcss', '')
-                    self.tlVersion = attrs.get(u'tlversion', '')
+                        self.docRef.childFieldSep = attrs.get(u'childsep', '')
+                    self.docRef.spellChkLang = attrs.get(u'spellchk', '')
+                    self.docRef.xslCssLink = attrs.get(u'xslcss', '')
+                    self.docRef.tlVersion = attrs.get(u'tlversion', '')
                 self.currentItem = newItem
             else:                    # reading bare format
                 self.bareFormat = format
@@ -113,7 +105,7 @@ class TreeSaxHandler(xml.sax.ContentHandler):
 
     def processingInstruction(self, target, data):
         """Recover xlst link from stylesheet instruction"""
-        self.xlstLink = u' '.join((target, data))
+        self.docRef.xlstLink = u' '.join((target, data))
 
 
 class XbelSaxHandler(xml.sax.ContentHandler):
