@@ -41,6 +41,16 @@ for c in range(9) + range(11, 13) + range(14, 32):
 unEscDict = {'&quot;': '"'}
 encryptPrefix = '>>TL+enc'
 
+tabbedImport = 'readTabbed'
+tableImport = 'readTable'
+textLineImport = 'readLines'
+textParaImport = 'readPara'
+treepadImport = 'readTreepad'
+xbelImport = 'readXbel'
+mozillaImport = 'readMozilla'
+xmlImport = 'readXml'
+odfImport = 'readOdf'
+
 class TreeDoc(object):
     """Tree document class - stores root and has tree utilities"""
     passwordDict = {}
@@ -52,9 +62,9 @@ class TreeDoc(object):
     bookmarkRootTitle = _('Bookmarks')
     copyFormat = None
     def __init__(self, filePath=None, setNewDefaults=False, importType=None):
-        """Open filePath (can also be file ref) if given, 
+        """Open filePath (can also be file ref) if given,
            setNewDefaults uses user defaults for compression & encryption,
-           importType gives an import method (in text) to read the file"""
+           importType gives an import method to read the file"""
         globalref.docRef = self
         self.root = None
         self.treeFormats = TreeFormats()
@@ -76,7 +86,10 @@ class TreeDoc(object):
         self.tlVersion = __version__
         self.fileInfoFormat = nodeformat.FileInfoFormat()
         if filePath:
-            self.readFile(filePath)
+            if importType:
+                getattr(self, importType)(filePath)
+            else:
+                self.readFile(filePath)
         else:
             self.treeFormats = TreeFormats({}, True)
             self.root = TreeItem(None, TreeFormats.rootFormatDefault)

@@ -378,7 +378,8 @@ class TreeMainWin(QtGui.QMainWindow):
         if addToRecent:
             globalref.treeControl.recentFiles.addEntry(self.doc.fileName)
         if addToRecent and globalref.options.boolData('PersistTreeState'):
-            if not globalref.treeControl.recentFiles.restoreTreeState(self.treeView):
+            if not globalref.treeControl.recentFiles.\
+                    restoreTreeState(self.treeView):
                 self.updateViews()
         else:
             self.updateViews()
@@ -517,7 +518,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 return True
         QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
         try:
-            self.doc.readFile(filePath)
+            self.doc = treedoc.TreeDoc(filePath)
             self.fileImported = False
         except treedoc.PasswordError:
             QtGui.QApplication.restoreOverrideCursor()
@@ -540,22 +541,22 @@ class TreeMainWin(QtGui.QMainWindow):
                 return True
             # assume file is not a TreeLine file
             choices = [(_('Tab &indented text, one node per line'),
-                        self.doc.readTabbed),
+                        treedoc.tabbedImport),
                         (_('Text &table with header row, one node per line'),
-                         self.doc.readTable),
+                         treedoc.tableImport),
                         (_('Plain text, one &node per line (CR delimitted)'),
-                         self.doc.readLines),
+                         treedoc.textLineImport),
                         (_('Plain text &paragraphs (blank line delimitted)'),
-                         self.doc.readPara),
+                         treedoc.textParaImport),
                         (_('Treepad &file (text nodes only)'),
-                         self.doc.readTreepad),
+                         treedoc.treepadImport),
                         (_('&XML bookmarks (XBEL format)'),
-                         self.doc.readXbel),
+                         treedoc.xbelImport),
                         (_('&HTML bookmarks (Mozilla format)'),
-                         self.doc.readMozilla),
+                         treedoc.mozillaImport),
                         (_('&Generic XML (Non-TreeLine file)'),
-                         self.doc.readXml),
-                        (_('Open Document (ODF) text'), self.doc.readOdf)]
+                         treedoc.xmlImport),
+                        (_('Open Document (ODF) text'), treedoc.odfImport)]
             dlg = treedialogs.RadioChoiceDlg(_('Import Text'),
                                              _('Choose Text Import Method'),
                                              choices, self)
@@ -563,7 +564,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 return True
             try:
                 QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-                apply(dlg.getResult(), (self.doc.storedFileRef,))
+                self.doc = treedoc.TreeDoc(filePath, False, dlg.getResult())
             except treedoc.ReadFileError, e:
                 QtGui.QApplication.restoreOverrideCursor()
                 QtGui.QMessageBox.warning(self, 'TreeLine', _('Error - %s')
@@ -716,7 +717,7 @@ class TreeMainWin(QtGui.QMainWindow):
             path = dlg.selectedPath()
             if path:
                 try:
-                    self.doc.readFile(path)
+                    self.doc = treedoc.TreeDoc(path)
                     self.doc.root.open = True
                     self.doc.fileName = ''
                     self.doc.fileInfoFormat.updateFileInfo()
