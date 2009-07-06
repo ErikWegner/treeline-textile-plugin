@@ -139,14 +139,12 @@ class TreeDoc(object):
         if self.encryptFile:
             password = TreeDoc.passwordDict.get(fileObj.name, '')
             if not password:
-                self.storedFileRef = fileObj
-                self.storedFileRef.seek(0)
+                fileObj.close()
                 raise PasswordError, 'Missing password'
             try:
                 text = p3.p3_decrypt(fileObj.read(), password)
             except p3.CryptError:
-                self.storedFileRef = fileObj
-                self.storedFileRef.seek(0)
+                fileObj.close()
                 raise PasswordError, 'Incorrect password'
             fileObj.close()
             fileObj = StringIO.StringIO(text)
@@ -198,8 +196,7 @@ class TreeDoc(object):
             f.close()
             raise
         except xml.sax.SAXException:
-            self.storedFileRef = f
-            self.storedFileRef.seek(0)
+            f.close()
             raise ReadFileError(_('Could not open as treeline file'))
         f.close()
         self.root = handler.rootItem

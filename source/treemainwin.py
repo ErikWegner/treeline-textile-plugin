@@ -490,16 +490,11 @@ class TreeMainWin(QtGui.QMainWindow):
         caption += u'- TreeLine'
         self.setWindowTitle(caption)
 
-    def openFile(self, fileRef, importOnFail=True, addToRecent=True):
+    def openFile(self, filePath, importOnFail=True, addToRecent=True):
         """Open given file, fail quietly if not importOnFail,
            return False if file should be removed from recent list,
-           True otherwise,
-           fileRef is either file path or file object"""
-        if hasattr(fileRef, 'read'):
-            fileName = unicode(fileRef.name, sys.getfilesystemencoding())
-        else:
-            fileName = fileRef
-        autoSaveFile = self.autoSaveFilePath(fileName)
+           True otherwise"""
+        autoSaveFile = self.autoSaveFilePath(filePath)
         if autoSaveFile and globalref.options.intData('AutoSaveMinutes',
                                                       0, 999):
             ans = QtGui.QMessageBox.information(self, 'TreeLine',
@@ -511,39 +506,37 @@ class TreeMainWin(QtGui.QMainWindow):
                                                 _('&Delete Backup'),
                                                 _('&Cancel File Open'), 0, 2)
             if ans == 0:
-                if not self.restoreAutoSaveFile(fileName):
+                if not self.restoreAutoSaveFile(filePath):
                     QtGui.QMessageBox.warning(self, 'TreeLine',
                                               _('Error - could not restore '\
                                                 'backup'))
                 return True
             elif ans == 1:
-                self.delAutoSaveFile(fileName)
+                self.delAutoSaveFile(filePath)
             else:
                 return True
         QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
         try:
-            self.doc.readFile(fileRef)
+            self.doc.readFile(filePath)
             self.fileImported = False
         except treedoc.PasswordError:
             QtGui.QApplication.restoreOverrideCursor()
             dlg = treedialogs.PasswordEntry(False, self)
             if dlg.exec_() != QtGui.QDialog.Accepted:
-                self.doc.storedFileRef.close()
                 return True
-            self.doc.setPassword(fileName, dlg.password)
-            result = self.openFile(self.doc.storedFileRef, importOnFail)
+            self.doc.setPassword(filePath, dlg.password)
+            result = self.openFile(filePath, importOnFail)
             if not dlg.saveIt:
-                self.doc.clearPassword(fileName)
+                self.doc.clearPassword(filePath)
             return result
         except (IOError, UnicodeError):
             QtGui.QApplication.restoreOverrideCursor()
             QtGui.QMessageBox.warning(self, 'TreeLine',
-                              _('Error - could not read file "%s"') % fileName)
+                              _('Error - could not read file "%s"') % filePath)
             return False
         except treedoc.ReadFileError, e:
             QtGui.QApplication.restoreOverrideCursor()
             if not importOnFail:
-                self.doc.storedFileRef.close()
                 return True
             # assume file is not a TreeLine file
             choices = [(_('Tab &indented text, one node per line'),
@@ -567,7 +560,6 @@ class TreeMainWin(QtGui.QMainWindow):
                                              _('Choose Text Import Method'),
                                              choices, self)
             if dlg.exec_() != QtGui.QDialog.Accepted:
-                self.doc.storedFileRef.close()
                 return True
             try:
                 QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
