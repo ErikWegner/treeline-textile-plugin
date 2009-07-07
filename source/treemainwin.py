@@ -491,82 +491,6 @@ class TreeMainWin(QtGui.QMainWindow):
         caption += u'- TreeLine'
         self.setWindowTitle(caption)
 
-    def openFile(self, filePath, importOnFail=True, addToRecent=True):
-        """Open given file, fail quietly if not importOnFail,
-           return False if file should be removed from recent list,
-           True otherwise"""
-        if not self.checkAutoSave():
-            return True
-        QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-        try:
-            self.doc = treedoc.TreeDoc(filePath)
-            self.fileImported = False
-        except treedoc.PasswordError:
-            QtGui.QApplication.restoreOverrideCursor()
-            dlg = treedialogs.PasswordEntry(False, self)
-            if dlg.exec_() != QtGui.QDialog.Accepted:
-                return True
-            self.doc.setPassword(filePath, dlg.password)
-            result = self.openFile(filePath, importOnFail)
-            if not dlg.saveIt:
-                self.doc.clearPassword(filePath)
-            return result
-        except (IOError, UnicodeError):
-            QtGui.QApplication.restoreOverrideCursor()
-            QtGui.QMessageBox.warning(self, 'TreeLine',
-                              _('Error - could not read file "%s"') % filePath)
-            return False
-        except treedoc.ReadFileError, e:
-            QtGui.QApplication.restoreOverrideCursor()
-            if not importOnFail:
-                return True
-            # assume file is not a TreeLine file
-            importType = self.chooseImportType()
-            if not importType:
-                return True
-            try:
-                QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-                self.doc = treedoc.TreeDoc(filePath, False, importType)
-            except treedoc.ReadFileError, e:
-                QtGui.QApplication.restoreOverrideCursor()
-                QtGui.QMessageBox.warning(self, 'TreeLine', _('Error - %s')
-                                                            % e)
-                return False
-            self.fileImported = True
-        self.doc.root.open = True
-        QtGui.QApplication.restoreOverrideCursor()
-        self.updateForFileChange(addToRecent)
-        if self.pluginInterface:
-            self.pluginInterface.execCallback(self.pluginInterface.
-                                                   fileOpenCallbacks)
-        return True
-
-    def chooseImportType(self):
-        """Show dialog for selecting file import type"""
-        choices = [(_('Tab &indented text, one node per line'),
-                    treedoc.tabbedImport),
-                    (_('Text &table with header row, one node per line'),
-                     treedoc.tableImport),
-                    (_('Plain text, one &node per line (CR delimitted)'),
-                     treedoc.textLineImport),
-                    (_('Plain text &paragraphs (blank line delimitted)'),
-                     treedoc.textParaImport),
-                    (_('Treepad &file (text nodes only)'),
-                     treedoc.treepadImport),
-                    (_('&XML bookmarks (XBEL format)'), treedoc.xbelImport),
-                    (_('&HTML bookmarks (Mozilla format)'),
-                     treedoc.mozillaImport),
-                    (_('&Generic XML (Non-TreeLine file)'),
-                     treedoc.xmlImport),
-                    (_('Open Document (ODF) text'), treedoc.odfImport)]
-        dlg = treedialogs.RadioChoiceDlg(_('Import Text'),
-                                         _('Choose Text Import Method'),
-                                         choices, self)
-        if dlg.exec_() != QtGui.QDialog.Accepted:
-            return None
-        return dlg.getResult()
-
-
     def getFileName(self, caption, defaultExt, filterList, currentFilter=''):
         """Return user specified file name for save as & export"""
         dir, name = os.path.split(self.doc.fileName)
@@ -606,33 +530,6 @@ class TreeMainWin(QtGui.QMainWindow):
         if minutes:
             self.autoSaveTimer.start(60000 * minutes)
 
-    def checkAutoSave(self):
-        """Check for presence of auto save file & prompt user,
-           return True if OK to continue"""
-        if not globalref.options.intData('AutoSaveMinutes', 0, 999):
-            return True
-        autoSaveFile = self.autoSaveFilePath(filePath)
-        if autoSaveFile:
-            ans = QtGui.QMessageBox.information(self, 'TreeLine',
-                                                _('Backup file "%s" exists.\n'\
-                                                  'A previous session may '\
-                                                  'have crashed.') %
-                                                autoSaveFile,
-                                                _('&Restore Backup'),
-                                                _('&Delete Backup'),
-                                                _('&Cancel File Open'), 0, 2)
-            if ans == 0:
-                if not self.restoreAutoSaveFile(filePath):
-                    QtGui.QMessageBox.warning(self, 'TreeLine',
-                                              _('Error - could not restore '\
-                                                'backup'))
-                return False
-            elif ans == 1:
-                self.delAutoSaveFile(filePath)
-                return True
-            else:
-                return False
-
     def autoSave(self):
         """Perform auto save if the option is enabled (called from timer)"""
         if self.doc.modified and self.doc.fileName and not self.fileImported:
@@ -650,48 +547,6 @@ class TreeMainWin(QtGui.QMainWindow):
                 pass
             if unsetPassword:
                 self.doc.clearPassword(self.doc.fileName)
-
-    def autoSaveFilePath(self, baseName=''):
-        """Return the path to a backup file if it exists"""
-        filePath = baseName and baseName + '~' or self.doc.fileName + '~'
-        if len(filePath) > 1 and \
-                 os.access(filePath.encode(sys.getfilesystemencoding()),
-                           os.R_OK):
-            return filePath
-        return ''
-
-    def delAutoSaveFile(self, baseName=''):
-        """Remove the backup auto save file if it exists"""
-        filePath = self.autoSaveFilePath(baseName)
-        if filePath:
-            try:
-                os.remove(filePath)
-            except OSError:
-                print 'Could not remove backup file %s' % \
-                      filePath.encode(globalref.localTextEncoding)
-
-    def restoreAutoSaveFile(self, baseName):
-        """Open backup file, then move baseName~ to baseName by overwriting,
-           return True on success"""
-        fileName = baseName + '~'
-        self.openFile(fileName, False, False)
-        if self.doc.fileName != fileName:
-            return False
-        try:
-            os.remove(baseName)
-        except OSError:
-            print 'Could not remove file %s' % \
-                  baseName.encode(globalref.localTextEncoding)
-            return False
-        try:
-            os.rename(fileName, baseName)
-        except OSError:
-            print 'Could not rename file %s' % \
-                  fileName.encode(globalref.localTextEncoding)
-            return False
-        self.doc.fileName = baseName
-        self.setMainCaption()
-        return True
 
     def saveFile(self, fileRef):
         """Save file to fileName, return True on success,
@@ -716,7 +571,7 @@ class TreeMainWin(QtGui.QMainWindow):
         if unsetPassword:
             self.doc.clearPassword(fileName)
         self.updateCmdAvail()
-        self.delAutoSaveFile()
+        globalRef.treeControl.delAutoSaveFile()
         self.resetAutoSave()
         if self.pluginInterface:
             self.pluginInterface.execCallback(self.pluginInterface.
@@ -745,9 +600,8 @@ class TreeMainWin(QtGui.QMainWindow):
                 self.doc = treedoc.TreeDoc()
             self.updateForFileChange(False)
             if self.pluginInterface:
-                self.pluginInterface.execCallback(globalref.
-                                                       pluginInterface.
-                                                       fileNewCallbacks)
+                self.pluginInterface.execCallback(globalref.pluginInterface.
+                                                  fileNewCallbacks)
 
     def fileOpen(self):
         """Open a file"""
@@ -771,7 +625,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                                                  dfltPath,
                                                                  filters))
             if fileName:
-                self.openFile(fileName)
+                globalref.treeControl.openFile(fileName)
 
     def fileOpenSample(self):
         """Open a sample template file"""
@@ -785,7 +639,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                             os.path.dirname(path),
                                             TreeMainWin.tlGenFileFilter))
             if fileName:
-                self.openFile(fileName)
+                globalref.treeControl.openFile(fileName)
 
     def fileSave(self):
         """Save current file"""
@@ -810,7 +664,7 @@ class TreeMainWin(QtGui.QMainWindow):
             self.setMainCaption()
             globalref.treeControl.recentFiles.addEntry(fileName)
             self.fileImported = False
-            self.delAutoSaveFile(oldFileName)
+            globalRef.treeControl.delAutoSaveFile(oldFileName)
 
     def fileExport(self):
         """Export the file as html, a table or text"""
@@ -1982,7 +1836,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 elif ans == 2:
                     return False
                 else:
-                    self.delAutoSaveFile()
+                    globalRef.treeControl.delAutoSaveFile()
                     return True
             if globalref.options.boolData('PersistTreeState'):
                 globalref.treeControl.recentFiles.saveTreeState(self.treeView)
@@ -2046,7 +1900,7 @@ class TreeMainWin(QtGui.QMainWindow):
         """Drop a file onto window"""
         fileList = event.mimeData().urls()
         if fileList and self.savePrompt():
-            self.openFile(unicode(fileList[0].toLocalFile()))
+            globalref.treeControl.openFile(unicode(fileList[0].toLocalFile()))
 
     def loadTypeSubMenu(self):
         """Update type select submenu with type names and check marks"""
