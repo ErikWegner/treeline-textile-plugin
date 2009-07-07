@@ -495,27 +495,8 @@ class TreeMainWin(QtGui.QMainWindow):
         """Open given file, fail quietly if not importOnFail,
            return False if file should be removed from recent list,
            True otherwise"""
-        autoSaveFile = self.autoSaveFilePath(filePath)
-        if autoSaveFile and globalref.options.intData('AutoSaveMinutes',
-                                                      0, 999):
-            ans = QtGui.QMessageBox.information(self, 'TreeLine',
-                                                _('Backup file "%s" exists.\n'\
-                                                  'A previous session may '\
-                                                  'have crashed.') %
-                                                autoSaveFile,
-                                                _('&Restore Backup'),
-                                                _('&Delete Backup'),
-                                                _('&Cancel File Open'), 0, 2)
-            if ans == 0:
-                if not self.restoreAutoSaveFile(filePath):
-                    QtGui.QMessageBox.warning(self, 'TreeLine',
-                                              _('Error - could not restore '\
-                                                'backup'))
-                return True
-            elif ans == 1:
-                self.delAutoSaveFile(filePath)
-            else:
-                return True
+        if not self.checkAutoSave():
+            return True
         QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
         try:
             self.doc = treedoc.TreeDoc(filePath)
@@ -540,31 +521,12 @@ class TreeMainWin(QtGui.QMainWindow):
             if not importOnFail:
                 return True
             # assume file is not a TreeLine file
-            choices = [(_('Tab &indented text, one node per line'),
-                        treedoc.tabbedImport),
-                        (_('Text &table with header row, one node per line'),
-                         treedoc.tableImport),
-                        (_('Plain text, one &node per line (CR delimitted)'),
-                         treedoc.textLineImport),
-                        (_('Plain text &paragraphs (blank line delimitted)'),
-                         treedoc.textParaImport),
-                        (_('Treepad &file (text nodes only)'),
-                         treedoc.treepadImport),
-                        (_('&XML bookmarks (XBEL format)'),
-                         treedoc.xbelImport),
-                        (_('&HTML bookmarks (Mozilla format)'),
-                         treedoc.mozillaImport),
-                        (_('&Generic XML (Non-TreeLine file)'),
-                         treedoc.xmlImport),
-                        (_('Open Document (ODF) text'), treedoc.odfImport)]
-            dlg = treedialogs.RadioChoiceDlg(_('Import Text'),
-                                             _('Choose Text Import Method'),
-                                             choices, self)
-            if dlg.exec_() != QtGui.QDialog.Accepted:
+            importType = self.chooseImportType()
+            if not importType:
                 return True
             try:
                 QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-                self.doc = treedoc.TreeDoc(filePath, False, dlg.getResult())
+                self.doc = treedoc.TreeDoc(filePath, False, importType)
             except treedoc.ReadFileError, e:
                 QtGui.QApplication.restoreOverrideCursor()
                 QtGui.QMessageBox.warning(self, 'TreeLine', _('Error - %s')
@@ -578,6 +540,32 @@ class TreeMainWin(QtGui.QMainWindow):
             self.pluginInterface.execCallback(self.pluginInterface.
                                                    fileOpenCallbacks)
         return True
+
+    def chooseImportType(self):
+        """Show dialog for selecting file import type"""
+        choices = [(_('Tab &indented text, one node per line'),
+                    treedoc.tabbedImport),
+                    (_('Text &table with header row, one node per line'),
+                     treedoc.tableImport),
+                    (_('Plain text, one &node per line (CR delimitted)'),
+                     treedoc.textLineImport),
+                    (_('Plain text &paragraphs (blank line delimitted)'),
+                     treedoc.textParaImport),
+                    (_('Treepad &file (text nodes only)'),
+                     treedoc.treepadImport),
+                    (_('&XML bookmarks (XBEL format)'), treedoc.xbelImport),
+                    (_('&HTML bookmarks (Mozilla format)'),
+                     treedoc.mozillaImport),
+                    (_('&Generic XML (Non-TreeLine file)'),
+                     treedoc.xmlImport),
+                    (_('Open Document (ODF) text'), treedoc.odfImport)]
+        dlg = treedialogs.RadioChoiceDlg(_('Import Text'),
+                                         _('Choose Text Import Method'),
+                                         choices, self)
+        if dlg.exec_() != QtGui.QDialog.Accepted:
+            return None
+        return dlg.getResult()
+
 
     def getFileName(self, caption, defaultExt, filterList, currentFilter=''):
         """Return user specified file name for save as & export"""
@@ -617,6 +605,33 @@ class TreeMainWin(QtGui.QMainWindow):
         minutes = globalref.options.intData('AutoSaveMinutes', 0, 999)
         if minutes:
             self.autoSaveTimer.start(60000 * minutes)
+
+    def checkAutoSave(self):
+        """Check for presence of auto save file & prompt user,
+           return True if OK to continue"""
+        if not globalref.options.intData('AutoSaveMinutes', 0, 999):
+            return True
+        autoSaveFile = self.autoSaveFilePath(filePath)
+        if autoSaveFile:
+            ans = QtGui.QMessageBox.information(self, 'TreeLine',
+                                                _('Backup file "%s" exists.\n'\
+                                                  'A previous session may '\
+                                                  'have crashed.') %
+                                                autoSaveFile,
+                                                _('&Restore Backup'),
+                                                _('&Delete Backup'),
+                                                _('&Cancel File Open'), 0, 2)
+            if ans == 0:
+                if not self.restoreAutoSaveFile(filePath):
+                    QtGui.QMessageBox.warning(self, 'TreeLine',
+                                              _('Error - could not restore '\
+                                                'backup'))
+                return False
+            elif ans == 1:
+                self.delAutoSaveFile(filePath)
+                return True
+            else:
+                return False
 
     def autoSave(self):
         """Perform auto save if the option is enabled (called from timer)"""
