@@ -89,7 +89,7 @@ class TreeControl(object):
 
     def recentOpen(self, filePath):
         """Open from recentFiles call"""
-        if filePath and globalref.mainWin.savePrompt():
+        if filePath and self.savePrompt():
             if not self.openFile(filePath):
                 self.recentFiles.removeEntry(filePath)
 
@@ -168,6 +168,25 @@ class TreeControl(object):
             return None
         return dlg.getResult()
 
+    def newFile(self, templatePath=''):
+        """Open a new file"""
+        win = globalref.mainWin
+        if templatePath:
+            try:
+                win.doc = treedoc.TreeDoc(templatePath)
+                win.doc.root.open = True
+                win.doc.fileName = ''
+                win.doc.fileInfoFormat.updateFileInfo()
+            except (treedoc.PasswordError, IOError, UnicodeError,
+                    treedoc.ReadFileError):
+                QtGui.QMessageBox.warning(win, 'TreeLine',
+                            _('Error - could not read template file "%s"') \
+                            % templatePath)
+                win.doc = treedoc.TreeDoc()
+        else:
+            win.doc = treedoc.TreeDoc()
+        win.updateForFileChange(False)
+
     def checkAutoSave(self):
         """Check for presence of auto save file & prompt user,
            return True if OK to continue"""
@@ -237,6 +256,33 @@ class TreeControl(object):
         globalref.docRef.fileName = baseName
         globalref.mainWin.setMainCaption()
         return True
+
+    def savePrompt(self, closing=False):
+        """Ask for save if doc modified, return false on cancel"""
+        win = globalref.mainWin
+        if not self.duplicateWindows():
+            if win.doc.modified and (closing or not globalref.options.
+                                     boolData('OpenNewWindow')):
+                text = win.fileImported and _('Save changes?') or \
+                       _('Save changes to "%s"?') % win.doc.fileName
+                ans = QtGui.QMessageBox.information(win, 'TreeLine', text,
+                                                    _('&Yes'), _('&No'),
+                                                    _('&Cancel'), 0, 2)
+                if ans == 0:
+                    self.fileSave()
+                elif ans == 1:
+                    self.delAutoSaveFile()
+                    return True
+                else:
+                    return False
+            if globalref.options.boolData('PersistTreeState'):
+                self.recentFiles.saveTreeState(win.treeView)
+        return True
+
+    def duplicateWindows(self):
+        """Return list of windows with the same file as the active window"""
+        return [win for win in self.windowList if win != globalref.mainWin and
+                win.doc.fileName == globalref.mainWin.doc.fileName]
 
     def updateFocus(self):
         """Check for focus change to a different main window"""

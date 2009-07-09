@@ -580,32 +580,18 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def fileNew(self):
         """New file command"""
-        if self.savePrompt():
+        if globalref.treeControl.savePrompt():
             dlg = treedialogs.TemplateDialog(self)
             if dlg.exec_() != QtGui.QDialog.Accepted:
                 return
-            path = dlg.selectedPath()
-            if path:
-                try:
-                    self.doc = treedoc.TreeDoc(path)
-                    self.doc.root.open = True
-                    self.doc.fileName = ''
-                    self.doc.fileInfoFormat.updateFileInfo()
-                except (treedoc.PasswordError, IOError, UnicodeError,
-                        treedoc.ReadFileError):
-                    QtGui.QMessageBox.warning(self, 'TreeLine',
-                        _('Error - could not read template file "%s"') % path)
-                    self.doc = treedoc.TreeDoc()
-            else:
-                self.doc = treedoc.TreeDoc()
-            self.updateForFileChange(False)
+            globalref.treeControl.newFile(dlg.selectedPath())
             if self.pluginInterface:
                 self.pluginInterface.execCallback(globalref.pluginInterface.
                                                   fileNewCallbacks)
 
     def fileOpen(self):
         """Open a file"""
-        if self.savePrompt():
+        if globalref.treeControl.savePrompt():
             dfltPath = os.path.dirname(self.doc.fileName)
             if not dfltPath:
                 dfltPath = globalref.treeControl.recentFiles.firstPath()
@@ -629,7 +615,7 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def fileOpenSample(self):
         """Open a sample template file"""
-        if self.savePrompt():
+        if globalref.treeControl.savePrompt():
             path = self.findHelpPath()
             if not path:
                 globalref.setStatusBar(_('Sample directory not found'))
@@ -1822,29 +1808,9 @@ class TreeMainWin(QtGui.QMainWindow):
         """Page down the right-hand parent view"""
         self.rightTabs.currentWidget().widget(0).scrollPage(1)
 
-    def savePrompt(self):
-        """Ask for save if doc modified, return false on cancel"""
-        if self.doc:
-            if self.doc.modified:
-                text = self.fileImported and _('Save changes?') or \
-                       _('Save changes to "%s"?') % self.doc.fileName
-                ans = QtGui.QMessageBox.information(self, 'TreeLine', text,
-                                                    _('&Yes'), _('&No'),
-                                                    _('&Cancel'), 0, 2)
-                if ans == 0:
-                    self.fileSave()
-                elif ans == 2:
-                    return False
-                else:
-                    globalRef.treeControl.delAutoSaveFile()
-                    return True
-            if globalref.options.boolData('PersistTreeState'):
-                globalref.treeControl.recentFiles.saveTreeState(self.treeView)
-        return True
-
     def closeEvent(self, event):
         """Ask for save if doc modified"""
-        if self.savePrompt():
+        if globalref.treeControl.savePrompt(True):
             globalref.treeControl.recentFiles.writeList()
             toolbarPos = base64.b64encode(self.saveState().data())
             globalref.options.changeData('ToolbarPosition', toolbarPos, True)
@@ -1899,7 +1865,7 @@ class TreeMainWin(QtGui.QMainWindow):
     def dropEvent(self, event):
         """Drop a file onto window"""
         fileList = event.mimeData().urls()
-        if fileList and self.savePrompt():
+        if fileList and globalref.treeControl.savePrompt():
             globalref.treeControl.openFile(unicode(fileList[0].toLocalFile()))
 
     def loadTypeSubMenu(self):
