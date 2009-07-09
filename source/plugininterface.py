@@ -433,7 +433,8 @@ class PluginInterface(object):
            (if it is a file-like object, fileRef.name must be defined),
            if importOnFail and not a TreeLine file, will prompt for import type,
            if addToRecent, will add filename to recently used file list"""
-        self.mainWin.openFile(fileRef, importOnFail, addToRecent)
+        # TODO:  Add support for file object (temp file)
+        globalref.treeControl.openFile(fileRef, importOnFail, addToRecent)
 
     def newFile(self):
         """Start a new file"""
@@ -460,7 +461,8 @@ class PluginInterface(object):
         """Save TreeLine file to fileRef interactively (QMessageBox on failure),
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)"""
-        self.mainWin.saveFile(fileRef)
+        # TODO:  Add support for file object???
+        globalref.treeControl.saveFile(fileRef)
 
     def writeFile(self, fileRef, password=''):
         """Save TreeLine file to fileRef non-interactively,

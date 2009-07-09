@@ -187,6 +187,58 @@ class TreeControl(object):
             win.doc = treedoc.TreeDoc()
         win.updateForFileChange(False)
 
+    def saveFile(self, fileName):
+        """Save file to fileName, return True on success"""
+        win = globalref.mainWin
+        unsetPassword = False
+        if win.doc.encryptFile and not win.doc.hasPassword(fileName):
+            dlg = treedialogs.PasswordEntry(True, win)
+            if dlg.exec_() != QtGui.QDialog.Accepted:
+                return False
+            win.doc.setPassword(fileName, dlg.password)
+            unsetPassword = not dlg.saveIt
+        try:
+            win.doc.writeFile(fileName)
+        except IOError:
+            QtGui.QMessageBox.warning(win, 'TreeLine',
+                                _('Error - Could not write to %s') % fileName)
+            return False
+        if unsetPassword:
+            win.doc.clearPassword(fileName)
+        win.updateCmdAvail()
+        self.delAutoSaveFile()
+        self.resetAutoSave()
+        if win.pluginInterface:
+            win.pluginInterface.execCallback(win.pluginInterface.
+                                             fileSaveCallbacks)
+        return True
+
+    def resetAutoSave(self):
+        """Restart auto save timer if the option is enabled"""
+        globalref.mainWin.autoSaveTimer.stop()
+        minutes = globalref.options.intData('AutoSaveMinutes', 0, 999)
+        if minutes:
+            globalref.mainWin.autoSaveTimer.start(60000 * minutes)
+
+    def autoSave(self):
+        """Perform auto save if the option is enabled (called from timer)"""
+        win = globalref.mainWin
+        if win.doc.modified and win.doc.fileName and not win.fileImported:
+            unsetPassword = False
+            if win.doc.encryptFile and \
+                        not win.doc.hasPassword(win.doc.fileName):
+                dlg = PasswordEntry(True, win)
+                if dlg.exec_() != QtGui.QDialog.Accepted:
+                    return
+                win.doc.setPassword(win.doc.fileName, dlg.password)
+                unsetPassword = not dlg.saveIt
+            try:
+                win.doc.writeFile(win.doc.fileName + '~', False)
+            except IOError:
+                pass
+            if unsetPassword:
+                win.doc.clearPassword(win.doc.fileName)
+
     def checkAutoSave(self):
         """Check for presence of auto save file & prompt user,
            return True if OK to continue"""

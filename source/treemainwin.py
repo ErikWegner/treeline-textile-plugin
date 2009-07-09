@@ -82,7 +82,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.updateColors()
         self.autoSaveTimer = QtCore.QTimer(self)
         self.connect(self.autoSaveTimer, QtCore.SIGNAL('timeout()'),
-                     self.autoSave)
+                     globalref.treeControl.autoSave)
 
         split = QtGui.QSplitter()
         self.setCentralWidget(split)
@@ -390,7 +390,7 @@ class TreeMainWin(QtGui.QMainWindow):
         if self.setTypeDlg and self.setTypeDlg.isVisible():
             self.setTypeDlg.loadList()
         self.updateCmdAvail()
-        self.resetAutoSave()
+        globalref.treeControl.resetAutoSave()
 
     def updateAddTagAvail(self):
         """Update enabled status of editor tag entry commands"""
@@ -523,61 +523,6 @@ class TreeMainWin(QtGui.QMainWindow):
             return fileName
         return ''
 
-    def resetAutoSave(self):
-        """Restart auto save timer if the option is enabled"""
-        self.autoSaveTimer.stop()
-        minutes = globalref.options.intData('AutoSaveMinutes', 0, 999)
-        if minutes:
-            self.autoSaveTimer.start(60000 * minutes)
-
-    def autoSave(self):
-        """Perform auto save if the option is enabled (called from timer)"""
-        if self.doc.modified and self.doc.fileName and not self.fileImported:
-            unsetPassword = False
-            if self.doc.encryptFile and \
-                        not self.doc.hasPassword(self.doc.fileName):
-                dlg = PasswordEntry(True, self)
-                if dlg.exec_() != QtGui.QDialog.Accepted:
-                    return
-                self.doc.setPassword(self.doc.fileName, dlg.password)
-                unsetPassword = not dlg.saveIt
-            try:
-                self.doc.writeFile(self.doc.fileName + '~', False)
-            except IOError:
-                pass
-            if unsetPassword:
-                self.doc.clearPassword(self.doc.fileName)
-
-    def saveFile(self, fileRef):
-        """Save file to fileName, return True on success,
-           fileRef is either file path or file object"""
-        if hasattr(fileRef, 'read'):
-            fileName = unicode(fileRef.name, sys.getfilesystemencoding())
-        else:
-            fileName = fileRef
-        unsetPassword = False
-        if self.doc.encryptFile and not self.doc.hasPassword(fileName):
-            dlg = treedialogs.PasswordEntry(True, self)
-            if dlg.exec_() != QtGui.QDialog.Accepted:
-                return False
-            self.doc.setPassword(fileName, dlg.password)
-            unsetPassword = not dlg.saveIt
-        try:
-            self.doc.writeFile(fileRef)
-        except IOError:
-            QtGui.QMessageBox.warning(self, 'TreeLine',
-                                _('Error - Could not write to %s') % fileName)
-            return False
-        if unsetPassword:
-            self.doc.clearPassword(fileName)
-        self.updateCmdAvail()
-        globalRef.treeControl.delAutoSaveFile()
-        self.resetAutoSave()
-        if self.pluginInterface:
-            self.pluginInterface.execCallback(self.pluginInterface.
-                                                   fileSaveCallbacks)
-        return True
-
     def fileNew(self):
         """New file command"""
         if globalref.treeControl.savePrompt():
@@ -631,7 +576,7 @@ class TreeMainWin(QtGui.QMainWindow):
         """Save current file"""
         pass
         if self.doc.fileName and not self.fileImported:
-            self.saveFile(self.doc.fileName)
+            globalref.treeControl.saveFile(self.doc.fileName)
         else:
             self.fileSaveAs()
 
@@ -646,11 +591,11 @@ class TreeMainWin(QtGui.QMainWindow):
                         (self.doc.compressFile and 1 or 0)
         fileName = self.getFileName(_('Save As'), '.trl', filterList,
                                     filterList[currentFilter])
-        if fileName and self.saveFile(fileName):
+        if fileName and globalref.treeControl.saveFile(fileName):
             self.setMainCaption()
             globalref.treeControl.recentFiles.addEntry(fileName)
             self.fileImported = False
-            globalRef.treeControl.delAutoSaveFile(oldFileName)
+            globalref.treeControl.delAutoSaveFile(oldFileName)
 
     def fileExport(self):
         """Export the file as html, a table or text"""
@@ -1509,7 +1454,7 @@ class TreeMainWin(QtGui.QMainWindow):
             globalref.options.writeChanges()
             if oldAutoSave != globalref.options.intData('AutoSaveMinutes',
                                                         0, 999):
-                self.resetAutoSave()
+                globalref.treeControl.resetAutoSave()
             self.doc.undoStore.levels = globalref.options.\
                                                   intData('UndoLevels', 0, 99)
             self.doc.redoStore.levels = globalref.options.\
