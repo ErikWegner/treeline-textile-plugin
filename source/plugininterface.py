@@ -51,6 +51,7 @@
 
 import sys
 import os.path
+import tempfile
 from PyQt4 import QtCore, QtGui
 import treedoc
 import nodeformat
@@ -433,8 +434,16 @@ class PluginInterface(object):
            (if it is a file-like object, fileRef.name must be defined),
            if importOnFail and not a TreeLine file, will prompt for import type,
            if addToRecent, will add filename to recently used file list"""
-        # TODO:  Add support for file object (temp file)
-        globalref.treeControl.openFile(fileRef, importOnFail, addToRecent)
+        if hasattr(fileRef, 'read'):
+            fd, fileName = tempfile.mkstemp()
+            os.write(fd, fileRef.read())
+            os.close(fd)
+            fileRef.close()
+        else:
+            fileName = fileRef
+        globalref.treeControl.openFile(fileName, importOnFail, addToRecent)
+        if hasattr(fileRef, 'read'):
+            os.remove(fileName)
 
     def newFile(self):
         """Start a new file"""
@@ -458,10 +467,8 @@ class PluginInterface(object):
             return False
 
     def saveFile(self, fileRef):
-        """Save TreeLine file to fileRef interactively (QMessageBox on failure),
-           fileRef is either a file path string or a file-like object
-           (if it is a file-like object, fileRef.name must be defined)"""
-        # TODO:  Add support for file object???
+        """Save TreeLine file to fileRef interactively
+           (QMessageBox on failure)"""
         globalref.treeControl.saveFile(fileRef)
 
     def writeFile(self, fileRef, password=''):

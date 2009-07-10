@@ -163,7 +163,7 @@ class TreeControl(object):
                     (_('Open Document (ODF) text'), treedoc.odfImport)]
         dlg = treedialogs.RadioChoiceDlg(_('Import Text'),
                                          _('Choose Text Import Method'),
-                                         choices, self)
+                                         choices, globalref.mainWin)
         if dlg.exec_() != QtGui.QDialog.Accepted:
             return None
         return dlg.getResult()
