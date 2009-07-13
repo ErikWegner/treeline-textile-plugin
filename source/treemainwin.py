@@ -371,7 +371,7 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def updateForFileChange(self, addToRecent=True):
         """Update GUI after file new or open"""
-        globalref.updateRefs()
+        globalref.updateRefs(self)
         self.setMainCaption()
         if self.leftTabs.currentWidget() == self.flatView:
             self.leftTabs.setCurrentWidget(self.treeView)
@@ -530,9 +530,6 @@ class TreeMainWin(QtGui.QMainWindow):
             if dlg.exec_() != QtGui.QDialog.Accepted:
                 return
             globalref.treeControl.newFile(dlg.selectedPath())
-            if self.pluginInterface:
-                self.pluginInterface.execCallback(globalref.pluginInterface.
-                                                  fileNewCallbacks)
 
     def fileOpen(self):
         """Open a file"""
@@ -1811,7 +1808,8 @@ class TreeMainWin(QtGui.QMainWindow):
         """Drop a file onto window"""
         fileList = event.mimeData().urls()
         if fileList and globalref.treeControl.savePrompt():
-            globalref.treeControl.openFile(unicode(fileList[0].toLocalFile()))
+            globalref.treeControl.openFile(unicode(fileList[0].toLocalFile()),
+                                           False)
 
     def loadTypeSubMenu(self):
         """Update type select submenu with type names and check marks"""

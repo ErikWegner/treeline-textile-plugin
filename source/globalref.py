@@ -38,8 +38,12 @@ setStatusBar = dummyFunction  # called with text and optional duration (ms)
 focusTree = dummyFunction
 
 
-def updateRefs():
+def updateRefs(win):
     """Update references based on current main window"""
+    global mainWin
+    mainWin = win
+    global docRef
+    docRef = mainWin.doc
     global pluginInterface
     pluginInterface = mainWin.pluginInterface
     global updateViewAll

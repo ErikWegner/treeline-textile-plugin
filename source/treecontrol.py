@@ -67,20 +67,25 @@ class TreeControl(object):
 
     def firstWindow(self, fileNames=None):
         """Open first main window"""
-        win = treemainwin.TreeMainWin()
-        self.windowList.append(win)
         if fileNames:
-            self.openFile(unicode(fileNames[0], globalref.localTextEncoding))
+            for fileName in fileNames:
+                win = treemainwin.TreeMainWin()
+                self.windowList.append(win)
+                self.openFile(unicode(fileName, globalref.localTextEncoding),
+                              False)
+                win.show()
         else:
+            win = treemainwin.TreeMainWin()
+            self.windowList.append(win)
             self.autoOpen()
-        win.show()
+            win.show()
 
     def autoOpen(self):
         """Open last used file"""
         if globalref.options.boolData('AutoFileOpen') and \
                  self.recentFiles:
             path = self.recentFiles[0].path
-            if path and not self.openFile(path, False):
+            if path and not self.openFile(path, False, False):
                 self.recentFiles.removeEntry(path)
         elif not self.recentFiles and \
                 globalref.options.intData('RecentFiles', 0, 99):
@@ -93,14 +98,21 @@ class TreeControl(object):
             if not self.openFile(filePath):
                 self.recentFiles.removeEntry(filePath)
 
-    def openFile(self, filePath, importOnFail=True, addToRecent=True):
+    def openFile(self, filePath, newWinOk=True, importOnFail=True,
+                 addToRecent=True):
         """Open given file, fail quietly if not importOnFail,
            return False if file should be removed from recent list,
            True otherwise"""
-        if not self.checkAutoSave():
+        # TODO:  Fix error conditions
+        # TODO:  Simplify parameters and/or return value
+        if newWinOk and globalref.options.boolData('OpenNewWindow'):
+            win = treemainwin.TreeMainWin()
+            self.windowList.append(win)
+        else:
+            win = globalref.mainWin
+        if not self.checkAutoSave(filePath):
             return True
         QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-        win = globalref.mainWin
         try:
             win.doc = treedoc.TreeDoc(filePath)
             win.fileImported = False
@@ -110,7 +122,7 @@ class TreeControl(object):
             if dlg.exec_() != QtGui.QDialog.Accepted:
                 return True
             win.doc.setPassword(filePath, dlg.password)
-            result = self.openFile(filePath, importOnFail)
+            result = self.openFile(filePath, False, importOnFail)
             if not dlg.saveIt:
                 win.doc.clearPassword(filePath)
             return result
@@ -141,6 +153,7 @@ class TreeControl(object):
         if win.pluginInterface:
             win.pluginInterface.execCallback(win.pluginInterface.
                                              fileOpenCallbacks)
+        win.show()
         return True
 
     def chooseImportType(self):
@@ -170,7 +183,11 @@ class TreeControl(object):
 
     def newFile(self, templatePath=''):
         """Open a new file"""
-        win = globalref.mainWin
+        if globalref.options.boolData('OpenNewWindow'):
+            win = treemainwin.TreeMainWin()
+            self.windowList.append(win)
+        else:
+            win = globalref.mainWin
         if templatePath:
             try:
                 win.doc = treedoc.TreeDoc(templatePath)
@@ -186,6 +203,9 @@ class TreeControl(object):
         else:
             win.doc = treedoc.TreeDoc()
         win.updateForFileChange(False)
+        if win.pluginInterface:
+            win.pluginInterface.execCallback(win.pluginInterface.
+                                             fileNewCallbacks)
 
     def saveFile(self, fileName):
         """Save file to fileName, return True on success"""
@@ -239,7 +259,7 @@ class TreeControl(object):
             if unsetPassword:
                 win.doc.clearPassword(win.doc.fileName)
 
-    def checkAutoSave(self):
+    def checkAutoSave(self, filePath):
         """Check for presence of auto save file & prompt user,
            return True if OK to continue"""
         if not globalref.options.intData('AutoSaveMinutes', 0, 999):
@@ -290,7 +310,7 @@ class TreeControl(object):
         """Open backup file, then move baseName~ to baseName by overwriting,
            return True on success"""
         fileName = baseName + '~'
-        self.openFile(fileName, False, False)
+        self.openFile(fileName, False, False, False)
         if globalref.docRef.fileName != fileName:
             return False
         try:
@@ -345,5 +365,5 @@ class TreeControl(object):
             win = win.mainWinRef
         except AttributeError:
             pass
-        if win and win != globalref.mainWin:
-            print 'Possible focus change', win
+        if win and win != globalref.mainWin and win in self.windowList:
+            globalref.updateRefs(win)
