@@ -103,8 +103,8 @@ class TreeControl(object):
         """Open given file, fail quietly if not importOnFail,
            return False if file should be removed from recent list,
            True otherwise"""
-        # TODO:  Fix error conditions
         # TODO:  Simplify parameters and/or return value
+        oldWin = globalref.mainWin
         if newWinOk and globalref.options.boolData('OpenNewWindow'):
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
@@ -120,6 +120,7 @@ class TreeControl(object):
             QtGui.QApplication.restoreOverrideCursor()
             dlg = treedialogs.PasswordEntry(False, win)
             if dlg.exec_() != QtGui.QDialog.Accepted:
+                globalref.updateRefs(oldWin)
                 return True
             win.doc.setPassword(filePath, dlg.password)
             result = self.openFile(filePath, False, importOnFail)
@@ -130,6 +131,7 @@ class TreeControl(object):
             QtGui.QApplication.restoreOverrideCursor()
             QtGui.QMessageBox.warning(win, 'TreeLine',
                               _('Error - could not read file "%s"') % filePath)
+            globalref.updateRefs(oldWin)
             return False
         except treedoc.ReadFileError, e:
             QtGui.QApplication.restoreOverrideCursor()
@@ -138,6 +140,7 @@ class TreeControl(object):
             # assume file is not a TreeLine file
             importType = self.chooseImportType()
             if not importType:
+                globalref.updateRefs(oldWin)
                 return True
             try:
                 QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
@@ -145,6 +148,7 @@ class TreeControl(object):
             except treedoc.ReadFileError, e:
                 QtGui.QApplication.restoreOverrideCursor()
                 QtGui.QMessageBox.warning(win, 'TreeLine', _('Error - %s') % e)
+                globalref.updateRefs(oldWin)
                 return False
             win.fileImported = True
         win.doc.root.open = True
