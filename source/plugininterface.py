@@ -428,12 +428,14 @@ class PluginInterface(object):
     #  File Interfaces:
     #*************************************************************************
 
-    def openFile(self, fileRef, importOnFail=True, addToRecent=True):
+    def openFile(self, fileRef, importOnFail=True, addToRecent=True,
+                 newWinOk=True):
         """Open file given by fileRef interactively (QMessageBox on failure),
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined),
            if importOnFail and not a TreeLine file, will prompt for import type,
-           if addToRecent, will add filename to recently used file list"""
+           if addToRecent, will add filename to recently used file list,
+           if newWinOk will allow to create new window based on user setting"""
         if hasattr(fileRef, 'read'):
             fd, fileName = tempfile.mkstemp()
             os.write(fd, fileRef.read())
@@ -441,7 +443,8 @@ class PluginInterface(object):
             fileRef.close()
         else:
             fileName = fileRef
-        globalref.treeControl.openFile(fileName, importOnFail, addToRecent)
+        globalref.treeControl.openFile(fileName, newWinOk, importOnFail,
+                                       addToRecent)
         if hasattr(fileRef, 'read'):
             os.remove(fileName)
 

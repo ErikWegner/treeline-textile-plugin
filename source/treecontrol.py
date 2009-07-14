@@ -101,9 +101,8 @@ class TreeControl(object):
     def openFile(self, filePath, newWinOk=True, importOnFail=True,
                  addToRecent=True):
         """Open given file, fail quietly if not importOnFail,
-           return False if file should be removed from recent list,
-           True otherwise"""
-        # TODO:  Simplify parameters and/or return value
+           return True on success or user cancel,
+           return False on failure (to remove from recent files)"""
         oldWin = globalref.mainWin
         if newWinOk and globalref.options.boolData('OpenNewWindow'):
             win = treemainwin.TreeMainWin()
@@ -371,3 +370,4 @@ class TreeControl(object):
             pass
         if win and win != globalref.mainWin and win in self.windowList:
             globalref.updateRefs(win)
+            self.recentFiles.updateMenu()
