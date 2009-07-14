@@ -67,6 +67,7 @@ class TreeMainWin(QtGui.QMainWindow):
                       ('TextAddColorTag', _('&Color...'),
                        ('<font color="%s">', '</font>'))]
     tagDict = dict([(text, tag) for name, text, tag in tagMenuEntries])
+    winCascade = 24
 
     def __init__(self, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
@@ -76,8 +77,11 @@ class TreeMainWin(QtGui.QMainWindow):
         self.resize(globalref.options.intData('WindowXSize', 10, 10000),
                     globalref.options.intData('WindowYSize', 10, 10000))
         if globalref.options.boolData('SaveWindowGeom'):
-            self.move(globalref.options.intData('WindowXPos', 0, 10000),
-                      globalref.options.intData('WindowYPos', 0, 10000))
+            x = globalref.options.intData('WindowXPos', 0, 10000)
+            y = globalref.options.intData('WindowYPos', 0, 10000)
+            shift = TreeMainWin.winCascade * \
+                    (len(globalref.treeControl.windowList) - 1)
+            self.move(x + shift, y + shift)
         self.origPalette = QtGui.QApplication.palette()
         self.updateColors()
         self.autoSaveTimer = QtCore.QTimer(self)
