@@ -189,9 +189,9 @@ class TreeControl(object):
             return None
         return dlg.getResult()
 
-    def newFile(self, templatePath=''):
+    def newFile(self, templatePath='', newWinOk=True):
         """Open a new file"""
-        if globalref.options.boolData('OpenNewWindow'):
+        if newWinOk and globalref.options.boolData('OpenNewWindow'):
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
         else:
@@ -358,6 +358,22 @@ class TreeControl(object):
             if globalref.options.boolData('PersistTreeState'):
                 self.recentFiles.saveTreeState(win.treeView)
         return True
+
+    def newWindow(self):
+        """Create a new window viewing the current file"""
+        doc = globalref.mainWin.doc
+        win = treemainwin.TreeMainWin()
+        self.windowList.append(win)
+        win.doc = doc
+        win.updateForFileChange(False)
+        win.show()
+
+    def closeWindow(self):
+        """Close the current window without exiting"""
+        if self.windowCount() > 1:
+            globalref.mainWin.close()
+        else:
+            self.newFile('', False)
 
     def duplicateWindows(self):
         """Return list of windows with the same file as the active window"""

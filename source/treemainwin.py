@@ -190,6 +190,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.shortcuts = {}
         self.toolbars = []
         self.recentFileSep = None
+        self.winMenuSep = None
         self.setupMenus()
         self.recentFileActions = []
         globalref.treeControl.recentFiles.updateMenu()
@@ -2492,6 +2493,24 @@ class TreeMainWin(QtGui.QMainWindow):
         self.actions['ToolsTextColor'] = toolsTxtColorAct
         self.connect(toolsTxtColorAct, QtCore.SIGNAL('triggered()'),
                      self.toolsTxtColor)
+
+        winMenu = self.menuBar().addMenu(_('&Window'))
+
+        winNewAct = QtGui.QAction(_('&New Window'), self)
+        winNewAct.setStatusTip(_('Open a new window viewing the same file'))
+        winMenu.addAction(winNewAct)
+        self.actions['WinNewWindow'] = winNewAct
+        self.connect(winNewAct, QtCore.SIGNAL('triggered()'),
+                     globalref.treeControl.newWindow)
+
+        winCloseAct = QtGui.QAction(_('&Close Window'), self)
+        winCloseAct.setStatusTip(_('Close the current window'))
+        winMenu.addAction(winCloseAct)
+        self.actions['WinCloseWindow'] = winCloseAct
+        self.connect(winCloseAct, QtCore.SIGNAL('triggered()'),
+                     globalref.treeControl.closeWindow)
+
+        self.winMenuSep = winMenu.addSeparator()
 
         helpMenu = self.menuBar().addMenu(_('&Help'))
 

@@ -4,7 +4,7 @@
 # optiondefaults.py, provides initial config option values
 #
 # TreeLine, an information storage program
-# Copyright (C) 2006, Douglas W. Bell
+# Copyright (C) 2009, Douglas W. Bell
 #
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, either Version 2 or any later
@@ -90,6 +90,8 @@ menuKeyBindList = [(N_('FileNew'),             'Ctrl+N'),
                    (N_('ToolsDefaultColor'),   ''),
                    (N_('ToolsBackColor'),      ''),
                    (N_('ToolsTextColor'),      ''),
+                   (N_('WinNewWindow'),        ''),
+                   (N_('WinCloseWindow'),      ''),
                    (N_('HelpContents'),        'F1'),
                    (N_('HelpFullReadMe'),      ''),
                    (N_('HelpAbout'),           ''),
