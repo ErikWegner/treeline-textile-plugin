@@ -103,6 +103,11 @@ class TreeControl(object):
         """Open given file, fail quietly if not importOnFail,
            return True on success or user cancel,
            return False on failure (to remove from recent files)"""
+        if self.matchingWindows(filePath):
+            win = self.matchingWindows(filePath)[0]
+            win.activateWindow()
+            win.raise_()
+            return True
         oldWin = globalref.mainWin
         if newWinOk and globalref.options.boolData('OpenNewWindow'):
             win = treemainwin.TreeMainWin()
@@ -358,6 +363,18 @@ class TreeControl(object):
         """Return list of windows with the same file as the active window"""
         return [win for win in self.windowList if win != globalref.mainWin and
                 win.doc.fileName == globalref.mainWin.doc.fileName]
+
+    def matchingWindows(self, fileName):
+        """Return list of windows with the given file name"""
+        return [win for win in self.windowList if win.doc.fileName == fileName]
+
+    def removeWin(self, win):
+        """Remove given windoww from the window list"""
+        self.windowList.remove(win)
+
+    def windowCount(self):
+        """Return the current number of windows"""
+        return len(self.windowList)
 
     def updateFocus(self):
         """Check for focus change to a different main window"""

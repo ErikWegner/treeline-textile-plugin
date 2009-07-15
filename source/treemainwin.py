@@ -80,7 +80,7 @@ class TreeMainWin(QtGui.QMainWindow):
             x = globalref.options.intData('WindowXPos', 0, 10000)
             y = globalref.options.intData('WindowYPos', 0, 10000)
             shift = TreeMainWin.winCascade * \
-                    (len(globalref.treeControl.windowList) - 1)
+                    (globalref.treeControl.windowCount() - 1)
             self.move(x + shift, y + shift)
         self.origPalette = QtGui.QApplication.palette()
         self.updateColors()
@@ -1795,10 +1795,12 @@ class TreeMainWin(QtGui.QMainWindow):
                 tabNum = self.rightTabs.currentIndex()
                 globalref.options.changeData('ActiveRightView', tabNum, True)
             globalref.options.writeChanges()
+            globalref.treeControl.removeWin(self)
             # make clipboard data persistent and fix error message on windows
-            clip = QtGui.QApplication.clipboard()
-            clipEvent = QtCore.QEvent(QtCore.QEvent.Clipboard)
-            QtGui.QApplication.sendEvent(clip, clipEvent)
+            if not globalref.treeControl.windowCount():
+                clip = QtGui.QApplication.clipboard()
+                clipEvent = QtCore.QEvent(QtCore.QEvent.Clipboard)
+                QtGui.QApplication.sendEvent(clip, clipEvent)
             event.accept()
         else:
             event.ignore()
