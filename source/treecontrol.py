@@ -392,6 +392,20 @@ class TreeControl(object):
         """Return the current number of windows"""
         return len(self.windowList)
 
+    def updateWinMenu(self):
+        """Update the window list menu in the active main window"""
+        mainWin = globalref.mainWin
+        for action in mainWin.winMenu.actions():
+            if hasattr(action, 'refWin'):
+                mainWin.winMenu.removeAction(action)
+        num = 1
+        for win in self.windowList:
+            action = WindowAction(mainWin, win, num)
+            mainWin.winMenu.addAction(action)
+            if win is mainWin:
+                action.setChecked(True)
+            num += 1
+
     def updateFocus(self):
         """Check for focus change to a different main window"""
         win = QtGui.QApplication.activeWindow()
@@ -404,3 +418,32 @@ class TreeControl(object):
         if win and win != globalref.mainWin and win in self.windowList:
             globalref.updateRefs(win)
             self.recentFiles.updateMenu()
+            self.updateWinMenu()
+
+
+class WindowAction(QtGui.QAction):
+    """Menu item for a window entry"""
+    maxLength = 30
+    def __init__(self, parent, refWin, num):
+        QtGui.QAction.__init__(self, parent)
+        self.refWin = refWin
+        self.setText('&%d %s' % (num, self.abbrevPath()))
+        self.setStatusTip(refWin.doc.fileName)
+        self.setCheckable(True)
+        self.connect(self, QtCore.SIGNAL('triggered()'), self.raiseWin)
+
+    def abbrevPath(self):
+        """Return shortened version of path"""
+        abbrevPath = self.refWin.doc.fileName
+        if len(abbrevPath) > WindowAction.maxLength:
+            truncLength = WindowAction.maxLength - 3
+            pos = abbrevPath.find(os.sep, len(abbrevPath) - truncLength)
+            if pos < 0:
+                pos = len(abbrevPath) - truncLength
+            abbrevPath = '...' + abbrevPath[pos:]
+        return abbrevPath
+
+    def raiseWin(self):
+        """Raise referenced window"""
+        self.refWin.activateWindow()
+        self.refWin.raise_()
