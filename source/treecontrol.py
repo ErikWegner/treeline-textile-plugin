@@ -361,9 +361,11 @@ class TreeControl(object):
 
     def newWindow(self):
         """Create a new window viewing the current file"""
+        globalref.mainWin.duplicateWin = True
         doc = globalref.mainWin.doc
         win = treemainwin.TreeMainWin()
         self.windowList.append(win)
+        win.duplicateWin = True
         win.doc = doc
         win.updateForFileChange(False)
         win.show()
@@ -383,6 +385,17 @@ class TreeControl(object):
     def matchingWindows(self, fileName):
         """Return list of windows with the given file name"""
         return [win for win in self.windowList if win.doc.fileName == fileName]
+
+    def updateDuplicateWindows(self):
+        """Update data display on other windows with same file"""
+        duplicateWindows = self.duplicateWindows()
+        if not duplicateWindows:
+            globalref.mainWin.duplicateWin = False
+            return
+        for win in duplicateWindows:
+            win.duplicateWin = False
+            win.updateViews()
+            win.duplicateWin = True
 
     def removeWin(self, win):
         """Remove given windoww from the window list"""

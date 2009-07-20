@@ -184,6 +184,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.sortDlg = None
         self.helpView = None
         self.fileImported = False
+        self.duplicateWin = False
         self.printData = printdata.PrintData()
 
         self.actions = {}
@@ -283,6 +284,8 @@ class TreeMainWin(QtGui.QMainWindow):
             self.filterStatus.show()
         elif self.filterStatus.isVisible():
             self.statusBar().removeWidget(self.filterStatus)
+        if self.duplicateWin:
+            globalref.treeControl.updateDuplicateWindows()
         QtGui.QApplication.restoreOverrideCursor()
 
     def updateViewSelection(self):
@@ -293,6 +296,8 @@ class TreeMainWin(QtGui.QMainWindow):
     def updateViewItem(self, item):
         """Update item display in the active left view"""
         self.leftTabs.currentWidget().updateTreeItem(item)
+        if self.duplicateWin:
+            globalref.treeControl.updateDuplicateWindows()
 
     def updateRightView(self):
         """Update given right-hand view or the active one"""
@@ -333,6 +338,8 @@ class TreeMainWin(QtGui.QMainWindow):
         self.updateCmdAvail()
         if self.sortDlg and self.sortDlg.isVisible():
             self.sortDlg.updateDialog()
+        if self.duplicateWin:
+            globalref.treeControl.updateDuplicateWindows()
         QtGui.QApplication.restoreOverrideCursor()
 
     def updateCmdAvail(self):
