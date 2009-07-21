@@ -185,6 +185,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.helpView = None
         self.fileImported = False
         self.duplicateWin = False
+        self.duplicateSelect = None
         self.printData = printdata.PrintData()
 
         self.actions = {}
@@ -341,6 +342,22 @@ class TreeMainWin(QtGui.QMainWindow):
         if self.duplicateWin:
             globalref.treeControl.updateDuplicateWindows()
         QtGui.QApplication.restoreOverrideCursor()
+
+    def saveMultiWinTree(self):
+        """Save tree select and open nodes when multiple windows show
+           the same file"""
+        self.duplicateSelect = self.doc.selection[:]
+
+    def updateMultiWinTree(self):
+        """Update the tree and restore tree select and open nodes when
+           multiple windows show the same file"""
+        altSelect = self.doc.selection
+        if self.duplicateSelect:
+            self.doc.selection = self.duplicateSelect
+        self.duplicateWin = False
+        self.updateViews()
+        self.duplicateWin = True
+        self.doc.selection = altSelect
 
     def updateCmdAvail(self):
         """Update the enabled status of menus"""

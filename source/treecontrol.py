@@ -362,12 +362,13 @@ class TreeControl(object):
     def newWindow(self):
         """Create a new window viewing the current file"""
         globalref.mainWin.duplicateWin = True
+        globalref.mainWin.saveMultiWinTree()
         doc = globalref.mainWin.doc
         win = treemainwin.TreeMainWin()
         self.windowList.append(win)
-        win.duplicateWin = True
         win.doc = doc
         win.updateForFileChange(False)
+        win.duplicateWin = True
         win.show()
 
     def closeWindow(self):
@@ -393,9 +394,7 @@ class TreeControl(object):
             globalref.mainWin.duplicateWin = False
             return
         for win in duplicateWindows:
-            win.duplicateWin = False
-            win.updateViews()
-            win.duplicateWin = True
+            win.updateMultiWinTree()
 
     def removeWin(self, win):
         """Remove given windoww from the window list"""
@@ -429,6 +428,8 @@ class TreeControl(object):
         except AttributeError:
             pass
         if win and win != globalref.mainWin and win in self.windowList:
+            if globalref.mainWin.duplicateWin:
+                globalref.mainWin.saveMultiWinTree()
             globalref.updateRefs(win)
             self.recentFiles.updateMenu()
             self.updateWinMenu()
