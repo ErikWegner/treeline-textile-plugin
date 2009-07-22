@@ -15,6 +15,7 @@
 import sys
 import os.path
 import re
+import copy
 import codecs
 import base64
 from PyQt4 import QtCore, QtGui
@@ -351,13 +352,15 @@ class TreeMainWin(QtGui.QMainWindow):
     def updateMultiWinTree(self):
         """Update the tree and restore tree select and open nodes when
            multiple windows show the same file"""
-        altSelect = self.doc.selection
+        storeDoc = globalref.mainWin.doc
+        self.doc = copy.deepcopy(storeDoc)
+        globalref.docRef = self.doc
         if self.duplicateSelect:
             self.doc.selection = self.duplicateSelect
         self.duplicateWin = False
         self.updateViews()
         self.duplicateWin = True
-        self.doc.selection = altSelect
+        globalref.docRef = storeDoc
 
     def updateCmdAvail(self):
         """Update the enabled status of menus"""
