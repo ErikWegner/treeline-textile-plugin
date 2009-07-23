@@ -186,6 +186,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.helpView = None
         self.fileImported = False
         self.duplicateSelect = None
+        self.storedOpenNodes = []
         self.printData = printdata.PrintData()
 
         self.actions = {}
@@ -341,12 +342,18 @@ class TreeMainWin(QtGui.QMainWindow):
         """Save tree select and open nodes when multiple windows show
            the same file"""
         self.duplicateSelect = self.doc.selection[:]
+        self.storedOpenNodes = [node for node in self.doc.root.descendantList()
+                                if node.open]
 
     def updateMultiWinTree(self):
         """Update the tree and restore tree select and open nodes when
            multiple windows show the same file"""
         if self.duplicateSelect:
             self.doc.selection = self.duplicateSelect
+        for node in self.doc.root.descendantGen():
+            node.open = False
+        for node in self.storedOpenNodes:
+            node.open = True
         self.updateViews()
 
     def updateCmdAvail(self):
