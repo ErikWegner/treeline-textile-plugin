@@ -361,14 +361,12 @@ class TreeControl(object):
 
     def newWindow(self):
         """Create a new window viewing the current file"""
-        globalref.mainWin.duplicateWin = True
         globalref.mainWin.saveMultiWinTree()
         doc = globalref.mainWin.doc
         win = treemainwin.TreeMainWin()
         self.windowList.append(win)
         win.doc = doc
         win.updateForFileChange(False)
-        win.duplicateWin = True
         win.show()
 
     def closeWindow(self):
@@ -386,15 +384,6 @@ class TreeControl(object):
     def matchingWindows(self, fileName):
         """Return list of windows with the given file name"""
         return [win for win in self.windowList if win.doc.fileName == fileName]
-
-    def updateDuplicateWindows(self):
-        """Update data display on other windows with same file"""
-        duplicateWindows = self.duplicateWindows()
-        if not duplicateWindows:
-            globalref.mainWin.duplicateWin = False
-            return
-        for win in duplicateWindows:
-            win.updateMultiWinTree()
 
     def removeWin(self, win):
         """Remove given windoww from the window list"""
@@ -428,11 +417,13 @@ class TreeControl(object):
         except AttributeError:
             pass
         if win and win != globalref.mainWin and win in self.windowList:
-            if globalref.mainWin.duplicateWin:
+            if self.duplicateWindows():
                 globalref.mainWin.saveMultiWinTree()
             globalref.updateRefs(win)
             self.recentFiles.updateMenu()
             self.updateWinMenu()
+            if self.duplicateWindows():
+                win.updateMultiWinTree()
 
 
 class WindowAction(QtGui.QAction):
