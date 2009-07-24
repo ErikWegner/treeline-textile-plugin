@@ -14,7 +14,7 @@
 
 import sys
 import os.path
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui, QtNetwork
 try:
     from __main__ import __version__, iconPath
 except ImportError:
@@ -35,6 +35,7 @@ class TreeControl(object):
     def __init__(self, userStyle):
         self.windowList = []
         globalref.treeControl = self
+        self.serverSocket = None
         mainVersion = '.'.join(__version__.split('.')[:2])
         globalref.options = option.Option(u'treeline-%s' % mainVersion, 21)
         globalref.options.loadAll(optiondefaults.defaultOutput())
@@ -65,20 +66,58 @@ class TreeControl(object):
         qApp.connect(qApp, QtCore.SIGNAL('focusChanged(QWidget*, QWidget*)'),
                      self.updateFocus)
 
-    def firstWindow(self, fileNames=None):
+    def getSocket(self):
+        """Open a socket from another TreeLine process, focus or open the
+           applicable file"""
+        socket = self.serverSocket.nextPendingConnection()
+        if socket and socket.waitForReadyRead(1000):
+            data = unicode(socket.readAll(), globalref.localTextEncoding)
+            if data.startswith('[') and data.endswith(']'):
+                fileNames = eval(data)
+                if fileNames:
+                    self.openMultipleFiles(fileNames)
+                else:
+                    globalref.mainWin.activateWindow()
+                    globalref.mainWin.raise_()
+
+    def firstWindow(self, fileNames):
         """Open first main window"""
+        socket = QtNetwork.QLocalSocket() # check for existing TreeLine session
+        socket.connectToServer('treeline-session', QtCore.QIODevice.WriteOnly)
+        if socket.waitForConnected(1000):
+            socket.write(repr(fileNames))
+            if socket.waitForBytesWritten(1000):
+                socket.close()
+                sys.exit(0)  # if found, send files to open and exit TreeLine
+        qApp = QtGui.QApplication.instance()
+        # start local server to listen for attempt to start new session
+        self.serverSocket = QtNetwork.QLocalServer()
+        self.serverSocket.listen('treeline-session')
+        qApp.connect(self.serverSocket, QtCore.SIGNAL('newConnection()'),
+                     self.getSocket)
         if fileNames:
-            for fileName in fileNames:
-                win = treemainwin.TreeMainWin()
-                self.windowList.append(win)
-                self.openFile(unicode(fileName, globalref.localTextEncoding),
-                              False)
-                win.show()
+            filenames = [unicode(fileName, globalref.localTextEncoding) for
+                         fileName in fileNames]
+            self.openMultipleFiles(fileNames)
         else:
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
             self.autoOpen()
             win.show()
+
+    def openMultipleFiles(self, fileNames):
+        """Open files in multiple windows if unique"""
+        for fileName in fileNames:
+            fileName = os.path.abspath(fileName)
+            if self.matchingWindows(fileName):
+                win = self.matchingWindows(fileName)[0]
+                win.activateWindow()
+                win.raise_()
+            else:
+                win = treemainwin.TreeMainWin()
+                self.windowList.append(win)
+                self.openFile(fileName, False)
+                win.show()
 
     def autoOpen(self):
         """Open last used file"""
