@@ -81,7 +81,7 @@ class TreeMainWin(QtGui.QMainWindow):
             x = globalref.options.intData('WindowXPos', 0, 10000)
             y = globalref.options.intData('WindowYPos', 0, 10000)
             shift = TreeMainWin.winCascade * \
-                    (globalref.treeControl.windowCount() - 1)
+                    globalref.treeControl.windowCount()
             self.move(x + shift, y + shift)
         self.origPalette = QtGui.QApplication.palette()
         self.updateColors()
