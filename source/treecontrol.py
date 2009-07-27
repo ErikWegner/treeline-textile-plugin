@@ -456,13 +456,22 @@ class TreeControl(object):
         except AttributeError:
             pass
         if win and win != globalref.mainWin and win in self.windowList:
+            oldWin = globalref.mainWin
             if self.duplicateWindows():
-                globalref.mainWin.saveMultiWinTree()
+                oldWin.saveMultiWinTree()
             globalref.updateRefs(win)
             self.recentFiles.updateMenu()
             self.updateWinMenu()
             if self.duplicateWindows():
                 win.updateMultiWinTree()
+            if oldWin.configDlg and oldWin.configDlg.isVisible():
+                win.configDlg = oldWin.configDlg
+                win.configDlg.resetParam(True)
+                oldWin.configDlg = None
+            if oldWin.setTypeDlg and oldWin.setTypeDlg.isVisible():
+                win.setTypeDlg = oldWin.setTypeDlg
+                win.setTypeDlg.loadList()
+                oldWin.setTypeDlg = None
 
 
 class WindowAction(QtGui.QAction):
