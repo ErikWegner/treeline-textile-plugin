@@ -571,7 +571,7 @@ class TreeDoc(object):
     def readXmlString(self, string):
         """Read xml string and return top item or None"""
         try:
-            handler = treexmlparse.TreeSaxHandler()
+            handler = treexmlparse.TreeSaxHandler(self)
             xml.sax.parseString(string.encode('utf-8'), handler)
         except xml.sax.SAXException:
             return None
@@ -580,7 +580,7 @@ class TreeDoc(object):
     def readXmlStringAndFormat(self, string):
         """Read xml string and return tuple of top item and new formats"""
         try:
-            handler = treexmlparse.TreeSaxHandler()
+            handler = treexmlparse.TreeSaxHandler(self)
             xml.sax.parseString(string.encode('utf-8'), handler)
         except xml.sax.SAXException:
             return (None, [])

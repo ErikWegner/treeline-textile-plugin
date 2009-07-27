@@ -276,9 +276,15 @@ class TreeView(QtGui.QTreeWidget):
 
     def dropMimeData(self, parent, mimeData, isCopy=False):
         """Decode dropped data"""
+        mainWin = self.parent().parent().parent().parent()
+        oldMainWin = globalref.mainWin
+        if globalref.treeControl.duplicateWindows():
+            oldMainWin.saveMultiWinTree()
+        globalref.updateRefs(mainWin)
         text = unicode(mimeData.data('text/xml'), 'utf-8')
         root, newFormats = globalref.docRef.readXmlStringAndFormat(text)
         if not root:
+            globalref.updateRefs(oldMainWin)
             return False
         if root.formatName == treedoc.TreeDoc.copyFormat.name:
             itemList = root.childList
@@ -305,6 +311,9 @@ class TreeView(QtGui.QTreeWidget):
         if newFormats:
             globalref.docRef.treeFormats.updateAutoChoices()
         globalref.updateViewAll()
+        globalref.updateRefs(oldMainWin)
+        if globalref.treeControl.duplicateWindows():
+            oldMainWin.updateMultiWinTree()
         return True
 
     def mousePressEvent(self, event):
