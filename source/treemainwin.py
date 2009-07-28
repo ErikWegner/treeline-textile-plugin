@@ -1095,8 +1095,9 @@ class TreeMainWin(QtGui.QMainWindow):
         if show:
             if not TreeMainWin.setTypeDlg:
                 TreeMainWin.setTypeDlg = treedialogs.TypeSetDlg()
-                self.connect(TreeMainWin.setTypeDlg, QtCore.SIGNAL('viewClosed'),
-                             self.updateNonModalDialogs)
+                self.connect(TreeMainWin.setTypeDlg,
+                             QtCore.SIGNAL('viewClosed'),
+                             globalref.treeControl.updateDialogs)
             else:
                 TreeMainWin.setTypeDlg.loadList()
             TreeMainWin.setTypeDlg.setCurrentSel()
@@ -1110,8 +1111,9 @@ class TreeMainWin(QtGui.QMainWindow):
         if show:
             if not TreeMainWin.configDlg:
                 TreeMainWin.configDlg = configdialog.ConfigDialog()
-                self.connect(TreeMainWin.configDlg, QtCore.SIGNAL('dialogClosed'),
-                             self.updateNonModalDialogs)
+                self.connect(TreeMainWin.configDlg,
+                             QtCore.SIGNAL('dialogClosed'),
+                             globalref.treeControl.updateDialogs)
             elif not TreeMainWin.configDlg.isVisible():
                 TreeMainWin.configDlg.resetCurrent()
             TreeMainWin.configDlg.show()
@@ -1152,7 +1154,7 @@ class TreeMainWin(QtGui.QMainWindow):
             if not TreeMainWin.sortDlg:
                 TreeMainWin.sortDlg = treedialogs.SortDlg()
                 self.connect(TreeMainWin.sortDlg, QtCore.SIGNAL('viewClosed'),
-                             self.updateNonModalDialogs)
+                             globalref.treeControl.updateDialogs)
             else:
                 TreeMainWin.sortDlg.updateDialog()
             TreeMainWin.sortDlg.show()
@@ -1352,7 +1354,7 @@ class TreeMainWin(QtGui.QMainWindow):
             if not TreeMainWin.findDlg:
                 TreeMainWin.findDlg = treedialogs.FindTextEntry()
                 self.connect(TreeMainWin.findDlg, QtCore.SIGNAL('viewClosed'),
-                             self.updateNonModalDialogs)
+                             globalref.treeControl.updateDialogs)
             TreeMainWin.findDlg.entry.selectAll()
             TreeMainWin.findDlg.entry.setFocus()
             TreeMainWin.findDlg.show()

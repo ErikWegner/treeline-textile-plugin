@@ -446,6 +446,10 @@ class TreeControl(object):
                 action.setChecked(True)
             num += 1
 
+    def updateDialogs(self):
+        """Update non-modal dialogs in response to their close signal"""
+        globalref.mainWin.updateNonModalDialogs()
+
     def updateFocus(self):
         """Check for focus change to a different main window"""
         win = QtGui.QApplication.activeWindow()

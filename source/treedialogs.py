@@ -205,6 +205,7 @@ class TypeSetDlg(QtGui.QDialog):
 
     def closeEvent(self, event):
         """Signal that view is closing"""
+        self.hide()
         self.emit(QtCore.SIGNAL('viewClosed'), False)
         event.accept()
 
@@ -564,6 +565,7 @@ class SortDlg(QtGui.QDialog):
 
     def closeEvent(self, event):
         """Signal that view is closing"""
+        self.hide()
         self.emit(QtCore.SIGNAL('viewClosed'), False)
         event.accept()
 
@@ -1282,6 +1284,7 @@ class FindTextEntry(QtGui.QDialog):
 
     def closeEvent(self, event):
         """Signal that view is closing"""
+        self.hide()
         self.emit(QtCore.SIGNAL('viewClosed'), False)
         event.accept()
 

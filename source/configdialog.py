@@ -194,6 +194,7 @@ class ConfigDialog(QtGui.QDialog):
         if self.formatModified:
             event.ignore()
         else:
+            self.hide()
             self.emit(QtCore.SIGNAL('dialogClosed'), False)
             event.accept()
 
