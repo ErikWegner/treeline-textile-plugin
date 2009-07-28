@@ -44,6 +44,7 @@ import plugininterface
 class TreeMainWin(QtGui.QMainWindow):
     """Main window, menus, toolbar, and status"""
     toolIcons = None
+    helpView = None
     tlPlainFileFilter = u'%s (*.trl *.xml)' % _('TreeLine Files - Plain')
     tlCompFileFilter = u'%s (*.trl *.trl.gz)' % \
                        _('TreeLine Files - Compressed')
@@ -183,7 +184,6 @@ class TreeMainWin(QtGui.QMainWindow):
         self.configDlg = None
         self.findDlg = None
         self.sortDlg = None
-        self.helpView = None
         self.fileImported = False
         self.duplicateSelect = None
         self.storedOpenNodes = []
@@ -1634,8 +1634,8 @@ class TreeMainWin(QtGui.QMainWindow):
     def helpContents(self):
         """View the Using section of the ReadMe file"""
         self.helpReadMe()
-        if self.helpView:
-            self.helpView.textView.scrollToAnchor('using')
+        if TreeMainWin.helpView:
+            TreeMainWin.helpView.textView.scrollToAnchor('using')
 
     def findHelpPath(self):
         """Return the full path of the help files or ''"""
@@ -1654,19 +1654,19 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def helpReadMe(self):
         """View the ReadMe file"""
-        if not self.helpView:
+        if not TreeMainWin.helpView:
             path = self.findHelpPath()
             if path:
                 TreeMainWin.toolIcons.loadIcons(['helpback', 'helpforward',
                                                  'helphome'])
-                self.helpView = helpview.HelpView(path,
+                TreeMainWin.helpView = helpview.HelpView(path,
                                                   _('TreeLine README File'),
                                                   TreeMainWin.toolIcons)
             else:
                 globalref.setStatusBar(_('Read Me file not found'))
                 return
-        self.helpView.show()
-        self.helpView.textView.home()
+        TreeMainWin.helpView.show()
+        TreeMainWin.helpView.textView.home()
 
     def helpAbout(self):
         """About this program"""

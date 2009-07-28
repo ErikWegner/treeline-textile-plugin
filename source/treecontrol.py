@@ -451,10 +451,6 @@ class TreeControl(object):
         win = QtGui.QApplication.activeWindow()
         while win and win.parent():
             win = win.parent()
-        try:
-            win = win.mainWinRef
-        except AttributeError:
-            pass
         if win and win != globalref.mainWin and win in self.windowList:
             oldWin = globalref.mainWin
             if self.duplicateWindows():
@@ -472,6 +468,10 @@ class TreeControl(object):
                 win.setTypeDlg = oldWin.setTypeDlg
                 win.setTypeDlg.loadList()
                 oldWin.setTypeDlg = None
+            if oldWin.sortDlg and oldWin.sortDlg.isVisible():
+                win.sortDlg = oldWin.sortDlg
+                win.sortDlg.updateDialog()
+                oldWin.sortDlg = None
 
 
 class WindowAction(QtGui.QAction):

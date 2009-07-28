@@ -37,7 +37,6 @@ class TypeSetDlg(QtGui.QDialog):
         self.setAttribute(QtCore.Qt.WA_QuitOnClose, False)
         self.setWindowFlags(QtCore.Qt.Window)
         self.setWindowTitle(_('Set Data Types'))
-        self.mainWinRef = globalref.mainWin
 
         topLayout = QtGui.QVBoxLayout(self)
         self.groupBox = QtGui.QGroupBox()
@@ -320,7 +319,6 @@ class SortDlg(QtGui.QDialog):
         self.setAttribute(QtCore.Qt.WA_QuitOnClose, False)
         self.setWindowFlags(QtCore.Qt.Window)
         self.setWindowTitle(_('Sorting'))
-        self.mainWinRef = globalref.mainWin
 
         topLayout = QtGui.QGridLayout(self)
         whatGroup = QtGui.QGroupBox(_('What to Sort'))
@@ -1230,7 +1228,6 @@ class FindTextEntry(QtGui.QDialog):
         self.setAttribute(QtCore.Qt.WA_QuitOnClose, False)
         self.setWindowFlags(QtCore.Qt.Window)
         self.setWindowTitle(_('Find'))
-        self.mainWinRef = globalref.mainWin
 
         topLayout = QtGui.QVBoxLayout(self)
         label = QtGui.QLabel(_('Enter key words'))
