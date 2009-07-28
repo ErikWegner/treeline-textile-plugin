@@ -1454,6 +1454,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                 _('Enable executable links'))
         optiondlg.OptionDlgBool(dlg, 'OpenNewWindow',
                                 _('Open files in new windows'))
+        dlg.startNewColumn()
         dlg.startGroupBox(_('New Objects'))
         optiondlg.OptionDlgBool(dlg, 'CompressNewFiles',
                                _('Set new files to compressed by default'))
@@ -1466,7 +1467,6 @@ class TreeMainWin(QtGui.QMainWindow):
                                  _('Multiple Selection Sequence'),
                                  [('tree', _('Tree order')),
                                   ('select', _('Selection order'))])
-        dlg.startNewColumn()
         dlg.startGroupBox(_('Data Editor Pages'))
         optiondlg.OptionDlgInt(dlg, 'EditorPages', '%s \n(%s)' %
                                (_('Number of pages shown'),
@@ -1474,6 +1474,7 @@ class TreeMainWin(QtGui.QMainWindow):
         dlg.startGroupBox(_('Undo Memory'))
         optiondlg.OptionDlgInt(dlg, 'UndoLevels',
                                '%s ' % _('Number of undo levels'), 0, 99)
+        dlg.startNewColumn()
         dlg.startGroupBox(_('Auto Save'))
         optiondlg.OptionDlgInt(dlg, 'AutoSaveMinutes', '%s \n(%s)' %
                                (_('Minutes between saves'),
