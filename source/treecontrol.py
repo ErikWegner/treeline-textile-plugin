@@ -460,18 +460,7 @@ class TreeControl(object):
             self.updateWinMenu()
             if self.duplicateWindows():
                 win.updateMultiWinTree()
-            if oldWin.configDlg and oldWin.configDlg.isVisible():
-                win.configDlg = oldWin.configDlg
-                win.configDlg.resetParam(True)
-                oldWin.configDlg = None
-            if oldWin.setTypeDlg and oldWin.setTypeDlg.isVisible():
-                win.setTypeDlg = oldWin.setTypeDlg
-                win.setTypeDlg.loadList()
-                oldWin.setTypeDlg = None
-            if oldWin.sortDlg and oldWin.sortDlg.isVisible():
-                win.sortDlg = oldWin.sortDlg
-                win.sortDlg.updateDialog()
-                oldWin.sortDlg = None
+            win.updateNonModalDialogs()
 
 
 class WindowAction(QtGui.QAction):

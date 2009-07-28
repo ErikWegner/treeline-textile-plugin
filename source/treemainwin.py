@@ -44,6 +44,10 @@ import plugininterface
 class TreeMainWin(QtGui.QMainWindow):
     """Main window, menus, toolbar, and status"""
     toolIcons = None
+    configDlg = None
+    setTypeDlg = None
+    sortDlg = None
+    findDlg = None
     helpView = None
     tlPlainFileFilter = u'%s (*.trl *.xml)' % _('TreeLine Files - Plain')
     tlCompFileFilter = u'%s (*.trl *.trl.gz)' % \
@@ -180,10 +184,6 @@ class TreeMainWin(QtGui.QMainWindow):
         self.pluginInterface = None
         self.condFilter = None
         self.textFilter = []
-        self.setTypeDlg = None
-        self.configDlg = None
-        self.findDlg = None
-        self.sortDlg = None
         self.fileImported = False
         self.duplicateSelect = None
         self.storedOpenNodes = []
@@ -330,12 +330,12 @@ class TreeMainWin(QtGui.QMainWindow):
                     splitter.widget(index).updateView()
                 else:
                     splitter.widget(index).setEnabled(False)
-        if self.setTypeDlg and self.setTypeDlg.isVisible():
+        if TreeMainWin.setTypeDlg and TreeMainWin.setTypeDlg.isVisible():
             # could be updateDlg(), except needed after ConfigDialog apply
-            self.setTypeDlg.loadList()
+            TreeMainWin.setTypeDlg.loadList()
         self.updateCmdAvail()
-        if self.sortDlg and self.sortDlg.isVisible():
-            self.sortDlg.updateDialog()
+        if TreeMainWin.sortDlg and TreeMainWin.sortDlg.isVisible():
+            TreeMainWin.sortDlg.updateDialog()
         QtGui.QApplication.restoreOverrideCursor()
 
     def saveMultiWinTree(self):
@@ -409,15 +409,33 @@ class TreeMainWin(QtGui.QMainWindow):
                 self.updateViews()
         else:
             self.updateViews()
-        if self.configDlg and self.configDlg.isVisible():
-            self.configDlg.resetParam(True)
-        else:
-            self.configDlg = None
-        if self.setTypeDlg and self.setTypeDlg.isVisible():
-            self.setTypeDlg.loadList()
+        self.updateNonModalDialogs()
         globalref.treeControl.updateWinMenu()
         self.updateCmdAvail()
         globalref.treeControl.resetAutoSave()
+
+    def updateNonModalDialogs(self):
+        """Update any open non-modal dialogs and their toggle actions"""
+        if TreeMainWin.configDlg and TreeMainWin.configDlg.isVisible():
+            TreeMainWin.configDlg.resetParam(True)
+            self.actions['DataConfigType'].setChecked(True)
+        else:
+            TreeMainWin.configDlg = None
+            self.actions['DataConfigType'].setChecked(False)
+        if TreeMainWin.setTypeDlg and TreeMainWin.setTypeDlg.isVisible():
+            TreeMainWin.setTypeDlg.loadList()
+            self.actions['DataSetDescendType'].setChecked(True)
+        else:
+            TreeMainWin.setTypeDlg = None
+            self.actions['DataSetDescendType'].setChecked(False)
+        if TreeMainWin.sortDlg and TreeMainWin.sortDlg.isVisible():
+            TreeMainWin.sortDlg.updateDialog()
+            self.actions['DataSort'].setChecked(True)
+        else:
+            TreeMainWin.sortDlg = None
+            self.actions['DataSort'].setChecked(False)
+        self.actions['ToolsFind'].setChecked(bool(TreeMainWin.findDlg and \
+                                             TreeMainWin.findDlg.isVisible()))
 
     def updateAddTagAvail(self):
         """Update enabled status of editor tag entry commands"""
@@ -757,18 +775,18 @@ class TreeMainWin(QtGui.QMainWindow):
     def editUndo(self):
         """Undo the previous action"""
         self.doc.undoStore.undo(self.doc.redoStore)
-        if self.setTypeDlg and self.setTypeDlg.isVisible():
-            self.setTypeDlg.loadList()
-        if self.configDlg:
-            self.configDlg.resetParam()
+        if TreeMainWin.setTypeDlg and TreeMainWin.setTypeDlg.isVisible():
+            TreeMainWin.setTypeDlg.loadList()
+        if TreeMainWin.configDlg:
+            TreeMainWin.configDlg.resetParam()
 
     def editRedo(self):
         """Redo the previous undo"""
         self.doc.redoStore.undo(self.doc.undoStore)
-        if self.setTypeDlg and self.setTypeDlg.isVisible():
-            self.setTypeDlg.loadList()
-        if self.configDlg:
-            self.configDlg.resetParam()
+        if TreeMainWin.setTypeDlg and TreeMainWin.setTypeDlg.isVisible():
+            TreeMainWin.setTypeDlg.loadList()
+        if TreeMainWin.configDlg:
+            TreeMainWin.configDlg.resetParam()
 
     def editCut(self):
         """Cut the branch or text to the clipboard"""
@@ -843,8 +861,8 @@ class TreeMainWin(QtGui.QMainWindow):
                         self.doc.treeFormats.addIfMissing(format)
                     self.doc.treeFormats.updateDerivedTypes()
                     self.doc.treeFormats.updateUniqueID()
-                    if self.configDlg:
-                        self.configDlg.resetParam()
+                    if TreeMainWin.configDlg:
+                        TreeMainWin.configDlg.resetParam()
                 else:
                     self.doc.undoStore.addChildListUndo(self.doc.selection)
                 selectList = []
@@ -1075,30 +1093,30 @@ class TreeMainWin(QtGui.QMainWindow):
     def dataSet(self, show):
         """Show dialog for setting item data types"""
         if show:
-            if not self.setTypeDlg:
-                self.setTypeDlg = treedialogs.TypeSetDlg()
-                self.connect(self.setTypeDlg, QtCore.SIGNAL('viewClosed'),
-                             self.actions['DataSetDescendType'].setChecked)
+            if not TreeMainWin.setTypeDlg:
+                TreeMainWin.setTypeDlg = treedialogs.TypeSetDlg()
+                self.connect(TreeMainWin.setTypeDlg, QtCore.SIGNAL('viewClosed'),
+                             self.updateNonModalDialogs)
             else:
-                self.setTypeDlg.loadList()
-            self.setTypeDlg.setCurrentSel()
-            self.setTypeDlg.updateDlg()
-            self.setTypeDlg.show()
+                TreeMainWin.setTypeDlg.loadList()
+            TreeMainWin.setTypeDlg.setCurrentSel()
+            TreeMainWin.setTypeDlg.updateDlg()
+            TreeMainWin.setTypeDlg.show()
         else:
-            self.setTypeDlg.hide()
+            TreeMainWin.setTypeDlg.hide()
 
     def dataConfig(self, show):
         """Show dialog for modifying data types"""
         if show:
-            if not self.configDlg:
-                self.configDlg = configdialog.ConfigDialog()
-                self.connect(self.configDlg, QtCore.SIGNAL('dialogClosed'),
-                             self.actions['DataConfigType'].setChecked)
-            elif not self.configDlg.isVisible():
-                self.configDlg.resetCurrent()
-            self.configDlg.show()
+            if not TreeMainWin.configDlg:
+                TreeMainWin.configDlg = configdialog.ConfigDialog()
+                self.connect(TreeMainWin.configDlg, QtCore.SIGNAL('dialogClosed'),
+                             self.updateNonModalDialogs)
+            elif not TreeMainWin.configDlg.isVisible():
+                TreeMainWin.configDlg.resetCurrent()
+            TreeMainWin.configDlg.show()
         else:
-            self.configDlg.close()
+            TreeMainWin.configDlg.close()
 
     def dataCopyTypes(self):
         """Copy the configuration from another TreeLine file"""
@@ -1112,8 +1130,8 @@ class TreeMainWin(QtGui.QMainWindow):
             try:
                 self.doc.treeFormats.configCopy(fileName, password)
                 QtGui.QApplication.restoreOverrideCursor()
-                if self.configDlg:
-                    self.configDlg.resetParam()
+                if TreeMainWin.configDlg:
+                    TreeMainWin.configDlg.resetParam()
                 return
             except treedoc.PasswordError:
                 QtGui.QApplication.restoreOverrideCursor()
@@ -1131,15 +1149,15 @@ class TreeMainWin(QtGui.QMainWindow):
     def dataSort(self, show):
         """Open the dialog for sorting nodes"""
         if show:
-            if not self.sortDlg:
-                self.sortDlg = treedialogs.SortDlg()
-                self.connect(self.sortDlg, QtCore.SIGNAL('viewClosed'),
-                             self.actions['DataSort'].setChecked)
+            if not TreeMainWin.sortDlg:
+                TreeMainWin.sortDlg = treedialogs.SortDlg()
+                self.connect(TreeMainWin.sortDlg, QtCore.SIGNAL('viewClosed'),
+                             self.updateNonModalDialogs)
             else:
-                self.sortDlg.updateDialog()
-            self.sortDlg.show()
+                TreeMainWin.sortDlg.updateDialog()
+            TreeMainWin.sortDlg.show()
         else:
-            self.sortDlg.hide()
+            TreeMainWin.sortDlg.hide()
 
     def dataFilterCond(self):
         """Filter types with conditional rules"""
@@ -1241,8 +1259,8 @@ class TreeMainWin(QtGui.QMainWindow):
                               False, False, not dlg.existOnly(), True,
                               dlg.startNumber())
         self.updateViews()
-        if self.configDlg:
-            self.configDlg.resetParam()
+        if TreeMainWin.configDlg:
+            TreeMainWin.configDlg.resetParam()
 
     def dataAddCat(self):
         """Add child's category items as a new child level"""
@@ -1261,8 +1279,8 @@ class TreeMainWin(QtGui.QMainWindow):
             for item in selectList:
                 item.addChildCat(dlg.getSelList())
             self.updateViews()
-            if self.configDlg:
-                self.configDlg.resetParam()
+            if TreeMainWin.configDlg:
+                TreeMainWin.configDlg.resetParam()
         else:
             QtGui.QMessageBox.warning(self, 'TreeLine',
                                       _('Cannot expand without common fields'))
@@ -1274,8 +1292,8 @@ class TreeMainWin(QtGui.QMainWindow):
         for item in selectList:
             item.flatChildCat()
         self.updateViews()
-        if self.configDlg:
-            self.configDlg.resetParam()
+        if TreeMainWin.configDlg:
+            TreeMainWin.configDlg.resetParam()
 
     def dataArrangeRef(self):
         """Arrange data using parent references"""
@@ -1313,8 +1331,8 @@ class TreeMainWin(QtGui.QMainWindow):
         for item in selectList:
             item.flatByRef(dlg.text)
         self.updateViews()
-        if self.configDlg:
-            self.configDlg.resetParam()
+        if TreeMainWin.configDlg:
+            TreeMainWin.configDlg.resetParam()
 
     def toolsExpand(self):
         """Expand all children of selected item"""
@@ -1331,15 +1349,15 @@ class TreeMainWin(QtGui.QMainWindow):
     def toolsFind(self, show):
         """Find item matching text string"""
         if show:
-            if not self.findDlg:
-                self.findDlg = treedialogs.FindTextEntry()
-                self.connect(self.findDlg, QtCore.SIGNAL('viewClosed'),
-                             self.actions['ToolsFind'].setChecked)
-            self.findDlg.entry.selectAll()
-            self.findDlg.entry.setFocus()
-            self.findDlg.show()
+            if not TreeMainWin.findDlg:
+                TreeMainWin.findDlg = treedialogs.FindTextEntry()
+                self.connect(TreeMainWin.findDlg, QtCore.SIGNAL('viewClosed'),
+                             self.updateNonModalDialogs)
+            TreeMainWin.findDlg.entry.selectAll()
+            TreeMainWin.findDlg.entry.setFocus()
+            TreeMainWin.findDlg.show()
         else:
-            self.findDlg.hide()
+            TreeMainWin.findDlg.hide()
 
     def toolsSpellCheck(self):
         """Spell check the tree's text data strting in the selected branch"""

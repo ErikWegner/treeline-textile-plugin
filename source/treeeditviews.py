@@ -17,6 +17,7 @@ import os.path
 import tempfile
 from PyQt4 import QtCore, QtGui
 import configdialog
+import treemainwin
 import optiondefaults
 import globalref
 
@@ -443,8 +444,8 @@ class DataEditGroup(QtGui.QGroupBox):
         configdialog.ConfigDialog.currentField = globalref.docRef.\
                                        treeFormats[self.item.formatName].\
                                        fieldList[0].name
-        globalref.mainWin.configDlg.tabs.setCurrentIndex(1)
-        globalref.mainWin.configDlg.updatePage()
+        treemainwin.TreeMainWin.configDlg.tabs.setCurrentIndex(1)
+        treemainwin.TreeMainWin.configDlg.updatePage()
 
     def modifyFieldConfig(self):
         """Bring up type config dialog with the caller's field"""
@@ -452,8 +453,8 @@ class DataEditGroup(QtGui.QGroupBox):
         globalref.mainWin.dataConfig(True)
         configdialog.ConfigDialog.currentType = self.item.formatName
         configdialog.ConfigDialog.currentField = field
-        globalref.mainWin.configDlg.tabs.setCurrentIndex(3)
-        globalref.mainWin.configDlg.updatePage()
+        treemainwin.TreeMainWin.configDlg.tabs.setCurrentIndex(3)
+        treemainwin.TreeMainWin.configDlg.updatePage()
 
 class DataEditScrollView(QtGui.QScrollArea):
     """Right pane view to edit database info"""

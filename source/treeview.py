@@ -18,6 +18,7 @@ import string
 from PyQt4 import QtCore, QtGui
 import treedoc
 import treeitem
+import treemainwin
 import optiondefaults
 import globalref
 
@@ -298,8 +299,8 @@ class TreeView(QtGui.QTreeWidget):
                 globalref.docRef.treeFormats.addIfMissing(format)
             globalref.docRef.treeFormats.updateDerivedTypes()
             globalref.docRef.treeFormats.updateUniqueID()
-            if globalref.mainWin.configDlg:
-                globalref.mainWin.configDlg.resetParam()
+            if treemainwin.TreeMainWin.configDlg:
+                treemainwin.TreeMainWin.configDlg.resetParam()
         else:
             globalref.docRef.undoStore.addChildListUndo(undoParents)
         for node in itemList:
