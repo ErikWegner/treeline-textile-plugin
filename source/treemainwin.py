@@ -678,7 +678,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 self.doc.exportHtmlColumns(fileName, outGroup,
                                            ExportDlg.numColumns, indent,
                                            ExportDlg.addHeader)
-            elif ExportDlg.exportType == ExportDlg.dirType:
+            elif ExportDlg.exportType == ExportDlg.dirTableType:
                 defaultDir, fn = os.path.split(self.doc.fileName)
                 if not defaultDir:
                     defaultDir = unicode(os.environ.get('HOME', ''),
@@ -688,7 +688,19 @@ class TreeMainWin(QtGui.QMainWindow):
                                                      defaultDir)
                 dirName = unicode(dirName)
                 if dirName:
-                    self.doc.exportDir(dirName, nodeList, ExportDlg.addHeader)
+                    self.doc.exportDirTable(dirName, nodeList,
+                                            ExportDlg.addHeader)
+            elif ExportDlg.exportType == ExportDlg.dirPageType:
+                defaultDir, fn = os.path.split(self.doc.fileName)
+                if not defaultDir:
+                    defaultDir = unicode(os.environ.get('HOME', ''),
+                                         sys.getfilesystemencoding())
+                dirName = QtGui.QFileDialog.getExistingDirectory(self,
+                                                     _('Export to Directory'),
+                                                     defaultDir)
+                dirName = unicode(dirName)
+                if dirName:
+                    self.doc.exportDirPage(dirName, nodeList)
             elif ExportDlg.exportType == ExportDlg.xsltType:
                 dlgText = _('A link to a stylesheet can be added to the '\
                             'XSL file\nEnter a CSS filename (blank for none)')
@@ -765,7 +777,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                        ExportDlg.includeRoot,
                                        ExportDlg.openOnly)
         except IOError, e:
-            if ExportDlg.exportType == ExportDlg.dirType:
+            if ExportDlg.exportType == ExportDlg.dirTableType:
                 QtGui.QMessageBox.warning(self, 'TreeLine', unicode(e))
             else:
                 QtGui.QMessageBox.warning(self, 'TreeLine',

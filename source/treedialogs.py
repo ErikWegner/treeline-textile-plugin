@@ -305,15 +305,9 @@ class FieldSelectList(QtGui.QTreeWidget):
 
 class SortDlg(QtGui.QDialog):
     """Dialog to control sorting options"""
-    entireTree = 0
-    selectBranch = 1
-    selectChildren = 2
-    selectSiblings = 3
+    entireTree, selectBranch, selectChildren, selectSiblings = range(4)
     sortWhat = selectBranch
-    allTypes = 0
-    chooseTypes = 1
-    titlesAscend = 2
-    titlesDescend = 3
+    allTypes, chooseTypes, titlesAscend, titlesDescend = range(4)
     method = allTypes
     def __init__(self, parent=None):
         QtGui.QDialog.__init__(self, parent)
@@ -844,20 +838,10 @@ class TemplateDialog(QtGui.QDialog):
 
 class ExportDlg(QtGui.QDialog):
     """Dialog for selecting type of file export"""
-    htmlType = 0
-    dirType = 1
-    xsltType = 2
-    trlType = 3
-    textType = 4
-    tableType = 5
-    xbelType = 6
-    mozType = 7
-    xmlType = 8
-    odfType = 9
+    htmlType, dirTableType, dirPageType, xsltType, trlType, textType, \
+              tableType, xbelType, mozType, xmlType, odfType = range(11)
     exportType = htmlType
-    entireTree = 0
-    selectBranch = 1
-    selectNode = 2
+    entireTree, selectBranch, selectNode = range(3)
     exportWhat = entireTree
     includeRoot = False
     openOnly = False
@@ -878,9 +862,12 @@ class ExportDlg(QtGui.QDialog):
         htmlButton = QtGui.QRadioButton(_('&HTML single file output'))
         self.typeButtons.addButton(htmlButton, ExportDlg.htmlType)
         typeLayout.addWidget(htmlButton)
-        dirButton = QtGui.QRadioButton(_('HTML &directories output'))
-        self.typeButtons.addButton(dirButton, ExportDlg.dirType)
+        dirButton = QtGui.QRadioButton(_('HTML &directory tables'))
+        self.typeButtons.addButton(dirButton, ExportDlg.dirTableType)
         typeLayout.addWidget(dirButton)
+        dirPageButton = QtGui.QRadioButton(_('HTML directory &pages'))
+        self.typeButtons.addButton(dirPageButton, ExportDlg.dirPageType)
+        typeLayout.addWidget(dirPageButton)
         xsltButton = QtGui.QRadioButton(_('&XSLT output'))
         self.typeButtons.addButton(xsltButton, ExportDlg.xsltType)
         typeLayout.addWidget(xsltButton)
@@ -986,7 +973,7 @@ class ExportDlg(QtGui.QDialog):
         else:
             self.openOnlyButton.setChecked(False)
             self.openOnlyButton.setEnabled(False)
-        if exportType in (ExportDlg.htmlType, ExportDlg.dirType):
+        if exportType in (ExportDlg.htmlType, ExportDlg.dirTableType):
             self.headerButton.setEnabled(True)
         else:
             self.headerButton.setChecked(False)
@@ -1009,7 +996,8 @@ class ExportDlg(QtGui.QDialog):
             self.whatButtons.button(ExportDlg.entireTree).setChecked(True)
         else:
             self.whatButtons.button(ExportDlg.selectBranch).setEnabled(True)
-        if exportType in (ExportDlg.dirType, ExportDlg.xsltType):
+        if exportType in (ExportDlg.dirTableType, ExportDlg.dirPageType,
+                          ExportDlg.xsltType):
             self.whatButtons.button(ExportDlg.selectNode).setEnabled(False)
             if self.whatButtons.checkedId() == ExportDlg.selectNode:
                 self.whatButtons.button(ExportDlg.selectBranch).\
@@ -1035,9 +1023,7 @@ class ExportDlg(QtGui.QDialog):
 
 class NumberingDlg(QtGui.QDialog):
     """Dialog for adding numbering to nodes"""
-    outlineType = 0
-    sectionType = 1
-    singleType = 2
+    outlineType, sectionType, singleType = range(3)
     outlineFormat = ['I.', 'A.', '1.', 'a)', '(1)', '(a)', '(i)']
     sectionFormat = ['1', '.1', '.1']
     singleFormat = ['1.']

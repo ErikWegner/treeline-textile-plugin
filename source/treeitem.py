@@ -222,7 +222,7 @@ class TreeItem(object):
                 textList.extend(child.exportToText(level + 1, openOnly))
         return textList
 
-    def exportDir(self, linkDict, parentTitle=None, header='', footer=''):
+    def exportDirTable(self, linkDict, parentTitle=None, header='', footer=''):
         """Write dir structure with html tables"""
         if not self.childList:
             return
@@ -287,8 +287,12 @@ class TreeItem(object):
             raise IOError(_('Error - cannot write file to %s' % dirName))
         f.close()
         for child in self.childList:
-            child.exportDir(linkDict, title, header, footer)
+            child.exportDirTable(linkDict, title, header, footer)
         os.chdir('..')
+
+    def exportDirPage(self, linkDict):
+        """Write directory structure with navigation bar and full pages"""
+        pass
 
     def createDirLinkDict(self, linkDict, path):
         """Create dict to store parent directories for internal links"""
@@ -299,7 +303,7 @@ class TreeItem(object):
             child.createDirLinkDict(linkDict, path)
 
     def exportDirName(self, encode=False):
-        """Return legal directory name for exportDir()"""
+        """Return legal directory name for exporting to directories"""
         try:
             dirName = filter(None, self.refFieldText().split('\n'))[0]
         except IndexError:

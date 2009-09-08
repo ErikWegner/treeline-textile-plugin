@@ -689,7 +689,7 @@ class TreeDoc(object):
             raise
         f.close()
 
-    def exportDir(self, dirName, nodeList, addHeader=False):
+    def exportDirTable(self, dirName, nodeList, addHeader=False):
         """Write tree to nested directory struct with html tables"""
         oldDir = os.getcwd()
         os.chdir(dirName.encode(sys.getfilesystemencoding()))
@@ -709,7 +709,26 @@ class TreeDoc(object):
             item = nodeList[0]
         linkDict = {}
         item.createDirLinkDict(linkDict, os.getcwd())
-        item.exportDir(linkDict, None, header, footer)
+        item.exportDirTable(linkDict, None, header, footer)
+        self.treeFormats.removeQuiet(TreeDoc.copyFormat)
+        os.chdir(oldDir)
+
+    def exportDirPage(self, dirName, nodeList):
+        """Write tree to nested directory struct with html tables"""
+        oldDir = os.getcwd()
+        os.chdir(dirName.encode(sys.getfilesystemencoding()))
+        if len(nodeList) > 1:
+            self.treeFormats.addIfMissing(TreeDoc.copyFormat)
+            item = TreeItem(None, TreeDoc.copyFormat.name)
+            item.data[TreeFormats.fieldDefault] = TreeDoc.rootTitleDefault
+            for child in nodeList:
+                item.childList.append(child)
+                child.parent = item
+        else:
+            item = nodeList[0]
+        linkDict = {}
+        item.createDirLinkDict(linkDict, os.getcwd())
+        item.exportDirPage(linkDict, None, header, footer)
         self.treeFormats.removeQuiet(TreeDoc.copyFormat)
         os.chdir(oldDir)
 
