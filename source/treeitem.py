@@ -233,7 +233,7 @@ class TreeItem(object):
             os.chdir(dirName)
         except (OSError, ValueError, UnicodeError):
             print 'Error - cannot create directory', dirName
-            raise IOError(_('Error - cannot create directory %s' % dirName))
+            raise IOError(_('Error - cannot create directory %s') % dirName)
         title = self.title()
         lines = [u'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 '\
                  'Transitional//EN">', u'<html>', u'<head>',
@@ -284,7 +284,7 @@ class TreeItem(object):
             f.writelines([line + '\n' for line in lines])
         except IOError:
             print 'Error - could not write file to', dirname
-            raise IOError(_('Error - cannot write file to %s' % dirName))
+            raise IOError(_('Error - cannot write file to %s') % dirName)
         f.close()
         for child in self.childList:
             child.exportDirTable(linkDict, title, header, footer)
@@ -292,7 +292,36 @@ class TreeItem(object):
 
     def exportDirPage(self, linkDict):
         """Write directory structure with navigation bar and full pages"""
-        pass
+        title = self.title()
+        lines = [u'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 '\
+                 'Transitional//EN">', u'<html>', u'<head>',
+                 u'<meta http-equiv="Content-Type" content="text/html; '\
+                 'charset=utf-8">', u'<title>%s</title>' % title,
+                 u'</head>', u'<body>']
+        sep = globalref.docRef.lineBreaks and u'<br />\n' or u'\n'
+        lines.append(sep.join(self.formatText(True, True, True)))
+        lines.extend([u'</body>', u'</html>'])
+        try:
+            dirName = self.exportDirName(True)
+            fileName = u'%s.html' % dirName
+            f = codecs.open(fileName, 'w', 'utf-8')
+            f.writelines([line + '\n' for line in lines])
+        except (IOError, UnicodeError):
+            print 'Error - could not write file to %s', fileName
+            raise IOError(_('Error - cannot write file to %s') % fileName)
+        f.close()
+        if self.childList:
+            try:
+                if not os.access(dirName, os.R_OK):
+                    os.mkdir(dirName, 0755)
+                os.chdir(dirName)
+            except (OSError, ValueError, UnicodeError):
+                print 'Error - cannot create directory', dirName
+                raise IOError(_('Error - cannot create directory %s')
+                              % dirName)
+            for child in self.childList:
+                child.exportDirPage(linkDict)
+            os.chdir('..')
 
     def createDirLinkDict(self, linkDict, path):
         """Create dict to store parent directories for internal links"""
