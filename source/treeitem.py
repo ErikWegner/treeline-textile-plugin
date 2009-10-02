@@ -298,6 +298,31 @@ class TreeItem(object):
                  u'<meta http-equiv="Content-Type" content="text/html; '\
                  'charset=utf-8">', u'<title>%s</title>' % title,
                  u'</head>', u'<body>']
+        links = []
+        for item in self.childList:
+            links.append(u'&gt; &gt; <a href="%s/%s.html">%s</a><br />' %
+                         (self.exportDirName(False), item.exportDirName(False),
+                          item.title()))
+        if self.parent:
+            pos = 0
+            for item in self.parent.childList:
+                if item is self:
+                    links.insert(pos, u'&gt; %s<br />' % self.title())
+                    pos = len(links)
+                else:
+                    links.insert(pos, u'&gt; <a href="%s.html">%s</a><br />' %
+                                 (item.exportDirName(False), item.title()))
+                pos += 1
+            if self.parent.parent:
+                pos = 0
+                for item in self.parent.parent.childList:
+                    links.insert(pos, u'<a href="../%s.html">%s</a><br />' %
+                                 (item.exportDirName(False), item.title()))
+                    if item is self.parent:
+                        pos = len(links)
+                    pos += 1
+        lines.extend(links)
+        lines.append('<hr>')
         sep = globalref.docRef.lineBreaks and u'<br />\n' or u'\n'
         lines.append(sep.join(self.formatText(True, True, True)))
         lines.extend([u'</body>', u'</html>'])
