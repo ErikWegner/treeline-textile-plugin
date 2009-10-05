@@ -294,10 +294,13 @@ class TreeItem(object):
         """Write directory structure with navigation bar and full pages"""
         title = self.title()
         lines = [u'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 '\
-                 'Transitional//EN">', u'<html>', u'<head>',
+                  'Transitional//EN">', u'<html>', u'<head>',
                  u'<meta http-equiv="Content-Type" content="text/html; '\
-                 'charset=utf-8">', u'<title>%s</title>' % title,
-                 u'</head>', u'<body>']
+                  'charset=utf-8">',
+                 u'<link rel="stylesheet" type="text/css" '\
+                   'href="%sdefault.css" />' % ('../' * level),
+                 u'<title>%s</title>' % title,
+                 u'</head>', u'<body>', u'<div id="sidebar">']
         links = []
         for item in self.childList:
             links.append(u'&nbsp; &nbsp; &nbsp; &nbsp; &bull; '\
@@ -334,7 +337,7 @@ class TreeItem(object):
                 pos = len(links)
             pos += 1
         lines.extend(links)
-        lines.append('<hr>')
+        lines.append('</div>')
         sep = globalref.docRef.lineBreaks and u'<br />\n' or u'\n'
         lines.append(sep.join(self.formatText(True, True, True)))
         lines.extend([u'</body>', u'</html>'])

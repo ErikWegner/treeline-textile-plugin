@@ -717,6 +717,15 @@ class TreeDoc(object):
         """Write tree to nested directory struct with html tables"""
         oldDir = os.getcwd()
         os.chdir(dirName.encode(sys.getfilesystemencoding()))
+        cssLines = ['#sidebar {', 'width: 16em;', 'float: left;',
+                'clear: left;', 'border-right: 1px solid black;', '}']
+        try:
+            f = codecs.open('default.css', 'w', 'utf-8')
+            f.writelines([(line + '\n').encode('utf-8') for line in cssLines])
+        except (IOError, UnicodeError):
+            print 'Error - could not write file to default.css'
+            raise IOError(_('Error - cannot write file to %s') % 'default.css')
+        f.close()
         if len(nodeList) > 1:
             self.treeFormats.addIfMissing(TreeDoc.copyFormat)
             item = TreeItem(None, TreeDoc.copyFormat.name)
