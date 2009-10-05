@@ -290,7 +290,7 @@ class TreeItem(object):
             child.exportDirTable(linkDict, title, header, footer)
         os.chdir('..')
 
-    def exportDirPage(self, linkDict):
+    def exportDirPage(self, linkDict, level=0):
         """Write directory structure with navigation bar and full pages"""
         title = self.title()
         lines = [u'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 '\
@@ -300,27 +300,39 @@ class TreeItem(object):
                  u'</head>', u'<body>']
         links = []
         for item in self.childList:
-            links.append(u'&gt; &gt; <a href="%s/%s.html">%s</a><br />' %
+            links.append(u'&nbsp; &nbsp; &nbsp; &nbsp; &bull; '\
+                          '<a href="%s/%s.html">%s</a><br />' %
                          (self.exportDirName(False), item.exportDirName(False),
                           item.title()))
-        if self.parent:
-            pos = 0
-            for item in self.parent.childList:
-                if item is self:
-                    links.insert(pos, u'&gt; %s<br />' % self.title())
-                    pos = len(links)
-                else:
-                    links.insert(pos, u'&gt; <a href="%s.html">%s</a><br />' %
-                                 (item.exportDirName(False), item.title()))
-                pos += 1
-            if self.parent.parent:
-                pos = 0
-                for item in self.parent.parent.childList:
-                    links.insert(pos, u'<a href="../%s.html">%s</a><br />' %
-                                 (item.exportDirName(False), item.title()))
-                    if item is self.parent:
-                        pos = len(links)
-                    pos += 1
+        uncleList = []
+        if self.parent and level > 0:
+            siblingList = self.parent.childList
+            if self.parent.parent and level > 1:
+                uncleList = self.parent.parent.childList
+            else:
+                uncleList = [self.parent]
+        else:
+            siblingList = [self]
+        pos = 0
+        for item in siblingList:
+            if item is self:
+                links.insert(pos, u'&nbsp; &nbsp; &bull; <b>%s</b><br />' %
+                             self.title())
+                pos = len(links)
+            else:
+                links.insert(pos,
+                             u'&nbsp; &nbsp; &bull; '\
+                              '<a href="%s.html">%s</a><br />' %
+                             (item.exportDirName(False), item.title()))
+            pos += 1
+        pos = 0
+        for item in uncleList:
+            links.insert(pos,
+                         u'&bull; <a href="../%s.html">%s</a><br />' %
+                         (item.exportDirName(False), item.title()))
+            if item is self.parent:
+                pos = len(links)
+            pos += 1
         lines.extend(links)
         lines.append('<hr>')
         sep = globalref.docRef.lineBreaks and u'<br />\n' or u'\n'
@@ -345,7 +357,7 @@ class TreeItem(object):
                 raise IOError(_('Error - cannot create directory %s')
                               % dirName)
             for child in self.childList:
-                child.exportDirPage(linkDict)
+                child.exportDirPage(linkDict, level + 1)
             os.chdir('..')
 
     def createDirLinkDict(self, linkDict, path):
