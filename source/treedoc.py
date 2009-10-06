@@ -718,7 +718,8 @@ class TreeDoc(object):
         oldDir = os.getcwd()
         os.chdir(dirName.encode(sys.getfilesystemencoding()))
         cssLines = ['#sidebar {', 'width: 16em;', 'float: left;',
-                'clear: left;', 'border-right: 1px solid black;', '}']
+                    'clear: left;', 'border-right: 1px solid black;',
+                    'margin-right: 1em;', '}']
         try:
             f = codecs.open('default.css', 'w', 'utf-8')
             f.writelines([(line + '\n').encode('utf-8') for line in cssLines])
