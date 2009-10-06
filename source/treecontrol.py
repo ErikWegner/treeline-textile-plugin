@@ -253,6 +253,7 @@ class TreeControl(object):
         if win.pluginInterface:
             win.pluginInterface.execCallback(win.pluginInterface.
                                              fileNewCallbacks)
+        win.show()
 
     def saveFile(self, fileName):
         """Save file to fileName, return True on success"""
