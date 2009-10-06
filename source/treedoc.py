@@ -708,7 +708,7 @@ class TreeDoc(object):
         else:
             item = nodeList[0]
         linkDict = {}
-        item.createDirLinkDict(linkDict, os.getcwd())
+        item.createDirTableLinkDict(linkDict, os.getcwd())
         item.exportDirTable(linkDict, None, header, footer)
         self.treeFormats.removeQuiet(TreeDoc.copyFormat)
         os.chdir(oldDir)
@@ -737,7 +737,7 @@ class TreeDoc(object):
         else:
             item = nodeList[0]
         linkDict = {}
-        item.createDirLinkDict(linkDict, os.getcwd())
+        item.createDirPageLinkDict(linkDict, os.getcwd())
         item.exportDirPage(linkDict)
         self.treeFormats.removeQuiet(TreeDoc.copyFormat)
         os.chdir(oldDir)

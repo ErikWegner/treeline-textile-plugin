@@ -260,7 +260,8 @@ class TreeItem(object):
                     anchor = match.group(1)
                     absPath = linkDict.get(anchor, '')
                     if absPath:
-                        relPath = treedoc.relativePath(os.getcwd(), absPath)
+                        curPath = unicode(dirName, sys.getfilesystemencoding())
+                        relPath = treedoc.relativePath(curPath, absPath)
                         relPath = os.path.join(relPath, 'index.html')
                         if os.sep != '/':
                             relPath = relPath.replace(os.sep, '/')
@@ -283,12 +284,20 @@ class TreeItem(object):
             f = codecs.open('index.html', 'w', 'utf-8')
             f.writelines([line + '\n' for line in lines])
         except IOError:
-            print 'Error - could not write file to', dirname
+            print 'Error - could not write file to', dirName
             raise IOError(_('Error - cannot write file to %s') % dirName)
         f.close()
         for child in self.childList:
             child.exportDirTable(linkDict, title, header, footer)
         os.chdir('..')
+
+    def createDirTableLinkDict(self, linkDict, path):
+        """Create dict to store parent directories for internal links"""
+        for anchor in filter(None, self.refFieldText().split('\n')):
+            linkDict[anchor] = path
+        path = os.path.join(path, self.exportDirName(False))
+        for child in self.childList:
+            child.createDirTableLinkDict(linkDict, path)
 
     def exportDirPage(self, linkDict, level=0):
         """Write directory structure with navigation bar and full pages"""
@@ -338,12 +347,25 @@ class TreeItem(object):
             pos += 1
         lines.extend(links)
         lines.append('</div>')
+        textList = []
+        for line in self.formatText(True, True, True):
+            for match in TreeItem.dirExportLinkRe.finditer(line):
+                anchor = match.group(1)
+                absPath = linkDict.get(anchor, '')
+                if absPath:
+                    curPath = unicode(os.getcwd(), sys.getfilesystemencoding())
+                    relPath = treedoc.relativePath(curPath, absPath)
+                    if os.sep != '/':
+                        relPath = relPath.replace(os.sep, '/')
+                    link = '<a href="%s">' % relPath
+                    line = TreeItem.dirExportLinkRe.sub(link, line)
+            textList.append(line)
         sep = globalref.docRef.lineBreaks and u'<br />\n' or u'\n'
-        lines.append(sep.join(self.formatText(True, True, True)))
+        lines.append(sep.join(textList))
         lines.extend([u'</body>', u'</html>'])
+        dirName = self.exportDirName(True)
+        fileName = '%s.html' % dirName
         try:
-            dirName = self.exportDirName(True)
-            fileName = u'%s.html' % dirName
             f = codecs.open(fileName, 'w', 'utf-8')
             f.writelines([line + '\n' for line in lines])
         except (IOError, UnicodeError):
@@ -363,13 +385,14 @@ class TreeItem(object):
                 child.exportDirPage(linkDict, level + 1)
             os.chdir('..')
 
-    def createDirLinkDict(self, linkDict, path):
+    def createDirPageLinkDict(self, linkDict, path):
         """Create dict to store parent directories for internal links"""
+        dirName = self.exportDirName(False)
         for anchor in filter(None, self.refFieldText().split('\n')):
-            linkDict[anchor] = path
-        path = os.path.join(path, self.exportDirName(True))
+            linkDict[anchor] = os.path.join(path, '%s.html' % dirName)
+        path = os.path.join(path, dirName)
         for child in self.childList:
-            child.createDirLinkDict(linkDict, path)
+            child.createDirPageLinkDict(linkDict, path)
 
     def exportDirName(self, encode=False):
         """Return legal directory name for exporting to directories"""
@@ -377,8 +400,9 @@ class TreeItem(object):
             dirName = filter(None, self.refFieldText().split('\n'))[0]
         except IndexError:
             dirName = ''
-        if encode:
-            dirName = dirName.encode(sys.getfilesystemencoding(), 'replace')
+        dirName = dirName.encode(sys.getfilesystemencoding(), 'replace')
+        if not encode:
+            dirName = unicode(dirName, sys.getfilesystemencoding())
         dirName = TreeItem.dirExportDirRe.sub('', dirName)
         if not dirName:
             dirName = '___'
