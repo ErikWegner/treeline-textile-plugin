@@ -24,12 +24,6 @@ import globalref
 
 class DataEditLine(QtGui.QTextEdit):
     """Line editor within data edit view"""
-    tagMenuEntries = [(_('&Bold'), ('<b>', '</b>')),
-                      (_('&Italics'), ('<i>', '</i>')),
-                      (_('&Underline'), ('<u>', '</u>')),
-                      (_('&Size...'), ('<font size="%s">', '</font>')),
-                      (_('&Color...'), ('<font color="%s">', '</font>'))]
-    tagDict = dict(tagMenuEntries)
     def __init__(self, field, item, labelRef, parent=None):
         QtGui.QTextEdit.__init__(self, parent)
         self.field = field
@@ -185,6 +179,10 @@ class DataEditLine(QtGui.QTextEdit):
         self.connect(extEditAct, QtCore.SIGNAL('triggered()'),
                      self.showExtEditor)
         menu.insertMenu(firstAction, globalref.mainWin.tagSubMenu)
+        addLinkAct = QtGui.QAction(_('&Add Internal Link...'), self)
+        menu.insertAction(firstAction, addLinkAct)
+        self.connect(addLinkAct, QtCore.SIGNAL('triggered()'),
+                     globalref.mainWin.inlineLinkTagPrompt)
         menu.insertSeparator(firstAction)
         typeConfigAct = QtGui.QAction(_('&Modify Type Config...'), self)
         menu.insertAction(firstAction, typeConfigAct)

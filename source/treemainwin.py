@@ -1734,6 +1734,10 @@ class TreeMainWin(QtGui.QMainWindow):
             openTag = openTag % color.name()
         editor.addHtmlTag(openTag, closeTag)
 
+    def inlineLinkTagPrompt(self):
+        """Prompt user to pick node for inline internal link"""
+        pass
+
     def focusLeftView(self):
         """Focus active view in the left pane"""
         self.leftTabs.currentWidget().setFocus()

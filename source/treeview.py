@@ -84,6 +84,7 @@ class TreeView(QtGui.QTreeWidget):
         self.incremSearchStr = ''
         self.blockColumnResize = False
         self.editedItem = None
+        self.noSelectClickCallback = None
         self.connect(self, QtCore.SIGNAL('itemExpanded(QTreeWidgetItem*)'),
                      self.loadItemChildren)
         self.connect(self, QtCore.SIGNAL('itemCollapsed(QTreeWidgetItem*)'),
@@ -326,6 +327,9 @@ class TreeView(QtGui.QTreeWidget):
         clickedItem = self.itemAt(event.pos())
         if not clickedItem:  # skip unselecting click on blank space
             self.dragStartPos = None
+            return
+        if self.noSelectClickCallback:
+            self.noSelectClickCallback(clickedItem)
             return
         if event.button() == QtCore.Qt.LeftButton:
             self.dragStartPos = QtCore.QPoint(event.pos())
