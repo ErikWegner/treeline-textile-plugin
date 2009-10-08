@@ -83,11 +83,12 @@ class TreeMainWin(QtGui.QMainWindow):
         self.resize(globalref.options.intData('WindowXSize', 10, 10000),
                     globalref.options.intData('WindowYSize', 10, 10000))
         if globalref.options.boolData('SaveWindowGeom'):
-            x = globalref.options.intData('WindowXPos', 0, 10000)
-            y = globalref.options.intData('WindowYPos', 0, 10000)
-            shift = TreeMainWin.winCascade * \
-                    globalref.treeControl.windowCount()
-            self.move(x + shift, y + shift)
+            x = globalref.options.intData('WindowXPos', -1000, 10000)
+            y = globalref.options.intData('WindowYPos', -1000, 10000)
+            if x != -1000 or y != -1000:
+                shift = TreeMainWin.winCascade * \
+                        globalref.treeControl.windowCount()
+                self.move(x + shift, y + shift)
         self.origPalette = QtGui.QApplication.palette()
         self.updateColors()
         self.autoSaveTimer = QtCore.QTimer(self)
