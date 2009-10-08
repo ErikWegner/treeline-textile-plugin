@@ -169,6 +169,10 @@ class DataEditLine(QtGui.QTextEdit):
         cursor.setPosition(selectEnd, QtGui.QTextCursor.KeepAnchor)
         self.setTextCursor(cursor)
 
+    def addHtmlLinkTag(self, ref, text):
+        """Add HTML inline internal link with given text"""
+        self.insertPlainText('<a href="#%s">%s</a>' % (ref, text))
+
     def contextMenuEvent(self, event):
         """Override popup menu to add tag submenu, ext editor and config
            modification menu items"""

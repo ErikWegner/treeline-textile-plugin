@@ -329,7 +329,8 @@ class TreeView(QtGui.QTreeWidget):
             self.dragStartPos = None
             return
         if self.noSelectClickCallback:
-            self.noSelectClickCallback(clickedItem)
+            self.noSelectClickCallback(clickedItem.docItemRef)
+            self.noSelectClickCallback = None
             return
         if event.button() == QtCore.Qt.LeftButton:
             self.dragStartPos = QtCore.QPoint(event.pos())

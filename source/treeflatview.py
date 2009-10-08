@@ -53,6 +53,7 @@ class FlatView(QtGui.QListWidget):
         self.incremSearchMode = False
         self.incremSearchStr = ''
         self.editedItem = None
+        self.noSelectClickCallback = None
         self.connect(self, QtCore.SIGNAL('itemSelectionChanged()'),
                      self.changeSelected)
         self.connect(self,
@@ -247,6 +248,10 @@ class FlatView(QtGui.QListWidget):
             globalref.setStatusBar('')
         clickedItem = self.itemAt(event.pos())
         if not clickedItem:  # skip unselecting click on blank space
+            return
+        if self.noSelectClickCallback:
+            self.noSelectClickCallback(clickedItem.docItemRef)
+            self.noSelectClickCallback = None
             return
         if event.button() == QtCore.Qt.RightButton:
             return           # stop rename when context menu is used

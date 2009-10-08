@@ -187,6 +187,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.fileImported = False
         self.duplicateSelect = None
         self.storedOpenNodes = []
+        self.linkTagEditor = None
         self.printData = printdata.PrintData()
 
         self.actions = {}
@@ -1736,7 +1737,23 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def inlineLinkTagPrompt(self):
         """Prompt user to pick node for inline internal link"""
-        pass
+        self.linkTagEditor = self.focusWidgetWithAttr('addHtmlLinkTag')
+        if not self.linkTagEditor:
+            return
+        view = self.leftTabs.currentWidget()
+        view.noSelectClickCallback = self.addInlineLinkTag
+        globalref.setStatusBar(_('Click on tree node for link destination'))
+        for action in self.actions.values():
+            action.setEnabled(False)
+
+    def addInlineLinkTag(self, item):
+        """Add link to item to active data editor"""
+        self.statusBar().clearMessage()
+        self.linkTagEditor.addHtmlLinkTag(item.refFieldText(), item.title())
+        self.linkTagEditor = None
+        for action in self.actions.values():
+            action.setEnabled(True)
+        self.updateCmdAvail()
 
     def focusLeftView(self):
         """Focus active view in the left pane"""
