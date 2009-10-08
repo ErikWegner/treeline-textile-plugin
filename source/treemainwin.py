@@ -569,13 +569,13 @@ class TreeMainWin(QtGui.QMainWindow):
             return fileName
         return ''
 
-    def fileNew(self):
+    def fileNew(self, newWinOk=True):
         """New file command"""
         if globalref.treeControl.savePrompt():
             dlg = treedialogs.TemplateDialog(self)
             if dlg.exec_() != QtGui.QDialog.Accepted:
                 return
-            globalref.treeControl.newFile(dlg.selectedPath())
+            globalref.treeControl.newFile(dlg.selectedPath(), newWinOk)
 
     def fileOpen(self):
         """Open a file"""

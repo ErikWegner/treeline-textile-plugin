@@ -102,6 +102,7 @@ class TreeControl(object):
         else:
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
+            self.updateWinMenu()
             self.autoOpen()
             win.show()
 
@@ -129,7 +130,8 @@ class TreeControl(object):
         elif not self.recentFiles and \
                 globalref.options.intData('RecentFiles', 0, 99):
             globalref.mainWin.show()
-            globalref.mainWin.fileNew()  # tmplate prompt if no recent files
+            # prompt for template if no recent files
+            globalref.mainWin.fileNew(False)
 
     def recentOpen(self, filePath):
         """Open from recentFiles call"""
@@ -148,9 +150,9 @@ class TreeControl(object):
             win.raise_()
             return True
         oldWin = globalref.mainWin
-        if newWinOk and globalref.options.boolData('OpenNewWindow'):
+        if newWinOk and globalref.options.boolData('OpenNewWindow') and \
+                (globalref.docRef.fileName or globalref.docRef.modified):
             win = treemainwin.TreeMainWin()
-            self.windowList.append(win)
         else:
             win = globalref.mainWin
         if not self.checkAutoSave(filePath):
@@ -196,6 +198,8 @@ class TreeControl(object):
             win.fileImported = True
         win.doc.root.open = True
         QtGui.QApplication.restoreOverrideCursor()
+        if win is not oldWin:
+            self.windowList.append(win)
         win.updateForFileChange(addToRecent)
         if win.pluginInterface:
             win.pluginInterface.execCallback(win.pluginInterface.
@@ -230,7 +234,8 @@ class TreeControl(object):
 
     def newFile(self, templatePath='', newWinOk=True):
         """Open a new file"""
-        if newWinOk and globalref.options.boolData('OpenNewWindow'):
+        if newWinOk and globalref.options.boolData('OpenNewWindow') and \
+                (globalref.docRef.fileName or globalref.docRef.modified):
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
         else:
@@ -313,26 +318,26 @@ class TreeControl(object):
         if not globalref.options.intData('AutoSaveMinutes', 0, 999):
             return True
         autoSaveFile = self.autoSaveFilePath(filePath)
-        if autoSaveFile:
-            ans = QtGui.QMessageBox.information(self, 'TreeLine',
-                                                _('Backup file "%s" exists.\n'\
-                                                  'A previous session may '\
-                                                  'have crashed.') %
-                                                autoSaveFile,
-                                                _('&Restore Backup'),
-                                                _('&Delete Backup'),
-                                                _('&Cancel File Open'), 0, 2)
-            if ans == 0:
-                if not self.restoreAutoSaveFile(filePath):
-                    QtGui.QMessageBox.warning(self, 'TreeLine',
-                                              _('Error - could not restore '\
-                                                'backup'))
-                return False
-            elif ans == 1:
-                self.delAutoSaveFile(filePath)
-                return True
-            else:
-                return False
+        if not  autoSaveFile:
+            return True
+        ans = QtGui.QMessageBox.information(self, 'TreeLine',
+                                            _('Backup file "%s" exists.\n'\
+                                              'A previous session may '\
+                                              'have crashed.') % autoSaveFile,
+                                            _('&Restore Backup'),
+                                            _('&Delete Backup'),
+                                            _('&Cancel File Open'), 0, 2)
+        if ans == 0:
+            if not self.restoreAutoSaveFile(filePath):
+                QtGui.QMessageBox.warning(self, 'TreeLine',
+                                          _('Error - could not restore '\
+                                            'backup'))
+            return False
+        elif ans == 1:
+            self.delAutoSaveFile(filePath)
+            return True
+        else:
+            return False
 
     def autoSaveFilePath(self, baseName=''):
         """Return the path to a backup file if it exists"""
