@@ -323,6 +323,8 @@ class TreeView(QtGui.QTreeWidget):
             return           # stop rename when context menu is used
         origX = self.horizontalScrollBar().value()
         QtGui.QTreeWidget.mousePressEvent(self, event)
+        # work around Qt bug - can't set to old value directly?
+        self.horizontalScrollBar().setValue(origX + 1)
         self.horizontalScrollBar().setValue(origX)
 
     def mouseReleaseEvent(self, event):
