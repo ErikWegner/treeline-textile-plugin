@@ -453,7 +453,9 @@ class TreeMainWin(QtGui.QMainWindow):
     def clipText(self):
         """Return text from the clipboard"""
         try:
-            text = unicode(QtGui.QApplication.clipboard().text('xml'))
+            # QString argument is work-around for bug in PyQt 4.6
+            text = unicode(QtGui.QApplication.clipboard().\
+                    text(QtCore.QString('xml')))
             if not text:
                 text = unicode(QtGui.QApplication.clipboard().text())
         except UnicodeError:
