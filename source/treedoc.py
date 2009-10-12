@@ -714,7 +714,7 @@ class TreeDoc(object):
         os.chdir(oldDir)
 
     def exportDirPage(self, dirName, nodeList):
-        """Write tree to nested directory struct with html tables"""
+        """Write tree to nested direct struct with html page for each node"""
         oldDir = os.getcwd()
         os.chdir(dirName.encode(sys.getfilesystemencoding()))
         cssLines = ['#sidebar {', 'width: 16em;', 'float: left;',

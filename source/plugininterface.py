@@ -491,6 +491,15 @@ class PluginInterface(object):
         except IOError:
             return False
 
+    def getFileName(self, caption, defaultExt, filterList, currentFilter=''):
+        """Return user specified file name for save as & export,
+           starts from directory of current or recently used file,
+           caption is the dialog title, defaultExt is added to base file name,
+           filterList is a list of filters with extensions, and
+           currentFilter is the active filter"""
+        return self.mainWin.getFileName(caption, defaultExt, filterList,
+                                        currentFilter)
+
     def getCurrentFileName(self):
         """Return the currently open filename"""
         return globalref.docRef.fileName
@@ -533,6 +542,30 @@ class PluginInterface(object):
         except IOError:
             return False
 
+    def exportDirTable(self, dirName, nodeList, addHeader=False):
+        """Export tree to nested directory struct with html tables,
+           dirName is initial export directory,
+           nodeList is list of nodes to export (defaults to selection)"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
+        try:
+            globalref.docRef.exportDirTable(dirName, nodeList, addHeader)
+            return True
+        except IOError:
+            return False
+
+    def exportDirPage(self, dirName, nodeList):
+        """Export tree to nested directory struct with html page for each node,
+           dirName is initial export directory,
+           nodeList is list of nodes to export (defaults to selection)"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
+        try:
+            globalref.docRef.exportDirPage(dirName, nodeList)
+            return True
+        except IOError:
+            return False
+
     def exportXslt(self, fileRef, includeRoot=True, indent=20):
         """Export XSLT file for the current formatting,
            fileRef is either a file path string or a file-like object
@@ -545,71 +578,108 @@ class PluginInterface(object):
         except IOError:
             return False
 
-    def exportTrlSubtree(self, fileRef):
+    def exportTrlSubtree(self, fileRef, nodeList, addBranches=True):
         """Export current branch as a TreeLine subtree,
            fileRef is either a file path string or a file-like object
-           (if it is a file-like object, fileRef.name must be defined)
+           (if it is a file-like object, fileRef.name must be defined),
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportTrlSubtree(fileRef, [self.getCurrentNode()])
+            globalref.docRef.exportTrlSubtree(fileRef, nodeList, addBranches)
             return True
         except IOError:
             return False
 
-    def exportTable(self, fileRef):
+    def exportTable(self, fileRef, nodeList, addBranches=True):
         """Export current item's children as a table of data,
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportTable(fileRef, [self.getCurrentNode()])
+            globalref.docRef.exportTable(fileRef, nodeList, addBranches)
             return True
         except IOError:
             return False
 
-    def exportTabbedTitles(self, fileRef, includeRoot=True, openOnly=False):
+    def exportTabbedTitles(self, fileRef, nodeList, addBranches=True,
+                           includeRoot=True, openOnly=False):
         """Export current branch to tabbed text titles,
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportTabbedTitles(fileRef,
-                                                [self.getCurrentNode()],
-                                                True, includeRoot, openOnly)
+            globalref.docRef.exportTabbedTitles(fileRef, nodeList, addBranches,
+                                                includeRoot, openOnly)
             return True
         except IOError:
             return False
 
-    def exportXbelBookmarks(self, fileRef):
+    def exportXbelBookmarks(self, fileRef, nodeList, addBranches=True):
         """Export current branch to XBEL format bookmarks,
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportXbel(fileRef, [self.getCurrentNode()])
+            globalref.docRef.exportXbel(fileRef, nodeList, addBranches)
             return True
         except IOError:
             return False
 
-    def exportHtmlBookmarks(self, fileRef):
+    def exportHtmlBookmarks(self, fileRef, nodeList, addBranches=True):
         """Export current branch to HTML format bookmarks,
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportHtmlBookmarks(fileRef,
-                                                 [self.getCurrentNode()])
+            globalref.docRef.exportHtmlBookmarks(fileRef, nodeList,
+                                                 addBranches)
             return True
         except IOError:
             return False
 
-    def exportGenericXml(self, fileRef):
+    def exportGenericXml(self, fileRef, nodeList, addBranches=True):
         """Export current branch to generic XML (non-TreeLine) file,
            fileRef is either a file path string or a file-like object
            (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
            returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
         try:
-            globalref.docRef.exportGenericXml(fileRef, [self.getCurrentNode()])
+            globalref.docRef.exportGenericXml(fileRef, nodeList, addBranches)
+            return True
+        except IOError:
+            return False
+
+    def exportOdf(self, fileRef, nodeList, addBranches=True,
+                  includeRoot=True, openOnly=False):
+        """Export an ODF format text file,
+           fileRef is either a file path string or a file-like object
+           (if it is a file-like object, fileRef.name must be defined)
+           nodeList is list of nodes to export (defaults to selection),
+           returns True on success, False on failure"""
+        if not nodeList:
+            nodeList = self.getSelectedNodes()
+        fontInfo = QtGui.QFontInfo(self.mainWin.dataOutSplit.widget(0).font())
+        try:
+            globalref.docRef.exportOdf(fileRef, nodeList, fontInfo.family(),
+                                       fontInfo.pointSize(),
+                                       fontInfo.fixedPitch(), addBranches,
+                                       includeRoot, openOnly)
             return True
         except IOError:
             return False
