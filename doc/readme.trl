@@ -1490,33 +1490,42 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <Name>New Features:</Name>
 <TEXT_BULLETS item="y">
 <Topic>Multiple document interface</Topic>
+<Text>Multiple TreeLine windows with different files can be open within the same TreeLine session.  The &quot;Open files in new windows&quot; general option controls whether new windows are used when opening or creating files.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Window menu</Topic>
+<Text>A &quot;Window&quot; menu has been added with commands to create new windows, close windows, or select from a list of current windows.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Multiple views of same file</Topic>
+<Text>The &quot;Window-&gt;New Window&quot; command creates a new window with views of the same TreeLine file.  Changes in either window are saved in the same document.  This can be used to work in different sections of the file simultaneously.  For performance reasons, the non-active window does not show the changes made in the active window until the non-active window is focused.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Attach to session</Topic>
+<Text>Starting TreeLine (from a shortcut, file association or command line) will activate an existing TreeLine session if it is already running.  A new window will be opened if an unopened file was specified by file association or in the command line.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Insert inline links</Topic>
+<Text>An &quot;Add internal link&quot; context menu has been added to text boxes in the data editor.  It prompts for another node to be clicked with the mouse, then an inline internal link is added with that node's reference information.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>HTML directory page export</Topic>
+<Text>Added an &quot;HTML directory pages&quot; export option.  This will export to a directory structure with an HTML file for every node.  A navigation pane on the left side of each page contains links to the node's parent, uncles and children.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Updates:</Name>
 <TEXT_BULLETS item="y">
-<Topic>Add exports to plugin interface</Topic>
+<Topic>General options dialog to 3 columns</Topic>
+<Text>The general options dialog has been split into three columns for better viewing on small, wide displays.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
-<Topic>General options dialog to 3 columns</Topic>
+<Topic>Add exports to plugin interface</Topic>
+<Text>Additional export commands and export options have been added to the plugin interface.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>No initial default window position</Topic>
+<Text>To avoid a problem on the Mac platform, when TreeLine is run for the first time, it lets the OS determine the window position.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 </HEADING3>
