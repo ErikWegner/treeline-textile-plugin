@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2009-10-12 by Doug Bell
+; Last modified : 2009-10-14 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.2.4"
+!define VERSION "1.3.0"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -322,9 +322,11 @@ SectionEnd
                 File ".\lib\pyexpat.pyd"
                 File ".\lib\PyQt4.QtCore.pyd"
                 File ".\lib\PyQt4.QtGui.pyd"
+                File ".\lib\PyQt4.QtNetwork.pyd"
 		File ".\lib\python26.dll"
                 File ".\lib\QtCore4.dll"
                 File ".\lib\QtGui4.dll"
+                File ".\lib\QtNetwork4.dll"
                 File ".\lib\select.pyd"
                 File ".\lib\sip.pyd"
                 File ".\lib\unicodedata.pyd"
@@ -479,6 +481,7 @@ Section /o "${NAME} source code" source
 	File ".\source\recentfiles.py"
 	File ".\source\setup.py"
         File ".\source\spellcheck.py"
+        File ".\source\treecontrol.py"
 	File ".\source\treedialogs.py"
 	File ".\source\treedoc.py"
         File ".\source\treeeditviews.py"
@@ -862,10 +865,12 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\python23.dll"
         Delete "$INSTDIR\lib\PyQt4.QtCore.pyd"
         Delete "$INSTDIR\lib\PyQt4.QtGui.pyd"
+        Delete "$INSTDIR\lib\PyQt4.QtNetwork.pyd"
         Delete "$INSTDIR\lib\QtCore4.dll"
         Delete "$INSTDIR\lib\QtCore.pyd"
         Delete "$INSTDIR\lib\QtGui4.dll"
         Delete "$INSTDIR\lib\QtGui.pyd"
+        Delete "$INSTDIR\lib\QtNetwork4.dll"
         Delete "$INSTDIR\lib\qt-mt230nc.dll"
         Delete "$INSTDIR\lib\select.pyd"
         Delete "$INSTDIR\lib\sip.pyd"
@@ -916,6 +921,7 @@ Section "Uninstall"
 	Delete "$INSTDIR\source\textedit2.py"
 	Delete "$INSTDIR\source\textedit3.py"
 	Delete "$INSTDIR\source\tmpcontrol.py"
+        Delete "$INSTDIR\source\treecontrol.py"
 	Delete "$INSTDIR\source\treedialogs.py"
 	Delete "$INSTDIR\source\treedoc.py"
         Delete "$INSTDIR\source\treeeditviews.py"
