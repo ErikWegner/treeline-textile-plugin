@@ -28,44 +28,56 @@ class Option(object):
             if sys.platform.startswith('win'):
                 self.path = unicode(os.environ.get('APPDATA', ''),
                                     sys.getfilesystemencoding())
-                midPath = os.path.join(u'bellz', dirName)
-                fileName = u'%s.ini' % dirName.split('-')[0]
+                altPath = os.path.join(globalref.modPath, u'%s.ini' % fileName)
+                if self.path and os.path.exists(self.path):
+                    self.path = os.path.join(self.path, u'bellz', dirName)
+                    if (os.path.exists(self.path) or
+                           not os.path.exists(altPath)) and self.createDirs():
+                        self.path = os.path.join(self.path,
+                                                 u'%s.ini' % fileName)
+                    else:
+                        self.path = altPath
+                else:
+                    self.path = altPath
             else:
                 self.path = unicode(os.environ.get('HOME', ''),
                                     sys.getfilesystemencoding())
-                midPath = u'.%s' % dirName
-                fileName = u'%src' % dirName.split('-')[0]
-            if self.path and os.path.exists(self.path):
-                self.path = os.path.join(self.path, midPath)
-                try:
-                    if not os.path.isdir(self.path):
-                        if os.path.isfile(self.path):
-                            os.remove(self.path)
-                        os.makedirs(self.path)
-                    self.pluginPath = os.path.join(self.path, u'plugins')
-                    if not os.path.isdir(self.pluginPath):
-                        os.makedirs(self.pluginPath)
-                    self.iconPath = os.path.join(self.path, u'icons')
-                    if not os.path.isdir(self.iconPath):
-                        os.makedirs(self.iconPath)
-                    self.templatePath = os.path.join(self.path, u'templates')
-                    if not os.path.isdir(self.templatePath):
-                        os.makedirs(self.templatePath)
-                    self.path = os.path.join(self.path, fileName)
-                except OSError:
+                if self.path and os.path.exists(self.path):
+                    self.path = os.path.join(self.path, u'.%s' % dirName)
+                    if self.createDirs():
+                        self.path = os.path.join(self.path, u'%src' % fileName)
+                else:
                     self.path = ''
-                    self.pluginPath = ''
-                    self.iconPath = ''
-                    self.templatePath = ''
-            else:
-                self.path = ''
-            if not self.path and sys.platform.startswith('win'):
-                self.path = os.path.join(globalref.modPath, fileName)
         self.keySpaces = keySpaces
         self.dfltDict = {}
         self.userDict = {}
         self.dictList = (self.userDict, self.dfltDict)
         self.chgList = []
+
+    def createDirs(self):
+        """Create option, plugin, icon & template directories if necessary
+           and save path locations.  Return True on success."""
+        try:
+            if not os.path.isdir(self.path):
+                if os.path.isfile(self.path):
+                    os.remove(self.path)
+                os.makedirs(self.path)
+            self.pluginPath = os.path.join(self.path, u'plugins')
+            if not os.path.isdir(self.pluginPath):
+                os.makedirs(self.pluginPath)
+            self.iconPath = os.path.join(self.path, u'icons')
+            if not os.path.isdir(self.iconPath):
+                os.makedirs(self.iconPath)
+            self.templatePath = os.path.join(self.path, u'templates')
+            if not os.path.isdir(self.templatePath):
+                os.makedirs(self.templatePath)
+        except OSError:
+            self.path = ''
+            self.pluginPath = ''
+            self.iconPath = ''
+            self.templatePath = ''
+            return False
+        return True
 
     def loadAll(self, defaultList):
         """Reads defaultList & file, writes file if required
