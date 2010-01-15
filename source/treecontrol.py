@@ -472,6 +472,16 @@ class TreeControl(object):
                 win.updateMultiWinTree()
             win.updateNonModalDialogs()
 
+    def forceUpdateWindow(self):
+        """Update an alternate window that shows the same file"""
+        oldWin = globalref.mainWin
+        oldWin.saveMultiWinTree()
+        for win in self.duplicateWindows():
+            globalref.updateRefs(win)
+            win.updateMultiWinTree()
+        globalref.updateRefs(oldWin)
+        oldWin.updateMultiWinTree()
+
 
 class WindowAction(QtGui.QAction):
     """Menu item for a window entry"""

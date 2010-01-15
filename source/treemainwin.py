@@ -392,6 +392,8 @@ class TreeMainWin(QtGui.QMainWindow):
         self.actions['DataFilterClear'].setEnabled(self.condFilter != None or
                                                    len(self.textFilter))
         self.actions['ToolsRemXLST'].setEnabled(len(self.doc.xlstLink))
+        self.actions['WinUpdateWindow'].setEnabled(len(globalref.treeControl.
+                                                       duplicateWindows()))
         self.statusBar().clearMessage()
         if self.pluginInterface:
             self.pluginInterface.execCallback(self.pluginInterface.
@@ -2588,6 +2590,14 @@ class TreeMainWin(QtGui.QMainWindow):
         self.actions['WinCloseWindow'] = winCloseAct
         self.connect(winCloseAct, QtCore.SIGNAL('triggered()'),
                      globalref.treeControl.closeWindow)
+
+        winUpdateAct = QtGui.QAction(_('&Update Other Window'), self)
+        winUpdateAct.setStatusTip(_('Update the contents of an alternate '
+                                    'window'))
+        self.winMenu.addAction(winUpdateAct)
+        self.actions['WinUpdateWindow'] = winUpdateAct
+        self.connect(winUpdateAct, QtCore.SIGNAL('triggered()'),
+                     globalref.treeControl.forceUpdateWindow)
 
         self.winMenu.addSeparator()
 
