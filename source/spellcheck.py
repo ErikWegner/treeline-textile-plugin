@@ -52,8 +52,8 @@ class SpellCheck(object):
         results = [self.stdOut.readline()]
         while results[-1] != '\n':
             results.append(self.stdOut.readline())
-        return filter(None, [formatOutput(unicode(line, 'utf-8'), skipList)
-                             for line in results])
+        return filter(None, [formatOutput(result, line, skipList)
+                             for result in results])
 
     def close(self):
         """Shut down hooks to outside program"""
@@ -83,23 +83,25 @@ class SpellCheckError(Exception):
 guessRe = re.compile('[&?] (\S+) \d+ (\d+): (.+)')
 noGuessRe = re.compile('# (\S+) (\d+)')
 
-def formatOutput(line, skipList=[]):
+def formatOutput(result, line, skipList=[]):
     """Return tuple of word, position and guess list"""
-    line = line.strip()
-    guessMatch = guessRe.match(line)
-    if guessMatch:
-        word = guessMatch.group(1)
-        if word not in skipList:
-            return (word, int(guessMatch.group(2)) - 1,
-                    guessMatch.group(3).split(', '))
-        else:
+    result = unicode(result, 'utf-8').strip()
+    match = guessRe.match(result)
+    if match:
+        guesses = match.group(3).split(', ')
+    else:
+        match = noGuessRe.match(result)
+        if not match:
             return None
-    noGuessMatch = noGuessRe.match(line)
-    if noGuessMatch:
-        word = noGuessMatch.group(1)
-        if word not in skipList:
-            return (word, int(noGuessMatch.group(2)) - 1, [])
-    return None
+        guesses = []
+    word = match.group(1)
+    if word in skipList:
+        return None
+    wordPos = int(match.group(2)) - 1
+    # work around unicode bug in older versions of aspell
+    while line[wordPos:wordPos + len(word)] != word and wordPos > 0:
+        wordPos -= 1
+    return (word, wordPos, guesses)
 
 
 if __name__ == '__main__':
