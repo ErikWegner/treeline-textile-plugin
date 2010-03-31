@@ -1250,9 +1250,9 @@ class TreeMainWin(QtGui.QMainWindow):
                     fields = [item.nodeFormat().findField(name) for name in
                               dlg.resultDict.keys()]
                     self.pluginInterface.execCallback(globalref.
-                                                           pluginInterface.
-                                                           dataChangeCallbacks,
-                                                           item, fields)
+                                                      pluginInterface.
+                                                      dataChangeCallbacks,
+                                                      item, fields)
             self.updateViews()
         else:
             QtGui.QMessageBox.warning(self, 'TreeLine',

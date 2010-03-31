@@ -915,8 +915,13 @@ class TreeItem(object):
 
     def editFields(self, valueDict):
         """Set values for fields based on dictionary"""
-        for field in valueDict.keys():
-            self.data[field] = valueDict[field]
+        for fieldName, value in valueDict.iteritems():
+            field = self.nodeFormat().findField(fieldName)
+            if field:
+                newValue, ok = field.storedText(value)
+                if ok:
+                    value = newValue
+            self.data[fieldName] = value
         globalref.docRef.modified = True
 
     def childTypes(self):
