@@ -116,9 +116,10 @@ class Option(object):
         if storeChange:
             self.chgList.append(key)
 
-    def boolData(self, key):
+    def boolData(self, key, defaultOnly=False):
         """Returns true or false from yes or no in option data"""
-        for data in self.dictList:
+        dictList = defaultOnly and (self.dfltDict,) or self.dictList
+        for data in dictList:
             val = data.get(key)
             if val and val[0] in ('y', 'Y'):
                 return True
@@ -127,9 +128,10 @@ class Option(object):
         print 'Option error - bool key', key, 'is not valid'
         return False
 
-    def numData(self, key, min=None, max=None):
+    def numData(self, key, min=None, max=None, defaultOnly=False):
         """Return float from option data"""
-        for data in self.dictList:
+        dictList = defaultOnly and (self.dfltDict,) or self.dictList
+        for data in dictList:
             val = data.get(key)
             if val:
                 try:
@@ -142,9 +144,10 @@ class Option(object):
         print 'Option error - float key', key, 'is not valid'
         return False
 
-    def intData(self, key, min=None, max=None):
+    def intData(self, key, min=None, max=None, defaultOnly=False):
         """Return int from option data"""
-        for data in self.dictList:
+        dictList = defaultOnly and (self.dfltDict,) or self.dictList
+        for data in dictList:
             val = data.get(key)
             if val:
                 try:
@@ -157,9 +160,10 @@ class Option(object):
         print 'Option error - int key', key, 'is not valid'
         return False
 
-    def strData(self, key, emptyOk=0):
+    def strData(self, key, emptyOk=0, defaultOnly=False):
         """Return string from option data"""
-        for data in self.dictList:
+        dictList = defaultOnly and (self.dfltDict,) or self.dictList
+        for data in dictList:
             val = data.get(key)
             if val != None:
                 if val or emptyOk:
