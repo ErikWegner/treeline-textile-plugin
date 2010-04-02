@@ -1782,12 +1782,9 @@ class ToolbarDlg(QtGui.QDialog):
         self.updateFunction = updateFunction
         self.toolIcons = toolIcons
         self.modified = False
-        self.numToolbars = globalref.options.intData('ToolbarQuantity', 0,
-                                                 optiondefaults.maxNumToolbars)
+        self.numToolbars = 0
         self.availableCommands = []
-        self.toolbarLists = [globalref.options.
-                             strData('Toolbar%d' % num, True).split(',') for
-                             num in range(self.numToolbars)]
+        self.toolbarLists = []
 
         topLayout = QtGui.QVBoxLayout(self)
         gridLayout = QtGui.QGridLayout()
@@ -1809,14 +1806,13 @@ class ToolbarDlg(QtGui.QDialog):
         numberBox = QtGui.QGroupBox(_('Toolbar Quantity'))
         gridLayout.addWidget(numberBox, 0, 2)
         numberLayout = QtGui.QHBoxLayout(numberBox)
-        numberSpin = QtGui.QSpinBox()
-        numberLayout.addWidget(numberSpin)
-        numberSpin.setRange(0, optiondefaults.maxNumToolbars)
-        numberSpin.setValue(self.numToolbars)
+        self.quantitySpin = QtGui.QSpinBox()
+        numberLayout.addWidget(self.quantitySpin)
+        self.quantitySpin.setRange(0, optiondefaults.maxNumToolbars)
         numberlabel = QtGui.QLabel(_('&Toolbars'))
         numberLayout.addWidget(numberlabel)
-        numberlabel.setBuddy(numberSpin)
-        self.connect(numberSpin, QtCore.SIGNAL('valueChanged(int)'),
+        numberlabel.setBuddy(self.quantitySpin)
+        self.connect(self.quantitySpin, QtCore.SIGNAL('valueChanged(int)'),
                      self.changeQuantity)
 
         availableBox = QtGui.QGroupBox(_('A&vailable Commands'))
@@ -1838,7 +1834,6 @@ class ToolbarDlg(QtGui.QDialog):
 
         self.availableListWidget = QtGui.QListWidget()
         availableLayout.addWidget(self.availableListWidget)
-        self.updateAvailableCommands(menuCombo.currentText())
 
         buttonLayout = QtGui.QVBoxLayout()
         gridLayout.addLayout(buttonLayout, 1, 1)
@@ -1859,7 +1854,6 @@ class ToolbarDlg(QtGui.QDialog):
         toolbarLayout = QtGui.QVBoxLayout(toolbarBox)
         self.toolbarCombo = QtGui.QComboBox()
         toolbarLayout.addWidget(self.toolbarCombo)
-        # self.updateToolbarCombo()
         self.connect(self.toolbarCombo,
                      QtCore.SIGNAL('currentIndexChanged(int)'),
                      self.updateToolbarCommands)
@@ -1881,11 +1875,12 @@ class ToolbarDlg(QtGui.QDialog):
         self.connect(self.moveDownButton, QtCore.SIGNAL('clicked()'),
                      self.moveDown)
 
-        self.updateToolbarCombo()
-        self.updateToolbarCommands(0)
-
         ctrlLayout = QtGui.QHBoxLayout()
         topLayout.addLayout(ctrlLayout)
+        defaultButton = QtGui.QPushButton(_('Restore Defaults'))
+        ctrlLayout.addWidget(defaultButton)
+        self.connect(defaultButton, QtCore.SIGNAL('clicked()'),
+                     self.restoreDefaults)
         ctrlLayout.addStretch(0)
         okButton = QtGui.QPushButton(_('&OK'))
         ctrlLayout.addWidget(okButton)
@@ -1900,6 +1895,11 @@ class ToolbarDlg(QtGui.QDialog):
         ctrlLayout.addWidget(cancelButton)
         self.connect(cancelButton, QtCore.SIGNAL('clicked()'),
                      self, QtCore.SLOT('reject()'))
+
+        self.loadToolbars()
+        self.updateAvailableCommands(menuCombo.currentText())
+        self.updateToolbarCombo()
+        self.updateToolbarCommands(0)
 
     def translatedCommand(self, command):
         """Return command translated and with spaces added"""
@@ -1955,6 +1955,19 @@ class ToolbarDlg(QtGui.QDialog):
         QtGui.QListWidgetItem(ToolbarDlg.separatorString,
                               self.availableListWidget)
         self.availableListWidget.setCurrentRow(0)
+
+    def loadToolbars(self, defaultOnly=False):
+        """Load toolbar data from options"""
+        self.numToolbars = globalref.options.intData('ToolbarQuantity', 0,
+                                                 optiondefaults.maxNumToolbars,
+                                                 defaultOnly)
+        self.quantitySpin.blockSignals(True)
+        self.quantitySpin.setValue(self.numToolbars)
+        self.quantitySpin.blockSignals(False)
+        self.toolbarLists = [globalref.options.
+                             strData('Toolbar%d' % num, True, defaultOnly).
+                             split(',')
+                             for num in range(self.numToolbars)]
 
     def updateToolbarCombo(self):
         """Fill in toolbar numbers for current toolbar quantity"""
@@ -2036,6 +2049,13 @@ class ToolbarDlg(QtGui.QDialog):
         self.toolbarListWidget.scrollToItem(item)
         command = self.toolbarLists[toolNum].pop(pos)
         self.toolbarLists[toolNum].insert(pos + 1, command)
+        self.setModified()
+
+    def restoreDefaults(self):
+        """Set toolbars back to default settings"""
+        self.loadToolbars(True)
+        self.updateToolbarCombo()
+        self.updateToolbarCommands(0)
         self.setModified()
 
     def applyChanges(self):
