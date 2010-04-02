@@ -1641,6 +1641,10 @@ class ShortcutDlg(QtGui.QDialog):
 
         ctrlLayout = QtGui.QHBoxLayout()
         topLayout.addLayout(ctrlLayout)
+        defaultButton = QtGui.QPushButton(_('Restore Defaults'))
+        ctrlLayout.addWidget(defaultButton)
+        self.connect(defaultButton, QtCore.SIGNAL('clicked()'),
+                     self.restoreDefaults)
         ctrlLayout.addStretch(0)
         okButton = QtGui.QPushButton(_('&OK'))
         ctrlLayout.addWidget(okButton)
@@ -1672,6 +1676,11 @@ class ShortcutDlg(QtGui.QDialog):
         viewport.adjustSize()
         return scrollArea
 
+    def restoreDefaults(self):
+        """Set toolbars back to default settings"""
+        for edit in self.editList:
+            edit.loadKey(True)
+
     def accept(self):
         """Save changes to options and update actions before closing"""
         for edit in self.editList:
@@ -1689,7 +1698,12 @@ class KeyLineEdit(QtGui.QLineEdit):
         self.dialogRef = dialogRef
         self.setReadOnly(True)
         self.modified = False
-        keyName = globalref.options.strData(self.command, True)
+        self.key = None
+        self.loadKey()
+
+    def loadKey(self, defaultOnly=False):
+        """Load key shortcut"""
+        keyName = globalref.options.strData(self.command, True, defaultOnly)
         if keyName:
             keyName = '+'.join(keyName.split())  # for legacy config files
             self.key = QtGui.QKeySequence(keyName)
@@ -1697,6 +1711,8 @@ class KeyLineEdit(QtGui.QLineEdit):
         else:
             self.key = None
             self.setText(KeyLineEdit.blankText)
+        if defaultOnly:
+            self.modified = True
 
     def clearKey(self):
         """Remove existing key"""
