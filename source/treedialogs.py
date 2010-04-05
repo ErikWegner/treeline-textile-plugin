@@ -1223,6 +1223,8 @@ class FindTextEntry(QtGui.QDialog):
         self.entry = QtGui.QLineEdit()
         topLayout.addWidget(self.entry)
         self.entry.setFocus()
+        self.statusLabel = QtGui.QLabel()
+        topLayout.addWidget(self.statusLabel)
         ctrlLayout = QtGui.QHBoxLayout()
         topLayout.addLayout(ctrlLayout)
         ctrlLayout.addStretch(0)
@@ -1251,8 +1253,9 @@ class FindTextEntry(QtGui.QDialog):
                 if rightSplitter == globalref.mainWin.dataOutSplit and \
                         rightView.height():
                     rightView.highlightWords(wordList)
+                self.statusLabel.setText('')
             else:
-                globalref.setStatusBar(_('Text string not found'), 4000)
+                self.statusLabel.setText(_('Text string not found'))
 
     def findNext(self):
         """Find next match"""

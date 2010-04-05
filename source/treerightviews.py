@@ -72,7 +72,8 @@ class DataOutView(QtGui.QTextBrowser):
             globalref.docRef.selection.findRefField(name[1:])
         elif name.startswith(u'exec:'):
             if not globalref.options.boolData('EnableExecLinks'):
-                globalref.setStatusBar(_('Executable links are not enabled'))
+                QtGui.QMessageBox.warning(self, 'TreeLine',
+                                         _('Executable links are not enabled'))
             elif sys.platform.startswith('win'):
                 name = name.replace("'", '"')
                 # windows interprets first quoted text as a title!

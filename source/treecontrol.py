@@ -105,6 +105,7 @@ class TreeControl(object):
             self.updateWinMenu()
             self.autoOpen()
             win.show()
+        globalref.setStatusBar(_('Ready'), 2000)
 
     def openMultipleFiles(self, fileNames):
         """Open files in multiple windows if unique"""

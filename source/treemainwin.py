@@ -204,7 +204,6 @@ class TreeMainWin(QtGui.QMainWindow):
         self.setupToolbars()
         self.restoreToolbarPos()
         self.filterStatus = QtGui.QLabel()
-        globalref.setStatusBar(_('Ready'), 2000)
         self.doc = treedoc.TreeDoc()
         self.updateForFileChange(False)
 
@@ -611,7 +610,8 @@ class TreeMainWin(QtGui.QMainWindow):
         if globalref.treeControl.savePrompt():
             path = self.findHelpPath()
             if not path:
-                globalref.setStatusBar(_('Sample directory not found'))
+                QtGui.QMessageBox.warning(self, 'TreeLine',
+                                          _('Sample directory not found'))
                 return
             fileName = unicode(QtGui.QFileDialog.getOpenFileName(self,
                                             _('Open Sample Template File'),
@@ -1702,7 +1702,8 @@ class TreeMainWin(QtGui.QMainWindow):
                                                   _('TreeLine README File'),
                                                   TreeMainWin.toolIcons)
             else:
-                globalref.setStatusBar(_('Read Me file not found'))
+                QtGui.QMessageBox.warning(self, 'TreeLine',
+                                          _('Read Me file not found'))
                 return
         TreeMainWin.helpView.show()
         TreeMainWin.helpView.textView.home()
