@@ -215,26 +215,29 @@ class TreeView(QtGui.QTreeWidget):
         """Begin iterative search"""
         self.incremSearchMode = True
         self.incremSearchStr = ''
-        globalref.setStatusBar(_('Search for:'))
+        globalref.setStatusBar(_('Search for:'), 0, True)
 
     def doIncremSearch(self):
         """Search for searchStr in all titles"""
-        globalref.setStatusBar(_('Search for: %s') % self.incremSearchStr)
+        globalref.setStatusBar(_('Search for: %s') % self.incremSearchStr,
+                               0, True)
         if globalref.docRef.selection.findTitleText(self.incremSearchStr):
-            globalref.setStatusBar(_('Search for: %s') % self.incremSearchStr)
+            globalref.setStatusBar(_('Search for: %s') % self.incremSearchStr,
+                                   0, True)
         else:
             globalref.setStatusBar(_('Search for: %s  (not found)') %
-                                             self.incremSearchStr)
+                                   self.incremSearchStr, 0, True)
 
     def treeIncremNext(self):
         """Search for next occurance of increm string"""
         if self.incremSearchStr:
             if globalref.docRef.selection.findNextTitle(self.incremSearchStr,
                                                         True):
-                globalref.setStatusBar(_('Next:  %s') % self.incremSearchStr)
+                globalref.setStatusBar(_('Next:  %s') % self.incremSearchStr,
+                                       0, True)
             else:
                 globalref.setStatusBar(_('Next:  %s  (not found)') %
-                                       self.incremSearchStr)
+                                       self.incremSearchStr, 0, True)
 
     def treeIncremPrev(self):
         """Search for previous occurance of increm string"""
@@ -242,10 +245,10 @@ class TreeView(QtGui.QTreeWidget):
             if globalref.docRef.selection.findNextTitle(self.incremSearchStr,
                                                         False):
                 globalref.setStatusBar(_('Previous:  %s') %
-                                       self.incremSearchStr)
+                                       self.incremSearchStr, 0, True)
             else:
                 globalref.setStatusBar(_('Previous:  %s  (not found)') %
-                                       self.incremSearchStr)
+                                       self.incremSearchStr, 0, True)
 
     def showTypeMenu(self):
         """Show popup menu for changing the item type"""

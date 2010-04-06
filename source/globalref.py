@@ -59,6 +59,6 @@ def updateRefs(win):
     global updateViewMenuStat
     updateViewMenuStat = mainWin.updateCmdAvail
     global setStatusBar
-    setStatusBar = mainWin.statusBar().showMessage
+    setStatusBar = mainWin.setStatusMsg
     global focusTree
     focusTree = mainWin.focusLeftView

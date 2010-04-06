@@ -287,8 +287,11 @@ class TreeMainWin(QtGui.QMainWindow):
             self.filterStatus.setText((u' %s ' % _('and')).join(filters))
             self.statusBar().addWidget(self.filterStatus)
             self.filterStatus.show()
+            self.statusBar().show()
         elif self.filterStatus.isVisible():
             self.statusBar().removeWidget(self.filterStatus)
+            if not self.showStatusBar:
+                self.statusBar().hide()
         QtGui.QApplication.restoreOverrideCursor()
 
     def updateViewSelection(self):
@@ -533,6 +536,15 @@ class TreeMainWin(QtGui.QMainWindow):
             QtGui.QMessageBox.warning(self, 'TreeLine',
                                 _('Could not load plugin module %s') %
                                 ', '.join(errorList))
+
+    def setStatusMsg(self, text, timeout=0, forceShow=False):
+        """Set the status bar message with optional timeout.
+           Force a hidden bar to show if forceShow is true"""
+        self.statusBar().showMessage(text, timeout)
+        if text and forceShow:
+            self.statusBar().show()
+        if not text and not self.showStatusBar:
+            self.statusBar().hide()
 
     def setMainCaption(self):
         """Set main window caption using doc filename path"""
@@ -1759,13 +1771,14 @@ class TreeMainWin(QtGui.QMainWindow):
             return
         view = self.leftTabs.currentWidget()
         view.noSelectClickCallback = self.addInlineLinkTag
-        globalref.setStatusBar(_('Click on tree node for link destination'))
+        globalref.setStatusBar(_('Click on tree node for link destination'),
+                               0, True)
         for action in self.actions.values():
             action.setEnabled(False)
 
     def addInlineLinkTag(self, item):
         """Add link to item to active data editor"""
-        self.statusBar().clearMessage()
+        globalref.setStatusBar('')
         self.linkTagEditor.addHtmlLinkTag(item.refFieldText(), item.title())
         self.linkTagEditor = None
         for action in self.actions.values():
