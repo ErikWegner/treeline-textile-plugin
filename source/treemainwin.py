@@ -79,6 +79,8 @@ class TreeMainWin(QtGui.QMainWindow):
         QtGui.QMainWindow.__init__(self, parent)
         self.setAcceptDrops(True)
         self.setStatusBar(QtGui.QStatusBar())
+        self.showStatusBar = globalref.options.boolData('ShowStatusBar')
+        self.viewStatusBar(self.showStatusBar)
         globalref.mainWin = self
         self.resize(globalref.options.intData('WindowXSize', 10, 10000),
                     globalref.options.intData('WindowYSize', 10, 10000))
@@ -1099,6 +1101,14 @@ class TreeMainWin(QtGui.QMainWindow):
         self.dataOutSplit.widget(1).showDescendants = checked
         self.updateRightView()
 
+    def viewStatusBar(self, checked):
+        """Toggle the display of the status bar"""
+        if checked:
+            self.statusBar().show()
+        else:
+            self.statusBar().hide()
+        self.showStatusBar = checked
+
     def dataTypeChange(self, action):
         """Change type based on submenu selection"""
         if self.doc.selection:
@@ -1452,6 +1462,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                 _('Show children in right-hand view'))
         optiondlg.OptionDlgBool(dlg, 'StartShowDescend',
                                 _('Show descendants in output view'))
+        optiondlg.OptionDlgBool(dlg, 'ShowStatusBar', _('Show status bar'))
         optiondlg.OptionDlgBool(dlg, 'PersistTreeState',
                                      _('Restore view states of recent files'))
         optiondlg.OptionDlgBool(dlg, 'SaveWindowGeom',
@@ -2312,6 +2323,17 @@ class TreeMainWin(QtGui.QMainWindow):
         viewDescendAct.setChecked(self.dataOutSplit.widget(1).showDescendants)
         self.connect(viewDescendAct, QtCore.SIGNAL('toggled(bool)'),
                      self.viewDescendants)
+
+        viewMenu.addSeparator()
+
+        viewStatusAct = QtGui.QAction(_('Show Status Bar'), self)
+        viewStatusAct.setStatusTip(_('Toggle the display of the status bar'))
+        viewStatusAct.setCheckable(True)
+        viewMenu.addAction(viewStatusAct)
+        self.actions['ViewStatusBar'] = viewStatusAct
+        viewStatusAct.setChecked(self.showStatusBar)
+        self.connect(viewStatusAct, QtCore.SIGNAL('toggled(bool)'),
+                     self.viewStatusBar)
 
         dataMenu = self.menuBar().addMenu(_('&Data'))
 
