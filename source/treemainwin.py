@@ -60,7 +60,7 @@ class TreeMainWin(QtGui.QMainWindow):
     xbelFileFilter = u'%s (*.xml)' % _('XBEL Bookmarks')
     mozFileFilter = u'%s (*.html *.htm)' % _('Mozilla Bookmarks')
     htmlFileFilter = u'%s (*.html *.htm)' % _('Html Files')
-    xsltFileFilter = u'%s (*.xsl)' % _('XSLT Files')
+    xsltFileFilter = u'%s (*.xsl *.xslt)' % _('XSLT Files')
     tableFileFilter = u'%s (*.tbl *.txt)' % _('Table Files')
     xmlFileFilter = u'%s (*.xml)' % _('XML Files')
     odfFileFilter = u'%s (*.odt)' % _('ODF Text Files')
@@ -555,7 +555,8 @@ class TreeMainWin(QtGui.QMainWindow):
         caption += u'- TreeLine'
         self.setWindowTitle(caption)
 
-    def getFileName(self, caption, defaultExt, filterList, currentFilter=''):
+    def getSaveFileName(self, caption, defaultExt, filterList,
+                        currentFilter=''):
         """Return user specified file name for save as & export"""
         dir, name = os.path.split(self.doc.fileName)
         if not dir:
@@ -587,6 +588,20 @@ class TreeMainWin(QtGui.QMainWindow):
             return fileName
         return ''
 
+    def getOpenFileName(self, caption, filterList):
+        """Return user specified file name for file open"""
+        dfltPath = os.path.dirname(self.doc.fileName)
+        if not dfltPath:
+            dfltPath = globalref.treeControl.recentFiles.firstPath()
+        if not dfltPath:
+            dfltPath = unicode(os.environ.get('HOME', ''),
+                               sys.getfilesystemencoding())
+        if not dfltPath:
+            dfltPath = '..'
+        fileName = QtGui.QFileDialog.getOpenFileName(self, caption, dfltPath,
+                                                     ';;'.join(filterList))
+        return unicode(fileName)
+
     def fileNew(self, newWinOk=True):
         """New file command"""
         if globalref.treeControl.savePrompt():
@@ -598,24 +613,11 @@ class TreeMainWin(QtGui.QMainWindow):
     def fileOpen(self):
         """Open a file"""
         if globalref.treeControl.savePrompt():
-            dfltPath = os.path.dirname(self.doc.fileName)
-            if not dfltPath:
-                dfltPath = globalref.treeControl.recentFiles.firstPath()
-            if not dfltPath:
-                dfltPath = unicode(os.environ.get('HOME', ''),
-                                   sys.getfilesystemencoding())
-            if not dfltPath:
-                dfltPath = '..'
-            filters = ';;'.join([TreeMainWin.tlGenFileFilter,
-                                 TreeMainWin.textFileFilter,
-                                 TreeMainWin.treepadFileFilter,
-                                 TreeMainWin.xbelFileFilter,
-                                 TreeMainWin.mozFileFilter,
-                                 TreeMainWin.odfFileFilter,
-                                 TreeMainWin.allFileFilter])
-            fileName = unicode(QtGui.QFileDialog.getOpenFileName(self, '',
-                                                                 dfltPath,
-                                                                 filters))
+            filters = [TreeMainWin.tlGenFileFilter, TreeMainWin.textFileFilter,
+                       TreeMainWin.treepadFileFilter,
+                       TreeMainWin.xbelFileFilter, TreeMainWin.mozFileFilter,
+                       TreeMainWin.odfFileFilter, TreeMainWin.allFileFilter]
+            fileName = self.getOpenFileName('', filters)
             if fileName:
                 globalref.treeControl.openFile(fileName)
 
@@ -651,8 +653,8 @@ class TreeMainWin(QtGui.QMainWindow):
                       TreeMainWin.allFileFilter]
         currentFilter = self.doc.encryptFile and 2 or \
                         (self.doc.compressFile and 1 or 0)
-        fileName = self.getFileName(_('Save As'), '.trl', filterList,
-                                    filterList[currentFilter])
+        fileName = self.getSaveFileName(_('Save As'), '.trl', filterList,
+                                        filterList[currentFilter])
         if fileName and globalref.treeControl.saveFile(fileName):
             self.setMainCaption()
             globalref.treeControl.recentFiles.addEntry(fileName)
@@ -660,11 +662,11 @@ class TreeMainWin(QtGui.QMainWindow):
             globalref.treeControl.delAutoSaveFile(oldFileName)
 
     def fileExport(self):
-        """Export the file as html, a table or text"""
+        """Export the file as html, a table or text.  Return fileName or ''"""
         ExportDlg = treedialogs.ExportDlg
         dlg = ExportDlg(self)
         if dlg.exec_() != QtGui.QDialog.Accepted:
-            return
+            return ''
         indent = globalref.options.intData('IndentOffset', 0,
                                            optiondefaults.maxIndentOffset)
         nodeList = self.doc.selection
@@ -678,14 +680,14 @@ class TreeMainWin(QtGui.QMainWindow):
         if not nodeList:
             QtGui.QMessageBox.warning(self, 'TreeLine',
                                       _('Nothing to export'))
-            return
+            return ''
         try:
             if ExportDlg.exportType == ExportDlg.htmlType:
-                fileName = self.getFileName(_('Export Html'), '.html',
-                                            [TreeMainWin.htmlFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export Html'), '.html',
+                                                [TreeMainWin.htmlFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if not fileName:
-                    return
+                    return ''
                 outGroup = output.OutputGroup()
                 if addBranches:
                     for node in nodeList:
@@ -729,7 +731,7 @@ class TreeMainWin(QtGui.QMainWindow):
                                                       QtGui.QLineEdit.Normal,
                                                       self.doc.xslCssLink)
                 if ok:
-                    fileName = self.getFileName(_('Export XSLT'), '.xsl',
+                    fileName = self.getSaveFileName(_('Export XSLT'), '.xsl',
                                                  [TreeMainWin.xsltFileFilter,
                                                   TreeMainWin.allFileFilter])
                     if fileName:
@@ -744,52 +746,54 @@ class TreeMainWin(QtGui.QMainWindow):
                               TreeMainWin.tlCompFileFilter,
                               TreeMainWin.allFileFilter]
                 origCompress = self.doc.compressFile
-                fileName = self.getFileName(_('Export Subtree'), '.trl',
-                                            filterList, self.doc.compressFile)
+                fileName = self.getSaveFileName(_('Export Subtree'), '.trl',
+                                                filterList,
+                                                self.doc.compressFile)
                 if fileName:
                     self.doc.exportTrlSubtree(fileName, nodeList, addBranches)
                 self.doc.compressFile = origCompress
             elif ExportDlg.exportType == ExportDlg.tableType:
-                fileName = self.getFileName(_('Export Table'), '.tbl',
-                                            [TreeMainWin.tableFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export Table'), '.tbl',
+                                                [TreeMainWin.tableFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportTable(fileName, nodeList, addBranches)
             elif ExportDlg.exportType == ExportDlg.textType:
-                fileName = self.getFileName(_('Export Titles'), '.txt',
-                                            [TreeMainWin.textFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export Titles'), '.txt',
+                                                [TreeMainWin.textFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportTabbedTitles(fileName, nodeList,
                                                 addBranches,
                                                 ExportDlg.includeRoot,
                                                 ExportDlg.openOnly)
             elif ExportDlg.exportType == ExportDlg.xbelType:
-                fileName = self.getFileName(_('Export XBEL Bookmarks'),
-                                            '.xml',
-                                            [TreeMainWin.xbelFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export XBEL Bookmarks'),
+                                                '.xml',
+                                                [TreeMainWin.xbelFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportXbel(fileName, nodeList, addBranches)
             elif ExportDlg.exportType == ExportDlg.mozType:
-                fileName = self.getFileName(_('Export Html Bookmarks'),
-                                            '.html',
-                                            [TreeMainWin.mozFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export Html Bookmarks'),
+                                                '.html',
+                                                [TreeMainWin.mozFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportHtmlBookmarks(fileName, nodeList,
                                                  addBranches)
             elif ExportDlg.exportType == ExportDlg.xmlType:
-                fileName = self.getFileName(_('Export Generic XML'), '.xml',
-                                            [TreeMainWin.xmlFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export Generic XML'),
+                                                '.xml',
+                                                [TreeMainWin.xmlFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportGenericXml(fileName, nodeList, addBranches)
             else:    #  ODF type
                 fontInfo = QtGui.QFontInfo(self.dataOutSplit.widget(0).font())
-                fileName = self.getFileName(_('Export ODF Text'), '.odt',
-                                            [TreeMainWin.odfFileFilter,
-                                             TreeMainWin.allFileFilter])
+                fileName = self.getSaveFileName(_('Export ODF Text'), '.odt',
+                                                [TreeMainWin.odfFileFilter,
+                                                 TreeMainWin.allFileFilter])
                 if fileName:
                     self.doc.exportOdf(fileName, nodeList, fontInfo.family(),
                                        fontInfo.pointSize(),
@@ -803,6 +807,9 @@ class TreeMainWin(QtGui.QMainWindow):
                 QtGui.QMessageBox.warning(self, 'TreeLine',
                                          _('Error - Could not write to %s') % \
                                           fileName)
+            return ''
+        return fileName
+
 
     def editUndo(self):
         """Undo the previous action"""

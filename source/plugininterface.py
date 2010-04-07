@@ -78,6 +78,10 @@ class PluginInterface(object):
             del frame
         return os.path.dirname(fileName)
 
+    def getLanguage(self):
+        """Return language code used by TreeLine for translations"""
+        return globalref.lang
+
     #*************************************************************************
     #  Node Interfaces:
     #*************************************************************************
@@ -491,14 +495,22 @@ class PluginInterface(object):
         except IOError:
             return False
 
-    def getFileName(self, caption, defaultExt, filterList, currentFilter=''):
-        """Return user specified file name for save as & export,
+    def getFileName(self, caption, defaultExt='', filterList=None,
+                    currentFilter='', saveMode=True):
+        """Return user specified file name for open, save as & export,
            starts from directory of current or recently used file,
-           caption is the dialog title, defaultExt is added to base file name,
-           filterList is a list of filters with extensions, and
-           currentFilter is the active filter"""
-        return self.mainWin.getFileName(caption, defaultExt, filterList,
-                                        currentFilter)
+           caption is the dialog title,
+           defaultExt is added to base file name in saveMode,
+           filterList is a list of filters with extensions (defaults to *.trl),
+           currentFilter is the active filter in saveMode,
+           saveMode is True for save and export, False for file open"""
+        if not filterList:
+            filterList = [self.mainWin.tlGenFileFilter]
+        if saveMode:
+            return self.mainWin.getSaveFileName(caption, defaultExt,
+                                                filterList, currentFilter)
+        else:
+            return self.mainWin.getOpenFileName(caption, filterList)
 
     def getCurrentFileName(self):
         """Return the currently open filename"""
@@ -526,6 +538,10 @@ class PluginInterface(object):
     def setFileSaveCallback(self, callbackFunc):
         """Set callback function to be called after a file is saved"""
         self.fileSaveCallbacks.append(callbackFunc)
+
+    def fileExport(self):
+        """Export data to html,xml, etc. via dialog and return the fileName"""
+        return self.mainWin.fileExport()
 
     def exportHtml(self, fileRef, includeRoot=True, openOnly=False, indent=20,
                    addHeader=False):
