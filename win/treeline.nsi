@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2009-10-14 by Doug Bell
+; Last modified : 2010-04-08 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.3.0"
+!define VERSION "1.3.1"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -96,6 +96,7 @@ Section "${NAME} (required)" treeline
 
 	; Put files there
 	File ".\lib\treeline.exe"
+	File ".\lib\treeline_dos.exe"
         File ".\lib\library.zip"
 	File ".\treeline.ico"
 
@@ -311,14 +312,12 @@ SectionEnd
 
                 SetOutPath "$INSTDIR\lib"
 
-                File ".\lib\_ctypes.pyd"
                 File ".\lib\_hashlib.pyd"
 		File ".\lib\_socket.pyd"
 		File ".\lib\_ssl.pyd"
                 File ".\lib\bz2.pyd"
-                File ".\lib\Microsoft.VC90.CRT.manifest"
-                File ".\lib\msvcp90.dll"
-                File ".\lib\msvcr90.dll"
+                File ".\lib\libgcc_s_dw2-1.dll"
+                File ".\lib\mingwm10.dll"
                 File ".\lib\pyexpat.pyd"
                 File ".\lib\PyQt4.QtCore.pyd"
                 File ".\lib\PyQt4.QtGui.pyd"
@@ -339,9 +338,6 @@ SectionEnd
                 File ".\lib\imageformats\qjpeg4.dll"
                 File ".\lib\imageformats\qsvg4.dll"
                 File ".\lib\imageformats\qtiff4.dll"
-                File ".\lib\Microsoft.VC90.CRT.manifest"
-                File ".\lib\msvcp90.dll"
-                File ".\lib\msvcr90.dll"
 
 	SectionEnd
 !endif
@@ -543,6 +539,7 @@ Section "Uninstall"
 
 	; Remove files and uninstaller
 	Delete "$INSTDIR\lib\treeline.exe"
+	Delete "$INSTDIR\lib\treeline_dos.exe"
         Delete "$INSTDIR\lib\library.zip"
 	Delete "$INSTDIR\lib\treeline.ico"
         Delete "$INSTDIR\lib\treeline.exe.log"
@@ -852,6 +849,7 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\bz2.pyd"
         Delete "$INSTDIR\lib\libqtc.pyd"
         Delete "$INSTDIR\lib\libsip.dll"
+        Delete "$INSTDIR\lib\libgcc_s_dw2-1.dll"
         Delete "$INSTDIR\lib\mingwm10.dll"
         Delete "$INSTDIR\lib\msvcp71.dll"
         Delete "$INSTDIR\lib\MSVCR71.dll"
