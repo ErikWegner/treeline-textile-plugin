@@ -395,7 +395,7 @@ class TreeControl(object):
                                                     _('&Yes'), _('&No'),
                                                     _('&Cancel'), 0, 2)
                 if ans == 0:
-                    self.fileSave()
+                    win.fileSave()
                 elif ans == 1:
                     self.delAutoSaveFile()
                     return True
