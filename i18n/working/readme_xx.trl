@@ -42,7 +42,7 @@ generic="TEXT_CNTR"
 condition="Done != &quot;true&quot;"
 icon="bullet_1">
 <Name type="Text"></Name>
-<Name_en type="Text">Version 1.3.1 (unstable development snapshot)</Name_en>
+<Name_en type="Text">Version 1.3.2 (unstable development snapshot)</Name_en>
 <Ref type="Text" ref="y"></Ref>
 <Done type="Boolean" format="yes/no" init="false">false</Done>
 <RefNum type="Text">1.4</RefNum>
@@ -659,6 +659,19 @@ icon="bullet_2">
 <Done>true</Done>
 <RefNum>1.12.1.2.2</RefNum>
 </CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT_TODO item="y"
+line0="{*Name_en*}"
+line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
+generic="CONTENTS_LINK_INDENT"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text">Multiple Windows</Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en">basics-wins</Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+</CONTENTS_LINK_INDENT_TODO>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
 <Name_en>Tree Navigation</Name_en>
@@ -1178,7 +1191,7 @@ The &lt;a href=&quot;#basics&quot;&gt;Basics&lt;/a&gt; section describes views a
 <Topic_en>Templates</Topic_en>
 <Text_en>When starting a new file, the templates dialog gives a choice of nodes with a single line of text or with long text.  The single line template only has a node title, while the long text options have a title and a multiple line text field in each node.  For long text, you can also choose between plain text, which preserves line breaks, and HTML text, which allows more complex formatting.&lt;br /&gt;&lt;br /&gt;
 
-There are a few more specific options, including canned setups for personal contact information a book list and a to-do list.</Text_en>
+There are a few more specific options, including canned setups for personal contact information, a book list and a to-do list.</Text_en>
 <Ref>start-templates</Ref>
 <Done>true</Done>
 </TEXT_HEAD>
@@ -1273,7 +1286,7 @@ The other tab in the left pane is the &quot;Flat View&quot;.  It displays all of
 <Topic_en>Right Pane Views</Topic_en>
 <Text_en>The right pane is tabbed to show one of three different views of the data. The &quot;Data Output&quot; view shows the formatted text for each node and is read-only (see &lt;a href=&quot;#fig-1&quot;&gt;Figure 1&lt;/a&gt;). The &quot;Data Editor&quot; view shows a text edit box for each data field within a node (see &lt;a href=&quot;#fig-2&quot;&gt;Figure 2&lt;/a&gt;). The &quot;Title List&quot; view shows a list of node titles that can be modified using typical text editor methods.&lt;br /&gt;&lt;br /&gt;
 
-When a parent node is selected in the tree, the the right view will default to showing information about the selected node in an upper pane and information about the selected node's children in the lower pane.  The &quot;View-&amp;gt;Show Child Pane&quot; command will toggle the display of the child nodes.  If the selected node has no children, the view will show a single pane with information about the selected node only.&lt;br /&gt;&lt;br /&gt;
+When a parent node is selected in the tree, the right view will default to showing information about the selected node in an upper pane and information about the selected node's children in the lower pane.  The &quot;View-&amp;gt;Show Child Pane&quot; command will toggle the display of the child nodes.  If the selected node has no children, the view will show a single pane with information about the selected node only.&lt;br /&gt;&lt;br /&gt;
 
 When multiple nodes are selected in the tree, the right view will not display any child node information.  It will instead show information about every selected node.&lt;br /&gt;&lt;br /&gt;
 
@@ -1317,6 +1330,25 @@ To add information to a new TreeLine document, use the &quot;Edit-&amp;gt;Add Ch
 <Done>true</Done>
 <RefNum>1.12.3.2</RefNum>
 </TEXT_HEAD>
+<TEXT_HEAD_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
+line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+generic="TEXT_HEAD"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Topic type="Text"></Topic>
+<Topic_en type="Text">Multiple Windows</Topic_en>
+<Text type="Text" html="y" lines="12"></Text>
+<Text_en type="Text" html="y" lines="12">Multiple TreeLine windows with different files can be open within the same TreeLine session. The &quot;Open files in new windows&quot; option in &quot;Tools-&gt;General Options&quot; controls whether new windows are used when opening or creating files.&lt;br /&gt;&lt;br /&gt;
+
+The &quot;Window-&gt;New Window&quot; command will create a new window with views of the same TreeLine file. Changes in either window are saved in the same document. This can be used to work in different sections of the file simultaneously. For performance reasons, the non-active window does not show the changes made in the active window until either the non-active window is focused or the &quot;Window-&gt;Update Other Window&quot; command is issued.&lt;br /&gt;&lt;br /&gt;
+
+Starting TreeLine (from a shortcut, file association or command line) will activate an existing TreeLine session if it is already running. A new window will be opened if an unopened file was specified by file association or in the command line.</Text_en>
+<Ref type="Text" ref="y">basics-wins</Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text"></RefNum>
+</TEXT_HEAD_TODO>
 </HEADING3>
 <HEADING3 item="y">
 <Name_en>Tree Navigation</Name_en>
@@ -1379,19 +1411,21 @@ The &quot;Edit-&amp;gt;Paste Node Text&quot; command renames the selection based
 <Done>true</Done>
 <RefNum>1.12.5.2</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD item="y">
+<TEXT_HEAD_TODO item="y">
 <Topic_en>Right Pane Views</Topic_en>
 <Text_en>In the right pane, the &quot;Data Editor&quot; view provides the most direct way to edit the data within a node. If the edited field is used in the title formatting, the node title in the tree will show the changes. The field editor will scroll, allowing multiple lines of text to be entered.&lt;br /&gt;&lt;br /&gt;
 
 There are items in the &quot;Data Editor&quot; box context menus to add HTML font tags around selected text. These tags include bold, italics, underline, size and color. Note that the fields must be set to display HTML content (see the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; section) for this to be effective.&lt;br /&gt;&lt;br /&gt;
 
+Another edit box conteext menu item will add an internal link in the text.  The status bar will then prompt the user to click on the link destination in the tree view.  This will add an internal link to that destination to the text in the edit box.  Of course, the field must be set to display HTML content for this to be effective.&lt;br /&gt;&lt;br /&gt;
+
 An external editor can also be invoked from a &quot;Data Editor&quot; box context menu.   After the text editor saves changes and is closed, the changed text will be in the text box.  The EDITOR environment variable can be used to specify the editor to start, or, if the variable doesn't exist, TreeLine will prompt for an executable to set as the default.&lt;br /&gt;&lt;br /&gt;
 
 Also in the right pane, the &quot;Title List&quot; view is useful to quickly rename child titles or to add new child nodes. A text list of new nodes can even be pasted directly into this view.</Text_en>
 <Ref>edit-view</Ref>
-<Done>true</Done>
+<Done>false</Done>
 <RefNum>1.12.5.3</RefNum>
-</TEXT_HEAD>
+</TEXT_HEAD_TODO>
 <TEXT_HEAD item="y">
 <Topic_en>Spell Check</Topic_en>
 <Text_en>There is a spell check command in the &quot;Tools&quot; menu.  Use of this command requires an external program to be installed (either aspell or ispell - see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).  If there are any misspelled words in the selected branch, a dialog will allow the word to be ignored, added to the dictionary, replaced with a suggestion or edited.  This will spell check the text in all data fields of each node.&lt;br /&gt;&lt;br /&gt;
@@ -1815,13 +1849,13 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Done>true</Done>
 <RefNum>1.12.10.4</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD item="y">
+<TEXT_HEAD_TODO item="y">
 <Topic_en>Command Line</Topic_en>
-<Text_en>Command line options allow non-interactive file importing and exporting. This allows automated runs to be scheduled. For more details, run &quot;treeline -h&quot; from the command line.</Text_en>
+<Text_en>Command line options allow non-interactive file importing and exporting. This allows automated runs to be scheduled. For more details, run &quot;treeline -h&quot; (or &quot;treeline_dos -h&quot; in Windows) from the command line.</Text_en>
 <Ref>file-cmdline</Ref>
-<Done>true</Done>
+<Done>false</Done>
 <RefNum>1.12.10.5</RefNum>
-</TEXT_HEAD>
+</TEXT_HEAD_TODO>
 </HEADING3>
 <HEADING3 item="y">
 <Name_en>File Import</Name_en>
@@ -1891,15 +1925,15 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Done>true</Done>
 <RefNum>1.12.12.1</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD item="y">
+<TEXT_HEAD_TODO item="y">
 <Topic_en>HTML</Topic_en>
 <Text_en>Single-file HTML output is similar to printing, with similar options. It can include the print header and footer in the HTML, and the number of columns can be set.&lt;br /&gt;&lt;br /&gt;
 
-There is also a multiple-file HTML export that creates a directory structure. Directories are named for the content of the reference data field, which must contain legal file names and not have duplicates under the same parent. Each HTML file is a table of data for a set of siblings, with links to the parent and child pages.</Text_en>
+There are also two multiple-file HTML export functions that create directory structures. Directories are named for the content of the reference data field, which must contain legal file names and not have duplicates under the same parent. The first form creates a table in each HTML file that contains the data for a set of siblings, as well as links to the parent and child pages.  The second form creates an HTML page for every node, with a navigation pane on the left side of each page that contains links to the node's parent, uncles and children.</Text_en>
 <Ref>export-html</Ref>
-<Done>true</Done>
+<Done>false</Done>
 <RefNum>1.12.12.1</RefNum>
-</TEXT_HEAD>
+</TEXT_HEAD_TODO>
 <TEXT_HEAD item="y">
 <Topic_en>Delimited Text</Topic_en>
 <Text_en>Data can be exported to tabbed title text and tab-delimited tables. These formats are the same as the corresponding import formats. When exporting to a table, only the first level of children is used, so you may wish to flatten the data before exporting.</Text_en>
@@ -1943,12 +1977,14 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Name_en>Customizations</Name_en>
 <Ref>custom</Ref>
 <Done>true</Done>
-<TEXT_HEAD item="y">
+<TEXT_HEAD_TODO item="y">
 <Topic_en>Options</Topic_en>
-<Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.</Text_en>
+<Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.&lt;br /&gt;&lt;br /&gt;
+
+Under Windows, a &quot;treeline.ini&quot; file in the user's application settings directory is used by default to store the settings.  For portable use of TreeLine, that file can be manually moved to TreeLine's &quot;lib&quot; directory.  Once it exists, a &quot;treeline.ini&quot; file in the &quot;lib&quot; directory will be used and updated automatically if the file isn't also in the user's application setings directory.</Text_en>
 <Ref>custom-options</Ref>
-<Done>true</Done>
-</TEXT_HEAD>
+<Done>false</Done>
+</TEXT_HEAD_TODO>
 <TEXT_HEAD item="y">
 <Topic_en>Fonts</Topic_en>
 <Text_en>Fonts used in the tree views, the output view and the editor views can be set in the &quot;Tools-&amp;gt;Set Fonts&quot; menu.</Text_en>
@@ -2074,19 +2110,6 @@ To subscribe, go to &lt;a href=&quot;https://lists.berlios.de/mailman/listinfo/t
 <RefNum>1.14.3</RefNum>
 </TEXT_PARA>
 </HEADING2>
-<CONTENTS_LINK_INDENT_TODO item="n"
-line0="{*Name_en*}"
-line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
-generic="CONTENTS_LINK_INDENT"
-condition="Done != &quot;true&quot;"
-icon="bullet_1">
-<Name type="Text"></Name>
-<Name_en type="Text"></Name_en>
-<Link type="InternalLink" html="y" linkalt="Name_en"></Link>
-<Ref type="Text" ref="y"></Ref>
-<Done type="Boolean" format="yes/no" init="false"></Done>
-<RefNum type="Text"></RefNum>
-</CONTENTS_LINK_INDENT_TODO>
 <TEXT_BULLETS_TODO item="n"
 line0="{*Topic_en*}"
 line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
@@ -2130,21 +2153,6 @@ icon="bullet_1">
 <Done type="Boolean" format="yes/no" init="false"></Done>
 <RefNum type="Text"></RefNum>
 </TEXT_PARA_TODO>
-<TEXT_HEAD_TODO item="n"
-line0="{*Topic_en*}"
-line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
-line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
-generic="TEXT_HEAD"
-condition="Done != &quot;true&quot;"
-icon="bullet_1">
-<Topic type="Text"></Topic>
-<Topic_en type="Text"></Topic_en>
-<Text type="Text" html="y" lines="12"></Text>
-<Text_en type="Text" html="y" lines="12"></Text_en>
-<Ref type="Text" ref="y"></Ref>
-<Done type="Boolean" format="yes/no" init="false"></Done>
-<RefNum type="Text"></RefNum>
-</TEXT_HEAD_TODO>
 <FIGURE_TODO item="n"
 line0="{*Topic_en*}"
 line1="&lt;p&gt;{*Picture_en*}&lt;/p&gt;"
