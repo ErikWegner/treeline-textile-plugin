@@ -419,7 +419,7 @@ class TreeControl(object):
         """Close the current window without exiting"""
         if self.windowCount() > 1:
             globalref.mainWin.close()
-        else:
+        elif self.savePrompt():
             self.newFile('', False)
 
     def duplicateWindows(self):
