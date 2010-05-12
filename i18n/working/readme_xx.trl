@@ -48,7 +48,7 @@ icon="bullet_1">
 <RefNum type="Text">1.4</RefNum>
 </TEXT_CNTR_TODO>
 <TEXT_CNTR_TODO item="y">
-<Name_en>May xx, 2010</Name_en>
+<Name_en>May 14, 2010</Name_en>
 <Done>false</Done>
 <RefNum>1.5</RefNum>
 </TEXT_CNTR_TODO>
@@ -1467,7 +1467,7 @@ The &quot;Edit-&amp;gt;Paste Node Text&quot; command renames the selection based
 
 There are items in the &quot;Data Editor&quot; box context menus to add HTML font tags around selected text. These tags include bold, italics, underline, size and color. Note that the fields must be set to display HTML content (see the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; section) for this to be effective.&lt;br /&gt;&lt;br /&gt;
 
-Another edit box conteext menu item will add an internal link in the text.  The status bar will then prompt the user to click on the link destination in the tree view.  This will add an internal link to that destination to the text in the edit box.  Of course, the field must be set to display HTML content for this to be effective.&lt;br /&gt;&lt;br /&gt;
+Another edit box context menu item will add an internal link in the text.  The status bar will then prompt the user to click on the link destination in the tree view.  This will add an internal link to that destination to the text in the edit box.  Of course, the field must be set to display HTML content for this to be effective.&lt;br /&gt;&lt;br /&gt;
 
 An external editor can also be invoked from a &quot;Data Editor&quot; box context menu.   After the text editor saves changes and is closed, the changed text will be in the text box.  The EDITOR environment variable can be used to specify the editor to start, or, if the variable doesn't exist, TreeLine will prompt for an executable to set as the default.&lt;br /&gt;&lt;br /&gt;
 
@@ -2046,7 +2046,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Topic_en>Options</Topic_en>
 <Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.&lt;br /&gt;&lt;br /&gt;
 
-Under Windows, a &quot;treeline.ini&quot; file in the user's application settings directory is used by default to store the settings.  For portable use of TreeLine, that file can be manually moved to TreeLine's &quot;lib&quot; directory.  Once it exists, a &quot;treeline.ini&quot; file in the &quot;lib&quot; directory will be used and updated automatically if the file isn't also in the user's application setings directory.</Text_en>
+Under Windows, a &quot;treeline.ini&quot; file in the user's application settings directory is used by default to store the settings.  For portable use of TreeLine, that file can be manually moved to TreeLine's &quot;lib&quot; directory.  Once it exists, a &quot;treeline.ini&quot; file in the &quot;lib&quot; directory will be used and updated automatically if the file isn't also in the user's application settings directory.</Text_en>
 <Ref>custom-options</Ref>
 <Done>false</Done>
 <RefNum>1.12.13.1</RefNum>
