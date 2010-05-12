@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.2"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.1"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -202,7 +202,7 @@ icon="bullet_2">
 <Name_en type="Text">General</Name_en>
 <Ref type="Text" ref="y"></Ref>
 <Done type="Boolean" format="yes/no" init="true">yes</Done>
-<RefNum type="Text"></RefNum>
+<RefNum type="Text">1.8.1</RefNum>
 <TEXT_BULLETS item="y"
 line0="{*Topic_en*}"
 line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
@@ -215,7 +215,7 @@ icon="bullet_2">
 <Text_en type="Text" html="y" lines="7">Stores almost any type of information, including plain text, HTML, numbers, dates, times, booleans, URLs, etc.</Text_en>
 <Ref type="Text" ref="y"></Ref>
 <Done type="Boolean" format="yes/no" init="true">yes</Done>
-<RefNum type="Text">1.8.1</RefNum>
+<RefNum type="Text">1.8.1.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Baumstruktur</Topic>
@@ -223,7 +223,7 @@ icon="bullet_2">
 <Text>Die Baumstruktur hilft dabei, Ordnung zu halten.</Text>
 <Text_en>The tree structure helps keep things organized.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.2</RefNum>
+<RefNum>1.8.1.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Felder</Topic>
@@ -231,7 +231,7 @@ icon="bullet_2">
 <Text>Jedes Element kann verschiedene Felder enthalten, die eine Mini-Datenbank bilden.</Text>
 <Text_en>Each node can have several fields that form a mini-database.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.3</RefNum>
+<RefNum>1.8.1.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Elementtypen</Topic>
@@ -239,7 +239,7 @@ icon="bullet_2">
 <Text>Verschiedene Element-Typen mit verschiedenen Felddefinitionen können in einer Datei zusammengefasst werden.</Text>
 <Text_en>Several node types, with different sets of fields, can be included in one file.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.4</RefNum>
+<RefNum>1.8.1.4</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Ausgabeformat</Topic>
@@ -247,19 +247,21 @@ icon="bullet_2">
 <Text>Das Ausgabeformat, einschließlich der anzuzeigenden Felder, Ausgabezeilen und eines Symbols (Icons) für die Baumansicht, kann für jeden Element-Typ separat definiert werden.</Text>
 <Text_en>The node format, including fields, output lines and tree-view icon, can be defined for each node type.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.5</RefNum>
+<RefNum>1.8.1.5</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Ansichten</Name>
 <Name_en>Views</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.2</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Linke Fensterhälfte</Topic>
 <Topic_en>Left-hand view</Topic_en>
 <Text>Die linke Fensterhälfte zeigt standardmäßig eine Baumstruktur, kann aber auch eine flache Ansicht der Unterelemente des aktuellen Elements zeigen.</Text>
 <Text_en>The left-hand view defaults to a tree view but can show a flat list of descendants of the current node.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.2.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Filter</Topic>
@@ -267,6 +269,7 @@ icon="bullet_2">
 <Text>Die flache Ansicht in der linken Fensterhälfte kann auch die Ergebnisse einer Filteroperation anzeigen.</Text>
 <Text_en>The left flat view also shows the results of filtering operations.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.2.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Rechte Fensterhälfte</Topic>
@@ -274,7 +277,7 @@ icon="bullet_2">
 <Text>Die rechte Fensterhälfte kann eine von drei Ansichten zeigen, mit denen die Daten angesehen, die Datenfelder und die Titelzeilen der Elemente bearbeitet werden können.</Text>
 <Text_en>The right-hand view can show one of three views - for showing output, editing node data and editing node titles.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.6</RefNum>
+<RefNum>1.8.2.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Element mit Unterelementen</Topic>
@@ -282,6 +285,7 @@ icon="bullet_2">
 <Text>Die rechte Fensterhälfte zeigt normalerweise eine zweigeteilte Ansicht des aktuellen Elements und seiner Unterelemente.</Text>
 <Text_en>The right-hand view is normally split to show data from the parent node and its children.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.2.4</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Mehrfache Auswahlen</Topic>
@@ -289,6 +293,7 @@ icon="bullet_2">
 <Text>Falls mehrfache Auswahlen selektiert sind, zeigt die rechte Fensterhälfte alle Daten der Auswahlen.</Text>
 <Text_en>If multiple nodes are selected, the right-hand view shows all of their data.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.2.5</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Unterelemente anzeigen</Topic>
@@ -296,18 +301,21 @@ icon="bullet_2">
 <Text>Die rechte Fensterhälfte kann so konfiguriert werden, dass alle Unterelemente sichtbar sind.</Text>
 <Text_en>The output view can be set to show indented output from all descendant nodes.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.2.6</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Navigation</Name>
 <Name_en>Navigation</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.3</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Inkrementelle Suche</Topic>
 <Topic_en>Incremental search</Topic_en>
 <Text>Eine inkrementelle Suche erlaubt es, Elemente mit passendem Titel schenll zu finden.</Text>
 <Text_en>There is a quick incremental search command to find a matching node title.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.3.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Suche</Topic>
@@ -315,6 +323,7 @@ icon="bullet_2">
 <Text>Ein Suchkommando durchsucht alle Datenfelder der Elemente.</Text>
 <Text_en>There is a find command that searches through all node data.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.3.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Auswahl wechseln</Topic>
@@ -322,18 +331,21 @@ icon="bullet_2">
 <Text>Kommandos zum Wechsel zu vorhergehenden und nachfolgenden Auswahlen erlauben eine schnelle Navigation zwischen den Teilen eines Baumes.</Text>
 <Text_en>Previous and next selection commands toggle selections to quickly move between parts of the tree.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.3.3</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Formatierung</Name>
 <Name_en>Formatting</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.4</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Format-Dialog</Topic>
 <Topic_en>Format dialog</Topic_en>
 <Text>Der Dialog zur Datentypkonfiguration hat mehrere Reiter, um schnell alle Typen, Felder und Ausgabeparameter festzulegen.</Text>
 <Text_en>The dialog for data type configuration has several tabs to easily set all type, field and output parameters.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.4.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Format-Kopien</Topic>
@@ -341,20 +353,21 @@ icon="bullet_2">
 <Text>Die Formatierungseinstellungen und das Datenschema kann von einer anderen TreeLine-Datei kopiert werden. Damit lassen sich einfach Vorlagen zur Wiederverwendung erzeugen.</Text>
 <Text_en>Formatting information can be copied from another TreeLine file.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.10</RefNum>
+<RefNum>1.8.4.2</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Datenbehandlung</Name>
 <Name_en>File Handling</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.5</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Rückgängig machen/Wiederherstellen</Topic>
 <Topic_en>Undo/redo</Topic_en>
 <Text>Alle Befehle oder Funktionen, die Daten verändern, können rückgängig gemacht und wiederhergestellt werden.</Text>
 <Text_en>Undo and redo commands are available for all modifying operations.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.12</RefNum>
+<RefNum>1.8.5.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Dateiformate</Topic>
@@ -362,7 +375,7 @@ icon="bullet_2">
 <Text>TreeLine verwendet in der Regel XML-Dateien. Auf Wunsch können die Dateien auch komprimiert und/oder verschlüsselt gespeichert werden.</Text>
 <Text_en>TreeLine files are XML by default, but there are options for automatically compressing or encrypting the files.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.14</RefNum>
+<RefNum>1.8.5.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Dokumentvorlagen</Topic>
@@ -370,6 +383,7 @@ icon="bullet_2">
 <Text>Dokumentvorlagen für neue Dateien enthalten vordefinierte Datentypen für Standardelemente.</Text>
 <Text_en>Document templates for new files are preformatted to cover basic needs.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.5.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Drucken</Topic>
@@ -377,20 +391,21 @@ icon="bullet_2">
 <Text>Die formatierte Datenausgabe kann gedruckt werden, wahlweise auch mit Linien, die die Baumstruktur verdeutlichen, und konfigurierbaren Kopf- und Fußzeilen</Text>
 <Text_en>The formatted output can be printed with parent/child lines and  headers and footers.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.13</RefNum>
+<RefNum>1.8.5.4</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Datenimport und -export</Name>
 <Name_en>File Import and Export</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.6</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>HTML-Export</Topic>
 <Topic_en>HTML export</Topic_en>
 <Text>Alle Daten können als HTML exportiert werden.</Text>
 <Text_en>The data can be exported to HTML.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.15</RefNum>
+<RefNum>1.8.6.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>XSLT-Export</Topic>
@@ -398,7 +413,7 @@ icon="bullet_2">
 <Text>Es kann ein XSLT-Stylesheet erzeugt werden, der zum formatierten Anzeigen der TreeLine-XML-Dateien geeignet ist.</Text>
 <Text_en>An XSLT file can be exported to work with the XML TreeLine files.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.16</RefNum>
+<RefNum>1.8.6.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Text Importieren und Exportieren</Topic>
@@ -406,7 +421,7 @@ icon="bullet_2">
 <Text>Text kann in verschiedenen Formaten importiert werden, u.a. als Freitext mit Leerzeilen, als einfache Tabelle mit Tabulatoren oder als Dokument, das mit Tabulatoren eingerückt und strukturiert ist. Die Tabellen oder strukturierten Dokumente kann TreeLine auch wieder exportieren.</Text>
 <Text_en>Tab-delimited tables and tab-indented text files can be imported and exported.  Plain text files and Treepad files can be imported.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.17</RefNum>
+<RefNum>1.8.6.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Lesezeichen-Dateien</Topic>
@@ -414,7 +429,7 @@ icon="bullet_2">
 <Text>Lesezeichen im Mozilla-Format und im XBEL-Standard, der z.B. von Konqueror verwendet wird, lassen sich importieren und exportieren.</Text>
 <Text_en>Mozilla and XBEL format bookmark files can be imported and exported.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.18</RefNum>
+<RefNum>1.8.6.4</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>XML Importieren und Exportieren</Topic>
@@ -422,7 +437,7 @@ icon="bullet_2">
 <Text>Praktisch jede XML-Datei kann von TreeLine gelesen und geschrieben werden. Damit lässt sich TreeLine als einfacher XML-Editor verwenden.</Text>
 <Text_en>Generic XML files can be imported and exported, allowing TreeLine to function as a crude XML editor.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.19</RefNum>
+<RefNum>1.8.6.5</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>ODF-Import/-Export</Topic>
@@ -430,6 +445,7 @@ icon="bullet_2">
 <Text>ODF-Dokumente können als Gliederung importiert und exportiert werden.</Text>
 <Text_en>ODF text documents can be imported and exported as outlines.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.6.6</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Stapelverarbeitung</Topic>
@@ -437,20 +453,21 @@ icon="bullet_2">
 <Text>Auf der Kommandozeile können mehrere Dateien auf einmal von TreeLine von einem zu einem anderen der unterstützten Dateiformate umgewandelt werden.</Text>
 <Text_en>Batch file conversions can be done from a command line interface.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.20</RefNum>
+<RefNum>1.8.6.7</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Verknüpfungen</Name>
 <Name_en>Linking Objects</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.7</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>URL-Verknüpfungen</Topic>
 <Topic_en>URL links</Topic_en>
 <Text>Wenn Sie auf URL-Felder in der Ansicht klicken, öffnet sich die Verknüpfung in einem externen Webbrowser.</Text>
 <Text_en>Clicking on URL fields in the output view opens the link in an external web browser.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.7</RefNum>
+<RefNum>1.8.7.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Interne Verknüpfungen</Topic>
@@ -458,7 +475,7 @@ icon="bullet_2">
 <Text>Es gibt interne Verknüpfungen, die an Hand eines Verweis-Felds oder eines Schlüsselworts ein anderes Element im Baum öffnen.</Text>
 <Text_en>There are internal link fields that select another node based on a reference or a keyword.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.8</RefNum>
+<RefNum>1.8.7.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Ausführbare Verknüpfungen</Topic>
@@ -466,20 +483,21 @@ icon="bullet_2">
 <Text>Eine ausführbare Verknüpfung kann ein externes Programm aufrufen oder eine Datei öffnen, wenn sie angeklickt wird.</Text>
 <Text_en>An executable link can run an external program or open a file when clicked.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.9</RefNum>
+<RefNum>1.8.7.3</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Daten bearbeiten</Name>
 <Name_en>Data Manipulation</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.8</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Sortieren</Topic>
 <Topic_en>Sorting</Topic_en>
 <Text>Es gibt verschiedene Sortier-Optionen.</Text>
 <Text_en>There are several sorting options.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.21</RefNum>
+<RefNum>1.8.8.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Filtern</Topic>
@@ -487,7 +505,7 @@ icon="bullet_2">
 <Text>Elemente können nach verschiedenen Kriterien gefiltert werden.</Text>
 <Text_en>The nodes can be filtered.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.22</RefNum>
+<RefNum>1.8.8.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Regelbasierte/datenabhängige Icons</Topic>
@@ -495,7 +513,7 @@ icon="bullet_2">
 <Text>Das in der Baumansicht angezeigte Symbol (Icon) für ein Element kann sich in Abhängikeit von dessen Daten ändern.</Text>
 <Text_en>A node's icon and output format can be changed conditionally based on its data.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.23</RefNum>
+<RefNum>1.8.8.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Rechtschreibprüfung</Topic>
@@ -503,7 +521,7 @@ icon="bullet_2">
 <Text>Wenn das benötigte externe Programm installiert ist (siehe Kapitel &lt;a href=&quot;#sysreq&quot;&gt;System-Anforderungen&lt;/a&gt;), kann eine Rechtschreibprüfung benutzt werden.</Text>
 <Text_en>Text data can be spell checked (requires an external program - see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.24</RefNum>
+<RefNum>1.8.8.4</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Daten neu anordnen</Topic>
@@ -511,7 +529,7 @@ icon="bullet_2">
 <Text>Daten können automatisch neu angeordnet werden, entweder an Hand von Verweisen auf Elternelemente oder nach Kategorien aus Datenfeldern.</Text>
 <Text_en>Data can be automatically arranged using either parent references or categories from data fields.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.25</RefNum>
+<RefNum>1.8.8.5</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Nummerierung</Topic>
@@ -519,20 +537,21 @@ icon="bullet_2">
 <Text>Es gibt eine flexible Nummerierungsfunktion.</Text>
 <Text_en>There is an outline numbering feature.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.26</RefNum>
+<RefNum>1.8.8.6</RefNum>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
 <Name>Anpassungen</Name>
 <Name_en>Customization</Name_en>
 <Done>yes</Done>
+<RefNum>1.8.9</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>Anpassung</Topic>
 <Topic_en>Customization</Topic_en>
 <Text>Es gibt eine Vielzahl von Möglichkeiten TreeLine anzupassen, sowohl allgemeine als auch dateispezifische.</Text>
 <Text_en>There are many options for customizing both general and file-based attributes.</Text_en>
 <Done>yes</Done>
-<RefNum>1.8.27</RefNum>
+<RefNum>1.8.9.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Tastatur-Kürzel und Symbolleisten</Topic>
@@ -540,23 +559,16 @@ icon="bullet_2">
 <Text>Tastatur-Kürzel und Symbolleisten können selbst angepasst werden.</Text>
 <Text_en>There are editors for keyboard shortcuts and toolbar commands.</Text_en>
 <Done>yes</Done>
+<RefNum>1.8.9.2</RefNum>
 </TEXT_BULLETS>
-<TEXT_BULLETS_TODO item="y"
-line0="{*Topic_en*}"
-line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
-generic="TEXT_BULLETS"
-condition="Done != &quot;true&quot;"
-sibprefix="&lt;ul&gt;"
-sibsuffix="&lt;/ul&gt;"
-icon="bullet_1">
-<Topic type="Text">Mehrsprachen-Unterstützung</Topic>
-<Topic_en type="Text">Internationalization</Topic_en>
-<Text type="Text" html="y" lines="7">Die Benutzeroberfläche und das Handbuch sind in deutscher, englischer, französischer, portugiesischer und russischer Sprache verfügbar.</Text>
-<Text_en type="Text" html="y" lines="7">The user interface and documentation are available in English, French and German.</Text_en>
-<Ref type="Text" ref="y"></Ref>
-<Done type="Boolean" format="yes/no" init="false">false</Done>
-<RefNum type="Text">1.8.28</RefNum>
-</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Mehrsprachen-Unterstützung</Topic>
+<Topic_en>Internationalization</Topic_en>
+<Text>Die Benutzeroberfläche und das Handbuch sind in deutscher, englischer, französischer, portugiesischer und russischer Sprache verfügbar.</Text>
+<Text_en>The user interface and documentation are available in English, French and German.</Text_en>
+<Done>true</Done>
+<RefNum>1.8.9.3</RefNum>
+</TEXT_BULLETS>
 </HEADING4>
 </HEADING2>
 <HEADING2 item="y">
@@ -718,7 +730,7 @@ To install TreeLine with a different prefix (the default is /usr/local), use:  &
 Um TreeLine und die Übersetzungen zusammen zu installieren, entpacken Sie das Übersetzungspaket in das selbe Verzeichnis wie TreeLine selbst und installieren Sie dann wie oben beschrieben. Wenn TreeLine bereits installiert sein sollte, entpacken Sie das Übersetzungspaket in ein beliebiges Verzeichnis, wechseln in das Verzeichnis und führen dann das Installationskommando wie oben beschrieben mit den gleichen Optionen aus.</Text>
 <Text_en>To install language translations for TreeLine, download the &quot;treeline-i18n-...&quot; tar file that matches the version number of the main TreeLine file (ignore the letter suffix on the translation version number).  To install the program and translation files simultaneously, extract the translation file from the same directory where the main treeline tar file was extracted and run the install command as described above.  If TreeLine is already installed, extract the translation file to any directory and run the translation's install command as described above.</Text_en>
 <Done>yes</Done>
-<RefNum>1.11.1.4</RefNum>
+<RefNum>1.11.1.3</RefNum>
 </TEXT_PARA>
 </HEADING4>
 <HEADING4 item="y">
@@ -736,20 +748,12 @@ Um TreeLine und die Übersetzungen zusammen zu installieren, entpacken Sie das �
 <RefNum>1.11.2.1</RefNum>
 </TEXT_PARA>
 <TEXT_PARA item="y">
-<Topic>Upgrade</Topic>
-<Topic_en>Upgrade</Topic_en>
-<Text>Wenn Sie bereits eine funktionsfähige TreeLine-Installation haben, können Sie ein kleineres Download-Paket verwenden. Auch diese Datei treeline-x.x.x-upgrade.exe können Sie einfach ausführen, um TreeLine auf den neuesten Stand zu bringen.</Text>
-<Text_en>When doing a minor upgrade (only the last number in the revision varies), you can use a smaller download.  Simply install and execute treeline-x.x.x-upgrade.exe to upgrade the files from your previous installation.</Text_en>
-<Done>yes</Done>
-<RefNum>1.11.2.2</RefNum>
-</TEXT_PARA>
-<TEXT_PARA item="y">
 <Topic>Rechtschreibprüfung</Topic>
 <Topic_en>Spell checker</Topic_en>
 <Text>Um die Rechtschreibprüfung von TreeLine zu benutzen, müssen Sie wie unter &lt;a href=&quot;#sysreq&quot;&gt;System-Anforderungen&lt;/a&gt; beschrieben ispell oder aspell installiert haben.</Text>
 <Text_en>To use TreeLine's spell checker, an external program (aspell or ispell) must be installed (see the &lt;a href=&quot;#sysreq&quot;&gt;System Requirements&lt;/a&gt; section).</Text_en>
 <Done>yes</Done>
-<RefNum>1.11.2.3</RefNum>
+<RefNum>1.11.2.2</RefNum>
 </TEXT_PARA>
 <TEXT_PARA item="y">
 <Topic>Internationalisierung</Topic>
@@ -758,7 +762,7 @@ Um TreeLine und die Übersetzungen zusammen zu installieren, entpacken Sie das �
 Zur Installation einfach die Datei ausführen.</Text>
 <Text_en>To install language translations for TreeLine, download the &quot;treeline-i18n-...&quot; exe file that matches the version number of the main TreeLine file (ignore the letter suffix on the translation version number).  To install the translation files, simply execute the translation file.</Text_en>
 <Done>yes</Done>
-<RefNum>1.11.2.5</RefNum>
+<RefNum>1.11.2.3</RefNum>
 </TEXT_PARA>
 <TEXT_PARA item="y">
 <Topic>Quelldateien verändern</Topic>
@@ -766,7 +770,7 @@ Zur Installation einfach die Datei ausführen.</Text>
 <Text>Wenn Sie selbst die Quelldateien verändern oder Ihre eigenen PyQt-Programme für Windows schreiben wollen, gehen Sie nicht wie oben beschrieben vor, sondern installieren Python (&lt;a href=&quot;http://www.python.org&quot;&gt; www.python.org&lt;/a&gt;), Qt (&lt;a href=&quot;http://www.trolltech.com&quot;&gt; www.trolltech.com&lt;/a&gt;) und PyQt (&lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt;) jeweils wie dort beschrieben. Dann entpacken Sie die Quelldateien aus der Linux-Version (TreeLine tar-Datei) in ein beliebiges Verzeichnis und führen die Datei treeline.py aus.</Text>
 <Text_en>If you wish to modify the source code or write your own PyQt programs for Windows, do not use the above procedure. Instead, you need to install Python (see &lt;a href=&quot;http://www.python.org&quot;&gt; www.python.org&lt;/a&gt;), Qt (see &lt;a href=&quot;http://www.trolltech.com&quot;&gt; www.trolltech.com&lt;/a&gt;), and PyQt (see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt;). Then extract the source code files from the Linux version (treeline tar file) to a directory of your choice and execute the treeline.py file.</Text_en>
 <Done>yes</Done>
-<RefNum>1.11.2.6</RefNum>
+<RefNum>1.11.2.4</RefNum>
 </TEXT_PARA>
 </HEADING4>
 </HEADING2>
@@ -804,13 +808,14 @@ icon="bullet_2">
 <Name_en>Templates</Name_en>
 <Link>start-templates</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.1.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Beispieldateien</Name>
 <Name_en>Example Files</Name_en>
 <Link>start-example</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.1.2</RefNum>
+<RefNum>1.12.1.1.3</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -824,19 +829,21 @@ icon="bullet_2">
 <Name_en>Left Pane Views</Name_en>
 <Link>basics-left</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.2.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Rechte Fensterhälfte</Name>
 <Name_en>Right Pane Views</Name_en>
 <Link>basics-right</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.2.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Befehle</Name>
 <Name_en>Commands</Name_en>
 <Link>basics-cmds</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.2.2</RefNum>
+<RefNum>1.12.1.2.3</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -857,13 +864,14 @@ icon="bullet_2">
 <Name_en>Selection</Name_en>
 <Link>nav-select</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.3.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Suchen</Name>
 <Name_en>Searching</Name_en>
 <Link>nav-search</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.3.2</RefNum>
+<RefNum>1.12.1.3.3</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -919,98 +927,105 @@ icon="bullet_2">
 <Name_en>Type List</Name_en>
 <Link>format-type</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Typ konfigurieren</Name>
 <Name_en>Type Config</Name_en>
 <Link>format-config</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.3</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Liste der Felder</Name>
 <Name_en>Field List</Name_en>
 <Link>format-fields</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.4</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Felder konfigurieren</Name>
 <Name_en>Field Config</Name_en>
 <Link>format-fieldconf</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.5</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Ausgabe</Name>
 <Name_en>Output</Name_en>
 <Link>format-output</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.6</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Formatierung von Überschriften</Name>
 <Name_en>Title Formatting</Name_en>
 <Link>format-title</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.4</RefNum>
+<RefNum>1.12.1.5.7</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Übersprungene Zeilen</Name>
 <Name_en>Skipped Lines</Name_en>
 <Link>format-skip</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.5</RefNum>
+<RefNum>1.12.1.5.8</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>HTML-Auszeichnungen (Tags)</Name>
 <Name_en>HTML Tags</Name_en>
 <Link>format-html</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.6</RefNum>
+<RefNum>1.12.1.5.9</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Formatierungsbeispiele</Name>
 <Name_en>Formatting Examples</Name_en>
 <Link>format-example</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.7</RefNum>
+<RefNum>1.12.1.5.10</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Andere Feldverweise</Name>
 <Name_en>Other Field References</Name_en>
 <Link>format-refs</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.3</RefNum>
+<RefNum>1.12.1.5.11</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Präfix und Suffix für Elemente auf gleicher Ebene</Name>
 <Name_en>Sibling Prefix and Suffix</Name_en>
 <Link>format-sibling-text</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.12</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Referenzfeld für Verknüpfungen</Name>
 <Name_en>Link Reference Field</Name_en>
 <Link>format-link-ref</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.5.13</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Basistypen und abgeleitete Typen</Name>
 <Name_en>Generic and Derived Types</Name_en>
 <Link>format-derived</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.11</RefNum>
+<RefNum>1.12.1.5.14</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Datenabhängige (&quot;bedingte&quot;) Typen</Name>
 <Name_en>Conditional Types</Name_en>
 <Link>format-condition</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.12</RefNum>
+<RefNum>1.12.1.5.15</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Formate kopieren</Name>
 <Name_en>Copying Formats</Name_en>
 <Link>format-copy</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.5.13</RefNum>
+<RefNum>1.12.1.5.16</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1066,13 +1081,14 @@ icon="bullet_2">
 <Name_en>Unique ID Type</Name_en>
 <Link>field-unique</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.6.7</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Weitere Einstellungen</Name>
 <Name_en>Advanced Options</Name_en>
 <Link>field-advanced</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.6.7</RefNum>
+<RefNum>1.12.1.6.8</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1142,33 +1158,35 @@ icon="bullet_2">
 <Name_en>Page Setup</Name_en>
 <Link>print-setup</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.8.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Druckerschrift</Name>
 <Name_en>Printer Font</Name_en>
 <Link>print-font</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.8.3</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Kopf und Fuß</Name>
 <Name_en>Header and Footer</Name_en>
 <Link>print-header</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.8.2</RefNum>
+<RefNum>1.12.1.8.4</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Druckvorschau</Name>
 <Name_en>Print Preview</Name_en>
 <Link>print-preview</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.8.3</RefNum>
+<RefNum>1.12.1.8.5</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Probleme beim Drucken</Name>
 <Name_en>Printing Problems</Name_en>
 <Link>print-problems</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.8.4</RefNum>
+<RefNum>1.12.1.8.6</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1224,47 +1242,49 @@ icon="bullet_2">
 <Name_en>General Information</Name_en>
 <Link>import-general</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.10.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Text mit Trennzeichen</Name>
 <Name_en>Delimited Text</Name_en>
 <Link>import-delim</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.10.1</RefNum>
+<RefNum>1.12.1.10.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Fließtext</Name>
 <Name_en>Plain Text</Name_en>
 <Link>import-plain</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.10.2</RefNum>
+<RefNum>1.12.1.10.3</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>TreePad-Dateien</Name>
 <Name_en>Treepad Files</Name_en>
 <Link>import-treepad</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.10.3</RefNum>
+<RefNum>1.12.1.10.4</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Lesezeichen</Name>
 <Name_en>Bookmark Files</Name_en>
 <Link>import-bookmarks</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.10.4</RefNum>
+<RefNum>1.12.1.10.5</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Unspezifisches XML</Name>
 <Name_en>Generic XML</Name_en>
 <Link>import-xml</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.10.5</RefNum>
+<RefNum>1.12.1.10.6</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>ODF Textdokumente</Name>
 <Name_en>ODF Text Document</Name_en>
 <Link>import-odf</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.10.7</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1278,47 +1298,49 @@ icon="bullet_2">
 <Name_en>General Information</Name_en>
 <Link>export-general</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.11.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>HTML</Name>
 <Name_en>HTML</Name_en>
 <Link>export-html</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.11.1</RefNum>
+<RefNum>1.12.1.11.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Text mit Trennzeichen</Name>
 <Name_en>Delimited Text</Name_en>
 <Link>export-delim</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.11.2</RefNum>
+<RefNum>1.12.1.11.3</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Lesezeichen</Name>
 <Name_en>Bookmark Files</Name_en>
 <Link>export-bookmarks</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.11.3</RefNum>
+<RefNum>1.12.1.11.4</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Unspezifisches HTML</Name>
 <Name_en>Generic XML</Name_en>
 <Link>export-xml</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.11.4</RefNum>
+<RefNum>1.12.1.11.5</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>XSLT</Name>
 <Name_en>XSLT</Name_en>
 <Link>export-xslt</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.11.5</RefNum>
+<RefNum>1.12.1.11.6</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>ODF Textformat</Name>
 <Name_en>ODF Text Document</Name_en>
 <Link>export-odf</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.11.7</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1326,41 +1348,48 @@ icon="bullet_2">
 <Name_en>Customizations</Name_en>
 <Link>custom</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12</RefNum>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Optionen</Name>
 <Name_en>Options</Name_en>
 <Link>custom-options</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Schriften</Name>
 <Name_en>Fonts</Name_en>
 <Link>custom-fonts</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Tastatur-Kürzel</Name>
 <Name_en>Keyboard Shortcuts</Name_en>
 <Link>custom-keys</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.3</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Symbolleisten</Name>
 <Name_en>Toolbars</Name_en>
 <Link>custom-tools</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.4</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Farben</Name>
 <Name_en>Colors</Name_en>
 <Link>custom-color</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.5</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Baum-Symbole</Name>
 <Name_en>Tree Icons</Name_en>
 <Link>custom-icons</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.12.6</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1368,27 +1397,27 @@ icon="bullet_2">
 <Name_en>Plugins</Name_en>
 <Link>plugins</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.12</RefNum>
+<RefNum>1.12.1.13</RefNum>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Beschreibung</Name>
 <Name_en>Description</Name_en>
 <Link>plugins-intro</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.12.1</RefNum>
+<RefNum>1.12.1.13.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Installation</Name>
 <Name_en>Installation</Name_en>
 <Link>plugins-install</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.12.2</RefNum>
+<RefNum>1.12.1.13.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Interface</Name>
 <Name_en>Interface</Name_en>
 <Link>plugins-intrf</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.12.3</RefNum>
+<RefNum>1.12.1.13.3</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -1396,26 +1425,27 @@ icon="bullet_2">
 <Name_en>Common Problems</Name_en>
 <Link>errors</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.13</RefNum>
+<RefNum>1.12.1.14</RefNum>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Unsichtbare Bereiche</Name>
 <Name_en>Closed Panes</Name_en>
 <Link>errors-panes</Link>
 <Done>yes</Done>
+<RefNum>1.12.1.14.1</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>XML-Fehler</Name>
 <Name_en>XML Error</Name_en>
 <Link>errors-xml</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.13.1</RefNum>
+<RefNum>1.12.1.14.2</RefNum>
 </CONTENTS_LINK_INDENT>
 <CONTENTS_LINK_INDENT item="y">
 <Name>Drucken</Name>
 <Name_en>Printing</Name_en>
 <Link>errors-print</Link>
 <Done>yes</Done>
-<RefNum>1.12.1.13.3</RefNum>
+<RefNum>1.12.1.14.3</RefNum>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 </HEADING3>
@@ -1453,6 +1483,7 @@ Es gibt auch komplexere Vorlagen einschließlich Kontaktdaten, einer Buchliste u
 There are a few more specific options, including canned setups for personal contact information a book list and a to-do list.</Text_en>
 <Ref>start-templates</Ref>
 <Done>yes</Done>
+<RefNum>1.12.2.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Beispieldateien</Topic>
@@ -1461,14 +1492,14 @@ There are a few more specific options, including canned setups for personal cont
 <Text_en>Various TreeLine sample files can be opened by using the &quot;File-&amp;gt;Open Sample&quot; command.  They include (roughly in order of increasing complexity):</Text_en>
 <Ref>start-example</Ref>
 <Done>yes</Done>
-<RefNum>1.12.2.2</RefNum>
+<RefNum>1.12.2.3</RefNum>
 <TEXT_BULLETS item="y">
 <Topic>sample_basic_contacts</Topic>
 <Topic_en>sample_basic_contacts</Topic_en>
 <Text>&quot;sample_basic_contacts&quot; ist ein einfaches Format, um Adressen bzw. Kontakte zu erfassen und zu speichern. Es werden verschiedene Felder für die verschiedenen Informationsteile benutzt.</Text>
 <Text_en>The &quot;sample_basic_contacts&quot; file is a format for storing contact information.  Several fields are used for various pieces of information.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.1</RefNum>
+<RefNum>1.12.2.3.1</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_basic_booklist</Topic>
@@ -1476,7 +1507,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_basic_booklist&quot; ist eine Liste von Büchern. Hier sehen Sie, wie Elemente zum Aufnehmen von Daten konfiguriert werden können. Verschiedene Feldtypen werden benutzt, z.B. für den Autor und das eigentliche Buch.</Text>
 <Text_en>The &quot;sample_basic_booklist&quot; file is a list of books, providing an example of configuring nodes to contain data.  Several different field types are used to create author and book data types.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.2</RefNum>
+<RefNum>1.12.2.3.2</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_basic_longtext</Topic>
@@ -1484,7 +1515,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_basic_longtext&quot; enthält unter jedem Element ein langes Textfeld, ähnlich wie das Programm Treepad. Die Datei zeigt außerdem den Unterschied zwischen einfachen Textfeldern und HTML-Textfeldern.</Text>
 <Text_en>The &quot;sample_basic_longtext&quot; file contains a long text field under each node, similar to the Treepad program.  It also shows the difference between plain text and HTML text fields.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.3</RefNum>
+<RefNum>1.12.2.3.3</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_color_items</Topic>
@@ -1492,7 +1523,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_color_items&quot; verwendet HTML-Auszeichnungen in Datenformaten, um farbige Ausgaben zu erzeugen. Vgl. das Kapitel &lt;a href=&quot;#format-html&quot;&gt;HTML-Auszeichnungen (Tags)&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_color_items&quot; file uses HTML tags in data type formats to provide color output. See also the &lt;a href=&quot;#format-html&quot;&gt;HTML Tags&lt;/a&gt; section.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.4</RefNum>
+<RefNum>1.12.2.3.4</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_char_format</Topic>
@@ -1500,7 +1531,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_char_format&quot; ist ein Beispiel, wie Sie mit HTML-Auszeichnungen die Formatierung mit Schriften beeinflussen können. Vgl. das Kapitel &lt;a href=&quot;#field-options&quot;&gt;Field Options&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_char_format&quot; file is an example of using HTML tags in the data to control font formatting.  See also the &lt;a href=&quot;#format-html&quot;&gt;HTML Tags&lt;/a&gt; and the &lt;a href=&quot;#field-options&quot;&gt;Field Options&lt;/a&gt; sections.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.5</RefNum>
+<RefNum>1.12.2.3.5</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_bookmarks</Topic>
@@ -1508,7 +1539,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_bookmarks&quot; zeigt die Benutzung von externen HTML-Verknüpfungen. Es entspricht dem Format, das beim Importieren und Exporieren von Lesezeichen benutzt wird.</Text>
 <Text_en>The &quot;sample_bookmarks&quot; file is an example of  using external HTML links.  This is the file setup that is used when importing or exporting bookmark files.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.6</RefNum>
+<RefNum>1.12.2.3.6</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_intern_links</Topic>
@@ -1516,7 +1547,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_intern_links&quot; zeigt, wie man innerhalb einer TreeLine-Datei Verknüpfungen erstellen kann. Vgl. Kapitel &lt;a href=&quot;#field-link&quot;&gt;Linking Types&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_intern_links&quot; file shows how to do links that lead to elsewhere in the TreeLine file.  See also the &lt;a href=&quot;#field-link&quot;&gt;Linking Types&lt;/a&gt; section.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.7</RefNum>
+<RefNum>1.12.2.3.7</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_table_booklist</Topic>
@@ -1524,7 +1555,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_table_booklist&quot; zeigt die Benutzung von HTML-Auszeichnungen und Präfix- und Suffix-Tags, um Tabellen in der Ausgabeansicht zu erzeugen. Vgl. Kapitel &lt;a href=&quot;#format-advanced&quot;&gt;Weitere Einstellungen&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_table_booklist&quot; file shows how to use HTML tags and sibling prefixes and suffixes to create tables in the output.  See also the &lt;a href=&quot;#format-advanced&quot;&gt;Advanced Settings&lt;/a&gt; section.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.8</RefNum>
+<RefNum>1.12.2.3.8</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_other_fields</Topic>
@@ -1532,7 +1563,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_other_fields&quot; ist ein Beispiel für besondere Feldverweise, z.B. Verweise auf Eltern- oder Unterelemente oder Datei-Informationen. Vgl. Kapitel &lt;a href=&quot;#format-refs&quot;&gt;Andere Feldverweise&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_other_fields&quot; file is an example of alternate field references, including references to ancestor nodes, child nodes and file information.  See also the &lt;a href=&quot;#format-refs&quot;&gt;Other Field References&lt;/a&gt; section.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.9</RefNum>
+<RefNum>1.12.2.3.9</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>sample_conditional_todo</Topic>
@@ -1540,7 +1571,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>&quot;sample_conditional_todo&quot; zeigt, wie man regelbasierte Typen einsetzen kann, um die Darstellung von Elementen in Abhängigkeit von ihrem Inhalt zu verändern. Vgl. Kapitel &lt;a href=&quot;#format-derived&quot;&gt;Basistypen und abgeleitete Typen&lt;/a&gt;.</Text>
 <Text_en>The &quot;sample_conditional_todo&quot; shows how to use conditional types to change node output based on node content.  See also the &lt;a href=&quot;#format-derived&quot;&gt;Derived&lt;/a&gt; and &lt;a href=&quot;#format-condition&quot;&gt;Conditional Types&lt;/a&gt; sections.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.10</RefNum>
+<RefNum>1.12.2.3.10</RefNum>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>readme</Topic>
@@ -1548,7 +1579,7 @@ There are a few more specific options, including canned setups for personal cont
 <Text>Die Datei &quot;readme&quot;, die Vorlage für dieses Handbuch, zeigt selbst eine Vielzahl von Formatierungen, u.a. Überschriften, Aufzählungen, interne Verknüpfungen und Bilder.</Text>
 <Text_en>The &quot;readme&quot; file itself shows many types of formatting, including  headings, bullets, internal links and pictures.</Text_en>
 <Done>yes</Done>
-<RefNum>1.12.2.2.11</RefNum>
+<RefNum>1.12.2.3.11</RefNum>
 </TEXT_BULLETS>
 </TEXT_HEAD>
 </HEADING3>
@@ -1569,6 +1600,7 @@ Eine zweite Ansicht ist die &quot;flache Ansicht&quot;. Es zeigt alle Untereleme
 The other tab in the left pane is the &quot;Flat View&quot;.  It displays all of the descendants of the nodes that are selected in the &quot;Tree View&quot; in a flat list.  It also shows the results of filtering operations (see the &lt;a href=&quot;#data-filter&quot;&gt;Filtering&lt;/a&gt; section).</Text_en>
 <Ref>basics-left</Ref>
 <Done>yes</Done>
+<RefNum>1.12.3.1</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Rechte Fensterhälfte</Topic>
@@ -1597,7 +1629,7 @@ The initial state of the views can be controlled by changing the startup conditi
 By default, the number of nodes displayed simultaneously in the &quot;Data Editor&quot; view is limited.  Buttons in a heading allow the next or previous set of nodes to be displayed.  This provides a convenient way to page through the node information without slowing the program by trying to display too many fields.  The number of pages to display can be set in &quot;Tools-&amp;gt;General Options&quot;.</Text_en>
 <Ref>basics-right</Ref>
 <Done>yes</Done>
-<RefNum>1.12.3.1</RefNum>
+<RefNum>1.12.3.2</RefNum>
 <FIGURE item="y"
 line0="{*Topic_en*}"
 line1="&lt;p&gt;{*Picture_en*}&lt;/p&gt;"
@@ -1611,7 +1643,7 @@ icon="bullet_2">
 <Picture_en type="Picture" html="y">doc_main.png</Picture_en>
 <Ref type="Text" ref="y">fig-1</Ref>
 <Done type="Boolean" format="yes/no" init="true">yes</Done>
-<RefNum type="Text"></RefNum>
+<RefNum type="Text">1.12.3.2.1</RefNum>
 </FIGURE>
 <FIGURE item="y">
 <Topic>Abbildung der Editor-Ansicht</Topic>
@@ -1622,6 +1654,7 @@ icon="bullet_2">
 <Picture_en>doc_edit.png</Picture_en>
 <Ref>fig-2</Ref>
 <Done>yes</Done>
+<RefNum>1.12.3.2.2</RefNum>
 </FIGURE>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -1635,7 +1668,7 @@ Um Informationen zu einer neuen TreeLine-Datei hinzuzufügen, benutzen Sie den B
 To add information to a new TreeLine document, use the &quot;Edit-&amp;gt;Add Child&quot; command to create a new node. Then combinations of the add and insert commands may be used for additional nodes. Alternatively, new node titles may be typed into the &quot;Title List&quot; view in the right pane.</Text_en>
 <Ref>basics-cmds</Ref>
 <Done>yes</Done>
-<RefNum>1.12.3.2</RefNum>
+<RefNum>1.12.3.3</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -1676,6 +1709,7 @@ The &quot;View-&amp;gt;Previous Selection&quot; and &quot;View-&amp;gt;Next Sele
 By default, the selection sequence doesn't matter.  However, if the general option for multiple selection is changed to &quot;Selection Order&quot;, nodes selected with CTRL key held are output in the order selected.</Text_en>
 <Ref>nav-select</Ref>
 <Done>yes</Done>
+<RefNum>1.12.4.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Suchen</Topic>
@@ -1692,7 +1726,7 @@ The next method is an incremental search, started by typing CTRL + &quot;/&quot;
 By default, parent nodes will automatically open and close when found with the search methods, by typing the first letter, and with the &quot;next sibling&quot; keyboard command. This behavior can be disabled in &quot;Tools-&amp;gt;General Options&quot;.</Text_en>
 <Ref>nav-search</Ref>
 <Done>yes</Done>
-<RefNum>1.12.4.2</RefNum>
+<RefNum>1.12.4.3</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -1788,6 +1822,7 @@ Um den Typ für ausgewählten Elemente zu ändern, verwenden Sie das Menü &quot
 <Text_en>The &quot;Type List&quot; is the first tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  The list of data types can be modified by the buttons on the right.  New types can be added, and existing types can be copied, renamed or deleted.</Text_en>
 <Ref>format-type</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Typ konfigurieren</Topic>
@@ -1800,6 +1835,7 @@ Der Button &quot;Symbol ändern&quot; erlaubt die Auswahl eines passenden Symbol
 The &quot;Change Icon&quot; button allows the selection of a custom tree icon for this data type.  The &quot;Clear Select&quot; button on the icon dialog can be used to set the icon to &quot;None&quot;, so that no icon will be displayed for this type.   To avoid showing any tree icons, the &quot;Show icons in the tree view&quot; general option can be unset.</Text_en>
 <Ref>format-config</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.3</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Liste der Felder</Topic>
@@ -1808,6 +1844,7 @@ The &quot;Change Icon&quot; button allows the selection of a custom tree icon fo
 <Text_en>The &quot;Field List&quot; is the third tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  The list of fields within a data type can be modified by using the buttons on the right.  New fields can be added, and existing fields can be moved up and down in the list, renamed or deleted.</Text_en>
 <Ref>format-fields</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.4</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Felder konfigurieren</Topic>
@@ -1816,6 +1853,7 @@ The &quot;Change Icon&quot; button allows the selection of a custom tree icon fo
 <Text_en>&quot;Field Config&quot; is the fourth tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; (see &lt;a href=&quot;#fig-3&quot;&gt;Figure 3&lt;/a&gt;).  The field type and its output format string can be set (see the &lt;a href=&quot;#fields&quot;&gt;Field Types&lt;/a&gt; section for details).  Extra prefix and suffix text to be output with the field can also be set, and a default field value for new nodes can be entered.  There is a choice between plain text, which preserves line breaks, and HTML text, which allows various formatting options.  Finally, the number of lines displayed in the editor for the field can be specified.</Text_en>
 <Ref>format-fieldconf</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.5</RefNum>
 <FIGURE item="y">
 <Topic>Abbildung Feldkonfiguration</Topic>
 <Topic_en>Field config picture</Topic_en>
@@ -1825,6 +1863,7 @@ The &quot;Change Icon&quot; button allows the selection of a custom tree icon fo
 <Picture_en>doc_fieldconf.png</Picture_en>
 <Ref>fig-3</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.5.1</RefNum>
 </FIGURE>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -1834,6 +1873,7 @@ The &quot;Change Icon&quot; button allows the selection of a custom tree icon fo
 <Text_en>&quot;Output&quot; is the last tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot; (see &lt;a href=&quot;#fig-4&quot;&gt;Figure 4&lt;/a&gt;).  The left half of the dialog shows the fields.  The right half shows the formatting for the title (used for the node text in the tree view) and the node output. The formatting consists of text lines with embedded fields. The fields are shown as &quot;{*field_name*}&quot;. The field that is selected in the list can be added to a format at the cursor position with the &quot;&amp;gt;&amp;gt;&quot; keys.  The format field reference at the cursor can be removed with the &quot;&amp;lt;&amp;lt;&quot; keys.</Text_en>
 <Ref>format-output</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.6</RefNum>
 <FIGURE item="y">
 <Topic>Abbildung Ausgabeformatierung</Topic>
 <Topic_en>Output tab picture</Topic_en>
@@ -1843,6 +1883,7 @@ The &quot;Change Icon&quot; button allows the selection of a custom tree icon fo
 <Picture_en>doc_output.png</Picture_en>
 <Ref>fig-4</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.6.1</RefNum>
 </FIGURE>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -1856,7 +1897,7 @@ Wenn der eingegebene Text aus mehreren Zeilen besteht, wird nur die erste Zeile 
 If the text data used for a tree view title has multiple lines, only the first line will be used as the title.</Text_en>
 <Ref>format-title</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.4</RefNum>
+<RefNum>1.12.6.7</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Übersprungene Zeilen</Topic>
@@ -1865,7 +1906,7 @@ If the text data used for a tree view title has multiple lines, only the first l
 <Text_en>If a line in the output formatting contains one or more fields and all of those fields for a given node are empty, the line is skipped. No blank line or embedded text will be output for that line. Note that this does not apply to a line without any fields (only embedded text). Also, when a line ending with a &amp;lt;br/&amp;gt; or an &amp;lt;hr/&amp;gt; tag is skipped, the ending tag is retained.</Text_en>
 <Ref>format-skip</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.5</RefNum>
+<RefNum>1.12.6.8</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>HTML-Auszeichnungen (Tags)</Topic>
@@ -1878,7 +1919,7 @@ In den Datei-Einstellungen können Sie auch festlegen, ob nach jeder Formatzeile
 A line break is automatically output after each formatting line, unless the &quot;Add line breaks after each line&quot; file option is unset.  In addition, the &quot;Add blank lines between nodes&quot; file option determines whether there is also an automatic blank line between node outputs. A line break tag (&quot;&amp;lt;br&amp;gt;&quot;) can be used at the end of the formatting to get the same effect, or a horizontal line tag (&quot;&amp;lt;hr&amp;gt;&quot;) may be used instead to separate the nodes.</Text_en>
 <Ref>format-html</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.6</RefNum>
+<RefNum>1.12.6.9</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Formatierungsbeispiele</Topic>
@@ -1899,7 +1940,7 @@ Beispieldateien mit verschiedenen Formatierungen (&quot;sample_*.trl&quot;) sind
 Sample files with various kinds of formatting are included in the program distribution.  They can be opened by using the &quot;File-&amp;gt;Open Sample&quot; command.  They are also listed in the &lt;a href=&quot;#start-example&quot;&gt;Example Files&lt;/a&gt; section.</Text_en>
 <Ref>format-example</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.7</RefNum>
+<RefNum>1.12.6.10</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Andere Feldverweise</Topic>
@@ -1928,7 +1969,7 @@ Finally, a &quot;Child Count&quot; reference can be added.  This field will show
 For examples of these fields, see the &quot;sample_other_fields&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
 <Ref>format-refs</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.3</RefNum>
+<RefNum>1.12.6.11</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Weitere Einstellungen</Topic>
@@ -1949,7 +1990,7 @@ Also see the &quot;sample_table_booklist&quot; example file (by using the &quot;
 Siblings should generally be of the same type, or at least have the same prefix and suffix tags.</Text_en>
 <Ref>format-sibling-text</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.10</RefNum>
+<RefNum>1.12.6.12</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Referenzfeld für Verweise</Topic>
@@ -1962,6 +2003,7 @@ Das Referenzfeld wird für interne  Verweise und bei den Kommandos &quot;Nach Ve
 The link reference field is used for internal link references and for the arrange and flatten by reference commands.  The contents of this field should generally be unique if usage of these functions is planned.</Text_en>
 <Ref>format-link-ref</Ref>
 <Done>yes</Done>
+<RefNum>1.12.6.13</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Basistypen und abgeleitete Datentypen</Topic>
@@ -1974,7 +2016,7 @@ Es gibt zwei Wege, abgeleitete Datentypen zu erzeugen. Erstens kann man eine Opt
 There are two methods for creating derived types.  First, a derived option can be selected when copying a type on the &quot;Type List&quot; tab of the &quot;Data-&amp;gt;Configure Types Dialog&quot;.  Alternately, a generic type can be specified from the derived type's &quot;Type Config&quot; tab of the dialog if the advanced functions are shown.</Text_en>
 <Ref>format-derived</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.11</RefNum>
+<RefNum>1.12.6.14</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Regelbasierte Dateitypen</Topic>
@@ -2003,7 +2045,7 @@ Conditions do not have to be set for all types in a family.  If no conditions ar
 For an example, see the &quot;sample_conditional_todo&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
 <Ref>format-condition</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.12</RefNum>
+<RefNum>1.12.6.15</RefNum>
 <FIGURE item="y">
 <Topic>Abbildung regelbasierte Dateitypen</Topic>
 <Topic_en>Conditional dialog picture</Topic_en>
@@ -2013,7 +2055,7 @@ For an example, see the &quot;sample_conditional_todo&quot; file (by using the &
 <Picture_en>doc_condition.png</Picture_en>
 <Ref>fig-5</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.12.1</RefNum>
+<RefNum>1.12.6.15.1</RefNum>
 </FIGURE>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -2023,7 +2065,7 @@ For an example, see the &quot;sample_conditional_todo&quot; file (by using the &
 <Text_en>Another method for changing data type formatting is to copy the formats from another TreeLine file. This is done with the &quot;Data-&amp;gt;Copy Types from File&quot; command. All types from the chosen file are copied. Any types in the current file with matching names are overwritten, but types with unique names are retained.</Text_en>
 <Ref>format-copy</Ref>
 <Done>yes</Done>
-<RefNum>1.12.6.13</RefNum>
+<RefNum>1.12.6.16</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2139,6 +2181,7 @@ Anfags wird das Ausgabeformat auf die gewünschte erste Nummer mit optionalen f�
 Initially, the field's format string is set to the desired first number in the series, with optional leading zeros and optional leading or trailing characters. The initial number and the extra characters are useful to avoid duplication of numbers in different files.  All nodes of the data type will get an automatically assigned ID. The field format string will always show the next available number, which will be given to the next new node of that type.</Text_en>
 <Ref>field-unique</Ref>
 <Done>yes</Done>
+<RefNum>1.12.7.7</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Weitere Einstellungen</Topic>
@@ -2159,7 +2202,7 @@ There is also a setting to flag fields as required to be filled in. Those fields
 Fields can also be set as hidden, to prevent them from showing in the data edit view.</Text_en>
 <Ref>field-advanced</Ref>
 <Done>yes</Done>
-<RefNum>1.12.7.7</RefNum>
+<RefNum>1.12.7.8</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2231,6 +2274,7 @@ The &quot;Data-&amp;gt;Text Filter&quot; command works similarly, except it only
 <Picture_en>doc_filter.png</Picture_en>
 <Ref>fig-6</Ref>
 <Done>yes</Done>
+<RefNum>1.12.8.4.1</RefNum>
 </FIGURE>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -2282,6 +2326,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Text_en>The second tab of the &quot;Print Options&quot; dialog box is &quot;Page Setup&quot;.  On the left are settings for page size, orientation and units.  On the right are settings for columns, indent offsets, and margins.</Text_en>
 <Ref>print-setup</Ref>
 <Done>yes</Done>
+<RefNum>1.12.9.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Schriftauswahl</Topic>
@@ -2290,6 +2335,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Text_en>The third tab of the &quot;Print Options&quot; dialog box is &quot;Font Selection&quot;.  The printout will use the same font as the &quot;Data Output&quot; pane if the upper check box is checked.  If it is unchecked, a font can be selected specifically for printing.</Text_en>
 <Ref>print-font</Ref>
 <Done>yes</Done>
+<RefNum>1.12.9.3</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Kopf-/Fußzeile</Topic>
@@ -2298,7 +2344,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Text_en>The fourh tab on the &quot;Print Options&quot; dialog is used to set the print header and footer. There are file info fields on the left and six header/footer edit boxes (left, center and right justified) on the right. These fields can be added and combined with other text in the edit boxes, just like in the &quot;Output&quot; tab of the &quot;Data-&amp;gt;Configure Data Types&quot; dialog. The header and footer settings are saved with the TreeLine file.</Text_en>
 <Ref>print-header</Ref>
 <Done>yes</Done>
-<RefNum>1.12.9.2</RefNum>
+<RefNum>1.12.9.4</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Druckvorschau</Topic>
@@ -2307,7 +2353,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Text_en>The print preview window can be shown by using the &quot;File-&amp;gt;Print Preview&quot; menu or with the button on the &quot;Print Options&quot; dialog.  Buttons on the window are used to navigate between pages, open the &quot;Print Options&quot; dialog, or open the print dialog.  The print preview will show more detail if its window is made larger.</Text_en>
 <Ref>print-preview</Ref>
 <Done>yes</Done>
-<RefNum>1.12.9.3</RefNum>
+<RefNum>1.12.9.5</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Probleme beim Drucken</Topic>
@@ -2316,7 +2362,7 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Text_en>Some printing problems, especially problems with margins and word-wrapping, can be eliminated by changing the print font to a font that is better supported by the printer.</Text_en>
 <Ref>print-problems</Ref>
 <Done>yes</Done>
-<RefNum>1.12.9.4</RefNum>
+<RefNum>1.12.9.6</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2397,7 +2443,7 @@ Eine Tabelle, deren Spalten mit Tabulatoren getrennt sind, kann auch importiert 
 A tab-delimited table can also be imported. It becomes a single level of children under the root node, with each node containing fields from each table column. The first row of the table is used as field names and each subsequent row becomes a node.</Text_en>
 <Ref>import-delim</Ref>
 <Done>yes</Done>
-<RefNum>1.12.11.1</RefNum>
+<RefNum>1.12.11.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Textdateien</Topic>
@@ -2406,7 +2452,7 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Text_en>There are two types of plain text import. One creates a separate node for each line in the file. The other creates a node for each paragraph, assuming the paragraphs are separated by blank lines. In both cases, the resulting TreeLine file will have all of the text under a single parent, but it is a good starting point. Additional structure can be added later.</Text_en>
 <Ref>import-plain</Ref>
 <Done>yes</Done>
-<RefNum>1.12.11.2</RefNum>
+<RefNum>1.12.11.3</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Treepad-Dateien</Topic>
@@ -2415,7 +2461,7 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Text_en>There is also a filter to import files from the Treepad shareware program.  Only Treepad text nodes are supported.</Text_en>
 <Ref>import-treepad</Ref>
 <Done>yes</Done>
-<RefNum>1.12.11.3</RefNum>
+<RefNum>1.12.11.4</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Lesezeichen-Dateien</Topic>
@@ -2424,7 +2470,7 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Text_en>TreeLine will import bookmark files in both the Mozilla HTML format (Mozilla, Firefox and Netscape browsers) and the XBEL format (Konqueror, Galeon and Elinks browsers). Each bookmark becomes a node with a name and a link field. Some information in the files, such as visited dates and icon references, is not imported.  For an example, see the &quot;sample_bookmarks&quot; file (by using the &quot;File-&amp;gt;Open Sample&quot; command).</Text_en>
 <Ref>import-bookmarks</Ref>
 <Done>yes</Done>
-<RefNum>1.12.11.4</RefNum>
+<RefNum>1.12.11.5</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Unspezifisches XML</Topic>
@@ -2433,7 +2479,7 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Text_en>TreeLine will import and export generic XML files. These routines do not have much intelligence - each XML element becomes a node and each XML attribute becomes a field. XML text content become fields named &quot;Element_Data&quot;. This lets TreeLine function as a crude XML editor.</Text_en>
 <Ref>import-xml</Ref>
 <Done>yes</Done>
-<RefNum>1.12.11.5</RefNum>
+<RefNum>1.12.11.6</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>ODF Textdokumente</Topic>
@@ -2442,6 +2488,7 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Text_en>TreeLine will import Open Document Format (ODF) text documents, from applications such as OpenOffice.org and KWord.   The node structure is formed based on the heading styles assigned in the document. Any text under each heading is assigned to that heading's node. The import filter is intended for simple text outlines only.  No formatting is maintained, and objects such as tables and pictures are not imported.</Text_en>
 <Ref>import-odf</Ref>
 <Done>yes</Done>
+<RefNum>1.12.11.7</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2470,7 +2517,7 @@ Der Export als HTML-Verzeichnisstruktur erzeugt eine Verzeichnisstruktur. Die Ve
 There is also a multiple-file HTML export that creates a directory structure. Directories are named for the content of the reference data field, which must contain legal file names and not have duplicates under the same parent. Each HTML file is a table of data for a set of siblings, with links to the parent and child pages.</Text_en>
 <Ref>export-html</Ref>
 <Done>yes</Done>
-<RefNum>1.12.12.1</RefNum>
+<RefNum>1.12.12.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Text mit Trennzeichen</Topic>
@@ -2479,7 +2526,7 @@ There is also a multiple-file HTML export that creates a directory structure. Di
 <Text_en>Data can be exported to tabbed title text and tab-delimited tables. These formats are the same as the corresponding import formats. When exporting to a table, only the first level of children is used, so you may wish to flatten the data before exporting.</Text_en>
 <Ref>export-delim</Ref>
 <Done>yes</Done>
-<RefNum>1.12.12.2</RefNum>
+<RefNum>1.12.12.3</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Lesezeichen</Topic>
@@ -2488,7 +2535,7 @@ There is also a multiple-file HTML export that creates a directory structure. Di
 <Text_en>TreeLine will export bookmark files in both the Mozilla HTML format (Mozilla, Firefox and Netscape browsers) and the XBEL format (Konqueror, Galeon and Elinks browsers).</Text_en>
 <Ref>export-bookmarks</Ref>
 <Done>yes</Done>
-<RefNum>1.12.12.3</RefNum>
+<RefNum>1.12.12.4</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Unspezifisches XML</Topic>
@@ -2497,7 +2544,7 @@ There is also a multiple-file HTML export that creates a directory structure. Di
 <Text_en>TreeLine will import and export generic XML files. These routines do not have much intelligence - each node becomes an XML element and each field becomes an XML attribute, except for fields named &quot;Element_Data&quot; that become the element's text. This lets TreeLine function as a crude XML editor.</Text_en>
 <Ref>export-xml</Ref>
 <Done>yes</Done>
-<RefNum>1.12.12.4</RefNum>
+<RefNum>1.12.12.5</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>XSLT</Topic>
@@ -2514,7 +2561,7 @@ When exporting to XSLT, a link to the XSL file is added to the TreeLine file.  N
 If HTML tags are used in data formats that will be exported to XSLT, they should use xHTML style (&amp;lt;br /&amp;gt; instead of &amp;lt;br&amp;gt;). When exporting, there is a prompt for the name of an optional style sheet (css). This name is stored in the TreeLine file as the default for future exports. Also, the reference to the XSLT file in the TreeLine file may be removed with the &quot;Tools-&amp;gt;Remove XSLT Reference&quot; command.</Text_en>
 <Ref>export-xslt</Ref>
 <Done>yes</Done>
-<RefNum>1.12.12.5</RefNum>
+<RefNum>1.12.12.6</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>ODF Textdokumente</Topic>
@@ -2523,6 +2570,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>TreeLine will export an outline to an Open Document Format (ODF) text document, compatible with OpenOffice.org and KWord. The title of each node is assigned a heading style at the appropriate level. Any other text in the output of each node becomes normal text under the heading. The export filter is intended for simple text outlines only.  Any HTML formatting is stripped, and objects such as tables and pictures are not supported.</Text_en>
 <Ref>export-odf</Ref>
 <Done>yes</Done>
+<RefNum>1.12.12.7</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2530,6 +2578,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Name_en>Customizations</Name_en>
 <Ref>custom</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13</RefNum>
 <TEXT_HEAD item="y">
 <Topic>Optionen</Topic>
 <Topic_en>Options</Topic_en>
@@ -2537,6 +2586,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.</Text_en>
 <Ref>custom-options</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.1</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Schriften</Topic>
@@ -2545,6 +2595,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>Fonts used in the tree views, the output view and the editor views can be set in the &quot;Tools-&amp;gt;Set Fonts&quot; menu.</Text_en>
 <Ref>custom-fonts</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Tastatur-Kürzel</Topic>
@@ -2553,6 +2604,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>Keyboard shortcuts can be customized by using the &quot;Tools-&amp;gt;Set Keyboard Shortcuts&quot; command.  The shortcut editor has tabs for menu and non-menu based commands.  Simply type the new key sequence with the appropriate field selected.</Text_en>
 <Ref>custom-keys</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.3</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Symbolleisten</Topic>
@@ -2561,6 +2613,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>An editor to customize the toolbars is available from &quot;Tools-&amp;gt;Customize Toolbars&quot;.  The number of toolbars can be set and the buttons on each can be defined.</Text_en>
 <Ref>custom-tools</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.4</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Farben</Topic>
@@ -2569,6 +2622,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>User interface colors can be set using the last three items in the &quot;Tools menu.  If the &quot;Use Default System Colors&quot; command is enabled, the user background and text color settings are overridden.</Text_en>
 <Ref>custom-color</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.5</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Baum-Symbole (Icons)</Topic>
@@ -2577,6 +2631,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Text_en>There is an icons directory in the user configuration directory (&quot;~/.treeline-1.x/icons&quot; on Linux, &quot;Documents and Settings\&amp;lt;user&amp;gt;\Application Data\bellz\treeline-1.x\icons&quot; on Windows).  Image files (PNG or BMP) placed into this directory are available for use as tree icons.</Text_en>
 <Ref>custom-icons</Ref>
 <Done>yes</Done>
+<RefNum>1.12.13.6</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2584,7 +2639,7 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Name_en>Plugins</Name_en>
 <Ref>plugins</Ref>
 <Done>yes</Done>
-<RefNum>1.12.13</RefNum>
+<RefNum>1.12.14</RefNum>
 <TEXT_HEAD item="y">
 <Topic>Beschreibung</Topic>
 <Topic_en>Description</Topic_en>
@@ -2596,7 +2651,7 @@ Momentan verfügbare Plugins finden Sie auf der &quot;Downloads&quot;-Seite der 
 Currently available plugins are listed on the &quot;Downloads&quot; page of the TreeLine web site.</Text_en>
 <Ref>plugins-intro</Ref>
 <Done>yes</Done>
-<RefNum>1.12.13.1</RefNum>
+<RefNum>1.12.14.1</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Installation</Topic>
@@ -2606,7 +2661,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Text_en>The plugins are installed by copying their Python file (*.py) to a plugins directory.  This can be a directory in the TreeLine installation (&quot;&amp;lt;prefix&amp;gt;/lib/treeline/plugins/&quot; on Linux or &quot;TreeLine\lib\plugins\&quot; on Windows) or in the user configuration directory (&quot;~/.treeline-1.x/plugins/&quot; on Linux, &quot;Documents and Settings\&amp;lt;user&amp;gt;\Application Data\bellz\treeline-1.x\plugins\&quot; on Windows).  A list of loaded plugins can be found using the &quot;Help-&amp;gt;About Plugins&quot; command.</Text_en>
 <Ref>plugins-install</Ref>
 <Done>yes</Done>
-<RefNum>1.12.13.2</RefNum>
+<RefNum>1.12.14.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Interface</Topic>
@@ -2615,7 +2670,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Text_en>Information about writing new plugins can be found in the &quot;plugininterface.py&quot; file in the TreeLine source code.</Text_en>
 <Ref>plugins-intrf</Ref>
 <Done>yes</Done>
-<RefNum>1.12.13.3</RefNum>
+<RefNum>1.12.14.3</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
@@ -2623,7 +2678,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Name_en>Common Problems</Name_en>
 <Ref>errors</Ref>
 <Done>yes</Done>
-<RefNum>1.12.14</RefNum>
+<RefNum>1.12.15</RefNum>
 <TEXT_HEAD item="y">
 <Topic>Unsichtbare Bereiche</Topic>
 <Topic_en>Closed Panes</Topic_en>
@@ -2631,6 +2686,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Text_en>If one of the view panes is not visible when it should contain data, it has probably been collapsed to a size of zero.  This can apply to the left pane and to the upper and lower right panes.  To fix this, look for a thin stripe along one of the view borders that can be dragged back into its proper position.</Text_en>
 <Ref>errors-panes</Ref>
 <Done>yes</Done>
+<RefNum>1.12.15.1</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>XML-Fehler</Topic>
@@ -2639,7 +2695,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Text_en>An error message, &quot;Error loading XML Parser&quot;, typically means that TreeLine could not find a necessary XML library. Under Linux, Python uses external libraries for parsing. Installing either the expat library or the PyXML package should fix the problem. Under Windows, Python includes a parser, so this error should not be seen unless files are missing or corrupt.</Text_en>
 <Ref>errors-xml</Ref>
 <Done>yes</Done>
-<RefNum>1.12.14.1</RefNum>
+<RefNum>1.12.15.2</RefNum>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Drucken</Topic>
@@ -2648,7 +2704,7 @@ Die Liste der geladenen Plugins kann unter &quot;Hilfe-&gt;&amp;gt;Über Plugins
 <Text_en>Some printing problems, especially problems with margins and word-wrapping, can be eliminated by changing the print font to a font that is better supported by the printer.</Text_en>
 <Ref>errors-print</Ref>
 <Done>yes</Done>
-<RefNum>1.12.14.3</RefNum>
+<RefNum>1.12.15.3</RefNum>
 </TEXT_HEAD>
 </HEADING3>
 </HEADING2>
@@ -2728,6 +2784,22 @@ icon="bullet_1">
 <Done type="Boolean" format="yes/no" init="false"></Done>
 <RefNum type="Text"></RefNum>
 </CONTENTS_LINK_INDENT_TODO>
+<TEXT_BULLETS_TODO item="n"
+line0="{*Topic_en*}"
+line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
+generic="TEXT_BULLETS"
+condition="Done != &quot;true&quot;"
+sibprefix="&lt;ul&gt;"
+sibsuffix="&lt;/ul&gt;"
+icon="bullet_1">
+<Topic type="Text"></Topic>
+<Topic_en type="Text"></Topic_en>
+<Text type="Text" html="y" lines="7"></Text>
+<Text_en type="Text" html="y" lines="7"></Text_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</TEXT_BULLETS_TODO>
 <HEADING4_TODO item="n"
 line0="{*Name_en*}"
 line1="&lt;h4&gt;{*Name_en*}&lt;/h4&gt;"
