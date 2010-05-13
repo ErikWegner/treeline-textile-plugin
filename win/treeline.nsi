@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2010-04-08 by Doug Bell
+; Last modified : 2010-05-13 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.3.1"
+!define VERSION "1.3.2"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
