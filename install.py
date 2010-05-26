@@ -194,21 +194,21 @@ def main():
         try:
             from PyQt4 import QtCore, QtGui
         except:
-            print '  Sorry, Qt Version 4.1 or higher and '\
-                  'PyQt Version 4.0 or higher are required'
+            print '  Sorry, Qt Version 4.4 or higher and '\
+                  'PyQt Version 4.4.0 or higher are required'
             sys.exit(3)
         qtVersion = QtCore.qVersion()
-        if cmpVersions(qtVersion, (4, 1)):
+        if cmpVersions(qtVersion, (4, 4)):
             print '  Qt Version %s -> OK' % qtVersion
         else:
-            print '  Qt Version %s -> Sorry, 4.1 or higher is required' \
+            print '  Qt Version %s -> Sorry, 4.4 or higher is required' \
                   % qtVersion
             sys.exit(3)
         pyqtVersion = QtCore.PYQT_VERSION_STR
-        if cmpVersions(pyqtVersion, (2, 4)):
+        if cmpVersions(pyqtVersion, (4, 4)):
             print '  PyQt Version %s -> OK' % pyqtVersion
         else:
-            print '  PyQt Version %s -> Sorry, 4.0 or higher is required' \
+            print '  PyQt Version %s -> Sorry, 4.4.0 or higher is required' \
                   % pyqtVersion
             sys.exit(3)
         global testXML

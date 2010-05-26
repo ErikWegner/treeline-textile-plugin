@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.1"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.2"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -622,8 +622,8 @@ icon="bullet_2">
 <TEXT_BULLETS item="y">
 <Topic>Qt</Topic>
 <Topic_en>Qt</Topic_en>
-<Text>Qt (Version 4.1 oder neuer)</Text>
-<Text_en>Qt (Version 4.1 or higher)</Text_en>
+<Text>Qt (Version 4.4 oder neuer)</Text>
+<Text_en>Qt (Version 4.4 or higher)</Text_en>
 <Done>true</Done>
 <RefNum>1.10.1.1.1</RefNum>
 </TEXT_BULLETS>
@@ -638,8 +638,8 @@ icon="bullet_2">
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
 <Topic_en>PyQt</Topic_en>
-<Text>PyQt (Version 4.1 oder neuer - vgl. &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; für weitere Informationen).</Text>
-<Text_en>PyQt (Version 4.0 or higher - see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; for more information)</Text_en>
+<Text>PyQt (Version 4.4.0 oder neuer - vgl. &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; für weitere Informationen).</Text>
+<Text_en>PyQt (Version 4.4.0 or higher - see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; for more information)</Text_en>
 <Done>true</Done>
 <RefNum>1.10.1.1.3</RefNum>
 </TEXT_BULLETS>
@@ -1699,7 +1699,7 @@ icon="bullet_1">
 <Topic type="Text"></Topic>
 <Topic_en type="Text">Multiple Windows</Topic_en>
 <Text type="Text" html="y" lines="12"></Text>
-<Text_en type="Text" html="y" lines="12">Multiple TreeLine windows with different files can be open within the same TreeLine session. The &quot;Open files in new windows&quot; option in &quot;Tools-&gt;General Options&quot; controls whether new windows are used when opening or creating files.&lt;br /&gt;&lt;br /&gt;
+<Text_en type="Text" html="y" lines="12">Multiple TreeLine windows with different files can be opened within the same TreeLine session. The &quot;Open files in new windows&quot; option in &quot;Tools-&gt;General Options&quot; controls whether new windows are used when opening or creating files.&lt;br /&gt;&lt;br /&gt;
 
 The &quot;Window-&gt;New Window&quot; command will create a new window with views of the same TreeLine file. Changes in either window are saved in the same document. This can be used to work in different sections of the file simultaneously. For performance reasons, the non-active window does not show the changes made in the active window until either the non-active window is focused or the &quot;Window-&gt;Update Other Window&quot; command is issued.&lt;br /&gt;&lt;br /&gt;
 
