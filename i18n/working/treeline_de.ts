@@ -2306,22 +2306,22 @@ werden ohne Warnung überschrieben, falls sie den Namen der Ausgabedatei besitze
     <message>
         <location filename="optiondefaults.py" line="64"/>
         <source>ViewStatusBar</source>
-        <translation type="unfinished"></translation>
+        <translation>AnsichtStatusBar</translation>
     </message>
     <message>
         <location filename="optiondefaults.py" line="94"/>
         <source>WinNewWindow</source>
-        <translation type="unfinished"></translation>
+        <translation>FensterNeu</translation>
     </message>
     <message>
         <location filename="optiondefaults.py" line="95"/>
         <source>WinCloseWindow</source>
-        <translation type="unfinished"></translation>
+        <translation>FensterSchliessen</translation>
     </message>
     <message>
         <location filename="optiondefaults.py" line="96"/>
         <source>WinUpdateWindow</source>
-        <translation type="unfinished"></translation>
+        <translation>FensterAktualisieren</translation>
     </message>
 </context>
 <context>
@@ -2329,12 +2329,12 @@ werden ohne Warnung überschrieben, falls sie den Namen der Ausgabedatei besitze
     <message>
         <location filename="optiondlg.py" line="37"/>
         <source>&amp;OK</source>
-        <translation type="unfinished">&amp;OK</translation>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location filename="optiondlg.py" line="41"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Abbrechen</translation>
+        <translation>&amp;Abbrechen</translation>
     </message>
 </context>
 <context>
@@ -3326,17 +3326,17 @@ werden ohne Warnung überschrieben, falls sie den Namen der Ausgabedatei besitze
     <message>
         <location filename="treedialogs.py" line="865"/>
         <source>HTML &amp;directory tables</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML Verzeichnis als Tabelle</translation>
     </message>
     <message>
         <location filename="treedialogs.py" line="868"/>
         <source>HTML directory &amp;pages</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML Verzeichnis als Seiten</translation>
     </message>
     <message>
         <location filename="treedialogs.py" line="1899"/>
         <source>Restore Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Zurücksetzen</translation>
     </message>
 </context>
 <context>
@@ -3429,7 +3429,7 @@ werden ohne Warnung überschrieben, falls sie den Namen der Ausgabedatei besitze
     <message>
         <location filename="treedoc.py" line="728"/>
         <source>Error - cannot write file to %s</source>
-        <translation type="unfinished">Fehler - kann Datei %s nicht schreiben</translation>
+        <translation>Fehler - kann Datei %s nicht schreiben</translation>
     </message>
 </context>
 <context>
@@ -3535,7 +3535,7 @@ Manuell suchen? (oder setze EDITOR Environment-Variable</translation>
     <message>
         <location filename="treeeditviews.py" line="186"/>
         <source>&amp;Add Internal Link...</source>
-        <translation type="unfinished"></translation>
+        <translation>Internen Link einfügen</translation>
     </message>
 </context>
 <context>
@@ -5195,66 +5195,71 @@ von %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="2456"/>
         <source>&amp;Add Category Level...</source>
-        <translation type="unfinished">&amp;Kategorieebene hinzufügen...</translation>
+        <translation>&amp;Kategorieebene hinzufügen...</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1484"/>
         <source>Show status bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige Status-Bereich</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1504"/>
         <source>Open files in new windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffne Dateien in neuem Fenster</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1781"/>
         <source>Click on tree node for link destination</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Link-Ziel anklicken</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2349"/>
         <source>Show Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige Status-Bereich</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2350"/>
         <source>Toggle the display of the status bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Status-Bereich zeigen oder nicht</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2621"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fenster</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2623"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2624"/>
         <source>Open a new window viewing the same file</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster mit gleicher Datei öffnen</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2630"/>
         <source>&amp;Close Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenster schließen</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2631"/>
         <source>Close the current window</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuelles Fenster schließen</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2637"/>
         <source>&amp;Update Other Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisiere andere Fenster</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2639"/>
         <source>Update the contents of an alternate window</source>
+        <translation>Aktualisiere den Inhalt anderer Fenster</translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2413"/>
+        <source>C&amp;hange Selected Data...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

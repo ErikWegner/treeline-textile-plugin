@@ -5249,6 +5249,11 @@ por %(author)s</translation>
         <source>Update the contents of an alternate window</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="treemainwin.py" line="2413"/>
+        <source>C&amp;hange Selected Data...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>treerightviews</name>

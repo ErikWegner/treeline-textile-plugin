@@ -2410,7 +2410,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.connect(dataSortAct, QtCore.SIGNAL('triggered(bool)'),
                      self.dataSort)
 
-        dataEditFieldAct = QtGui.QAction(('C&hange Selected Data...'),
+        dataEditFieldAct = QtGui.QAction(_('C&hange Selected Data...'),
                                          self.selectReqdActGrp)
         dataEditFieldAct.setStatusTip(_('Edit data values for all selected '\
                                         'nodes'))
