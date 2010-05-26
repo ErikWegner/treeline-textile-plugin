@@ -207,6 +207,7 @@ class TreeMainWin(QtGui.QMainWindow):
         self.restoreToolbarPos()
         self.filterStatus = QtGui.QLabel()
         self.doc = treedoc.TreeDoc()
+        self.show()  # show window outline early and fix data edit view resizing
         self.updateForFileChange(False)
 
         self.connect(self.leftTabs, QtCore.SIGNAL('currentChanged(int)'),
