@@ -326,7 +326,7 @@ sibsuffix="&lt;/ul&gt;">
 <Text>TreeLine requires the following libraries and programs:</Text>
 <TEXT_BULLETS item="y">
 <Topic>Qt</Topic>
-<Text>Qt (Version 4.1 or higher)</Text>
+<Text>Qt (Version 4.4 or higher)</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
@@ -334,7 +334,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
-<Text>PyQt (Version 4.0 or higher - see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; for more information)</Text>
+<Text>PyQt (Version 4.4.0 or higher - see &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; for more information)</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>XML parser</Topic>

@@ -82,19 +82,25 @@ class TreeControl(object):
 
     def firstWindow(self, fileNames):
         """Open first main window"""
-        socket = QtNetwork.QLocalSocket() # check for existing TreeLine session
-        socket.connectToServer('treeline-session', QtCore.QIODevice.WriteOnly)
-        if socket.waitForConnected(1000):
-            socket.write(repr(fileNames))
-            if socket.waitForBytesWritten(1000):
-                socket.close()
-                sys.exit(0)  # if found, send files to open and exit TreeLine
-        qApp = QtGui.QApplication.instance()
-        # start local server to listen for attempt to start new session
-        self.serverSocket = QtNetwork.QLocalServer()
-        self.serverSocket.listen('treeline-session')
-        qApp.connect(self.serverSocket, QtCore.SIGNAL('newConnection()'),
-                     self.getSocket)
+        try:
+            # check for existing TreeLine session
+            socket = QtNetwork.QLocalSocket()
+            socket.connectToServer('treeline-session',
+                                   QtCore.QIODevice.WriteOnly)
+            # if found, send files to open and exit TreeLine
+            if socket.waitForConnected(1000):
+                socket.write(repr(fileNames))
+                if socket.waitForBytesWritten(1000):
+                    socket.close()
+                    sys.exit(0)
+            qApp = QtGui.QApplication.instance()
+            # start local server to listen for attempt to start new session
+            self.serverSocket = QtNetwork.QLocalServer()
+            self.serverSocket.listen('treeline-session')
+            qApp.connect(self.serverSocket, QtCore.SIGNAL('newConnection()'),
+                         self.getSocket)
+        except AttibuteError:
+            print 'Warning:  Could not create local socket'
         if fileNames:
             filenames = [unicode(fileName, globalref.localTextEncoding) for
                          fileName in fileNames]
