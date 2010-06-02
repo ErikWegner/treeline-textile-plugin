@@ -682,6 +682,7 @@ class TreeMainWin(QtGui.QMainWindow):
             QtGui.QMessageBox.warning(self, 'TreeLine',
                                       _('Nothing to export'))
             return ''
+        fileName = ''
         try:
             if ExportDlg.exportType == ExportDlg.htmlType:
                 fileName = self.getSaveFileName(_('Export Html'), '.html',
@@ -713,6 +714,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 if dirName:
                     self.doc.exportDirTable(dirName, nodeList,
                                             ExportDlg.addHeader)
+                    fileName = dirName
             elif ExportDlg.exportType == ExportDlg.dirPageType:
                 defaultDir, fn = os.path.split(self.doc.fileName)
                 if not defaultDir:
@@ -724,6 +726,7 @@ class TreeMainWin(QtGui.QMainWindow):
                 dirName = unicode(dirName)
                 if dirName:
                     self.doc.exportDirPage(dirName, nodeList)
+                    fileName = dirName
             elif ExportDlg.exportType == ExportDlg.xsltType:
                 dlgText = _('A link to a stylesheet can be added to the '\
                             'XSL file\nEnter a CSS filename (blank for none)')
