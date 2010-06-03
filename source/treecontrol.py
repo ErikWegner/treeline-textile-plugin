@@ -99,7 +99,7 @@ class TreeControl(object):
             self.serverSocket.listen('treeline-session')
             qApp.connect(self.serverSocket, QtCore.SIGNAL('newConnection()'),
                          self.getSocket)
-        except AttibuteError:
+        except AttributeError:
             print 'Warning:  Could not create local socket'
         if fileNames:
             filenames = [unicode(fileName, globalref.localTextEncoding) for
