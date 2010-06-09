@@ -21,6 +21,7 @@ import compileall
 import py_compile
 import glob
 import re
+import subprocess
 
 prefixDir = '/usr/local'
 buildRoot = '/'
@@ -112,12 +113,14 @@ def spellCheck(cmdList):
     """Try spell checkers from list, print result"""
     for cmd in cmdList:
         try:
-            stdIn, stdOut, stdErr = os.popen3(cmd)
-            stdOut.readline()    # read header
-            stdIn.write('!\n')   # set terse mode
-            stdIn.flush()
-            stdIn.close()
-            stdOut.close()
+            p = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE,
+                                 stdout=subprocess.PIPE,
+                                 stderr=subprocess.STDOUT)
+            p.stdout.readline()
+            p.stdin.write('!\n')
+            p.stdin.flush()
+            p.stdin.close()
+            p.stdout.close()
             print '  Spell Checker %s -> OK' % cmd.split()[0]
             return
         except:
