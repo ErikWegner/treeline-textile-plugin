@@ -67,6 +67,12 @@ class HelpView(QtGui.QMainWindow):
         self.connect(homeAct, QtCore.SIGNAL('triggered()'),
                      self.textView, QtCore.SLOT('home()'))
 
+        tools.addSeparator()
+        findLabel = QtGui.QLabel(_('Find:'), self)
+        tools.addWidget(findLabel)
+        self.findEdit = QtGui.QLineEdit(self)
+        tools.addWidget(self.findEdit)
+
     def showLink(self, text):
         """Send link text to the statusbar"""
         self.statusBar().showMessage(unicode(text))
