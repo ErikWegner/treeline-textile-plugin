@@ -68,14 +68,57 @@ class HelpView(QtGui.QMainWindow):
                      self.textView, QtCore.SLOT('home()'))
 
         tools.addSeparator()
-        findLabel = QtGui.QLabel(_('Find:'), self)
+        tools.addSeparator()
+        findLabel = QtGui.QLabel(_(' Find: '), self)
         tools.addWidget(findLabel)
         self.findEdit = QtGui.QLineEdit(self)
         tools.addWidget(self.findEdit)
+        self.connect(self.findEdit,
+                     QtCore.SIGNAL('textEdited(const QString &)'),
+                     self.findTextChanged)
+        self.connect(self.findEdit, QtCore.SIGNAL('returnPressed()'),
+                     self.findNext)
+
+        self.findPreviousAct = QtGui.QAction(_('Find &Previous'), self)
+        self.findPreviousAct.setIcon(icons['helpprevious'])
+        tools.addAction(self.findPreviousAct)
+        self.menu.addAction(self.findPreviousAct)
+        self.connect(self.findPreviousAct, QtCore.SIGNAL('triggered()'),
+                     self.findPrevious)
+        self.findPreviousAct.setEnabled(False)
+
+        self.findNextAct = QtGui.QAction(_('Find &Next'), self)
+        self.findNextAct.setIcon(icons['helpnext'])
+        tools.addAction(self.findNextAct)
+        self.menu.addAction(self.findNextAct)
+        self.connect(self.findNextAct, QtCore.SIGNAL('triggered()'),
+                     self.findNext)
+        self.findNextAct.setEnabled(False)
 
     def showLink(self, text):
         """Send link text to the statusbar"""
         self.statusBar().showMessage(unicode(text))
+
+    def findTextChanged(self, text):
+        """Update find controls based on text in text edit"""
+        text = unicode(text)
+        self.findPreviousAct.setEnabled(len(text) > 0)
+        self.findNextAct.setEnabled(len(text) > 0)
+
+    def findPrevious(self):
+        """Command to find the previous string"""
+        if self.textView.find(unicode(self.findEdit.text()),
+                              QtGui.QTextDocument.FindBackward):
+            self.statusBar().clearMessage()
+        else:
+            self.statusBar().showMessage(_('Text string not found'))
+
+    def findNext(self):
+        """Command to find the next string"""
+        if self.textView.find(unicode(self.findEdit.text())):
+            self.statusBar().clearMessage()
+        else:
+            self.statusBar().showMessage(_('Text string not found'))
 
 
 class HelpViewer(QtGui.QTextBrowser):

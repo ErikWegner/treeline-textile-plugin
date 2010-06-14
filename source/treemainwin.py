@@ -1731,7 +1731,8 @@ class TreeMainWin(QtGui.QMainWindow):
             path = self.findHelpPath()
             if path:
                 TreeMainWin.toolIcons.loadIcons(['helpback', 'helpforward',
-                                                 'helphome'])
+                                                 'helphome', 'helpprevious',
+                                                 'helpnext'])
                 TreeMainWin.helpView = helpview.HelpView(path,
                                                   _('TreeLine README File'),
                                                   TreeMainWin.toolIcons)
