@@ -73,6 +73,7 @@ class TreeMainWin(QtGui.QMainWindow):
                       ('TextAddColorTag', _('&Color...'),
                        ('<font color="%s">', '</font>'))]
     tagDict = dict([(text, tag) for name, text, tag in tagMenuEntries])
+    defaultWinSize = (640, 500)
     winCascade = 24
 
     def __init__(self, parent=None):
@@ -82,15 +83,33 @@ class TreeMainWin(QtGui.QMainWindow):
         self.showStatusBar = globalref.options.boolData('ShowStatusBar')
         self.viewStatusBar(self.showStatusBar)
         globalref.mainWin = self
-        self.resize(globalref.options.intData('WindowXSize', 10, 10000),
-                    globalref.options.intData('WindowYSize', 10, 10000))
         if globalref.options.boolData('SaveWindowGeom'):
-            x = globalref.options.intData('WindowXPos', -1000, 10000)
-            y = globalref.options.intData('WindowYPos', -1000, 10000)
-            if x != -1000 or y != -1000:
-                shift = TreeMainWin.winCascade * \
-                        globalref.treeControl.windowCount()
-                self.move(x + shift, y + shift)
+            if globalref.treeControl.windowCount():
+                rect = globalref.treeControl.windowList[-1].geometry()
+                rect.adjust(TreeMainWin.winCascade, TreeMainWin.winCascade,
+                            TreeMainWin.winCascade, TreeMainWin.winCascade)
+            else:
+                rect = QtCore.QRect(globalref.options.intData('WindowXPos',
+                                                              -1000, 10000),
+                                    globalref.options.intData('WindowYPos',
+                                                              -1000, 10000),
+                                    globalref.options.intData('WindowXSize',
+                                                              10, 10000),
+                                    globalref.options.intData('WindowYSize',
+                                                              10, 10000))
+            if rect.x() != -1000 or rect.y() != -1000:
+                desktop = QtGui.QApplication.desktop()
+                if desktop.isVirtualDesktop():
+                    availRect = desktop.screen().rect()
+                else:
+                    availRect = desktop.availableGeometry(desktop.
+                                                          primaryScreen())
+                winRect = rect.intersected(availRect)
+                self.setGeometry(winRect)
+            else:
+                self.resize(rect.size())
+        else:
+            self.resize(*TreeMainWin.defaultWinSize)
         self.origPalette = QtGui.QApplication.palette()
         self.updateColors()
         self.autoSaveTimer = QtCore.QTimer(self)
@@ -1883,8 +1902,10 @@ class TreeMainWin(QtGui.QMainWindow):
                 globalref.options.changeData('WindowXSize', self.width(), True)
                 globalref.options.changeData('WindowYSize', self.height(),
                                              True)
-                globalref.options.changeData('WindowXPos', self.x(), True)
-                globalref.options.changeData('WindowYPos', self.y(), True)
+                globalref.options.changeData('WindowXPos', self.geometry().x(),
+                                             True)
+                globalref.options.changeData('WindowYPos', self.geometry().y(),
+                                             True)
                 treeWidth = self.leftTabs.width()
                 rightWidth = self.rightTabs.width()
                 treePercent = int(treeWidth * 100.0 / (treeWidth + rightWidth))
