@@ -592,7 +592,7 @@ class DataEditView(QtGui.QWidget):
         self.scrollView.replaceGroups(self.allItems[start:end])
         self.updateControl()
         self.show()
-        globalref.focusTree()
+        self.scrollView.dataGroups[0].setFocus(QtCore.Qt.TabFocusReason)
 
     def viewForward(self):
         """View next set of groups"""
@@ -603,7 +603,7 @@ class DataEditView(QtGui.QWidget):
         self.shownRanges.append((start, start + numGroups))
         self.updateControl()
         self.show()
-        globalref.focusTree()
+        self.scrollView.dataGroups[0].setFocus(QtCore.Qt.TabFocusReason)
 
     def viewAll(self):
         """View all groups"""
@@ -650,11 +650,20 @@ class DataEditView(QtGui.QWidget):
     def scrollPage(self, numPages=1):
         """Scrolls down by numPages (negative for up)
            leaving a one-line overlap"""
-        delta = self.scrollView.maximumViewportSize().height() - \
-                self.fontMetrics().height()
-        if delta > 0:
-            scrollBar = self.scrollView.verticalScrollBar()
+        delta = self.scrollView.maximumViewportSize().height()
+        if delta == 0:
+            return
+        fontSize = self.fontMetrics().height()
+        if delta > fontSize:
+            delta -= fontSize
+        scrollBar = self.scrollView.verticalScrollBar()
+        if (numPages > 0 and scrollBar.value() < scrollBar.maximum()) or \
+                (numPages < 0 and scrollBar.value() > scrollBar.minimum()):
             scrollBar.setValue(scrollBar.value() + numPages * delta)
+        elif numPages < 0:
+            self.viewBack()
+        else:
+            self.viewForward()
 
     def resizeEvent(self, event):
         """Change the minimum viewport size if view size changes"""
