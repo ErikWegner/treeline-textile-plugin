@@ -36,24 +36,18 @@ icon="bullet_2">
 <Done type="Boolean" format="yes/no" init="true">yes</Done>
 <RefNum type="Text">1.3</RefNum>
 </TEXT_CNTR>
-<TEXT_CNTR_TODO item="y"
-line0="{*Name_en*}"
-line1="&lt;center&gt;{*Name_en*}&lt;/center&gt;"
-generic="TEXT_CNTR"
-condition="Done != &quot;true&quot;"
-icon="bullet_1">
-<Name type="Text">Version 1.2.2</Name>
-<Name_en type="Text">Version 1.3.2 (unstable development snapshot)</Name_en>
-<Ref type="Text" ref="y"></Ref>
-<Done type="Boolean" format="yes/no" init="false">false</Done>
-<RefNum type="Text">1.4</RefNum>
-</TEXT_CNTR_TODO>
-<TEXT_CNTR_TODO item="y">
-<Name>8. Januar 2009</Name>
+<TEXT_CNTR item="y">
+<Name>Version 1.3.2 (instabiler Entwickler-Snapshot)</Name>
+<Name_en>Version 1.3.2 (unstable development snapshot)</Name_en>
+<Done>true</Done>
+<RefNum>1.4</RefNum>
+</TEXT_CNTR>
+<TEXT_CNTR item="y">
+<Name>14. Mai 2010</Name>
 <Name_en>May 14, 2010</Name_en>
-<Done>false</Done>
+<Done>true</Done>
 <RefNum>1.5</RefNum>
-</TEXT_CNTR_TODO>
+</TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name_en*}"
 line1="&lt;hr /&gt;&lt;h2&gt;{*Name_en*}&lt;/h2&gt;"
@@ -851,19 +845,13 @@ icon="bullet_2">
 <Done>true</Done>
 <RefNum>1.12.1.2.3</RefNum>
 </CONTENTS_LINK_INDENT>
-<CONTENTS_LINK_INDENT_TODO item="y"
-line0="{*Name_en*}"
-line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
-generic="CONTENTS_LINK_INDENT"
-condition="Done != &quot;true&quot;"
-icon="bullet_1">
-<Name type="Text"></Name>
-<Name_en type="Text">Multiple Windows</Name_en>
-<Link type="InternalLink" html="y" linkalt="Name_en">basics-wins</Link>
-<Ref type="Text" ref="y"></Ref>
-<Done type="Boolean" format="yes/no" init="false">false</Done>
-<RefNum type="Text">1.12.1.2.4</RefNum>
-</CONTENTS_LINK_INDENT_TODO>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Mehrere Fenster</Name>
+<Name_en>Multiple Windows</Name_en>
+<Link>basics-wins</Link>
+<Done>true</Done>
+<RefNum>1.12.1.2.4</RefNum>
+</CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
 <Name>Navigation im Baum</Name>
@@ -1689,25 +1677,22 @@ To add information to a new TreeLine document, use the &quot;Edit-&amp;gt;Add Ch
 <Done>true</Done>
 <RefNum>1.12.3.3</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD_TODO item="y"
-line0="{*Topic_en*}"
-line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
-line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
-generic="TEXT_HEAD"
-condition="Done != &quot;true&quot;"
-icon="bullet_1">
-<Topic type="Text"></Topic>
-<Topic_en type="Text">Multiple Windows</Topic_en>
-<Text type="Text" html="y" lines="12"></Text>
-<Text_en type="Text" html="y" lines="12">Multiple TreeLine windows with different files can be opened within the same TreeLine session. The &quot;Open files in new windows&quot; option in &quot;Tools-&gt;General Options&quot; controls whether new windows are used when opening or creating files.&lt;br /&gt;&lt;br /&gt;
+<TEXT_HEAD item="y">
+<Topic_en>Multiple Windows</Topic_en>
+<Text>Mehrer Treeline-Fenster mit unterschiedlichen Dateien können innerhalb derselben Treeline-Sitzung geöffnet werden. Die Option &quot;Öffne Dateien in neuem Fenster&quot; in &quot;Extras-&gt;Allgemeine Einstellungen&quot; kontrolliert ob neue Fenster beim Öffnen oder Anlegen von Dateien benutzt werden.&lt;br /&gt;&lt;br /&gt;
+
+Das Kommando &quot;Fenster-&gt;Neues Fenster&quot; erzeugt ein neues Fenster welches die gleiche TreeLine-Datei anzeigt. Änderungen in jedem Fenster werden in demselben Dokument gespeichert. Die verschiedenen Ansichten können genutzt werden, um an unterschiedlichen Stellen der Datei gleichzeitig zu arbeiten. Das inaktive Fenster zeigt aus Effizienzgründen solange keine Änderungen an, bis entweder das inaktive Fenster den Focus erhält oder das Kommando &quot;Fenster-&gt;Aktualisiere andere Fenster&quot; benutzt wird.&lt;br /&gt;&lt;br /&gt;
+
+Beim Starten von Treeline (durch Shortcut, Dateiassoziation oder Kommandozeile) wird eine bestehende TreeLine-Sitzung benutzt, falls diese bereits läuft. Ein neues Fenster wird geöffnet falls eine noch nicht geöffnete Datei in der Dateiassoziation oder der Kommandozeile angegeben ist.</Text>
+<Text_en>Multiple TreeLine windows with different files can be opened within the same TreeLine session. The &quot;Open files in new windows&quot; option in &quot;Tools-&gt;General Options&quot; controls whether new windows are used when opening or creating files.&lt;br /&gt;&lt;br /&gt;
 
 The &quot;Window-&gt;New Window&quot; command will create a new window with views of the same TreeLine file. Changes in either window are saved in the same document. This can be used to work in different sections of the file simultaneously. For performance reasons, the non-active window does not show the changes made in the active window until either the non-active window is focused or the &quot;Window-&gt;Update Other Window&quot; command is issued.&lt;br /&gt;&lt;br /&gt;
 
 Starting TreeLine (from a shortcut, file association or command line) will activate an existing TreeLine session if it is already running. A new window will be opened if an unopened file was specified by file association or in the command line.</Text_en>
-<Ref type="Text" ref="y">basics-wins</Ref>
-<Done type="Boolean" format="yes/no" init="false">false</Done>
-<RefNum type="Text">1.12.3.4</RefNum>
-</TEXT_HEAD_TODO>
+<Ref>basics-wins</Ref>
+<Done>true</Done>
+<RefNum>1.12.3.4</RefNum>
+</TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
 <Name>Navigation im Baum</Name>
@@ -1799,12 +1784,14 @@ The &quot;Edit-&amp;gt;Paste Node Text&quot; command renames the selection based
 <Done>true</Done>
 <RefNum>1.12.5.2</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD_TODO item="y">
+<TEXT_HEAD item="y">
 <Topic>Die rechte Fensterhälfte</Topic>
 <Topic_en>Right Pane Views</Topic_en>
 <Text>In der rechten Fensterhälfte bietet die Ansicht &quot;Editor&quot; den direktesten Weg, um die Daten eines Elements zu bearbeiten. Wenn das bearbeitete Feld im Titel benutzt wird, zeigt der Baum sofort die jeweilige Änderung an. Die Felder erlauben die Eingabe von mehrzeiligem Text. Wenn nötig, wird ein Rollbalken angezeigt.&lt;br /&gt;&lt;br /&gt;
 
 Wenn die Benutzung von HTML freigeschaltet ist (siehe weiter unten im Kapitel &lt;a href=&quot;#fields&quot;&gt;Feldtypen&lt;/a&gt;), dann finden sich im Kontextmenü (erreichbar über die rechte Maustaste) unter &quot;Text auszeichnen&quot; Einträge, um HTML-Auszeichnungen wie &quot;fett&quot; oder &quot;kursiv&quot; hinzuzufügen.&lt;br /&gt;&lt;br /&gt;
+
+Ein weiterer Eintrag im Kontextmenü kann einen internen Link einfügen. Im unteren Status-Bereich erfolgt dann eine Aufforderung, den Link in der Baumansicht anzuklicken. Dieses wird einen internen Link zu diesem Knoten hinzufügen. Das Feld muss natürlich so konfiguriert sein, dass HTML angezeigt wird, damit es funktioniert.&lt;br /&gt;&lt;br /&gt;
 
 Vom Kontextmenü kann auch ein externer Editor aufgerufen werden. Nachdem der Texteditor seine Änderungen gespeicher hat und beendet wurde, erscheint der Text in der Textbox in TreeLine. Der Editor kann mit Hilfe der Umgebungsvariable EDITOR gesetzt werden. Wenn die Variable nicht existiert, fragt TreeLine den Pfad zum gewünschten Editor bei der ersten Benutzung ab.&lt;br /&gt;&lt;br /&gt;
 
@@ -1819,9 +1806,9 @@ An external editor can also be invoked from a &quot;Data Editor&quot; box contex
 
 Also in the right pane, the &quot;Title List&quot; view is useful to quickly rename child titles or to add new child nodes. A text list of new nodes can even be pasted directly into this view.</Text_en>
 <Ref>edit-view</Ref>
-<Done>false</Done>
+<Done>true</Done>
 <RefNum>1.12.5.3</RefNum>
-</TEXT_HEAD_TODO>
+</TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Rechtschreibprüfung</Topic>
 <Topic_en>Spell Check</Topic_en>
@@ -2447,15 +2434,15 @@ By default, TreeLine will avoid breaking pages between a parent and its first ch
 <Done>true</Done>
 <RefNum>1.12.10.4</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD_TODO item="y">
+<TEXT_HEAD item="y">
 <Topic>Kommandozeile</Topic>
 <Topic_en>Command Line</Topic_en>
-<Text>Mit dem Befehl &quot;treeline&quot; können Sie auf der Kommandozeile und in Skripten Dateien importieren und exportieren. Damit lassen sich zum Beispiel automatisierte Konvertierungsläufe einrichten. Wenn Sie &quot;treeline -h&quot; aufrufen, werden die verfügbaren Optionen angezeigt.</Text>
+<Text>Mit dem Befehl &quot;treeline&quot; können Sie auf der Kommandozeile und in Skripten Dateien importieren und exportieren. Damit lassen sich zum Beispiel automatisierte Konvertierungsläufe einrichten. Wenn Sie &quot;treeline -h&quot; (bzw. &quot;treeline_dos -h&quot; unter Windows) aufrufen, werden die verfügbaren Optionen angezeigt.</Text>
 <Text_en>Command line options allow non-interactive file importing and exporting. This allows automated runs to be scheduled. For more details, run &quot;treeline -h&quot; (or &quot;treeline_dos -h&quot; in Windows) from the command line.</Text_en>
 <Ref>file-cmdline</Ref>
-<Done>false</Done>
+<Done>true</Done>
 <RefNum>1.12.10.5</RefNum>
-</TEXT_HEAD_TODO>
+</TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
 <Name>Datei-Import</Name>
@@ -2546,19 +2533,19 @@ A tab-delimited table can also be imported. It becomes a single level of childre
 <Done>true</Done>
 <RefNum>1.12.12.1</RefNum>
 </TEXT_HEAD>
-<TEXT_HEAD_TODO item="y">
+<TEXT_HEAD item="y">
 <Topic>HTML</Topic>
 <Topic_en>HTML</Topic_en>
 <Text>Der Export als einzelne Datei funktioniert ähnlich wie drucken. Sie kann die Kopf- und Fußzeilen der Druckausgabe enthalten, und die Zahl der Zeilen kann gesetzt werden.&lt;br /&gt;&lt;br /&gt;
 
-Der Export als HTML-Verzeichnisstruktur erzeugt eine Verzeichnisstruktur. Die Verzeichnisse werden dabei nach dem Referenzfeld benannt, welches gültige Zeichen für Dateinamen enthalten muss und keine doppelten Einträge pro Verzeichnis beinhalten darf. Jede HTML-Datei iste eine Tabelle mit den Daten der Elemente auf gleicher Ebene mit HTML-Links zu Eltern- und Unterelementen.</Text>
+Es gibt auch zwei HTML Export-Funktionen, die Verzeichnishierarchien anlegen.  Die Verzeichnisse werden dabei nach dem Referenzfeld benannt, welches gültige Zeichen für Dateinamen enthalten müssen und keine doppelten Einträge pro Verzeichnis beinhalten dürfen. Die erste Variante erzeugt eine Tabelle mit den Daten der Elemente auf gleicher Ebene mit HTML-Links zu Eltern- und Unterelementen. Die zweite Variante erzeugt eine HTML-Datei für jeden Knoten, mit einem Navigationsbereich auf der linken Seite, der Links zum Vater, zu den Elementen auf gleicher Ebene und zu den Kindern enthält.</Text>
 <Text_en>Single-file HTML output is similar to printing, with similar options. It can include the print header and footer in the HTML, and the number of columns can be set.&lt;br /&gt;&lt;br /&gt;
 
 There are also two multiple-file HTML export functions that create directory structures. Directories are named for the content of the reference data field, which must contain legal file names and not have duplicates under the same parent. The first form creates a table in each HTML file that contains the data for a set of siblings, as well as links to the parent and child pages.  The second form creates an HTML page for every node, with a navigation pane on the left side of each page that contains links to the node's parent, uncles and children.</Text_en>
 <Ref>export-html</Ref>
-<Done>false</Done>
+<Done>true</Done>
 <RefNum>1.12.12.2</RefNum>
-</TEXT_HEAD_TODO>
+</TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Text mit Trennzeichen</Topic>
 <Topic_en>Delimited Text</Topic_en>
@@ -2619,16 +2606,24 @@ If HTML tags are used in data formats that will be exported to XSLT, they should
 <Ref>custom</Ref>
 <Done>true</Done>
 <RefNum>1.12.13</RefNum>
-<TEXT_HEAD_TODO item="y">
-<Topic>Optionen</Topic>
-<Topic_en>Options</Topic_en>
-<Text>Das Verhalten von TreeLine kann geändert werden durch die Einstellungen in &quot;Extras-&amp;gt;Allgemeine Einstellungen...&quot;. Die meisten Optionen sind schon an einer anderen Stelle in diesem Dokument behandelt worden.</Text>
-<Text_en>TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.&lt;br /&gt;&lt;br /&gt;
+<TEXT_HEAD_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
+line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+generic="TEXT_HEAD"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Topic type="Text">Optionen</Topic>
+<Topic_en type="Text">Options</Topic_en>
+<Text type="Text" html="y" lines="12">Das Verhalten von TreeLine kann geändert werden durch die Einstellungen in &quot;Extras-&amp;gt;Allgemeine Einstellungen...&quot;. Die meisten Optionen sind schon an einer anderen Stelle in diesem Dokument behandelt worden.&lt;br /&gt;&lt;br /&gt;
+
+Unter Windows wird die Datei &quot;treeline.ini&quot; im Verzeichnis zu den Benutzereinstellungen verwendet, um die Einstellungen zu speichern. Diese Datei kann manuell in das Treeline-Verzeichnis &quot;lib&quot; kopiert werden. Sobald die Datei im Verzeichnis &quot;lib&quot; exitiert, wird diese benutzt und automatisch geändert, solange sie nicht auch im Verzeichnis zu den Benutzereinstellungen existiert.</Text>
+<Text_en type="Text" html="y" lines="12">TreeLine's behavior can be modified with several settings available in &quot;Tools-&amp;gt;General Options&quot;.  Most of these options are covered elsewhere in this document.&lt;br /&gt;&lt;br /&gt;
 
 Under Windows, a &quot;treeline.ini&quot; file in the user's application settings directory is used by default to store the settings.  For portable use of TreeLine, that file can be manually moved to TreeLine's &quot;lib&quot; directory.  Once it exists, a &quot;treeline.ini&quot; file in the &quot;lib&quot; directory will be used and updated automatically if the file isn't also in the user's application settings directory.</Text_en>
-<Ref>custom-options</Ref>
-<Done>false</Done>
-<RefNum>1.12.13.1</RefNum>
+<Ref type="Text" ref="y">custom-options</Ref>
+<Done type="Boolean" format="yes/no" init="false">false</Done>
+<RefNum type="Text">1.12.13.1</RefNum>
 </TEXT_HEAD_TODO>
 <TEXT_HEAD item="y">
 <Topic>Schriften</Topic>
@@ -2801,6 +2796,31 @@ To subscribe, go to &lt;a href=&quot;https://lists.berlios.de/mailman/listinfo/t
 <RefNum>1.14.3</RefNum>
 </TEXT_PARA>
 </HEADING2>
+<TEXT_CNTR_TODO item="n"
+line0="{*Name_en*}"
+line1="&lt;center&gt;{*Name_en*}&lt;/center&gt;"
+generic="TEXT_CNTR"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text"></Name_en>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</TEXT_CNTR_TODO>
+<CONTENTS_LINK_INDENT_TODO item="n"
+line0="{*Name_en*}"
+line1="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{*Link*}&lt;br /&gt;"
+generic="CONTENTS_LINK_INDENT"
+condition="Done != &quot;true&quot;"
+icon="bullet_1">
+<Name type="Text"></Name>
+<Name_en type="Text"></Name_en>
+<Link type="InternalLink" html="y" linkalt="Name_en"></Link>
+<Ref type="Text" ref="y"></Ref>
+<Done type="Boolean" format="yes/no" init="false"></Done>
+<RefNum type="Text"></RefNum>
+</CONTENTS_LINK_INDENT_TODO>
 <TEXT_BULLETS_TODO item="n"
 line0="{*Topic_en*}"
 line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
