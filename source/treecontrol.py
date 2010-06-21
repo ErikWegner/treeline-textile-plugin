@@ -126,6 +126,7 @@ class TreeControl(object):
                 self.windowList.append(win)
                 self.openFile(fileName, False)
                 win.show()
+            QtGui.QApplication.alert(win)
 
     def autoOpen(self):
         """Open last used file"""
