@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2010-05-13 by Doug Bell
+; Last modified : 2010-06-22 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.3.2"
+!define VERSION "1.3.3"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -113,6 +113,13 @@ Section "${NAME} (required)" treeline
         File ".\templates\220en_Book_List.trl"
         File ".\templates\230en_ToDo_List.trl"
 
+        ; Set files to read-only
+        SetFileAttributes "110en_Long_Plain_Text.trl" READONLY
+        SetFileAttributes "120en_Long_HTML_Text.trl" READONLY
+        SetFileAttributes "210en_Contact_List.trl" READONLY
+        SetFileAttributes "220en_Book_List.trl" READONLY
+        SetFileAttributes "230en_ToDo_List.trl" READONLY
+
         ; Set output path to the doc install directory.
         SetOutPath "$INSTDIR\doc"
 
@@ -136,6 +143,19 @@ Section "${NAME} (required)" treeline
         File ".\doc\sample_intern_links.trl"
         File ".\doc\sample_other_fields.trl"
 	File ".\doc\sample_table_booklist.trl"
+
+        ; Set files to read-only
+	SetFileAttributes "readme.trl" READONLY
+	SetFileAttributes "sample_basic_booklist.trl" READONLY
+	SetFileAttributes "sample_basic_contacts.trl" READONLY
+	SetFileAttributes "sample_basic_longtext.trl" READONLY
+        SetFileAttributes "sample_bookmarks.trl" READONLY
+        SetFileAttributes "sample_char_format.trl" READONLY
+        SetFileAttributes "sample_color_items.trl" READONLY
+        SetFileAttributes "sample_conditional_todo.trl" READONLY
+        SetFileAttributes "sample_intern_links.trl" READONLY
+        SetFileAttributes "sample_other_fields.trl" READONLY
+	SetFileAttributes "sample_table_booklist.trl" READONLY
 
         ; Create an icons directory.
         SetOutPath "$INSTDIR\icons"
@@ -184,6 +204,8 @@ Section "${NAME} (required)" treeline
         File ".\icons\toolbar\32x32\helpcontents.png"
         File ".\icons\toolbar\32x32\helpforward.png"
         File ".\icons\toolbar\32x32\helphome.png"
+        File ".\icons\toolbar\32x32\helpnext.png"
+        File ".\icons\toolbar\32x32\helpprevious.png"
         File ".\icons\toolbar\32x32\textaddboldtag.png"
         File ".\icons\toolbar\32x32\textaddcolortag.png"
         File ".\icons\toolbar\32x32\textadditalicstag.png"
@@ -614,6 +636,8 @@ Section "Uninstall"
         Delete "$INSTDIR\icons\toolbar\32x32\helpcontents.png"
         Delete "$INSTDIR\icons\toolbar\32x32\helpforward.png"
         Delete "$INSTDIR\icons\toolbar\32x32\helphome.png"
+        Delete "$INSTDIR\icons\toolbar\32x32\helpnext.png"
+        Delete "$INSTDIR\icons\toolbar\32x32\helpprevious.png"
         Delete "$INSTDIR\icons\toolbar\32x32\textaddboldtag.png"
         Delete "$INSTDIR\icons\toolbar\32x32\textaddcolortag.png"
         Delete "$INSTDIR\icons\toolbar\32x32\textadditalicstag.png"
