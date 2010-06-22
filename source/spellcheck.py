@@ -14,6 +14,7 @@
 import os.path
 import re
 import sys
+import subprocess
 
 class SpellCheck(object):
     """Interfaces with aspell or ispell and stores session hooks"""
@@ -32,7 +33,11 @@ class SpellCheck(object):
             cmdList = ['%s %s' % (spellPath, opt) for opt in ispellOpts]
         for cmd in cmdList:
             try:
-                self.stdIn, self.stdOut, err = os.popen3(cmd)
+                p = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE,
+                                     stdout=subprocess.PIPE,
+                                     stderr=subprocess.STDOUT)
+                self.stdIn = p.stdin
+                self.stdOut = p.stdout
                 self.stdOut.readline()  # read header
                 self.stdIn.write('!\n')  # set terse mode (no correct returns)
                 self.stdIn.flush()
