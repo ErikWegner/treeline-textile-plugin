@@ -31,11 +31,11 @@
         </center>
 
         <center>
-          Version 1.3.2 (unstable development snapshot)
+          Version 1.3.3 (unstable development snapshot)
         </center>
 
         <center>
-          May 14, 2010
+          June 24, 2010
         </center>
         <hr>
 
@@ -294,11 +294,11 @@
 
             <div>
               <ul>
-                <li>Qt (Version 4.1 or higher)</li>
+                <li>Qt (Version 4.4 or higher)</li>
 
                 <li>Python (Version 2.4, 2.5 or 2.6)</li>
 
-                <li>PyQt (Version 4.0 or higher - see <a href=
+                <li>PyQt (Version 4.4.0 or higher - see <a href=
                 "http://www.riverbankcomputing.co.uk">www.riverbankcomputing.co.uk</a>
                 for more information)</li>
 
@@ -791,7 +791,7 @@
 
             <h4>Multiple Windows</h4>
 
-            <p>Multiple TreeLine windows with different files can be open
+            <p>Multiple TreeLine windows with different files can be opened
             within the same TreeLine session. The "Open files in new windows"
             option in "Tools-&gt;General Options" controls whether new
             windows are used when opening or creating files.<br>
@@ -1976,6 +1976,71 @@
         <h2>Revision History</h2>
 
         <div>
+          <hr>
+
+          <h3>June 24, 2010 - Release 1.3.3 (unstable development
+          snapshot)</h3>
+
+          <div>
+            <h4>Notes:</h4>
+
+            <div>
+              <ul>
+                <li>This is an unstable development snapshot. It may contain
+                bugs. Testing and bug reports are appreciated, but the stable
+                release (TreeLine 1.2.x) should be used for critical
+                work.</li>
+
+                <li>German is the only GUI and documentation translation that
+                has been updated so far.</li>
+              </ul>
+            </div>
+
+            <h4>New Features:</h4>
+
+            <div>
+              <ul>
+                <li>A new text search function has been added to the help
+                viewer.</li>
+
+                <li>The keyboard shortcuts for scrolling the right-hand views
+                (Ctrl+Page Up and Ctrl+Page Down) now cycle through the Data
+                Editor view pages if there is no more room to scroll</li>
+              </ul>
+            </div>
+
+            <h4>Updates:</h4>
+
+            <div>
+              <ul>
+                <li>The Linux system requirements have been updated to
+                indicate that Qt 4.4 or higher is now required.</li>
+
+                <li>The Windows installer now sets the sample and readme
+                documents to read-only status.</li>
+
+                <li>The German GUI and documentation translation has been
+                updated.</li>
+              </ul>
+            </div>
+
+            <h4>Bug Fixes:</h4>
+
+            <div>
+              <ul>
+                <li>The cascading of new windows has been fixed. It now
+                references the current position of the previous window, and
+                it avoids cascading windows off of the screen.</li>
+
+                <li>The Data Editor widgets are now sized correctly when
+                TreeLine is started in Data Editor mode.</li>
+
+                <li>The spell checker and the Linux installation script have
+                been updated to avoid subprocess command depreciation
+                warnings.</li>
+              </ul>
+            </div>
+          </div>
           <hr>
 
           <h3>May 14, 2010 - Release 1.3.2 (unstable development
