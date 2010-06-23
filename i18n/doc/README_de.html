@@ -31,11 +31,11 @@
         </center>
 
         <center>
-          Version 1.2.4
+          Version 1.3.3 (instabiler Entwickler-Snapshot)
         </center>
 
         <center>
-          12. Oktober 2009
+          24. Juni 2010
         </center>
         <hr>
 
@@ -284,7 +284,9 @@
               <li>Tastatur-Kürzel und Symbolleisten können selbst angepasst
               werden.</li>
 
-              <li>{*Text_en*}</li>
+              <li>Die Benutzeroberfläche und das Handbuch sind in deutscher,
+              englischer, französischer, portugiesischer und russischer
+              Sprache verfügbar.</li>
             </ul>
           </div>
         </div><a id="legal" name="legal">
@@ -318,11 +320,11 @@
 
             <div>
               <ul>
-                <li>Qt (Version 4.1 oder neuer)</li>
+                <li>Qt (Version 4.4 oder neuer)</li>
 
                 <li>Python (Version 2.4, 2.5 oder 2.6)</li>
 
-                <li>PyQt (Version 4.1 oder neuer - vgl. <a href=
+                <li>PyQt (Version 4.4.0 oder neuer - vgl. <a href=
                 "http://www.riverbankcomputing.co.uk">www.riverbankcomputing.co.uk</a>
                 für weitere Informationen).</li>
 
@@ -407,11 +409,6 @@
             ausführen. TreeLine wird dann installiert, und wahlweise werden
             auch Dateiverknüpfungen und ein Desktop-Symbol angelegt.</p>
 
-            <p>Wenn Sie bereits eine funktionsfähige TreeLine-Installation
-            haben, können Sie ein kleineres Download-Paket verwenden. Auch
-            diese Datei treeline-x.x.x-upgrade.exe können Sie einfach
-            ausführen, um TreeLine auf den neuesten Stand zu bringen.</p>
-
             <p>Um die Rechtschreibprüfung von TreeLine zu benutzen, müssen
             Sie wie unter <a href="#sysreq">System-Anforderungen</a>
             beschrieben ispell oder aspell installiert haben.</p>
@@ -463,6 +460,8 @@
               &nbsp;&nbsp;&nbsp;&nbsp;<a href="#basics-right">Rechte
               Fensterhälfte</a><br>
               &nbsp;&nbsp;&nbsp;&nbsp;<a href="#basics-cmds">Befehle</a><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<a href="#basics-wins">Mehrere
+              Fenster</a><br>
             </div><br>
             <a href="#nav">Navigation im Baum</a><br>
 
@@ -848,7 +847,30 @@
             Danach können Sie mit den anderen Einfügebefehlen im Menü
             "Bearbeiten" weitere Elemente einfügen. Alternativ können neue
             Unterelemente auch einfach in die "Überschriften-Liste" auf der
-            rechten Seite eingetippt werden.</p>
+            rechten Seite eingetippt werden.</p><a id="basics-wins" name=
+            "basics-wins">
+
+            <p>Mehrer Treeline-Fenster mit unterschiedlichen Dateien können
+            innerhalb derselben Treeline-Sitzung geöffnet werden. Die Option
+            "Öffne Dateien in neuem Fenster" in "Extras-&gt;Allgemeine
+            Einstellungen" kontrolliert ob neue Fenster beim Öffnen oder
+            Anlegen von Dateien benutzt werden.<br>
+            <br>
+            Das Kommando "Fenster-&gt;Neues Fenster" erzeugt ein neues
+            Fenster welches die gleiche TreeLine-Datei anzeigt. Änderungen in
+            jedem Fenster werden in demselben Dokument gespeichert. Die
+            verschiedenen Ansichten können genutzt werden, um an
+            unterschiedlichen Stellen der Datei gleichzeitig zu arbeiten. Das
+            inaktive Fenster zeigt aus Effizienzgründen solange keine
+            Änderungen an, bis entweder das inaktive Fenster den Focus erhält
+            oder das Kommando "Fenster-&gt;Aktualisiere andere Fenster"
+            benutzt wird.<br>
+            <br>
+            Beim Starten von Treeline (durch Shortcut, Dateiassoziation oder
+            Kommandozeile) wird eine bestehende TreeLine-Sitzung benutzt,
+            falls diese bereits läuft. Ein neues Fenster wird geöffnet falls
+            eine noch nicht geöffnete Datei in der Dateiassoziation oder der
+            Kommandozeile angegeben ist.</p>
           </div><a id="nav" name="nav">
           <hr>
 
@@ -982,6 +1004,13 @@
             sich im Kontextmenü (erreichbar über die rechte Maustaste) unter
             "Text auszeichnen" Einträge, um HTML-Auszeichnungen wie "fett"
             oder "kursiv" hinzuzufügen.<br>
+            <br>
+            Ein weiterer Eintrag im Kontextmenü kann einen internen Link
+            einfügen. Im unteren Status-Bereich erfolgt dann eine
+            Aufforderung, den Link in der Baumansicht anzuklicken. Dieses
+            wird einen internen Link zu diesem Knoten hinzufügen. Das Feld
+            muss natürlich so konfiguriert sein, dass HTML angezeigt wird,
+            damit es funktioniert.<br>
             <br>
             Vom Kontextmenü kann auch ein externer Editor aufgerufen werden.
             Nachdem der Texteditor seine Änderungen gespeicher hat und
@@ -1775,8 +1804,8 @@
             <p>Mit dem Befehl "treeline" können Sie auf der Kommandozeile und
             in Skripten Dateien importieren und exportieren. Damit lassen
             sich zum Beispiel automatisierte Konvertierungsläufe einrichten.
-            Wenn Sie "treeline -h" aufrufen, werden die verfügbaren Optionen
-            angezeigt.</p>
+            Wenn Sie "treeline -h" (bzw. "treeline_dos -h" unter Windows)
+            aufrufen, werden die verfügbaren Optionen angezeigt.</p>
           </div><a id="import" name="import">
           <hr>
 
@@ -1878,13 +1907,17 @@
             drucken. Sie kann die Kopf- und Fußzeilen der Druckausgabe
             enthalten, und die Zahl der Zeilen kann gesetzt werden.<br>
             <br>
-            Der Export als HTML-Verzeichnisstruktur erzeugt eine
-            Verzeichnisstruktur. Die Verzeichnisse werden dabei nach dem
-            Referenzfeld benannt, welches gültige Zeichen für Dateinamen
-            enthalten muss und keine doppelten Einträge pro Verzeichnis
-            beinhalten darf. Jede HTML-Datei iste eine Tabelle mit den Daten
-            der Elemente auf gleicher Ebene mit HTML-Links zu Eltern- und
-            Unterelementen.</p><a id="export-delim" name="export-delim">
+            Es gibt auch zwei HTML Export-Funktionen, die
+            Verzeichnishierarchien anlegen. Die Verzeichnisse werden dabei
+            nach dem Referenzfeld benannt, welches gültige Zeichen für
+            Dateinamen enthalten müssen und keine doppelten Einträge pro
+            Verzeichnis beinhalten dürfen. Die erste Variante erzeugt eine
+            Tabelle mit den Daten der Elemente auf gleicher Ebene mit
+            HTML-Links zu Eltern- und Unterelementen. Die zweite Variante
+            erzeugt eine HTML-Datei für jeden Knoten, mit einem
+            Navigationsbereich auf der linken Seite, der Links zum Vater, zu
+            den Elementen auf gleicher Ebene und zu den Kindern
+            enthält.</p><a id="export-delim" name="export-delim">
 
             <h4>Text mit Trennzeichen</h4>
 
@@ -1958,13 +1991,9 @@
           <div>
             <a id="custom-options" name="custom-options">
 
-            <h4>Optionen</h4>
+            <h4>{*Topic_en*}</h4>
 
-            <p>Das Verhalten von TreeLine kann geändert werden durch die
-            Einstellungen in "Extras-&gt;Allgemeine Einstellungen...". Die
-            meisten Optionen sind schon an einer anderen Stelle in diesem
-            Dokument behandelt worden.</p><a id="custom-fonts" name=
-            "custom-fonts">
+            <p>{*Text_en*}</p><a id="custom-fonts" name="custom-fonts">
 
             <h4>Schriften</h4>
 

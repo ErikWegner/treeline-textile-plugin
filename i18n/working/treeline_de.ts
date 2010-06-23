@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>cmdline</name>
     <message>
@@ -1794,22 +1795,22 @@ werden ohne Warnung überschrieben, falls sie den Namen der Ausgabedatei besitze
     <message>
         <location filename="helpview.py" line="72"/>
         <source> Find: </source>
-        <translation type="unfinished"></translation>
+        <translation> Suchen: </translation>
     </message>
     <message>
         <location filename="helpview.py" line="82"/>
         <source>Find &amp;Previous</source>
-        <translation type="unfinished">Rückwärts Suchen</translation>
+        <translation>&amp;Rückwärts Suchen</translation>
     </message>
     <message>
         <location filename="helpview.py" line="90"/>
         <source>Find &amp;Next</source>
-        <translation type="unfinished">Vorwärts Suchen</translation>
+        <translation>&amp;Vorwärts Suchen</translation>
     </message>
     <message>
         <location filename="helpview.py" line="121"/>
         <source>Text string not found</source>
-        <translation type="unfinished">String nicht gefunden</translation>
+        <translation>String nicht gefunden</translation>
     </message>
 </context>
 <context>

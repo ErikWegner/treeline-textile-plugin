@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.4"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.3"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.4</Name>
+<Name>Version 1.3.3 (instabiler Entwickler-Snapshot)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>12. Oktober 2009</Name>
+<Name>24. Juni 2010</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -298,17 +298,10 @@ sibsuffix="&lt;/ul&gt;">
 <Topic>Tastatur-Kürzel und Symbolleisten</Topic>
 <Text>Tastatur-Kürzel und Symbolleisten können selbst angepasst werden.</Text>
 </TEXT_BULLETS>
-<TEXT_BULLETS_TODO item="y"
-line0="{*Topic_en*}"
-line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
-generic="TEXT_BULLETS"
-sibprefix="&lt;ul&gt;"
-sibsuffix="&lt;/ul&gt;"
-icon="bullet_1">
-<Topic type="Text">Mehrsprachen-Unterstützung</Topic>
-<Text type="Text" html="y" lines="7">Die Benutzeroberfläche und das Handbuch sind in deutscher, englischer, französischer, portugiesischer und russischer Sprache verfügbar.</Text>
-<Ref type="Text" ref="y"></Ref>
-</TEXT_BULLETS_TODO>
+<TEXT_BULLETS item="y">
+<Topic>Mehrsprachen-Unterstützung</Topic>
+<Text>Die Benutzeroberfläche und das Handbuch sind in deutscher, englischer, französischer, portugiesischer und russischer Sprache verfügbar.</Text>
+</TEXT_BULLETS>
 </HEADING4>
 </HEADING2>
 <HEADING2 item="y">
@@ -334,7 +327,7 @@ icon="bullet_1">
 <Text>TreeLine benötigt die folgenden Bibliotheken und Programme:</Text>
 <TEXT_BULLETS item="y">
 <Topic>Qt</Topic>
-<Text>Qt (Version 4.1 oder neuer)</Text>
+<Text>Qt (Version 4.4 oder neuer)</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
@@ -342,7 +335,7 @@ icon="bullet_1">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
-<Text>PyQt (Version 4.1 oder neuer - vgl. &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; für weitere Informationen).</Text>
+<Text>PyQt (Version 4.4.0 oder neuer - vgl. &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; für weitere Informationen).</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>XML-Parser</Topic>
@@ -409,10 +402,6 @@ Um TreeLine und die Übersetzungen zusammen zu installieren, entpacken Sie das �
 <Text>Die heruntergeladene Datei treeline-x.x.x-install.exe einfach ausführen. TreeLine wird dann installiert, und wahlweise werden auch Dateiverknüpfungen und ein Desktop-Symbol angelegt.</Text>
 </TEXT_PARA>
 <TEXT_PARA item="y">
-<Topic>Upgrade</Topic>
-<Text>Wenn Sie bereits eine funktionsfähige TreeLine-Installation haben, können Sie ein kleineres Download-Paket verwenden. Auch diese Datei treeline-x.x.x-upgrade.exe können Sie einfach ausführen, um TreeLine auf den neuesten Stand zu bringen.</Text>
-</TEXT_PARA>
-<TEXT_PARA item="y">
 <Topic>Rechtschreibprüfung</Topic>
 <Text>Um die Rechtschreibprüfung von TreeLine zu benutzen, müssen Sie wie unter &lt;a href=&quot;#sysreq&quot;&gt;System-Anforderungen&lt;/a&gt; beschrieben ispell oder aspell installiert haben.</Text>
 </TEXT_PARA>
@@ -466,6 +455,10 @@ childtype="HEADING4">
 <CONTENTS_LINK_INDENT item="y">
 <Name>Befehle</Name>
 <Link>basics-cmds</Link>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Name>Mehrere Fenster</Name>
+<Link>basics-wins</Link>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -930,6 +923,14 @@ line2="&lt;p&gt;&lt;b&gt;{*Caption*}&lt;/b&gt;&lt;/p&gt;">
 Um Informationen zu einer neuen TreeLine-Datei hinzuzufügen, benutzen Sie den Befehl &quot;Bearbeiten-&amp;gt;Unterelement anlegen&quot;. Danach können Sie mit den anderen Einfügebefehlen im Menü &quot;Bearbeiten&quot; weitere Elemente einfügen. Alternativ können neue Unterelemente auch einfach in die &quot;Überschriften-Liste&quot; auf der rechten Seite eingetippt werden.</Text>
 <Ref>basics-cmds</Ref>
 </TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Text>Mehrer Treeline-Fenster mit unterschiedlichen Dateien können innerhalb derselben Treeline-Sitzung geöffnet werden. Die Option &quot;Öffne Dateien in neuem Fenster&quot; in &quot;Extras-&gt;Allgemeine Einstellungen&quot; kontrolliert ob neue Fenster beim Öffnen oder Anlegen von Dateien benutzt werden.&lt;br /&gt;&lt;br /&gt;
+
+Das Kommando &quot;Fenster-&gt;Neues Fenster&quot; erzeugt ein neues Fenster welches die gleiche TreeLine-Datei anzeigt. Änderungen in jedem Fenster werden in demselben Dokument gespeichert. Die verschiedenen Ansichten können genutzt werden, um an unterschiedlichen Stellen der Datei gleichzeitig zu arbeiten. Das inaktive Fenster zeigt aus Effizienzgründen solange keine Änderungen an, bis entweder das inaktive Fenster den Focus erhält oder das Kommando &quot;Fenster-&gt;Aktualisiere andere Fenster&quot; benutzt wird.&lt;br /&gt;&lt;br /&gt;
+
+Beim Starten von Treeline (durch Shortcut, Dateiassoziation oder Kommandozeile) wird eine bestehende TreeLine-Sitzung benutzt, falls diese bereits läuft. Ein neues Fenster wird geöffnet falls eine noch nicht geöffnete Datei in der Dateiassoziation oder der Kommandozeile angegeben ist.</Text>
+<Ref>basics-wins</Ref>
+</TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
 <Name>Navigation im Baum</Name>
@@ -984,6 +985,8 @@ Das Kommando &quot;Bearbeiten-&amp;gt;Text des Elements einfügen&quot; benennt 
 <Text>In der rechten Fensterhälfte bietet die Ansicht &quot;Editor&quot; den direktesten Weg, um die Daten eines Elements zu bearbeiten. Wenn das bearbeitete Feld im Titel benutzt wird, zeigt der Baum sofort die jeweilige Änderung an. Die Felder erlauben die Eingabe von mehrzeiligem Text. Wenn nötig, wird ein Rollbalken angezeigt.&lt;br /&gt;&lt;br /&gt;
 
 Wenn die Benutzung von HTML freigeschaltet ist (siehe weiter unten im Kapitel &lt;a href=&quot;#fields&quot;&gt;Feldtypen&lt;/a&gt;), dann finden sich im Kontextmenü (erreichbar über die rechte Maustaste) unter &quot;Text auszeichnen&quot; Einträge, um HTML-Auszeichnungen wie &quot;fett&quot; oder &quot;kursiv&quot; hinzuzufügen.&lt;br /&gt;&lt;br /&gt;
+
+Ein weiterer Eintrag im Kontextmenü kann einen internen Link einfügen. Im unteren Status-Bereich erfolgt dann eine Aufforderung, den Link in der Baumansicht anzuklicken. Dieses wird einen internen Link zu diesem Knoten hinzufügen. Das Feld muss natürlich so konfiguriert sein, dass HTML angezeigt wird, damit es funktioniert.&lt;br /&gt;&lt;br /&gt;
 
 Vom Kontextmenü kann auch ein externer Editor aufgerufen werden. Nachdem der Texteditor seine Änderungen gespeicher hat und beendet wurde, erscheint der Text in der Textbox in TreeLine. Der Editor kann mit Hilfe der Umgebungsvariable EDITOR gesetzt werden. Wenn die Variable nicht existiert, fragt TreeLine den Pfad zum gewünschten Editor bei der ersten Benutzung ab.&lt;br /&gt;&lt;br /&gt;
 
@@ -1332,7 +1335,7 @@ In der Standardeinstellung lässt TreeLine keine Seitenumbrüche zwischen einem 
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
 <Topic>Kommandozeile</Topic>
-<Text>Mit dem Befehl &quot;treeline&quot; können Sie auf der Kommandozeile und in Skripten Dateien importieren und exportieren. Damit lassen sich zum Beispiel automatisierte Konvertierungsläufe einrichten. Wenn Sie &quot;treeline -h&quot; aufrufen, werden die verfügbaren Optionen angezeigt.</Text>
+<Text>Mit dem Befehl &quot;treeline&quot; können Sie auf der Kommandozeile und in Skripten Dateien importieren und exportieren. Damit lassen sich zum Beispiel automatisierte Konvertierungsläufe einrichten. Wenn Sie &quot;treeline -h&quot; (bzw. &quot;treeline_dos -h&quot; unter Windows) aufrufen, werden die verfügbaren Optionen angezeigt.</Text>
 <Ref>file-cmdline</Ref>
 </TEXT_HEAD>
 </HEADING3>
@@ -1389,7 +1392,7 @@ Eine Tabelle, deren Spalten mit Tabulatoren getrennt sind, kann auch importiert 
 <Topic>HTML</Topic>
 <Text>Der Export als einzelne Datei funktioniert ähnlich wie drucken. Sie kann die Kopf- und Fußzeilen der Druckausgabe enthalten, und die Zahl der Zeilen kann gesetzt werden.&lt;br /&gt;&lt;br /&gt;
 
-Der Export als HTML-Verzeichnisstruktur erzeugt eine Verzeichnisstruktur. Die Verzeichnisse werden dabei nach dem Referenzfeld benannt, welches gültige Zeichen für Dateinamen enthalten muss und keine doppelten Einträge pro Verzeichnis beinhalten darf. Jede HTML-Datei iste eine Tabelle mit den Daten der Elemente auf gleicher Ebene mit HTML-Links zu Eltern- und Unterelementen.</Text>
+Es gibt auch zwei HTML Export-Funktionen, die Verzeichnishierarchien anlegen.  Die Verzeichnisse werden dabei nach dem Referenzfeld benannt, welches gültige Zeichen für Dateinamen enthalten müssen und keine doppelten Einträge pro Verzeichnis beinhalten dürfen. Die erste Variante erzeugt eine Tabelle mit den Daten der Elemente auf gleicher Ebene mit HTML-Links zu Eltern- und Unterelementen. Die zweite Variante erzeugt eine HTML-Datei für jeden Knoten, mit einem Navigationsbereich auf der linken Seite, der Links zum Vater, zu den Elementen auf gleicher Ebene und zu den Kindern enthält.</Text>
 <Ref>export-html</Ref>
 </TEXT_HEAD>
 <TEXT_HEAD item="y">
@@ -1425,11 +1428,18 @@ Wenn in einem nach XSLT zu exportierenden Datenformat HTML-Auszeichnungen verwen
 <HEADING3 item="y">
 <Name>Anpassungen</Name>
 <Ref>custom</Ref>
-<TEXT_HEAD item="y">
-<Topic>Optionen</Topic>
-<Text>Das Verhalten von TreeLine kann geändert werden durch die Einstellungen in &quot;Extras-&amp;gt;Allgemeine Einstellungen...&quot;. Die meisten Optionen sind schon an einer anderen Stelle in diesem Dokument behandelt worden.</Text>
-<Ref>custom-options</Ref>
-</TEXT_HEAD>
+<TEXT_HEAD_TODO item="y"
+line0="{*Topic_en*}"
+line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
+line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
+generic="TEXT_HEAD"
+icon="bullet_1">
+<Topic type="Text">Optionen</Topic>
+<Text type="Text" html="y" lines="12">Das Verhalten von TreeLine kann geändert werden durch die Einstellungen in &quot;Extras-&amp;gt;Allgemeine Einstellungen...&quot;. Die meisten Optionen sind schon an einer anderen Stelle in diesem Dokument behandelt worden.&lt;br /&gt;&lt;br /&gt;
+
+Unter Windows wird die Datei &quot;treeline.ini&quot; im Verzeichnis zu den Benutzereinstellungen verwendet, um die Einstellungen zu speichern. Diese Datei kann manuell in das Treeline-Verzeichnis &quot;lib&quot; kopiert werden. Sobald die Datei im Verzeichnis &quot;lib&quot; exitiert, wird diese benutzt und automatisch geändert, solange sie nicht auch im Verzeichnis zu den Benutzereinstellungen existiert.</Text>
+<Ref type="Text" ref="y">custom-options</Ref>
+</TEXT_HEAD_TODO>
 <TEXT_HEAD item="y">
 <Topic>Schriften</Topic>
 <Text>Die Schriften für die  Baumansicht, die Ausgabe-Ansicht und die Editor-Ansicht können im Menü &quot;Extras-&amp;gt;Schriften konfigurieren...&quot; eingestellt werden.</Text>
@@ -1542,6 +1552,17 @@ icon="bullet_1">
 <Link type="InternalLink" html="y" linkalt="Name_en"></Link>
 <Ref type="Text" ref="y"></Ref>
 </CONTENTS_LINK_INDENT_TODO>
+<TEXT_BULLETS_TODO item="n"
+line0="{*Topic_en*}"
+line1="&lt;li&gt;{*Text_en*}&lt;/li&gt;"
+generic="TEXT_BULLETS"
+sibprefix="&lt;ul&gt;"
+sibsuffix="&lt;/ul&gt;"
+icon="bullet_1">
+<Topic type="Text"></Topic>
+<Text type="Text" html="y" lines="7"></Text>
+<Ref type="Text" ref="y"></Ref>
+</TEXT_BULLETS_TODO>
 <HEADING4_TODO item="n"
 line0="{*Name_en*}"
 line1="&lt;h4&gt;{*Name_en*}&lt;/h4&gt;"
@@ -1560,16 +1581,6 @@ icon="bullet_1">
 <Text type="Text" html="y" lines="12"></Text>
 <Ref type="Text" ref="y"></Ref>
 </TEXT_PARA_TODO>
-<TEXT_HEAD_TODO item="n"
-line0="{*Topic_en*}"
-line1="&lt;h4&gt;{*Topic_en*}&lt;/h4&gt;"
-line2="&lt;p&gt;{*Text_en*}&lt;/p&gt;"
-generic="TEXT_HEAD"
-icon="bullet_1">
-<Topic type="Text"></Topic>
-<Text type="Text" html="y" lines="12"></Text>
-<Ref type="Text" ref="y"></Ref>
-</TEXT_HEAD_TODO>
 <FIGURE_TODO item="n"
 line0="{*Topic_en*}"
 line1="&lt;p&gt;{*Picture_en*}&lt;/p&gt;"

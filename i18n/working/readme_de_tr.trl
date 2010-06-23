@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.2"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.3"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -37,14 +37,14 @@ icon="bullet_2">
 <RefNum type="Text">1.3</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.3.2 (instabiler Entwickler-Snapshot)</Name>
-<Name_en>Version 1.3.2 (unstable development snapshot)</Name_en>
+<Name>Version 1.3.3 (instabiler Entwickler-Snapshot)</Name>
+<Name_en>Version 1.3.3 (unstable development snapshot)</Name_en>
 <Done>true</Done>
 <RefNum>1.4</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>14. Mai 2010</Name>
-<Name_en>May 14, 2010</Name_en>
+<Name>24. Juni 2010</Name>
+<Name_en>June 24, 2010</Name_en>
 <Done>true</Done>
 <RefNum>1.5</RefNum>
 </TEXT_CNTR>
