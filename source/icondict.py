@@ -18,7 +18,7 @@ import globalref
 
 class IconDict(dict):
     """Loads and stores icons by name"""
-    iconExt = ['.png', '.bmp']
+    iconExt = ['.png', '.bmp', '.ico', 'gif']
     defaultName = 'default'
     noneName = 'NoIcon'
     def __init__(self):
