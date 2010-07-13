@@ -1539,21 +1539,21 @@ class TreeMainWin(QtGui.QMainWindow):
                                  [('tree', _('Tree order')),
                                   ('select', _('Selection order'))])
         dlg.startGroupBox(_('Data Editor Pages'))
-        optiondlg.OptionDlgInt(dlg, 'EditorPages', '%s \n(%s)' %
-                               (_('Number of pages shown'),
-                                _('set to 0 for all')), 0, 999)
+        optiondlg.OptionDlgInt(dlg, 'EditorPages',
+                               _('Number of pages shown \n(set to 0 for all)'),
+                               0, 999)
         dlg.startGroupBox(_('Undo Memory'))
         optiondlg.OptionDlgInt(dlg, 'UndoLevels',
                                '%s ' % _('Number of undo levels'), 0, 99)
         dlg.startNewColumn()
         dlg.startGroupBox(_('Auto Save'))
-        optiondlg.OptionDlgInt(dlg, 'AutoSaveMinutes', '%s \n(%s)' %
-                               (_('Minutes between saves'),
-                               _('set to 0 to disable')), 0, 999)
+        optiondlg.OptionDlgInt(dlg, 'AutoSaveMinutes',
+                               _('Minutes between saves \n'
+                                 '(set to 0 to disable)'), 0, 999)
         dlg.startGroupBox(_('Recent Files'))
         optiondlg.OptionDlgInt(dlg, 'RecentFiles',
-                               '%s \n%s' % (_('Number of recent files'),
-                                            _('in the File menu')), 0, 99)
+                               _('Number of recent files \nin the File menu'),
+                               0, 99)
         dlg.startGroupBox(_('Data Editor Formats'))
         optiondlg.OptionDlgStr(dlg, 'EditDateFormat', _('Dates'))
         optiondlg.OptionDlgStr(dlg, 'EditTimeFormat', _('Times'))
