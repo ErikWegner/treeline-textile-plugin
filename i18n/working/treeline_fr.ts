@@ -4748,7 +4748,7 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1551"/>
         <source>Minutes between saves</source>
-        <translation>Temps en minutes entre sauvegardes</translation>
+        <translation type="obsolete">Temps en minutes entre sauvegardes</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1553"/>
@@ -4758,12 +4758,12 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1555"/>
         <source>Number of recent files</source>
-        <translation>Nombre de fichiers récents</translation>
+        <translation type="obsolete">Nombre de fichiers récents</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1556"/>
         <source>in the File menu</source>
-        <translation>dans le menu Fichier</translation>
+        <translation type="obsolete">dans le menu Fichier</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="650"/>
@@ -4958,17 +4958,17 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1543"/>
         <source>Number of pages shown</source>
-        <translation>Nombre de pages montrées</translation>
+        <translation type="obsolete">Nombre de pages montrées</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1544"/>
         <source>set to 0 for all</source>
-        <translation>Mettre un 0 pour toutes</translation>
+        <translation type="obsolete">Mettre un 0 pour toutes</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1552"/>
         <source>set to 0 to disable</source>
-        <translation>Mettre un 0 pour mettre hors fonction</translation>
+        <translation type="obsolete">Mettre un 0 pour mettre hors fonction</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1784"/>
@@ -5283,6 +5283,24 @@ par %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="2439"/>
         <source>C&amp;hange Selected Data...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1543"/>
+        <source>Number of pages shown 
+(set to 0 for all)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1552"/>
+        <source>Minutes between saves 
+(set to 0 to disable)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1555"/>
+        <source>Number of recent files 
+in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

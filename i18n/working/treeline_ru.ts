@@ -4154,7 +4154,7 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1551"/>
         <source>Minutes between saves</source>
-        <translation>Минут между сохранениями</translation>
+        <translation type="obsolete">Минут между сохранениями</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1553"/>
@@ -4164,12 +4164,12 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1555"/>
         <source>Number of recent files</source>
-        <translation>Количество недавних файлов</translation>
+        <translation type="obsolete">Количество недавних файлов</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1556"/>
         <source>in the File menu</source>
-        <translation>в меню Файл</translation>
+        <translation type="obsolete">в меню Файл</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1557"/>
@@ -4939,21 +4939,6 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1543"/>
-        <source>Number of pages shown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1544"/>
-        <source>set to 0 for all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1552"/>
-        <source>set to 0 to disable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="treemainwin.py" line="1784"/>
         <source>Font Size</source>
         <translation type="unfinished">Размер шрифта</translation>
@@ -5266,6 +5251,24 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="2439"/>
         <source>C&amp;hange Selected Data...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1543"/>
+        <source>Number of pages shown 
+(set to 0 for all)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1552"/>
+        <source>Minutes between saves 
+(set to 0 to disable)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1555"/>
+        <source>Number of recent files 
+in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

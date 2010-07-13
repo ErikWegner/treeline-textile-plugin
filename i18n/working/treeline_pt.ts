@@ -4747,7 +4747,7 @@ por %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1551"/>
         <source>Minutes between saves</source>
-        <translation>Minutos entre gravações</translation>
+        <translation type="obsolete">Minutos entre gravações</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1553"/>
@@ -4757,12 +4757,12 @@ por %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1555"/>
         <source>Number of recent files</source>
-        <translation>Número de arquivos recentes</translation>
+        <translation type="obsolete">Número de arquivos recentes</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1556"/>
         <source>in the File menu</source>
-        <translation>no menu de Arquivo</translation>
+        <translation type="obsolete">no menu de Arquivo</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="650"/>
@@ -4942,21 +4942,6 @@ por %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1541"/>
         <source>Data Editor Pages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1543"/>
-        <source>Number of pages shown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1544"/>
-        <source>set to 0 for all</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1552"/>
-        <source>set to 0 to disable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5272,6 +5257,24 @@ por %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="2439"/>
         <source>C&amp;hange Selected Data...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1543"/>
+        <source>Number of pages shown 
+(set to 0 for all)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1552"/>
+        <source>Minutes between saves 
+(set to 0 to disable)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1555"/>
+        <source>Number of recent files 
+in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

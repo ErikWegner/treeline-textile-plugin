@@ -39,6 +39,7 @@ TRANSLATIONS = treeline_cs.ts \
                treeline_de.ts \
                treeline_es.ts \
                treeline_fr.ts \
+               treeline_it.ts \
                treeline_pt.ts \
                treeline_ru.ts \
                treeline_xx.ts

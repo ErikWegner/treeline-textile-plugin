@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>cmdline</name>
     <message>
@@ -4049,7 +4048,8 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1509"/>
         <source>Restore view states of recent files</source>
-        <translation>Ansichtseinstellungen von kürzlich benutzten Dateien merken</translation>
+        <translation type="unfinished">Ansichtseinstellungen von kürzlich
+benutzten Dateien merken</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1511"/>
@@ -4104,7 +4104,8 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1531"/>
         <source>Set new files to compressed by default</source>
-        <translation>Neue Dateien standardmäßig komprimiert speichern</translation>
+        <translation type="unfinished">Neue Dateien standardmäßig komprimiert
+speichern</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1533"/>
@@ -4114,7 +4115,8 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1535"/>
         <source>New fields default to HTML content</source>
-        <translation>Neue Felder dürfen standardmäßig HTML-Tags enthalten</translation>
+        <translation type="unfinished">Neue Felder dürfen standardmäßig
+HTML-Tags enthalten</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1545"/>
@@ -4164,7 +4166,8 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1565"/>
         <source>Default max data editor lines</source>
-        <translation>Standard für die maximale Anzahl von Zeilen im Editor</translation>
+        <translation type="unfinished">Standard für die maximale Anzahl
+von Zeilen im Editor</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="2582"/>
@@ -4746,7 +4749,8 @@ von %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1551"/>
         <source>Minutes between saves</source>
-        <translation>Zeit in Minuten zwischen zwei Speichervorgängen</translation>
+        <translation type="obsolete">Zeit in Minuten zwischen
+zwei Speichervorgängen</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1553"/>
@@ -4756,12 +4760,12 @@ von %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1555"/>
         <source>Number of recent files</source>
-        <translation>Zahl der zuletzt geöffneten Dateien</translation>
+        <translation type="obsolete">Zahl der zuletzt geöffneten</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1556"/>
         <source>in the File menu</source>
-        <translation>im Menü &quot;Datei&quot;</translation>
+        <translation type="obsolete">Dateien im Menü &quot;Datei&quot;</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="650"/>
@@ -4956,17 +4960,18 @@ von %(author)s</translation>
     <message>
         <location filename="treemainwin.py" line="1543"/>
         <source>Number of pages shown</source>
-        <translation>Anzahl der angezeigten Seiten</translation>
+        <translation type="obsolete">Anzahl der angezeigten Seiten</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1544"/>
         <source>set to 0 for all</source>
-        <translation>0 für alle</translation>
+        <translation type="obsolete">0 für alle</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1552"/>
         <source>set to 0 to disable</source>
-        <translation>auf 0 setzen, um das automatische Speichern abzuschalten</translation>
+        <translation type="obsolete">auf 0 setzen, um das automatische
+Speichern abzuschalten</translation>
     </message>
     <message>
         <location filename="treemainwin.py" line="1784"/>
@@ -5282,6 +5287,24 @@ von %(author)s</translation>
         <location filename="treemainwin.py" line="2439"/>
         <source>C&amp;hange Selected Data...</source>
         <translation>Ausgewählte Daten ändern...</translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1543"/>
+        <source>Number of pages shown 
+(set to 0 for all)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1552"/>
+        <source>Minutes between saves 
+(set to 0 to disable)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1555"/>
+        <source>Number of recent files 
+in the File menu</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

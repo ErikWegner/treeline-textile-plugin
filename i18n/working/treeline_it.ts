@@ -2044,6 +2044,11 @@ if they share the output file&apos;s name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="optiondefaults.py" line="64"/>
+        <source>ViewStatusBar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="optiondefaults.py" line="65"/>
         <source>DataSetItemType</source>
         <translation type="unfinished"></translation>
@@ -2189,6 +2194,21 @@ if they share the output file&apos;s name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="optiondefaults.py" line="94"/>
+        <source>WinNewWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="optiondefaults.py" line="95"/>
+        <source>WinCloseWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="optiondefaults.py" line="96"/>
+        <source>WinUpdateWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="optiondefaults.py" line="97"/>
         <source>HelpContents</source>
         <translation type="unfinished"></translation>
@@ -2316,26 +2336,6 @@ if they share the output file&apos;s name.</source>
     <message>
         <location filename="optiondefaults.py" line="123"/>
         <source>RightParentPageDown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="optiondefaults.py" line="64"/>
-        <source>ViewStatusBar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="optiondefaults.py" line="94"/>
-        <source>WinNewWindow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="optiondefaults.py" line="95"/>
-        <source>WinCloseWindow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="optiondefaults.py" line="96"/>
-        <source>WinUpdateWindow</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2989,6 +2989,16 @@ if they share the output file&apos;s name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treedialogs.py" line="865"/>
+        <source>HTML &amp;directory tables</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treedialogs.py" line="868"/>
+        <source>HTML directory &amp;pages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treedialogs.py" line="871"/>
         <source>&amp;XSLT output</source>
         <translation type="unfinished"></translation>
@@ -3254,6 +3264,11 @@ if they share the output file&apos;s name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treedialogs.py" line="1899"/>
+        <source>Restore Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treedialogs.py" line="1757"/>
         <source>Key %(key)s already used for &quot;%(cmd)s&quot;</source>
         <translation type="unfinished"></translation>
@@ -3331,21 +3346,6 @@ if they share the output file&apos;s name.</source>
     <message>
         <location filename="treedialogs.py" line="2111"/>
         <source>Plugin Modules Loaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treedialogs.py" line="865"/>
-        <source>HTML &amp;directory tables</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treedialogs.py" line="868"/>
-        <source>HTML directory &amp;pages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treedialogs.py" line="1899"/>
-        <source>Restore Defaults</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3492,6 +3492,11 @@ Manually locate?
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treeeditviews.py" line="186"/>
+        <source>&amp;Add Internal Link...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treeeditviews.py" line="355"/>
         <source>&amp;Modify Type Config...</source>
         <translation type="unfinished"></translation>
@@ -3514,11 +3519,6 @@ Manually locate?
     <message>
         <location filename="treeeditviews.py" line="580"/>
         <source>Nodes %(start_node)d-%(end_node)d of %(total_num)d</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treeeditviews.py" line="186"/>
-        <source>&amp;Add Internal Link...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3784,16 +3784,6 @@ See TreeLine ReadMe file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="treemainwin.py" line="1218"/>
-        <source>Error - could not read file &quot;%s&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="832"/>
-        <source>Error - Could not write to %s</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="treemainwin.py" line="650"/>
         <source>Sample directory not found</source>
         <translation type="unfinished"></translation>
@@ -3870,8 +3860,18 @@ Enter a CSS filename (blank for none)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="832"/>
+        <source>Error - Could not write to %s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="1197"/>
         <source>Open Configuration File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1218"/>
+        <source>Error - could not read file &quot;%s&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4028,6 +4028,11 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="1507"/>
+        <source>Show status bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="1509"/>
         <source>Restore view states of recent files</source>
         <translation type="unfinished"></translation>
@@ -4078,6 +4083,11 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="1527"/>
+        <source>Open files in new windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="1529"/>
         <source>New Objects</source>
         <translation type="unfinished"></translation>
@@ -4118,6 +4128,12 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="1543"/>
+        <source>Number of pages shown 
+(set to 0 for all)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="1545"/>
         <source>Undo Memory</source>
         <translation type="unfinished"></translation>
@@ -4133,8 +4149,20 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="1552"/>
+        <source>Minutes between saves 
+(set to 0 to disable)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="1553"/>
         <source>Recent Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1555"/>
+        <source>Number of recent files 
+in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4256,6 +4284,11 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="1786"/>
         <source>Enter size factor (-6 to +6)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="1805"/>
+        <source>Click on tree node for link destination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4669,6 +4702,16 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="2375"/>
+        <source>Show Status Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2376"/>
+        <source>Toggle the display of the status bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="2384"/>
         <source>&amp;Data</source>
         <translation type="unfinished"></translation>
@@ -4711,6 +4754,11 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="2431"/>
         <source>Open the dialog for sorting nodes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2439"/>
+        <source>C&amp;hange Selected Data...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4974,6 +5022,41 @@ Continue from the root branch?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="treemainwin.py" line="2647"/>
+        <source>&amp;Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2649"/>
+        <source>&amp;New Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2650"/>
+        <source>Open a new window viewing the same file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2656"/>
+        <source>&amp;Close Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2657"/>
+        <source>Close the current window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2663"/>
+        <source>&amp;Update Other Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="treemainwin.py" line="2665"/>
+        <source>Update the contents of an alternate window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="treemainwin.py" line="2673"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
@@ -5021,89 +5104,6 @@ Continue from the root branch?</source>
     <message>
         <location filename="treemainwin.py" line="2706"/>
         <source>&amp;Add Font Tags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1507"/>
-        <source>Show status bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1527"/>
-        <source>Open files in new windows</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1805"/>
-        <source>Click on tree node for link destination</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2375"/>
-        <source>Show Status Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2376"/>
-        <source>Toggle the display of the status bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2647"/>
-        <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2649"/>
-        <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2650"/>
-        <source>Open a new window viewing the same file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2656"/>
-        <source>&amp;Close Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2657"/>
-        <source>Close the current window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2663"/>
-        <source>&amp;Update Other Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2665"/>
-        <source>Update the contents of an alternate window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="2439"/>
-        <source>C&amp;hange Selected Data...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1543"/>
-        <source>Number of pages shown 
-(set to 0 for all)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1552"/>
-        <source>Minutes between saves 
-(set to 0 to disable)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="treemainwin.py" line="1555"/>
-        <source>Number of recent files 
-in the File menu</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
