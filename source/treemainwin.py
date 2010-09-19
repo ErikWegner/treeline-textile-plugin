@@ -658,7 +658,6 @@ class TreeMainWin(QtGui.QMainWindow):
 
     def fileSave(self):
         """Save current file"""
-        pass
         if self.doc.fileName and not self.fileImported:
             globalref.treeControl.saveFile(self.doc.fileName)
         else:
@@ -678,6 +677,7 @@ class TreeMainWin(QtGui.QMainWindow):
         if fileName and globalref.treeControl.saveFile(fileName):
             self.setMainCaption()
             globalref.treeControl.recentFiles.addEntry(fileName)
+            globalref.treeControl.updateWinMenu()
             self.fileImported = False
             globalref.treeControl.delAutoSaveFile(oldFileName)
 
