@@ -55,7 +55,7 @@ class SpellCheck(object):
         self.stdIn.write('^%s\n' % line.encode('utf-8'))
         self.stdIn.flush()
         results = [self.stdOut.readline()]
-        while results[-1] != '\n':
+        while results[-1].strip():
             results.append(self.stdOut.readline())
         return filter(None, [formatOutput(result, line, skipList)
                              for result in results])
