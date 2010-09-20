@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2010-06-22 by Doug Bell
+; Last modified : 2010-09-20 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.3.3"
+!define VERSION "1.3.4"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -323,6 +323,7 @@ SectionEnd
                 Delete "$INSTDIR\lib\mingwm10.dll"
                 Delete "$INSTDIR\lib\msvcp71.dll"
                 Delete "$INSTDIR\lib\MSVCR71.dll"
+                Delete "$INSTDIR\lib\python26.dll"
                 Delete "$INSTDIR\lib\python25.dll"
                 Delete "$INSTDIR\lib\python24.dll"
                 Delete "$INSTDIR\lib\python23.dll"
@@ -344,7 +345,7 @@ SectionEnd
                 File ".\lib\PyQt4.QtCore.pyd"
                 File ".\lib\PyQt4.QtGui.pyd"
                 File ".\lib\PyQt4.QtNetwork.pyd"
-		File ".\lib\python26.dll"
+		File ".\lib\python27.dll"
                 File ".\lib\QtCore4.dll"
                 File ".\lib\QtGui4.dll"
                 File ".\lib\QtNetwork4.dll"
@@ -881,6 +882,7 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\msvcp90.dll"
         Delete "$INSTDIR\lib\msvcr90.dll"
         Delete "$INSTDIR\lib\pyexpat.pyd"
+        Delete "$INSTDIR\lib\python27.dll"
         Delete "$INSTDIR\lib\python26.dll"
         Delete "$INSTDIR\lib\python25.dll"
         Delete "$INSTDIR\lib\python24.dll"
