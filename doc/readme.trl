@@ -1522,6 +1522,10 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <Topic>Window menu</Topic>
 <Text>The list of windows in the Window menu is now properly updated after saving a file with a new name.</Text>
 </TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Spell check</Topic>
+<Text>Fixed a bug that could cause spell checks to hang.</Text>
+</TEXT_BULLETS>
 </HEADING4>
 </HEADING3>
 <HEADING3 item="y">
