@@ -5,7 +5,7 @@
  treeline.py, the main program file
 
  TreeLine, an information storage program
- Copyright (C) 2009, Douglas W. Bell
+ Copyright (C) 2010, Douglas W. Bell
 
  This is free software; you can redistribute it and/or modify it under the
  terms of the GNU General Public License, either Version 2 or any later
@@ -15,7 +15,7 @@
 """
 
 __progname__ = 'TreeLine'
-__version__ = '1.3.3'
+__version__ = '1.3.4'
 __author__ = 'Doug Bell'
 
 helpFilePath = None    # modified by install script if required
