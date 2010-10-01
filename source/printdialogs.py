@@ -98,6 +98,7 @@ class PrintPrevDlg(QtGui.QDialog):
     def showOptions(self):
         """Show a modal options dialog"""
         dlg = PrintOptionsDialog(self.printData, False, self)
+        self.setUpdatesEnabled(False)  # halt repaint until settings consistent
         if dlg.exec_() == QtGui.QDialog.Accepted:
             QtGui.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
             self.printData.setPrintContent()
@@ -109,6 +110,7 @@ class PrintPrevDlg(QtGui.QDialog):
             self.preview.paperRect = self.printData.printer.paperRect()
             self.updatePageNum()
             QtGui.QApplication.restoreOverrideCursor()
+        self.setUpdatesEnabled(True)
 
 
 class PrintPrev(QtGui.QWidget):
