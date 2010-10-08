@@ -42,7 +42,7 @@ def usage(exitCode=2):
     print 'where:'
     print '    -h         display this help message'
     print '    -p dir     install prefix [default: %s]' % prefixDir
-    print '    -d dir     documentaion dir [default: <prefix>/%s]' % docDir
+    print '    -d dir     documentation dir [default: <prefix>/%s]' % docDir
     print '    -t dir     template dir [default: <prefix>/%s]' % templateDir
     print '    -i dir     icon dir [default: <prefix>/%s]' % iconDir
     print '    -b dir     temporary build root for packagers [default: %s]' \
