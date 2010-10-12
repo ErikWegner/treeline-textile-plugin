@@ -13,7 +13,6 @@
 #*****************************************************************************
 
 import copy
-import types
 import string
 from PyQt4 import QtCore, QtGui
 import treedoc

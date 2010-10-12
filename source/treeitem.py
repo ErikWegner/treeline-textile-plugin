@@ -1037,7 +1037,7 @@ class TreeItem(object):
         self.childList = [item for item in self.descendantGen() if not
                           item.childList]
         for item in self.childList:
-            fieldList = item.nodeFormat().fieldNames()
+            #fieldList = item.nodeFormat().fieldNames() #unused
             origFields = origTreeFormats[item.formatName].fieldNames()
             addedFields = []
             oldParent = item.parent
