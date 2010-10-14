@@ -286,6 +286,13 @@ class PluginInterface(object):
                              addNewField(fieldName, {'type': fieldType})
         except KeyError:
             pass
+#
+#    def addNewFieldType(self, fieldTypeName, fieldTypeClass):
+#        FieldConfigPage.types.append(fieldTypeName)
+#        FieldConfigPage.typeTransDict = dict([(_(name), name) for name in FieldConfigPage.types])
+#        #globals()[fieldTypeName + 'Format'] = fieldTypeClass
+#        import fieldformat
+#        fieldformat.__dict__[fieldTypeName + 'Format'] = fieldTypeClass
 
     def getFormatFieldType(self, formatName, fieldName):
         """Return the type of the given field in the given format"""
