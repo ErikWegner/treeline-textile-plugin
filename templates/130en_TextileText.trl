@@ -4,60 +4,61 @@ line0="{*Name*}"
 line1="{*Name*}"
 line2="{*Text*}"
 icon="write">
-<Name type="Text" html="y" ref="y">Parent</Name>
-<Text type="Textile" html="y" lines="25">Parent text</Text>
+<Name type="Text" html="y" ref="y">Elternelement</Name>
+<Text type="Textile" html="y" lines="25">Text des Elternelements</Text>
 <TEXTILE_TEXT item="y">
-<Name>Textile Help</Name>
-<Text>Show some examples of Textile language.</Text>
+<Name>Textilehilfe</Name>
+<Text>Die Unterelemente zeigen einige Beispiele für Textileformatierungen.</Text>
 <TEXTILE_TEXT item="y">
-<Name>Text styling</Name>
-<Text>Use * to *mark text in bold*.
-Use _ to _emphasize_.
+<Name>Textauszeichung</Name>
+<Text>Mit * wird *Text fett markiert*.
+Mit _ wird _hervorgehoben_.
 
-Even colors (e.g. %{color:red}red%) can be used.
+Auch Farben (z. B. %{color:red}rot%) sind möglich.
 
-An empty line marks a paragraph.
-A line break converts to a html new line.</Text>
+Eine leere Zeile markiert einen neuen Absatz.
+Ein Zeilenumbruch beginnt eine neue Zeile.</Text>
 </TEXTILE_TEXT>
 <TEXTILE_TEXT item="y">
-<Name>Unordered list</Name>
-<Text>* Fruits
-** apple
-** pear
-* Vegetables
-** potato
-** cucumber</Text>
+<Name>Aufzählungsliste</Name>
+<Text>* Obst
+** Apfel
+** Birne
+* Gemüse
+** Tomate
+** Gurke</Text>
 </TEXTILE_TEXT>
 <TEXTILE_TEXT item="y">
-<Name>Ordered list</Name>
-<Text># A first item
-# A second item
-# A third</Text>
+<Name>Nummerierte Liste</Name>
+<Text># Der erste Punkt
+# Der zweite Punkt
+# Ein dritter Punkt</Text>
 </TEXTILE_TEXT>
 <TEXTILE_TEXT item="y">
-<Name>Mixed list</Name>
-<Text>* Point one
-* Point two
-## Step 1
-## Step 2
-## Step 3
-* Point three
-** Sub point 1
-** Sub point 2</Text>
+<Name>Gemischte Liste</Name>
+<Text>* Punkt eins
+* Punkt zwei
+## Schritt 1
+## Schritt 2
+## Schritt 3
+* Punkt drei
+** Unterpunkt eins
+** Unterpunkt zwei</Text>
 </TEXTILE_TEXT>
 <TEXTILE_TEXT item="y">
-<Name>Alignment</Name>
-<Text>Text alignment will not show up in Treeline but in exported html file.
-p&lt;. Left
+<Name>Ausrichtung</Name>
+<Text>Das Ausrichten von Absätzen ist in Treeline nicht sichtbar, wird aber beim HTML-Export beachtet.
 
-p=. Center
+p&lt;. Linksbündig
 
-p&gt;. Right
+p=. Zentriert
 
-p&lt;&gt;. Justify</Text>
+p&gt;. Rechtsbündig
+
+p&lt;&gt;. Blocksatz</Text>
 </TEXTILE_TEXT>
 <TEXTILE_TEXT item="y">
-<Name>Table</Name>
+<Name>Tabelle</Name>
 <Text>|_. one |_. two |_. three |
 |a|b|c|
 |\2. d|e|
