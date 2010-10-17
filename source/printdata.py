@@ -12,7 +12,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import os.path
 from PyQt4 import QtCore, QtGui
 import nodeformat
 import globalref

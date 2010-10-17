@@ -11,7 +11,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import sys
 import re
 import copy
 from PyQt4 import QtCore, QtGui

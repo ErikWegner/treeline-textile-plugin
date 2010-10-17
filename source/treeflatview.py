@@ -12,8 +12,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import copy
-import types
 import string
 from PyQt4 import QtCore, QtGui
 import globalref
