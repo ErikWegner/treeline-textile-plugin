@@ -14,10 +14,8 @@
 
 import sys
 import os.path
-import re
 import xml.sax.saxutils
 import codecs
-import locale
 import gzip
 import zipfile
 import StringIO

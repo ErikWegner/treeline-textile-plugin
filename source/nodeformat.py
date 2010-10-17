@@ -472,7 +472,6 @@ class NodeFormat(object):
         for srchTerm in [globalref.docRef.linkFieldName, u'link', u'url',
                          u'href']:
             for field in availFields:
-                name = field.name.lower()
                 if field.name.lower() == srchTerm:
                     return field
             for field in availFields:

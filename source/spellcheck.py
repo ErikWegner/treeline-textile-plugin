@@ -11,7 +11,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import os.path
 import re
 import sys
 import subprocess

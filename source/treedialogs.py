@@ -12,7 +12,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import copy
 import re
 import string
 import os
@@ -168,7 +167,6 @@ class TypeSetDlg(QtGui.QDialog):
                 if type not in typeList:
                     typeList.append(type)
         if len(typeList) > 1:
-            caption = _('Select Type')
             type, ok = QtGui.QInputDialog.getItem(self, _('Select Type'),
                                                   _('Change from data type'),
                                                   typeList, 0, False)
