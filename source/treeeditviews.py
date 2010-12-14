@@ -215,7 +215,6 @@ class DataEditLine(QtGui.QTextEdit):
         else:
             maxNumLines = globalref.options.intData('MaxEditLines', 1,
                                                     optiondefaults.maxNumLines)
-            maxHeight = maxNumLines * lineHeight
             textRect = fontMetrics.boundingRect(0, 0, width - \
                                                 DataEditGroup.horizMargins,
                                                 100000, QtCore.Qt.TextWordWrap,
