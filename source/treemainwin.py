@@ -14,9 +14,6 @@
 
 import sys
 import os.path
-import re
-import copy
-import codecs
 import base64
 from PyQt4 import QtCore, QtGui
 try:

@@ -12,7 +12,6 @@
 # but WITTHOUT ANY WARRANTY.  See the included LICENSE file for details.
 #*****************************************************************************
 
-import copy
 import re
 import string
 import os
