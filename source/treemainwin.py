@@ -2667,38 +2667,38 @@ class TreeMainWin(QtGui.QMainWindow):
 
         self.winMenu.addSeparator()
 
-        self.helpMenu = self.menuBar().addMenu(_('&Help'))
+        helpMenu = self.menuBar().addMenu(_('&Help'))
 
         helpContentsAct = QtGui.QAction(_('&Help Contents'), self)
         helpContentsAct.setStatusTip(_('View information about using TreeLine'))
-        self.helpMenu.addAction(helpContentsAct)
+        helpMenu.addAction(helpContentsAct)
         self.actions['HelpContents'] = helpContentsAct
         self.connect(helpContentsAct, QtCore.SIGNAL('triggered()'),
                      self.helpContents)
 
         helpReadMeAct = QtGui.QAction(_('&View Full ReadMe'), self)
         helpReadMeAct.setStatusTip(_('View the entire ReadMe file'))
-        self.helpMenu.addAction(helpReadMeAct)
+        helpMenu.addAction(helpReadMeAct)
         self.actions['HelpFullReadMe'] = helpReadMeAct
         self.connect(helpReadMeAct, QtCore.SIGNAL('triggered()'),
                      self.helpReadMe)
 
         helpAboutAct = QtGui.QAction(_('&About TreeLine'), self)
         helpAboutAct.setStatusTip(_('About this program'))
-        self.helpMenu.addAction(helpAboutAct)
+        helpMenu.addAction(helpAboutAct)
         self.actions['HelpAbout'] = helpAboutAct
         self.connect(helpAboutAct, QtCore.SIGNAL('triggered()'),
                      self.helpAbout)
 
         helpPluginAct = QtGui.QAction(_('About &Plugins'), self)
         helpPluginAct.setStatusTip(_('Show loaded plugin modules'))
-        self.helpMenu.addAction(helpPluginAct)
+        helpMenu.addAction(helpPluginAct)
         self.actions['HelpPlugin'] = helpPluginAct
         self.connect(helpPluginAct, QtCore.SIGNAL('triggered()'),
                      self.helpPlugin)
 
         self.pulldownMenuList = [fileMenu, editMenu, viewMenu, dataMenu,
-                                 toolsMenu, self.helpMenu]
+                                 toolsMenu, helpMenu]
 
         self.tagSubMenu = QtGui.QMenu(_('&Add Font Tags'), self)
         self.addTagGroup = QtGui.QActionGroup(self)
