@@ -47,6 +47,7 @@ class FlatView(QtGui.QListWidget):
         QtGui.QListWidget.__init__(self, parent)
         self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
         self.setEditTriggers(QtGui.QAbstractItemView.SelectedClicked)
+        self.updateGenOptions()
         self.rootItems = []
         self.incremSearchMode = False
         self.incremSearchStr = ''
@@ -118,6 +119,13 @@ class FlatView(QtGui.QListWidget):
                 item.setConditionalType()
                 item.viewData.setTreeIcon()
             item.viewData.setText(item.title())
+
+    def updateGenOptions(self):
+        """Update flat tree option settings"""
+        if globalref.options.boolData('ClickRename'):
+            self.setEditTriggers(QtGui.QAbstractItemView.SelectedClicked)
+        else:
+            self.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
 
     def changeCurrent(self, currentItem, prevItem):
         """Set current item in selection, called from tree signal"""

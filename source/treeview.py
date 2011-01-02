@@ -73,8 +73,7 @@ class TreeView(QtGui.QTreeWidget):
         self.setRootIsDecorated(True)
         self.setSelectionMode(QtGui.QAbstractItemView.ExtendedSelection)
         self.setEditTriggers(QtGui.QAbstractItemView.SelectedClicked)
-        self.setIndentation(globalref.options.intData('IndentOffset', 0,
-                                               optiondefaults.maxIndentOffset))
+        self.updateGenOptions()
         self.setDragEnabled(True)
         self.setAcceptDrops(True)
         self.setDropIndicatorShown(True)
@@ -159,6 +158,15 @@ class TreeView(QtGui.QTreeWidget):
         treeViewItem.loadChildren()
         if not self.blockColumnResize:
             self.resizeColumnToContents(0)
+
+    def updateGenOptions(self):
+        """Update tree option settings"""
+        self.setIndentation(globalref.options.intData('IndentOffset', 0,
+                            optiondefaults.maxIndentOffset))
+        if globalref.options.boolData('ClickRename'):
+            self.setEditTriggers(QtGui.QAbstractItemView.SelectedClicked)
+        else:
+            self.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
 
     def setCollapsed(self, treeViewItem):
         """Set collapsing item to closed"""
