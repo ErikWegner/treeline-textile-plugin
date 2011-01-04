@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.3"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.5"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.3.4 (instabiler Entwickler-Snapshot)</Name>
+<Name>Version 1.3.5 (instabiler Entwickler-Snapshot)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>22. September 2010</Name>
+<Name>5. Januar 2011</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
