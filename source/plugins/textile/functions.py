@@ -397,7 +397,7 @@ class Textile(object):
         return "\n".join(result)
 
     def lT(self, input):
-        if re.search(r'^#+', input):
+        if re.search(r'#$', input):
             return 'o'
         else:
             return 'u'
