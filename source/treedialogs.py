@@ -978,6 +978,7 @@ class ExportDlg(QtGui.QDialog):
             self.headerButton.setEnabled(False)
         if exportType == ExportDlg.htmlType:
             self.colLabel.setEnabled(True)
+            self.numColSpin.setEnabled(True)
         else:
             self.numColSpin.setValue(1)
             self.numColSpin.setEnabled(False)
