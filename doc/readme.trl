@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.3.5 (unstable development snapshot)</Name>
+<Name>Version 1.4.0 (new stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>January 5, 2011</Name>
+<Name>April 7, 2011</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -351,7 +351,7 @@ sibsuffix="&lt;/ul&gt;">
 <Ref>win-sys</Ref>
 <TEXT_PARA item="y">
 <Topic>Binary</Topic>
-<Text>Using the files provided in the installer, TreeLine should run on any computer running Win 95, 98, NT, 2000, or XP.</Text>
+<Text>Using the files provided in the installer, TreeLine should run on any computer running Windows XP, Vista or 7.</Text>
 </TEXT_PARA>
 <TEXT_PARA item="y">
 <Topic>Spell check</Topic>
@@ -1486,6 +1486,73 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <HEADING2 item="y">
 <Name>Revision History</Name>
 <Ref>revs</Ref>
+<HEADING3 item="y">
+<Name>April 7, 2011 - Release 1.4.0 (new stable release)</Name>
+<HEADING4 item="y">
+<Name>Notes:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Stable release</Topic>
+<Text>This is a new stable release, ending the 1.3.x development series.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Translations</Topic>
+<Text>This release is available in English, French and German, although the French documentation is not completly up to date.   Volunteers to do additional translations are welcome.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Updates:</Name>
+<TEXT_BULLETS item="y">
+<Topic>File browser path</Topic>
+<Text>The file browser used for editing path-based fields now remembers the previously used directory.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Toolbar icons</Topic>
+<Text>Added icons for the New Window and Close Window commands so they can be added to toolbars.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>French ReadMe translation</Topic>
+<Text>The French translation of the  ReadMe file has been updated.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Bug Fixes:</Name>
+<TEXT_BULLETS item="y">
+<Topic>HTML export columns</Topic>
+<Text>Fixed a bug that could keep the column control from being enabled during HTML export.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+<HEADING4 item="y">
+<Name>Major New Features Since 1.2.x:</Name>
+<TEXT_BULLETS item="y">
+<Topic>Multiple document interface</Topic>
+<Text>Different files can be open in multiple TreeLine windows within the same TreeLine session.  This is controled with commands in the new &quot;Window&quot; menu.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Multiple views of same file</Topic>
+<Text>The &quot;Window-&gt;New Window&quot; command creates a new window with views of the same TreeLine file.  Changes in either window are saved in the same document.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Attach to session</Topic>
+<Text>Starting TreeLine (from a shortcut, file association or command line) will activate an existing TreeLine session if it is already running.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Insert inline links</Topic>
+<Text>An &quot;Add internal link&quot; context menu has been added to text boxes in the data editor.  It prompts for another node to be clicked with the mouse, then an inline internal link is added with that node's reference information.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>HTML directory page export</Topic>
+<Text>Added an &quot;HTML directory pages&quot; export option.  This will export a directory structure with an HTML file for every node.  A navigation pane on the left side of each page contains links to nearby nodes.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Restore interface defaults</Topic>
+<Text>New dailog buttons will restore the default configuration when customizing toolbars or shortcuts.</Text>
+</TEXT_BULLETS>
+<TEXT_BULLETS item="y">
+<Topic>Help viewer search function</Topic>
+<Text>A new text search function has been added to the help viewer.</Text>
+</TEXT_BULLETS>
+</HEADING4>
+</HEADING3>
 <HEADING3 item="y">
 <Name>January 5, 2011 - Release 1.3.5 (unstable development snapshot)</Name>
 <HEADING4 item="y">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.3"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.5"
 line0="{*Name_en*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name_en*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2"
@@ -37,14 +37,14 @@ icon="bullet_2">
 <RefNum type="Text">1.3</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.3.3 (instabiler Entwickler-Snapshot)</Name>
-<Name_en>Version 1.3.3 (unstable development snapshot)</Name_en>
+<Name>Version 1.4.0</Name>
+<Name_en>Version 1.4.0</Name_en>
 <Done>true</Done>
 <RefNum>1.4</RefNum>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>24. Juni 2010</Name>
-<Name_en>June 24, 2010</Name_en>
+<Name>7. April 2017</Name>
+<Name_en>April 7, 2010</Name_en>
 <Done>true</Done>
 <RefNum>1.5</RefNum>
 </TEXT_CNTR>
@@ -664,8 +664,8 @@ icon="bullet_2">
 <TEXT_PARA item="y">
 <Topic>Binärpaket</Topic>
 <Topic_en>Binary</Topic_en>
-<Text>Mit den Dateien, die der Installer bereitstellt, sollte TreeLine auf jedem Computer mit Windows 95, 98, NT, 2000 oder XP laufen.</Text>
-<Text_en>Using the files provided in the installer, TreeLine should run on any computer running Win 95, 98, NT, 2000, or XP.</Text_en>
+<Text>Mit den Dateien, die der Installer bereitstellt, sollte TreeLine auf jedem Computer mit Windows XP, Vista oder 7 laufen.</Text>
+<Text_en>Using the files provided in the installer, TreeLine should run on any computer running Windows XP, Vista or 7.</Text_en>
 <Done>yes</Done>
 <RefNum>1.10.2.1</RefNum>
 </TEXT_PARA>
