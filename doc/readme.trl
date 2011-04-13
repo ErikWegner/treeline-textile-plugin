@@ -25,7 +25,7 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Name>Version 1.4.0 (new stable release)</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>April 7, 2011</Name>
+<Name>April 14, 2011</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -1487,7 +1487,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <Name>Revision History</Name>
 <Ref>revs</Ref>
 <HEADING3 item="y">
-<Name>April 7, 2011 - Release 1.4.0 (new stable release)</Name>
+<Name>April 14, 2011 - Release 1.4.0 (new stable release)</Name>
 <HEADING4 item="y">
 <Name>Notes:</Name>
 <TEXT_BULLETS item="y">
@@ -1496,7 +1496,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Translations</Topic>
-<Text>This release is available in English, French and German, although the French documentation is not completly up to date.   Volunteers to do additional translations are welcome.</Text>
+<Text>This release is available in English, French and German, although the French documentation is not completely up to date.   Volunteers to do additional translations are welcome.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
@@ -1508,10 +1508,6 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <TEXT_BULLETS item="y">
 <Topic>Toolbar icons</Topic>
 <Text>Added icons for the New Window and Close Window commands so they can be added to toolbars.</Text>
-</TEXT_BULLETS>
-<TEXT_BULLETS item="y">
-<Topic>French ReadMe translation</Topic>
-<Text>The French translation of the  ReadMe file has been updated.</Text>
 </TEXT_BULLETS>
 </HEADING4>
 <HEADING4 item="y">
@@ -1525,7 +1521,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 <Name>Major New Features Since 1.2.x:</Name>
 <TEXT_BULLETS item="y">
 <Topic>Multiple document interface</Topic>
-<Text>Different files can be open in multiple TreeLine windows within the same TreeLine session.  This is controled with commands in the new &quot;Window&quot; menu.</Text>
+<Text>Different files can be open in multiple TreeLine windows within the same TreeLine session.  This is controlled with commands in the new &quot;Window&quot; menu.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Multiple views of same file</Topic>
@@ -1545,7 +1541,7 @@ Currently available plugins are listed on the &quot;Downloads&quot; page of the 
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Restore interface defaults</Topic>
-<Text>New dailog buttons will restore the default configuration when customizing toolbars or shortcuts.</Text>
+<Text>New dialog buttons will restore the default configuration when customizing toolbars or shortcuts.</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Help viewer search function</Topic>

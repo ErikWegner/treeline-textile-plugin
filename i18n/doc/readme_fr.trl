@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.2.4"
+<HEADING1 item="y" nospace="y" nobreaks="y" tlversion="1.3.5"
 line0="{*Name*}"
 line1="&lt;center&gt;&lt;h1&gt;{*Name*}&lt;/h1&gt;&lt;/center&gt;"
 childtype="HEADING2">
@@ -22,10 +22,10 @@ line1="&lt;center&gt;{*Name*}&lt;/center&gt;">
 <Ref type="Text" ref="y"></Ref>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>Version 1.2.4</Name>
+<Name>Version 1.4.0</Name>
 </TEXT_CNTR>
 <TEXT_CNTR item="y">
-<Name>8 octobre 2009</Name>
+<Name>14 Avril 2011</Name>
 </TEXT_CNTR>
 <HEADING2 item="y"
 line0="{*Name*}"
@@ -326,7 +326,7 @@ sibsuffix="&lt;/ul&gt;">
 <Text>TreeLine requiert les programmes et librairies suivants:</Text>
 <TEXT_BULLETS item="y">
 <Topic>Qt</Topic>
-<Text>Qt (Version 4.1 ou ultérieur )</Text>
+<Text>Qt (Version 4.4 ou ultérieur )</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Python</Topic>
@@ -334,7 +334,7 @@ sibsuffix="&lt;/ul&gt;">
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>PyQt</Topic>
-<Text>PyQt (Version 2.4 ou ultérieur - voir &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; pour plus d'information)</Text>
+<Text>PyQt (Version 4.4.0 ou ultérieur - voir &lt;a href=&quot;http://www.riverbankcomputing.co.uk&quot;&gt; www.riverbankcomputing.co.uk&lt;/a&gt; pour plus d'information)</Text>
 </TEXT_BULLETS>
 <TEXT_BULLETS item="y">
 <Topic>Analizeur XML</Topic>
@@ -440,6 +440,9 @@ childtype="HEADING4">
 <CONTENTS_LINK_INDENT item="y">
 <Name>Commandes</Name>
 <Link>basics-cmds</Link>
+</CONTENTS_LINK_INDENT>
+<CONTENTS_LINK_INDENT item="y">
+<Link>basics-wins</Link>
 </CONTENTS_LINK_INDENT>
 </CONTENTS_LINK>
 <CONTENTS_LINK item="y">
@@ -903,6 +906,9 @@ line2="&lt;p&gt;&lt;b&gt;{*Caption*}&lt;/b&gt;&lt;/p&gt;">
 
 Pour ajouter une nouvelle information au document TreeLine, utiliser la commande &quot;Editer-&amp;gt;Ajouter Fils&quot; pour créer un nouveau noeud. Et une combinaison des commandes d'ajout et d'insertion peut être utilisée pour les noeuds additionels. Par ailleurs, les titres de nouveaux noeuds peuvent être tapés dans le volet de droite &quot;Liste des Titres&quot;.</Text>
 <Ref>basics-cmds</Ref>
+</TEXT_HEAD>
+<TEXT_HEAD item="y">
+<Ref>basics-wins</Ref>
 </TEXT_HEAD>
 </HEADING3>
 <HEADING3 item="y">
