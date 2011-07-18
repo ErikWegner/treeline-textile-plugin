@@ -24,6 +24,7 @@ import globalref
 
 class DataEditLine(QtGui.QTextEdit):
     """Line editor within data edit view"""
+    fileBrowsePath = ''
     def __init__(self, field, item, labelRef, parent=None):
         QtGui.QTextEdit.__init__(self, parent)
         self.field = field
@@ -70,12 +71,15 @@ class DataEditLine(QtGui.QTextEdit):
         """Open file browser to set contents"""
         dfltPath = unicode(self.toPlainText()).strip()
         if not dfltPath or not os.path.exists(dfltPath):
-            dfltPath = os.path.dirname(globalref.docRef.fileName)
+            dfltPath = DataEditLine.fileBrowsePath
+            if not dfltPath or not os.path.exists(dfltPath):
+                dfltPath = os.path.dirname(globalref.docRef.fileName)
         fileName = unicode(QtGui.QFileDialog.getOpenFileName(self,
                                                     _('Browse for file name'),
                                                     dfltPath,
                                                     '%s (*)' % _('All Files')))
         if fileName:
+            DataEditLine.fileBrowsePath = os.path.dirname(fileName)
             if ' ' in fileName and self.field.typeName == u'ExecuteLink':
                 fileName = "'%s'" % fileName
             self.setPlainText(fileName)

@@ -3971,7 +3971,7 @@ par %(author)s</translation>
     </message>
     <message>
         <source>Filter %s Data Type</source>
-        <translation>Filtre type de données %S</translation>
+        <translation>Filtre type de données %s</translation>
     </message>
     <message>
         <source>Enter key words</source>

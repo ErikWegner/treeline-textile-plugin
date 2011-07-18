@@ -3,7 +3,7 @@
 ; Created       : 2003-12-30
 ; By            : Petko Yotov 5ko@topfr.net
 ; License       : Free to use, modify and distribute, but with no warranty.
-; Last modified : 2010-09-20 by Doug Bell
+; Last modified : 2011-04-13 by Doug Bell
 
 ; TreeLine is a great structured information storage program by Doug Bell.
 ; Please check the website for details and updates <http://www.bellz.org/>.
@@ -16,7 +16,7 @@
 ; The name of the installer
 
 !define NAME "TreeLine"
-!define VERSION "1.3.4"
+!define VERSION "1.4.0"
 
 ; Uncomment next line to include pyQt libraries in the installer
 !define PYQT
@@ -226,6 +226,8 @@ Section "${NAME} (required)" treeline
         File ".\icons\toolbar\32x32\viewshowchild.png"
         File ".\icons\toolbar\32x32\viewshowdescend.png"
         File ".\icons\toolbar\32x32\viewtree.png"
+        File ".\icons\toolbar\32x32\winclosewindow.png"
+        File ".\icons\toolbar\32x32\winnewwindow.png"
 
         ; Set output path to a tree icons directory
         SetOutPath "$INSTDIR\icons\tree"
@@ -315,9 +317,11 @@ SectionEnd
 
 		SectionIn 1 RO
 
+                Delete "$INSTDIR\lib\\_ctypes.pyd"
                 Delete "$INSTDIR\lib\_qt.pyd"
                 Delete "$INSTDIR\lib\_sre.pyd"
                 Delete "$INSTDIR\lib\_winreg.pyd"
+                Delete "$INSTDIR\lib\libgcc_s_dw2-1.dll"
                 Delete "$INSTDIR\lib\libqtc.pyd"
                 Delete "$INSTDIR\lib\libsip.dll"
                 Delete "$INSTDIR\lib\mingwm10.dll"
@@ -339,8 +343,10 @@ SectionEnd
 		File ".\lib\_socket.pyd"
 		File ".\lib\_ssl.pyd"
                 File ".\lib\bz2.pyd"
-                File ".\lib\libgcc_s_dw2-1.dll"
-                File ".\lib\mingwm10.dll"
+                File ".\lib\LIBEAY32.dll"
+                File ".\lib\Microsoft.VC90.CRT.manifest"
+                File ".\lib\msvcp90.dll"
+                File ".\lib\msvcr90.dll"
                 File ".\lib\pyexpat.pyd"
                 File ".\lib\PyQt4.QtCore.pyd"
                 File ".\lib\PyQt4.QtGui.pyd"
@@ -351,11 +357,15 @@ SectionEnd
                 File ".\lib\QtNetwork4.dll"
                 File ".\lib\select.pyd"
                 File ".\lib\sip.pyd"
+                File ".\lib\SSLEAY32.dll"
                 File ".\lib\unicodedata.pyd"
                 File ".\lib\w9xpopen.exe"
 
                 SetOutPath "$INSTDIR\lib\imageformats"
 
+                File ".\lib\imageformats\Microsoft.VC90.CRT.manifest"
+                File ".\lib\imageformats\msvcp90.dll"
+                File ".\lib\imageformats\msvcr90.dll"
                 File ".\lib\imageformats\qgif4.dll"
                 File ".\lib\imageformats\qico4.dll"
                 File ".\lib\imageformats\qjpeg4.dll"
@@ -660,6 +670,8 @@ Section "Uninstall"
         Delete "$INSTDIR\icons\toolbar\32x32\viewshowchild.png"
         Delete "$INSTDIR\icons\toolbar\32x32\viewshowdescend.png"
         Delete "$INSTDIR\icons\toolbar\32x32\viewtree.png"
+        Delete "$INSTDIR\icons\toolbar\32x32\winclosewindow.png"
+        Delete "$INSTDIR\icons\toolbar\32x32\winnewwindow.png"
 
         Delete "$INSTDIR\icons\tree\anchor.png"
         Delete "$INSTDIR\icons\tree\arrow_1.png"
@@ -872,6 +884,7 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\_ssl.pyd"
         Delete "$INSTDIR\lib\_winreg.pyd"
         Delete "$INSTDIR\lib\bz2.pyd"
+        Delete "$INSTDIR\lib\LIBEAY32.dll"
         Delete "$INSTDIR\lib\libqtc.pyd"
         Delete "$INSTDIR\lib\libsip.dll"
         Delete "$INSTDIR\lib\libgcc_s_dw2-1.dll"
@@ -898,6 +911,7 @@ Section "Uninstall"
         Delete "$INSTDIR\lib\qt-mt230nc.dll"
         Delete "$INSTDIR\lib\select.pyd"
         Delete "$INSTDIR\lib\sip.pyd"
+        Delete "$INSTDIR\lib\SSLEAY32.dll"
         Delete "$INSTDIR\lib\unicodedata.pyd"
         Delete "$INSTDIR\lib\w9xpopen.exe"
 	Delete "$INSTDIR\lib\zlib.pyd"

@@ -1572,11 +1572,11 @@ class TreeMainWin(QtGui.QMainWindow):
                                                   intData('UndoLevels', 0, 99)
             self.doc.redoStore.levels = globalref.options.\
                                                   intData('UndoLevels', 0, 99)
-            globalref.treeControl.recentFiles.changeNumEntries(globalref.options.
-                                                 intData('RecentFiles', 0, 99))
-            self.treeView.setIndentation(globalref.options.
-                                         intData('IndentOffset',
-                                         0, optiondefaults.maxIndentOffset))
+            globalref.treeControl.recentFiles.\
+                      changeNumEntries(globalref.options.
+                                       intData('RecentFiles', 0, 99))
+            self.treeView.updateGenOptions()
+            self.flatView.updateGenOptions()
             self.updateViews()
 
     def toolsTreeFont(self):

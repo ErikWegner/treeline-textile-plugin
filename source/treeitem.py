@@ -875,7 +875,7 @@ class TreeItem(object):
             childOfTypeList.sort(self.cmpItems)
             if len(childOfTypeList) < len(self.childList):
                 childOfTypeList.extend([child for child in self.childList
-                                        if child.formatName not in formatName])
+                                       if child.formatName not in formatNames])
             self.childList = childOfTypeList
 
     def sortTypeBranch(self, formatNames):

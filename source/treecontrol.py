@@ -102,7 +102,7 @@ class TreeControl(object):
         except AttributeError:
             print 'Warning:  Could not create local socket'
         if fileNames:
-            filenames = [unicode(fileName, globalref.localTextEncoding) for
+            fileNames = [unicode(fileName, globalref.localTextEncoding) for
                          fileName in fileNames]
             self.openMultipleFiles(filenames)
         else:
