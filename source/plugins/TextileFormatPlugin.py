@@ -38,7 +38,7 @@ class TextileFormatPlugin():
         fieldformat.__dict__[fieldTypeName + 'Format'] = fieldTypeClass
 
     def _addMenuItems(self):
-        menu = self._tpi.mainWin.helpMenu
+        menu = self._tpi.getPulldownMenu(-1)
         aboutAction = QtGui.QAction(_('About Textile Plugin'), self._tpi.mainWin)
         menu.addAction(aboutAction)
         self._tpi.mainWin.connect(aboutAction, QtCore.SIGNAL('triggered()'),
