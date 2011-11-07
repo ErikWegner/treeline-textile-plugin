@@ -206,7 +206,7 @@ class TreeControl(object):
             win.fileImported = True
         win.doc.root.open = True
         QtGui.QApplication.restoreOverrideCursor()
-        if win is not oldWin:
+        if win not in self.windowList:
             self.windowList.append(win)
         win.updateForFileChange(addToRecent)
         if win.pluginInterface:
