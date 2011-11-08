@@ -96,6 +96,8 @@ class TreeDoc(object):
         if setNewDefaults or not hasattr(self, 'compressFile'):
             self.compressFile = globalref.options.boolData('CompressNewFiles')
             self.encryptFile = globalref.options.boolData('EncryptNewFiles')
+        elif not hasattr(self, 'encryptFile'):
+            self.encryptFile = False
         self.selection = treeselection.TreeSelection([self.root])
         self.fileInfoFormat.translateFields()
         self.fileInfoFormat.updateFileInfo()
