@@ -189,6 +189,7 @@ class TreeControl(object):
         except treedoc.ReadFileError, e:
             QtGui.QApplication.restoreOverrideCursor()
             if not importOnFail:
+                globalref.updateRefs(oldWin)
                 return True
             # assume file is not a TreeLine file
             importType = self.chooseImportType()
