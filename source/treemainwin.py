@@ -1204,8 +1204,8 @@ class TreeMainWin(QtGui.QMainWindow):
                 return
             except treedoc.PasswordError:
                 QtGui.QApplication.restoreOverrideCursor()
-                dlg = PasswordEntry(False, self, None, True)
-                if dlg.exec_loop() != QtGui.QDialog.Accepted:
+                dlg = treedialogs.PasswordEntry(False, self)
+                if dlg.exec_() != QtGui.QDialog.Accepted:
                     return
                 password = dlg.password
             except (IOError, UnicodeError, treedoc.ReadFileError):
