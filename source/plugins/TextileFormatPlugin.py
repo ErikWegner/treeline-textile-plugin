@@ -68,8 +68,11 @@ class TextileFormat(fieldformat.TextFormat):
         if not titleMode:
             #text = "The *great* escape from level %s." % self.parentLevel
             head_offset = 0
-            text = textile.textile(text, head_offset = 0)
-            text = text.strip()
+            text = textile.textile(text, head_offset = 0).replace("\t", "")
+            if text.startswith("<p>"):
+                text = text[3:]
+            if text.endswith("</p>"):
+                text = text[:-4]
         return u'%s%s%s' % (prefix, text, suffix)
 
 class AboutTextilePluginDialog(QtGui.QDialog):
