@@ -104,7 +104,7 @@ class TreeControl(object):
         if fileNames:
             fileNames = [unicode(fileName, globalref.localTextEncoding) for
                          fileName in fileNames]
-            self.openMultipleFiles(fileNames)
+            self.openMultipleFiles(filenames)
         else:
             win = treemainwin.TreeMainWin()
             self.windowList.append(win)
